@@ -1,0 +1,314 @@
+/* night-mode.css - Estilos para modo noturno */
+
+/* ================ ESTILOS GERAIS DO MODO NOTURNO ================ */
+body.night-mode {
+    background-color: #1a1a2e;
+    color: #e6e6e6;
+}
+
+/* ================ BOTÃO DE TEMA ================ */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
+/* Animação de rotação suave */
+.theme-toggle i {
+    transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+.theme-toggle:hover i {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Efeito de brilho ao clicar */
+.theme-toggle::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.theme-toggle:active::after {
+    opacity: 1;
+    transition: opacity 0s;
+}
+
+/* ================ CONTEÚDO PRINCIPAL ================ */
+body.night-mode .product-card {
+    background-color: #2d2d44;
+    color: #e6e6e6;
+}
+
+body.night-mode .product-info {
+    color: #e6e6e6;
+}
+
+body.night-mode .product-category {
+    background-color: #3d3d5c;
+    color: #b8b8cc;
+}
+
+body.night-mode .product-price {
+    color: #4da6ff;
+}
+
+body.night-mode .section-title {
+    color: #e6e6e6;
+    border-bottom-color: #4da6ff;
+}
+
+body.night-mode .action-button {
+    color: white;
+}
+
+body.night-mode .main-actions .action-button.buy {
+    background-color: #2563eb;
+}
+
+body.night-mode .main-actions .action-button.sell {
+    background-color: #0d9488;
+}
+
+body.night-mode .main-actions .action-button.donate {
+    background-color: #0891b2;
+}
+
+/* ================ BARRA DE PESQUISA ================ */
+body.night-mode .search-input input,
+body.night-mode .search-filters select {
+    background-color: #2d2d44;
+    color: #e6e6e6;
+    border-color: #4b5563;
+}
+
+body.night-mode .search-suggestions-container {
+    background-color: #2d2d44;
+    border-color: #4da6ff;
+    color: #e6e6e6;
+}
+
+body.night-mode .search-suggestion-header {
+    background-color: #3d3d5c;
+    color: #4da6ff;
+    border-bottom-color: #4b5563;
+}
+
+body.night-mode .search-suggestion {
+    border-bottom-color: #4b5563;
+}
+
+body.night-mode .search-suggestion:hover {
+    background-color: #3d3d5c;
+}
+
+/* ================ BREADCRUMBS ================ */
+body.night-mode .smart-breadcrumbs {
+    background-color: #2d2d44;
+    border-left-color: #4da6ff;
+    color: #e6e6e6;
+}
+
+body.night-mode .smart-breadcrumbs a {
+    color: #8bb4ff;
+    background-color: transparent;
+}
+
+body.night-mode .smart-breadcrumbs a:hover {
+    color: #4da6ff;
+    background-color: rgba(77, 166, 255, 0.15);
+}
+
+body.night-mode .smart-breadcrumbs .current-page {
+    color: #e6e6e6;
+}
+
+body.night-mode .smart-breadcrumbs .separator {
+    color: #8b9bb4;
+}
+
+/* ================ BOTÕES DE FAVORITAR ================ */
+body.night-mode .favorite-btn {
+    background-color: rgba(45, 45, 68, 0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+body.night-mode .favorite-btn:hover {
+    background-color: rgba(61, 61, 92, 0.9);
+}
+
+body.night-mode .favorite-btn i {
+    color: #a0aec0;
+}
+
+body.night-mode .favorite-btn.active i {
+    color: #ff6b6b;
+}
+
+body.night-mode .favorite-btn-bottom {
+    background-color: #3d3d5c;
+    border-color: #4b5563;
+    color: #e6e6e6;
+}
+
+body.night-mode .favorite-btn-bottom:hover {
+    background-color: #4b5563;
+}
+
+body.night-mode .favorite-btn-bottom.active {
+    background-color: rgba(231, 76, 60, 0.2);
+    border-color: #e74c3c;
+    color: #ff6b6b;
+}
+
+body.night-mode .favorite-btn-bottom.active i {
+    color: #ff6b6b;
+}
+
+/* Animações para os botões de favoritar */
+.favorite-btn {
+    transition: all 0.3s ease;
+}
+
+.favorite-btn:hover {
+    transform: scale(1.1);
+}
+
+.favorite-btn.active {
+    animation: heartBeat 0.6s ease;
+}
+
+@keyframes heartBeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.2); }
+    50% { transform: scale(0.9); }
+    75% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.favorite-btn-bottom {
+    transition: all 0.3s ease;
+}
+
+.favorite-btn-bottom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.favorite-btn-bottom.active {
+    animation: pulseHeart 0.5s ease;
+}
+
+@keyframes pulseHeart {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* ================ MODAL ================ */
+body.night-mode .modal-donation {
+    background-color: #2d2d44;
+    color: #e6e6e6;
+}
+
+body.night-mode .modal-header h2 {
+    color: #e6e6e6;
+}
+
+body.night-mode .input-field,
+body.night-mode .select-field,
+body.night-mode .textarea-field {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border-color: #4b5563;
+}
+
+body.night-mode .field-label {
+    color: #e6e6e6;
+}
+
+body.night-mode .file-upload-area {
+    border-color: #4b5563;
+    background-color: #3d3d5c;
+}
+
+body.night-mode .upload-text {
+    color: #e6e6e6;
+}
+
+body.night-mode .radio-custom {
+    border-color: #4b5563;
+}
+
+body.night-mode .success-overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+body.night-mode .modal-success {
+    background-color: #2d2d44;
+    color: #e6e6e6;
+}
+
+body.night-mode .success-title {
+    color: #e6e6e6;
+}
+
+/* ================ ELEMENTOS ADICIONAIS ================ */
+body.night-mode .notification {
+    background-color: #2d2d44;
+    color: #e6e6e6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.night-mode .contact-btn {
+    background: #2d2d44;
+    color: #4da6ff;
+}
+
+body.night-mode .contact-btn:hover {
+    background: linear-gradient(135deg, #3d3d5c 0%, #2d2d44 100%);
+    color: #e6e6e6;
+}
+
+/* ================ RESPONSIVIDADE ================ */
+@media (max-width: 768px) {
+    body.night-mode .smart-breadcrumbs {
+        background-color: #2d2d44;
+    }
+    
+    body.night-mode .search-input:focus-within input {
+        background-color: #3d3d5c;
+    }
+}

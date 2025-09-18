@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade - ReUse</title>
+    <link rel="stylesheet" href="CSS/cliente.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="CSS/privacidade.css">
+    <link rel="stylesheet" href="CSS/breadcrumbs.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <div class="logo-section">
+                    <div class="logo">
+                        <a href="cliente.html"><img src="IMG/reuse-logo-(1).svg" alt="ReUse Logo"></a>
+                    </div>
+                </div>
+
+                <!-- Barra de pesquisa e filtros no meio -->
+                <div class="search-section">
+                    <div class="search-combined">
+                        <div class="search-input">
+                            <input type="text" id="searchInput" placeholder="O que você está procurando?">
+                            <button id="searchButton" class="search-button" aria-label="Pesquisar">
+                               <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                        <div class="search-filters">
+                            <select>
+                                <option>Todos os filtros</option>
+                                <option>Roupas</option>
+                                <option>Eletrodomésticos</option>
+                                <option>Melhores preços</option>
+                                <option>Recém adicionados</option>
+                                <option>Itens para doação</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Elementos do usuário à direita -->
+                <div class="user-section">
+                    <div class="cart">
+                        <a href="carrinho.html">
+                            <span class="cart-icon"><i class="bi bi-cart3"></i></span>
+                        </a>
+                        <span class="cart-count">1</span>
+                    </div>
+                    <a href="login.html">
+                        <i class="bi bi-box-arrow-right"></i> Sair da Conta
+                    </a>
+                    <a href="perfil.html">
+                        <i class="bi bi-person-fill"></i> Minha Conta
+                    </a>
+                </div>
+
+                <!-- Categorias abaixo -->
+                <div class="categories-section">
+                    <section class="categories">
+                        <div class="dropdown">
+                            <a href="#">Masculino</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Roupas</div>
+                                <a href="#">Camisetas</a>
+                                <a href="#">Camisas</a>
+                                <a href="#">Calças</a>
+                                <a href="#">Bermudas</a>
+                                <a href="#">Jaquetas</a>
+                                <div class="dropdown-category">Calçados</div>
+                                <a href="#">Tênis</a>
+                                <a href="#">Sapatos</a>
+                                <a href="#">Chinelos</a>
+                                <div class="dropdown-category">Acessórios</div>
+                                <a href="#">Relógios</a>
+                                <a href="#">Cintos</a>
+                                <a href="#">Bonés</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a href="#">Feminino</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Roupas</div>
+                                <a href="#">Blusas</a>
+                                <a href="#">Vestidos</a>
+                                <a href="#">Calças</a>
+                                <a href="#">Saias</a>
+                                <a href="#">Jaquetas</a>
+                                <div class="dropdown-category">Calçados</div>
+                                <a href="#">Sapatos</a>
+                                <a href="#">Tênis</a>
+                                <a href="#">Sandálias</a>
+                                <a href="#">Botas</a>
+                                <div class="dropdown-category">Acessórios</div>
+                                <a href="#">Bolsas</a>
+                                <a href="#">Bijuterias</a>
+                                <a href="#">Lenços</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a href="#">Infantil</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Roupas</div>
+                                <a href="#">Camisetas</a>
+                                <a href="#">Conjuntos</a>
+                                <a href="#">Calças</a>
+                                <a href="#">Vestidos</a>
+                                <div class="dropdown-category">Calçados</div>
+                                <a href="#">Tênis</a>
+                                <a href="#">Sandálias</a>
+                                <div class="dropdown-category">Outros</div>
+                                <a href="#">Brinquedos</a>
+                                <a href="#">Acessórios</a>
+                                <a href="#">Material Escolar</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a href="#">Esportivo</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Roupas</div>
+                                <a href="#">Camisetas</a>
+                                <a href="#">Bermudas</a>
+                                <a href="#">Leggings</a>
+                                <a href="#">Jaquetas</a>
+                                <div class="dropdown-category">Calçados</div>
+                                <a href="#">Tênis de Corrida</a>
+                                <a href="#">Chuteiras</a>
+                                <a href="#">Tênis para Academia</a>
+                                <div class="dropdown-category">Equipamentos</div>
+                                <a href="#">Bolas</a>
+                                <a href="#">Raquetes</a>
+                                <a href="#">Acessórios de Treino</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a href="#">Casa/Cozinha</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Eletrodomésticos</div>
+                                <a href="#">Liquidificadores</a>
+                                <a href="#">Cafeteiras</a>
+                                <a href="#">Micro-ondas</a>
+                                <a href="#">Batedeiras</a>
+                                <div class="dropdown-category">Móveis</div>
+                                <a href="#">Mesas</a>
+                                <a href="#">Cadeiras</a>
+                                <a href="#">Sofás</a>
+                                <a href="#">Estantes</a>
+                                <div class="dropdown-category">Utensílios</div>
+                                <a href="#">Panelas</a>
+                                <a href="#">Talheres</a>
+                                <a href="#">Copos</a>
+                                <a href="#">Pratos</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="privacy-container">
+        <div class="privacy-hero">
+            <div class="privacy-header">
+                <h1>Política de Privacidade ReUse</h1>
+                <p class="update-date">Última atualização: <span>15 de junho de 2025</span></p>
+                <div class="privacy-breadcrumbs">
+                    <a href="cliente.html">Home</a> / <span>Política de Privacidade</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="privacy-content">
+            <div class="privacy-sections">
+                <section id="introducao" class="privacy-section">
+                    <h2><span>1</span>Introdução</h2>
+                    <p>Na ReUse, levamos a sua privacidade a sério. Esta Política de Privacidade explica como coletamos, usamos, compartilhamos e protegemos suas informações quando você utiliza nossos serviços de compra, venda e doação de itens usados.</p>
+                    <p>Ao acessar ou usar o site ReUse, você concorda com os termos desta Política de Privacidade. Se você não concordar com estes termos, por favor, não utilize nossos serviços.</p>
+                </section>
+
+                <section id="informacoes-coletadas" class="privacy-section">
+                    <h2><span>2</span>Informações que Coletamos</h2>
+                    
+                    <div class="subsection">
+                        <h3><i class="bi bi-person-fill-gear"></i> Informações que você nos fornece</h3>
+                        <ul class="icon-list">
+                            <li><i class="bi bi-check-circle-fill"></i> <strong>Dados de cadastro:</strong> Nome, e-mail, CPF, data de nascimento, endereço, telefone</li>
+                            <li><i class="bi bi-credit-card-fill"></i> <strong>Informações de pagamento:</strong> Dados do cartão de crédito ou conta bancária (processados por parceiros de pagamento seguros)</li>
+                            <li><i class="bi bi-tag-fill"></i> <strong>Conteúdo de anúncios:</strong> Descrições, fotos e detalhes dos itens que você cadastra</li>
+                            <li><i class="bi bi-chat-right-fill"></i> <strong>Comunicações:</strong> Mensagens trocadas com outros usuários ou com nosso suporte</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="subsection">
+                        <h3><i class="bi bi-gear-fill"></i> Informações coletadas automaticamente</h3>
+                        <ul class="icon-list">
+                            <li><i class="bi bi-bar-chart-fill"></i><strong>Dados de uso:</strong> Páginas visitadas, tempo gasto, cliques, pesquisas realizadas</li>
+                            <li><i class="bi bi-phone-fill"></i> <strong>Dados do dispositivo:</strong> Tipo de dispositivo, sistema operacional, navegador, endereço IP</li>
+                            <li><i class="bi bi-geo-alt-fill"></i> <strong>Localização:</strong> Aproximada, baseada no IP ou GPS (quando permitido)</li>
+                            <li><i class="bi bi-tools"></i> <strong>Cookies e tecnologias similares:</strong> Para personalizar sua experiência e análises</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="uso-informacoes" class="privacy-section">
+                    <h2><span>3</span>Como Usamos Suas Informações</h2>
+                    <p>Utilizamos suas informações para:</p>
+                    <div class="usage-grid">
+                        <div class="usage-item">
+                            <i class="bi bi-gear-wide"></i>
+                            <p>Fornecer, operar e melhorar nossos serviços</p>
+                        </div>
+                        <div class="usage-item">
+                            <i class="bi bi-arrow-left-right"></i>
+                            <p>Processar transações e enviar notificações</p>
+                        </div>
+                        <div class="usage-item">
+                            <i class="bi bi-person-fill-gear"></i>
+                            <p>Personalizar sua experiência e recomendar itens</p>
+                        </div>
+                        <div class="usage-item">
+                            <i class="bi bi-headset"></i>
+                            <p>Comunicar-se com você sobre sua conta</p>
+                        </div>
+                        <div class="usage-item">
+                            <i class="bi bi-shield-fill"></i>
+                            <p>Prevenir fraudes e atividades suspeitas</p>
+                        </div>
+                        <div class="usage-item">
+                           <i class="bi bi-briefcase-fill"></i>
+                            <p>Cumprir obrigações legais</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="compartilhamento" class="privacy-section">
+                    <h2><span>4</span>Compartilhamento de Informações</h2>
+                    <p>Podemos compartilhar suas informações nas seguintes situações:</p>
+                    
+                    <div class="subsection">
+                        <h3><i class="bi bi-people-fill"></i> Com outros usuários</h3>
+                        <ul class="icon-list">
+                            <li><i class="bi bi-person-vcard-fill"></i> Informações básicas do perfil quando você publica um item</li>
+                            <li><i class="bi bi-coin"></i> Dados de contato limitados quando uma transação é iniciada</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="subsection">
+                        <h3><i class="bi bi-cash-coin"></i> Com prestadores de serviços</h3>
+                        <ul class="icon-list">
+                            <li><i class="bi bi-cash"></i> Processadores de pagamento para concluir transações</li>
+                            <li><i class="bi bi-truck"></i> Serviços de entrega para envio de produtos</li>
+                            <li><i class="bi bi-pie-chart-fill"></i> Provedores de análise de dados e marketing</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="subsection">
+                        <h3><i class="bi bi-hammer"></i> Por motivos legais</h3>
+                        <p>Podemos divulgar informações se exigido por lei ou em resposta a solicitações legais válidas.</p>
+                    </div>
+                </section>
+
+                <section id="seguranca" class="privacy-section highlight-box">
+                    <h2><span>5</span>Segurança dos Dados</h2>
+                    <p>Implementamos medidas técnicas e organizacionais para proteger suas informações:</p>
+                    <div class="security-features">
+                        <div class="security-item">
+                            <i class="bi bi-lock-fill"></i>
+                            <p>Criptografia de dados sensíveis</p>
+                        </div>
+                        <div class="security-item">
+                            <i class="bi bi-person-fill-lock"></i>
+                            <p>Controles de acesso restritos</p>
+                        </div>
+                        <div class="security-item">
+                            <i class="bi bi-eye-fill"></i>
+                            <p>Monitoramento contínuo de segurança</p>
+                        </div>
+                        <div class="security-item">
+                            <i class="bi bi-mortarboard-fill"></i>
+                            <p>Treinamento de equipe em proteção de dados</p>
+                        </div>
+                    </div>
+                    <div class="security-note">
+                        <i class="bi bi-info-circle-fill"></i>
+                        <p>Nenhum sistema é 100% seguro, e não podemos garantir segurança absoluta.</p>
+                    </div>
+                </section>
+
+                <section id="direitos" class="privacy-section">
+                    <h2><span>6</span>Seus Direitos</h2>
+                    <p>De acordo com a LGPD (Lei Geral de Proteção de Dados), você tem direito a:</p>
+                    <div class="rights-grid">
+                        <div class="right-item">
+                            <i class="bi bi-search"></i>
+                            <p>Acessar e solicitar cópia dos seus dados</p>
+                        </div>
+                        <div class="right-item">
+                            <i class="bi bi-pencil-square"></i>
+                            <p>Corrigir informações incompletas</p>
+                        </div>
+                        <div class="right-item">
+                            <i class="bi bi-trash3-fill"></i>
+                            <p>Solicitar a exclusão de dados</p>
+                        </div>
+                        <div class="right-item">
+                            <i class="bi bi-arrow-counterclockwise"></i>
+                            <p>Revogar consentimentos</p>
+                        </div>
+                        <div class="right-item">
+                            <i class="bi bi-ban"></i>
+                            <p>Opor-se a determinados processamentos</p>
+                        </div>
+                    </div>
+                    <div class="contact-rights">
+                        <p>Para exercer esses direitos, entre em contato através do e-mail:</p>
+                        <a href="mailto:privacidade@reuse.com.br" class="email-btn">
+                           <i class="bi bi-envelope-fill"></i> privacidade@reuse.com.br
+                        </a>
+                    </div>
+                </section>
+
+                <section id="cookies" class="privacy-section">
+                    <h2><span>7</span>Cookies e Tecnologias Similares</h2>
+                    <p>Utilizamos cookies para:</p>
+                    <div class="cookie-uses">
+                        <div class="cookie-use">
+                            <div class="cookie-icon">
+                                <i class="bi bi-person-fill-check"></i>
+                            </div>
+                            <p>Manter sua sessão ativa</p>
+                        </div>
+                        <div class="cookie-use">
+                            <div class="cookie-icon">
+                                <i class="bi bi-memory"></i>
+                            </div>
+                            <p>Lembrar suas preferências</p>
+                        </div>
+                        <div class="cookie-use">
+                            <div class="cookie-icon">
+                                <i class="bi bi-bar-chart-steps"></i>
+                            </div>
+                            <p>Analisar o uso do site</p>
+                        </div>
+                        <div class="cookie-use">
+                            <div class="cookie-icon">
+                                <i class="bi bi-badge-ad"></i>
+                            </div>
+                            <p>Personalizar anúncios</p>
+                        </div>
+                    </div>
+                    <div class="cookie-manage">
+                        <p>Você pode gerenciar suas preferências de cookies nas configurações do navegador.</p>
+                        <a href="#" class="manage-btn">Gerenciar Preferências</a>
+                    </div>
+                </section>
+
+                <section id="menores" class="privacy-section">
+                    <h2><span>8</span>Menores de Idade</h2>
+                    <div class="age-warning">
+                        <i class="bi bi-person-standing"></i>
+                        <p>Nossos serviços não são destinados a menores de 18 anos. Não coletamos intencionalmente dados de crianças. Se tomarmos conhecimento de tal coleta, tomaremos medidas para excluir essas informações.</p>
+                    </div>
+                </section>
+
+                <section id="alteracoes" class="privacy-section">
+                    <h2><span>9</span>Alterações nesta Política</h2>
+                    <div class="changes-info">
+                        <i class="bi bi-arrow-clockwise"></i>
+                        <p>Podemos atualizar esta Política periodicamente. A versão mais recente estará sempre disponível em nosso site com a data de "Última atualização". Alterações significativas serão comunicadas por e-mail ou através de avisos no site.</p>
+                    </div>
+                </section>
+
+                <section id="contato" class="privacy-section contact-section">
+                    <h2><span>10</span>Contato</h2>
+                    <p>Se tiver dúvidas sobre esta Política de Privacidade ou sobre como tratamos seus dados pessoais, entre em contato conosco:</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                           <i class="bi bi-envelope-at-fill"></i>
+                            <p><strong>E-mail:</strong> privacidade@reuse.com.br</p>
+                        </div>
+                        <div class="contact-method">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <p><strong>Endereço:</strong> Av. Proteção de Dados, 1234 - São Paulo/SP - CEP 01234-567</p>
+                        </div>
+                        <div class="contact-method">
+                            <i class="bi bi-telephone-fill"></i>
+                            <p><strong>Telefone:</strong> (16) 99794-7914</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="last-updated">
+            <p>Esta política foi atualizada pela última vez em <strong>15 de junho de 2025</strong>.</p>
+        </div>
+
+        <div class="back-to-top">
+            <a href="#" id="backToTop"><i class="fas fa-arrow-up"></i> Voltar ao topo</a>
+        </div>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Seção de Idioma -->
+      <div class="footer-links language-section">
+                    <h3>Idioma/Language</h3>
+                    <div class="language-selector">
+                           <div id="google_translate_element"></div>
+                    </div>
+                </div>
+
+                <!-- Seção Minha Conta -->
+                <div class="footer-links">
+                    <h3>Minha Conta</h3>
+                    <a href="perfil.html"><i class="bi bi-person-fill"></i> <span>Perfil</span></a>
+                    <a href="pedidos.html"><i class="bi bi-box-seam"></i> <span>Pedidos</span></a>
+                    <a href="favoritos.html"><i class="bi bi-heart-fill"></i> <span>Favoritos</span></a>
+                </div>
+
+                <!-- Seção Minha Loja -->
+                <div class="footer-links">
+                    <h3>Minha Loja</h3>
+                    <a href="login.html"><i class="bi bi-grid-3x3-gap-fill"></i> <span>Produtos</span></a>
+                    <a href="login.html"><i class="bi bi-bar-chart-line-fill"></i> <span>Estatísticas</span></a>
+                    <a href="login.html"><i class="bi bi-star-fill"></i> <span>Avaliações</span></a>
+                </div>
+
+                <!-- Seção Configurações -->
+                <div class="footer-links">
+                    <h3>Configurações</h3>
+                    <a href="privacidade.html"><i class="bi bi-shield-lock-fill"></i> <span>Privacidade</span></a>
+                    <a href="notificacao.html"><i class="bi bi-bell-fill"></i> <span>Notificações</span></a>
+                    <a href="pagamento.html"><i class="bi bi-credit-card-fill"></i> <span>Pagamentos</span></a>
+                </div>
+
+                <!-- Seção Sobre Nós -->
+                <div class="footer-links">
+                    <h3>Sobre Nós</h3>
+                    <a href="missao.html"><i class="bi bi-info-circle-fill"></i> <span>Missão</span></a>
+                    <a href="equipe.html"><i class="bi bi-people-fill"></i> <span>Equipe</span></a>
+                    <a href="chat_Com_Vendedor.html"><i class="bi bi-chat-dots-fill"></i> <span>Chat com Vendedor</span></a>
+
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                &copy; 2025 ReUse - <span>Todos os direitos reservados</span>
+            </div>
+        </div>
+    </footer>
+
+  
+    <script src="JS/breadcrumbs.js"></script>
+        <script>
+        // Função para carregar o Google Translate Widget
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'pt',
+                includedLanguages: 'pt,en,es,fr',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+/* Estilos otimizados para breadcrumbs da ONG */
+.ong-breadcrumbs {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4edf9 100%);
+  padding: 14px 25px;
+  border-radius: 8px;
+  margin: 0 0 25px 0;
+  box-shadow: 0 2px 8px rgba(0,79,149,0.08);
+  border-left: 5px solid #3a7bd5;
+}
+
+.ong-breadcrumbs a {
+  color: #3a7bd5;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.ong-breadcrumbs a:hover {
+  color: #295fa6;
+  background-color: rgba(58,123,213,0.1);
+  text-decoration: none;
+}
+
+.ong-breadcrumbs span {
+  color: #2d3748;
+  font-weight: 600;
+  padding: 4px 8px;
+}
+
+.ong-breadcrumbs a:not(:first-child)::before {
+  content: '›';
+  margin: 0 10px;
+  color: #90a3bf;
+  font-weight: bold;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+/* Responsividade Aprimorada */
+@media (max-width: 992px) {
+  .ong-breadcrumbs {
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ong-breadcrumbs {
+    font-size: 14px;
+    padding: 10px 15px;
+    white-space: nowrap;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+  
+  .ong-breadcrumbs::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  .ong-breadcrumbs::-webkit-scrollbar-thumb {
+    background-color: #c1d3f0;
+    border-radius: 2px;
+  }
+  
+  .ong-breadcrumbs a {
+    padding: 3px 6px;
+  }
+  
+  .ong-breadcrumbs a::before {
+    margin: 0 6px;
+  }
+}

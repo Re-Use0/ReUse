@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/equipe.css">
+  <title>ReUse - Equipe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>ReUse - Equipe</title>
+</head>
+
+<body>
+  <!-- Container para partículas -->
+  <div id="particles-js"></div>
+
+  <header>
+    <div class="header-content">
+      <div class="brand">
+        <div class="logo">
+          <a href="cliente.html"><img src="IMG/reuse-logo-(1).svg" alt="ReUse Logo"></a>
+        </div>
+      </div>
+      <h1 class="cart-title">Nossa Equipe</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Conheça nossa equipe</h1>
+    <div class="equipe">
+      <div class="membro">
+        <img src="IMG/laura.jpg" alt="Laura Morselli Lugli">
+        <div class="descricao">
+          <h3>Laura Morselli Lugli</h3>
+          <p>Gestora de Projeto, Designer, desenvolvedora de protótipo e Documentação</p>
+        </div>
+      </div>
+      <div class="membro">
+        <img src="IMG/william.jpg" alt="Willian Wallace">
+        <div class="descricao">
+          <h3>Willian Wallace</h3>
+          <p>Programação front-end, e Documentação</p>
+        </div>
+      </div>
+      <div class="membro">
+        <img src="IMG/eu.jpg" alt="Murilo Santos Lima">
+        <div class="descricao">
+          <h3>Murilo Santos Lima</h3>
+          <p>Programação front-end, Programação back-end e Documentação</p>
+        </div>
+      </div>
+
+      <div class="membro">
+        <img src="IMG/licia.jpg" alt="Lícia Santos">
+        <div class="descricao">
+          <h3>Lícia Santos</h3>
+          <p>Designer, marketing e Documentação</p>
+        </div>
+      </div>
+
+      <div class="membro">
+        <img src="IMG/francisco.jpg" alt="Francisco Carlos Amoroso Junior">
+        <div class="descricao">
+          <h3>Francisco Carlos Amoroso Junior</h3>
+          <p>Documentação, Designer , Programação front-end</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Script para partículas -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      particlesJS('particles-js', {
+        "particles": {
+          "number": {
+            "value": 30,
+            "density": {
+              "enable": true,
+              "value_area": 800
+            }
+          },
+          "color": {
+            "value": "#8ecd90"
+          },
+          "shape": {
+            "type": "circle",
+            "stroke": {
+              "width": 0,
+              "color": "#000000"
+            }
+          },
+          "opacity": {
+            "value": 0.5,
+            "random": true,
+            "anim": {
+              "enable": true,
+              "speed": 1,
+              "opacity_min": 0.1,
+              "sync": false
+            }
+          },
+          "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+              "enable": true,
+              "speed": 2,
+              "size_min": 0.3,
+              "sync": false
+            }
+          },
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#52b69a",
+            "opacity": 0.4,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 1,
+            "direction": "none",
+            "random": true,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+              "enable": false,
+              "rotateX": 600,
+              "rotateY": 1200
+            }
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": "grab"
+            },
+            "onclick": {
+              "enable": true,
+              "mode": "push"
+            },
+            "resize": true
+          },
+          "modes": {
+            "grab": {
+              "distance": 140,
+              "line_linked": {
+                "opacity": 1
+              }
+            },
+            "push": {
+              "particles_nb": 4
+            }
+          }
+        },
+        "retina_detect": true
+      });
+    });
+  </script>
+</body>
+
+</html>

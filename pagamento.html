@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos de Pagamento - ReUse</title>
+    <link rel="stylesheet" href="CSS/cliente.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="CSS/pagamento.css">
+    <link rel="stylesheet" href="CSS/breadcrumbs.css">
+</head>
+
+<body>
+ <!-- CABEÇALHO -->
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <div class="logo-section">
+                    <div class="logo">
+                        <a href="cliente.html"><img src="IMG/reuse-logo-(1).svg" alt="ReUse Logo"></a>
+                    </div>
+                </div>
+
+                <!-- Barra de pesquisa e filtros no meio -->
+                <div class="search-section">
+                    <div class="search-combined">
+                        <div class="search-input">
+                            <input type="text" id="searchInput" placeholder="O que você está procurando?">
+                            <button id="searchButton" class="search-button" aria-label="Pesquisar">
+                               <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                        <div class="search-filters">
+                            <select>
+                                <option>Todos os filtros</option>
+                                <option>Roupas</option>
+                                <option>Eletrodomésticos</option>
+                                <option>Melhores preços</option>
+                                <option>Recém adicionados</option>
+                                <option>Itens para doação</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Elementos do usuário à direita -->
+                <div class="user-section">
+                    <div class="cart">
+                        <a href="carrinho.html">
+                            <span class="cart-icon"><i class="bi bi-cart3"></i></span>
+                        </a>
+                        <span class="cart-count">1</span>
+                    </div>
+                    <a href="login.html">
+                        <i class="bi bi-box-arrow-right"></i> Sair da Conta
+                    </a>
+                    <a href="perfil.html">
+                        <i class="bi bi-person-fill"></i> Minha Conta
+                    </a>
+                </div>
+
+                <!-- Categorias abaixo -->
+                <div class="categories-section">
+                    <section class="categories">
+                        <div class="dropdown">
+                            <a href="#">Masculino</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Roupas</div>
+                                <a href="#">Camisetas</a>
+                                <a href="#">Camisas</a>
+                                <a href="#">Calças</a>
+                                <a href="#">Bermudas</a>
+                                <a href="#">Jaquetas</a>
+                                <div class="dropdown-category">Calçados</div>
+                                <a href="#">Tênis</a>
+                                <a href="#">Sapatos</a>
+                                <a href="#">Chinelos</a>
+                                <div class="dropdown-category">Acessórios</div>
+                                <a href="#">Relógios</a>
+                                <a href="#">Cintos</a>
+                                <a href="#">Bonés</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a href="#">Feminino</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Roupas</div>
+                                <a href="#">Blusas</a>
+                                <a href="#">Vestidos</a>
+                                <a href="#">Calças</a>
+                                <a href="#">Saias</a>
+                                <a href="#">Jaquetas</a>
+                                <div class="dropdown-category">Calçados</div>
+                                <a href="#">Sapatos</a>
+                                <a href="#">Tênis</a>
+                                <a href="#">Sandálias</a>
+                                <a href="#">Botas</a>
+                                <div class="dropdown-category">Acessórios</div>
+                                <a href="#">Bolsas</a>
+                                <a href="#">Bijuterias</a>
+                                <a href="#">Lenços</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a href="#">Infantil</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Roupas</div>
+                                <a href="#">Camisetas</a>
+                                <a href="#">Conjuntos</a>
+                                <a href="#">Calças</a>
+                                <a href="#">Vestidos</a>
+                                <div class="dropdown-category">Calçados</div>
+                                <a href="#">Tênis</a>
+                                <a href="#">Sandálias</a>
+                                <div class="dropdown-category">Outros</div>
+                                <a href="#">Brinquedos</a>
+                                <a href="#">Acessórios</a>
+                                <a href="#">Material Escolar</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a href="#">Esportivo</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Roupas</div>
+                                <a href="#">Camisetas</a>
+                                <a href="#">Bermudas</a>
+                                <a href="#">Leggings</a>
+                                <a href="#">Jaquetas</a>
+                                <div class="dropdown-category">Calçados</div>
+                                <a href="#">Tênis de Corrida</a>
+                                <a href="#">Chuteiras</a>
+                                <a href="#">Tênis para Academia</a>
+                                <div class="dropdown-category">Equipamentos</div>
+                                <a href="#">Bolas</a>
+                                <a href="#">Raquetes</a>
+                                <a href="#">Acessórios de Treino</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a href="#">Casa/Cozinha</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Eletrodomésticos</div>
+                                <a href="#">Liquidificadores</a>
+                                <a href="#">Cafeteiras</a>
+                                <a href="#">Micro-ondas</a>
+                                <a href="#">Batedeiras</a>
+                                <div class="dropdown-category">Móveis</div>
+                                <a href="#">Mesas</a>
+                                <a href="#">Cadeiras</a>
+                                <a href="#">Sofás</a>
+                                <a href="#">Estantes</a>
+                                <div class="dropdown-category">Utensílios</div>
+                                <a href="#">Panelas</a>
+                                <a href="#">Talheres</a>
+                                <a href="#">Copos</a>
+                                <a href="#">Pratos</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- CONTEÚDO PRINCIPAL DA PÁGINA DE PAGAMENTOS -->
+    <main class="payments-container">
+        <div class="payments-header">
+            <h1><i class="bi bi-cash-coin"></i> Métodos de Pagamento</h1>
+            <p class="subtitle">Escolha a forma de pagamento que melhor atenda às suas necessidades</p>
+        </div>
+
+        <div class="payment-methods">
+            <!-- Cartão de Crédito -->
+            <div class="payment-section">
+                <div class="section-header">
+                    <i class="bi bi-credit-card-fill"></i>
+                    <h2>Cartão de Crédito</h2>
+                </div>
+                <p class="section-description">Pague em até 12x com juros ou à vista com desconto. Aceitamos as seguintes bandeiras:</p>
+                
+                <div class="cards-container">
+                    <div class="card-method">
+                        <div class="card-logo">
+                            <img src="https://logodownload.org/wp-content/uploads/2016/10/visa-logo-1.png" alt="Visa">
+                        </div>
+                        <span class="card-name">Visa</span>
+                    </div>
+                    <div class="card-method">
+                        <div class="card-logo">
+                            <img src="IMG/mastercard.svg" alt="Mastercard">
+                        </div>
+                        <span class="card-name">Mastercard</span>
+                    </div>
+                    <div class="card-method">
+                        <div class="card-logo">
+                            <img src="https://logodownload.org/wp-content/uploads/2017/04/elo-logo.png" alt="Elo">
+                        </div>
+                        <span class="card-name">Elo</span>
+                    </div>
+                    <div class="card-method">
+                        <div class="card-logo">
+                            <img src="IMG/amex.ico" alt="American Express">
+                        </div>
+                        <span class="card-name">American Express</span>
+                    </div>
+                    <div class="card-method">
+                        <div class="card-logo">
+                            <img src="IMG/hipercard.svg" alt="Hipercard">
+                        </div>
+                        <span class="card-name">Hipercard</span>
+                    </div>
+                    <div class="card-method">
+                        <div class="card-logo">
+                            <img src="IMG/picpay-logo.png" alt="PicPay">
+                        </div>
+                        <span class="card-name">PicPay</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cartão de Débito -->
+            <div class="payment-section">
+                <div class="section-header">
+                    <i class="bi bi-credit-card-2-back-fill"></i>
+                    <h2>Cartão de Débito</h2>
+                </div>
+                <p class="section-description">Pague diretamente da sua conta corrente, com desconto adicional. Bandeiras aceitas:</p>
+                
+                <div class="cards-container">
+                    <div class="card-method">
+                        <div class="card-logo">
+                            <img src="https://logodownload.org/wp-content/uploads/2016/10/visa-logo-1.png" alt="Visa">
+                        </div>
+                        <span class="card-name">Visa</span>
+                    </div>
+                    <div class="card-method">
+                        <div class="card-logo">
+                            <img src="IMG/mastercard.svg" alt="Mastercard">
+                        </div>
+                        <span class="card-name">Mastercard</span>
+                    </div>
+                    <div class="card-method">
+                        <div class="card-logo">
+                            <img src="https://logodownload.org/wp-content/uploads/2017/04/elo-logo.png" alt="Elo">
+                        </div>
+                        <span class="card-name">Elo</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PIX -->
+            <div class="payment-section highlight">
+                <div class="section-header">
+                    <i class="bi bi-qr-code"></i>
+                    <h2>PIX</h2>
+                    <span class="badge">10% OFF</span>
+                </div>
+                <div class="pix-info">
+                    <div class="pix-icon">
+                        <i class="bi bi-qr-code-scan"></i>
+                    </div>
+                    <div class="pix-details">
+                        <h3>Pagamento instantâneo com até 10% de desconto</h3>
+                        <p>O PIX é a forma mais rápida e segura de pagar suas compras. Basta escanear o QR code ou copiar o código durante o checkout.</p>
+                        
+                        <ul class="pix-benefits">
+                            <li><i class="bi bi-lightning-charge-fill"></i> Pagamento instantâneo - sua compra é confirmada em segundos</li>
+                            <li><i class="bi bi-chevron-double-down"></i> Desconto especial para pagamentos via PIX</li>
+                            <li><i class="bi bi-clock-fill"></i>Disponível 24 horas por dia, 7 dias por semana</li>
+                            <li><i class="bi bi-credit-card-2-front-fill"></i> Sem necessidade de cartão ou cadastro adicional</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informações de Segurança -->
+            <div class="security-info">
+                <div class="security-header">
+                    <i class="bi bi-shield-shaded"></i>
+                    <h3>Pagamentos 100% Seguros</h3>
+                </div>
+                <p>Todas as transações no ReUse são processadas com tecnologia de criptografia avançada. Trabalhamos com os maiores processadores de pagamento do mercado para garantir a segurança das suas informações financeiras. Nunca armazenamos dados completos do seu cartão em nossos sistemas.</p>
+            </div>
+
+     <!-- FAQ Atualizado -->
+    <div class="payment-faq">
+        <div class="faq-header">
+            <h2><i class="bi bi-question-octagon-fill"></i> Perguntas Frequentes</h2>
+            <p>Tire suas dúvidas sobre pagamentos e formas de compra</p>
+        </div>
+        
+        <div class="faq-container">
+            <div class="faq-item active">
+                <div class="faq-question">
+                    <div class="question-icon">
+                        <i class="bi bi-credit-card-2-back-fill"></i>
+                    </div>
+                    <div class="question-text">
+                        <h3>Posso parcelar no cartão de crédito?</h3>
+                        <div class="question-meta">
+                            <span class="category">Cartão de Crédito</span>
+                            <span class="time">2 min de leitura</span>
+                        </div>
+                    </div>
+                    <i class="bi bi-caret-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="answer-content">
+                        <p>Sim, você pode parcelar suas compras em até 12x no cartão de crédito, sujeito à análise de crédito pela administradora do seu cartão.</p>
+                        <ul class="answer-details">
+                            <li><i class="bi bi-check-circle-fill"></i> Parcelamento mínimo: R$ 20,00 por parcela</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Juros a partir da 3ª parcela</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Bandeiras aceitas: Visa, Mastercard, Elo, American Express</li>
+                        </ul>
+                        <div class="answer-help">
+                            <i class="bi bi-info-circle-fill"></i> Dica: Pagamentos à vista no crédito têm 5% de desconto!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <div class="question-icon">
+                       <i class="bi bi-qr-code"></i>
+                    </div>
+                    <div class="question-text">
+                        <h3>Qual o prazo para confirmação do PIX?</h3>
+                        <div class="question-meta">
+                            <span class="category">PIX</span>
+                            <span class="time">1 min de leitura</span>
+                        </div>
+                    </div>
+                    <i class="bi bi-caret-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="answer-content">
+                        <p>O pagamento via PIX é confirmado quase instantaneamente em nosso sistema.</p>
+                        <div class="timeline">
+                            <div class="timeline-step">
+                                <div class="timeline-icon">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <strong>0-30 segundos</strong>
+                                    <p>Confirmação automática do pagamento</p>
+                                </div>
+                            </div>
+                            <div class="timeline-step">
+                                <div class="timeline-icon">
+                                    <i class="bi bi-envelope-fill"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <strong>1-2 minutos</strong>
+                                    <p>E-mail de confirmação enviado</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <div class="question-icon">
+                        <i class="bi bi-cash"></i>
+                    </div>
+                    <div class="question-text">
+                        <h3>Há cobrança de taxas para pagamentos no débito ou PIX?</h3>
+                        <div class="question-meta">
+                            <span class="category">Taxas</span>
+                            <span class="time">1 min de leitura</span>
+                        </div>
+                    </div>
+                    <i class="bi bi-caret-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="answer-content">
+                        <p>Não cobramos nenhuma taxa adicional para pagamentos realizados com cartão de débito ou PIX.</p>
+                        <div class="benefits-grid">
+                            <div class="benefit-card">
+                                <i class="bi bi-piggy-bank-fill"></i>
+                                <h4>Desconto no PIX</h4>
+                                <p>10% OFF em qualquer compra</p>
+                            </div>
+                            <div class="benefit-card">
+                                <i class="bi bi-credit-card-2-front-fill"></i>
+                                <h4>Débito</h4>
+                                <p>5% OFF em compras acima de R$100</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <div class="question-icon">
+                        <i class="bi bi-floppy"></i>
+                    </div>
+                    <div class="question-text">
+                        <h3>Posso salvar meu cartão para compras futuras?</h3>
+                        <div class="question-meta">
+                            <span class="category">Segurança</span>
+                            <span class="time">2 min de leitura</span>
+                        </div>
+                    </div>
+                    <i class="bi bi-caret-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="answer-content">
+                        <p>Sim, você pode armazenar seus cartões de forma segura em nosso sistema.</p>
+                        <div class="security-features">
+                            <div class="security-card">
+                                <i class="bi bi-lock-fill"></i>
+                                <p>Criptografia de ponta a ponta</p>
+                            </div>
+                            <div class="security-card">
+                                <i class="bi bi-shield-fill"></i>
+                                <p>Certificado PCI DSS Nível 1</p>
+                            </div>
+                            <div class="security-card">
+                                <i class="bi bi-fingerprint"></i>
+                                <p>Autenticação em duas etapas</p>
+                            </div>
+                        </div>
+                        <div class="answer-note">
+                            <i class="bi bi-exclamation-triangle-fill"></i> Nunca armazenamos o código de segurança (CVV) do seu cartão.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="faq-contact">
+                <div class="contact-icon">
+                    <i class="bi bi-headset"></i>
+                </div>
+                <div class="contact-text">
+                    <h3>Ainda com dúvidas?</h3>
+                    <p>Nosso time está pronto para te ajudar!</p>
+                </div>
+                    <i class="bi bi-chat-right-fill"></i> Falar com atendente
+            </button>
+        </div>
+    </div>
+    </main>
+
+    <!-- RODAPÉ (o mesmo do site principal) -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Seção de Idioma -->
+                <div class="footer-links language-section">
+                    <h3>Idioma/Language</h3>
+                    <div class="language-selector">
+                        <button class="language-option active" data-lang="pt-br" aria-label="Português Brasileiro">
+                            <span class="flag-icon">🇧🇷</span> PT-BR
+                        </button>
+                        <button class="language-option" data-lang="en" aria-label="English">
+                            <span class="flag-icon">🇺🇸</span> EN
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Seção Minha Conta -->
+                <div class="footer-links">
+                    <h3>Minha Conta</h3>
+                    <a href="perfil.html"><i class="bi bi-person-fill"></i> <span>Perfil</span></a>
+                    <a href="pedidos.html"><i class="bi bi-box-seam"></i> <span>Pedidos</span></a>
+                    <a href="favoritos.html"><i class="bi bi-heart-fill"></i> <span>Favoritos</span></a>
+                </div>
+
+                <!-- Seção Minha Loja -->
+                <div class="footer-links">
+                    <h3>Minha Loja</h3>
+                    <a href="login.html"><i class="bi bi-grid-3x3-gap-fill"></i> <span>Produtos</span></a>
+                    <a href="login.html"><i class="bi bi-bar-chart-line-fill"></i> <span>Estatísticas</span></a>
+                    <a href="login.html"><i class="bi bi-star-fill"></i> <span>Avaliações</span></a>
+                </div>
+
+                <!-- Seção Configurações -->
+                <div class="footer-links">
+                    <h3>Configurações</h3>
+                    <a href="privacidade.html"><i class="bi bi-shield-lock-fill"></i> <span>Privacidade</span></a>
+                    <a href="notificacao.html"><i class="bi bi-bell-fill"></i> <span>Notificações</span></a>
+                    <a href="pagamento.html"><i class="bi bi-credit-card-fill"></i> <span>Pagamentos</span></a>
+                </div>
+
+                <!-- Seção Sobre Nós -->
+                <div class="footer-links">
+                    <h3>Sobre Nós</h3>
+                    <a href="missao.html"><i class="bi bi-info-circle-fill"></i> <span>Missão</span></a>
+                    <a href="equipe.html"><i class="bi bi-people-fill"></i> <span>Equipe</span></a>
+                    <a href="chat_com_vendedor.html"><i class="bi bi-chat-dots-fill"></i> <span>Chat com Vendedor</span></a>
+
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                &copy; 2025 ReUse - <span>Todos os direitos reservados</span>
+            </div>
+        </div>
+    </footer>
+    <script src="JS/breadcrumbs.js"></script>
+    <script src="JS/pagamento.js"></script>
+</body>
+</html>

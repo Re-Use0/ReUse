@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReUse - Estatísticas</title>
+    <link rel="stylesheet" href="CSS/vendedor.css">
+    <link rel="stylesheet" href="CSS/vendedor-sub.css">
+    <link rel="stylesheet" href="CSS/breadcrumbs-vendedor.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="container">
+            <div class="top-header">
+                <div class="logo">
+                    <img src="IMG/reuse-logo-(1).svg" alt="ReUse Logo">
+                </div>
+                <div class="user-actions">
+                    <a href="login.html">
+                       <i class="bi bi-box-arrow-left"></i> Sair da Conta
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- DASHBOARD PRINCIPAL -->
+    <div class="dashboard-container">
+        <!-- Menu Lateral -->
+        <aside class="sidebar">
+            <h2 class="sidebar-title">Meu Brechó</h2>
+            <ul class="sidebar-nav">
+                <li><a href="vendedor.html"><i class="bi bi-house"></i> Início</a></li>
+                <li><a href="meus_Produtos.html"><i class="bi bi-box-seam"></i> Meus Produtos</a></li>
+                <li><a href="add_produto_v.html"><i class="bi bi-plus-circle"></i> Adicionar Produto</a></li>
+                <li><a href="estatisticas.html" class="active"><i class="bi bi-bar-chart"></i> Estatísticas</a></li>
+                <li><a href="avaliacoes.html"><i class="bi bi-star-fill"></i> Avaliações</a></li>
+                <li><a href="configuracoes.html"><i class="bi bi-gear"></i> Configurações</a></li>
+                <li><a href="doacao.vendedor.html" id="doacao-link"><i class="bi bi-gift-fill"></i> Fazer Doação</a></li>
+                <li><a href="chat_clientes.html"><i class="bi bi-chat-dots"></i> Chat com Clientes</a></li>
+            </ul>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <!-- Breadcrumbs -->
+            <div id="breadcrumbs-container" class="breadcrumbs-vendedor">
+                <a href="vendedor.html">Painel do Vendedor</a> &gt; <span>Estatísticas</span>
+            </div>
+            
+            <h1>Estatísticas de Vendas</h1>
+            
+            <!-- Filtros -->
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="periodo">Período:</label>
+                    <select id="periodo">
+                        <option value="7">Últimos 7 dias</option>
+                        <option value="30" selected>Últimos 30 dias</option>
+                        <option value="90">Últimos 3 meses</option>
+                        <option value="365">Último ano</option>
+                        <option value="custom">Personalizado</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group custom-dates" style="display: none;">
+                    <label for="data-inicio">De:</label>
+                    <input type="date" id="data-inicio">
+                    
+                    <label for="data-fim">Até:</label>
+                    <input type="date" id="data-fim">
+                </div>
+                
+                <button class="filter-btn">Aplicar Filtros</button>
+            </div>
+            
+            <!-- Cards de Resumo -->
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: #e1f5fe;">
+                        <i class="bi bi-currency-dollar" style="color: #2196F3;"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-value">R$ 5.247,80</div>
+                        <div class="stat-label">Receita Total</div>
+                        <div class="stat-change positive">
+                            <i class="bi bi-arrow-up"></i> 12.5%
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: #e8f5e9;">
+                        <i class="bi bi-cart-check" style="color: #4CAF50;"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-value">42</div>
+                        <div class="stat-label">Vendas Realizadas</div>
+                        <div class="stat-change positive">
+                            <i class="bi bi-arrow-up"></i> 8.3%
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: #fff3e0;">
+                        <i class="bi bi-eye" style="color: #FF9800;"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-value">1.248</div>
+                        <div class="stat-label">Visualizações</div>
+                        <div class="stat-change positive">
+                            <i class="bi bi-arrow-up"></i> 22.1%
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: #fbe9e7;">
+                        <i class="bi bi-cart-x" style="color: #FF5722;"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-value">8</div>
+                        <div class="stat-label">Vendas Perdidas</div>
+                        <div class="stat-change negative">
+                            <i class="bi bi-arrow-down"></i> 3.2%
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gráficos -->
+            <div class="charts-container">
+                <div class="chart-wrapper">
+                    <h2 class="section-title">Receita por Período</h2>
+                    <canvas id="revenueChart"></canvas>
+                </div>
+                
+                <div class="chart-wrapper">
+                    <h2 class="section-title">Categorias Mais Vendidas</h2>
+                    <canvas id="categoriesChart"></canvas>
+                </div>
+                
+                <div class="chart-wrapper full-width">
+                    <h2 class="section-title">Desempenho de Vendas</h2>
+                    <canvas id="salesChart"></canvas>
+                </div>
+            </div>
+            
+            <!-- Tabela de Produtos Mais Vendidos -->
+            <h2 class="section-title">Produtos Mais Vendidos</h2>
+            <div class="table-container">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Vendas</th>
+                            <th>Estoque</th>
+                            <th>Receita</th>
+                            <th>Taxa de Conversão</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Vestido Floral Verão</td>
+                            <td>12</td>
+                            <td>3</td>
+                            <td>R$ 599,40</td>
+                            <td>8.7%</td>
+                        </tr>
+                        <tr>
+                            <td>Calça Jeans Skinny</td>
+                            <td>9</td>
+                            <td>5</td>
+                            <td>R$ 449,10</td>
+                            <td>7.2%</td>
+                        </tr>
+                        <tr>
+                            <td>Blusa de Tricô</td>
+                            <td>7</td>
+                            <td>2</td>
+                            <td>R$ 279,30</td>
+                            <td>6.8%</td>
+                        </tr>
+                        <tr>
+                            <td>Saia Midi Plissada</td>
+                            <td>6</td>
+                            <td>4</td>
+                            <td>R$ 299,40</td>
+                            <td>5.9%</td>
+                        </tr>
+                        <tr>
+                            <td>Jaqueta de Couro</td>
+                            <td>5</td>
+                            <td>1</td>
+                            <td>R$ 749,50</td>
+                            <td>4.3%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Seção de Idioma -->
+                <div class="footer-links language-section">
+                    <h3>Idioma/Language</h3>
+                    <div class="language-selector">
+                        <button class="language-option active" data-lang="pt-br" aria-label="Português Brasileiro">
+                            <span class="flag-icon">🇧🇷</span> PT-BR
+                        </button>
+                        <button class="language-option" data-lang="en" aria-label="English">
+                            <span class="flag-icon">🇺🇸</span> EN
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Seção Minha Loja -->
+                <div class="footer-links">
+                    <h3>Minha Loja</h3>
+                    <a href="#"><i class="bi bi-grid-3x3-gap-fill"></i> <span>Produtos</span></a>
+                    <a href="estatisticas.html"><i class="bi bi-bar-chart-line-fill"></i> <span>Estatísticas</span></a>
+                    <a href="avaliacoes.html"><i class="bi bi-star-fill"></i> <span>Avaliações</span></a>
+                </div>
+
+                <!-- Seção Configurações -->
+                <div class="footer-links">
+                    <h3>Configurações</h3>
+                    <a href="#"><i class="bi bi-shield-lock-fill"></i> <span>Privacidade</span></a>
+                    <a href="#"><i class="bi bi-credit-card-fill"></i> <span>Pagamentos</span></a>
+                </div>
+
+                <!-- Seção Sobre Nós -->
+                <div class="footer-links">
+                    <h3>Sobre Nós</h3>
+                    <a href="#"><i class="bi bi-info-circle-fill"></i> <span>Missão</span></a>
+                    <a href="#"><i class="bi bi-people-fill"></i> <span>Equipe</span></a>
+                    <a href=""><i class="bi bi-envelope-fill"></i> <span>Contato</span></a>
+
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                &copy; 2025 ReUse - <span>Todos os direitos reservados</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts JavaScript -->
+    <script src="JS/breadcrumbs-vendedor.js"></script>
+    <script>
+        // Ativar item do menu lateral
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configurar breadcrumbs
+            if (typeof updateBreadcrumbs === 'function') {
+                updateBreadcrumbs('Estatísticas');
+            }
+            
+            // Mostrar/ocultar datas personalizadas
+            document.getElementById('periodo').addEventListener('change', function() {
+                const customDates = document.querySelector('.custom-dates');
+                customDates.style.display = this.value === 'custom' ? 'flex' : 'none';
+            });
+            
+            // Inicializar gráficos
+            initCharts();
+        });
+        
+        function initCharts() {
+            // Gráfico de Receita
+            const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+            const revenueChart = new Chart(revenueCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan 1', 'Jan 5', 'Jan 10', 'Jan 15', 'Jan 20', 'Jan 25', 'Jan 30'],
+                    datasets: [{
+                        label: 'Receita (R$)',
+                        data: [120, 190, 300, 500, 200, 300, 450],
+                        backgroundColor: 'rgba(33, 150, 243, 0.2)',
+                        borderColor: 'rgba(33, 150, 243, 1)',
+                        borderWidth: 2,
+                        tension: 0.3,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+            
+            // Gráfico de Categorias
+            const categoriesCtx = document.getElementById('categoriesChart').getContext('2d');
+            const categoriesChart = new Chart(categoriesCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Roupas', 'Calçados', 'Acessórios', 'Bolsas'],
+                    datasets: [{
+                        data: [45, 25, 20, 10],
+                        backgroundColor: [
+                            'rgba(76, 175, 80, 0.7)',
+                            'rgba(33, 150, 243, 0.7)',
+                            'rgba(255, 152, 0, 0.7)',
+                            'rgba(156, 39, 176, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgba(76, 175, 80, 1)',
+                            'rgba(33, 150, 243, 1)',
+                            'rgba(255, 152, 0, 1)',
+                            'rgba(156, 39, 176, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                        }
+                    }
+                }
+            });
+            
+            // Gráfico de Desempenho de Vendas
+            const salesCtx = document.getElementById('salesChart').getContext('2d');
+            const salesChart = new Chart(salesCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Vestidos', 'Calças', 'Blusas', 'Saias', 'Casacos', 'Acessórios'],
+                    datasets: [
+                        {
+                            label: 'Visualizações',
+                            data: [450, 320, 280, 210, 180, 350],
+                            backgroundColor: 'rgba(33, 150, 243, 0.5)',
+                            borderColor: 'rgba(33, 150, 243, 1)',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'Vendas',
+                            data: [45, 32, 28, 21, 18, 35],
+                            backgroundColor: 'rgba(76, 175, 80, 0.5)',
+                            borderColor: 'rgba(76, 175, 80, 1)',
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

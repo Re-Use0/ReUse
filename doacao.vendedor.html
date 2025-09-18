@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReUse - Fazer Doação</title>
+    <link rel="stylesheet" href="CSS/vendedor.css">
+    <link rel="stylesheet" href="CSS/vendedor-sub.css">
+    <link rel="stylesheet" href="CSS/breadcrumbs-vendedor.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  
+</head>
+<body>
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="container">
+            <div class="top-header">
+                <div class="logo">
+                    <img src="IMG/reuse-logo-(1).svg alt="ReUse Logo">
+                </div>
+                <div class="user-actions">
+                    <a href="login.html">
+                       <i class="bi bi-box-arrow-left"></i> Sair da Conta
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- DASHBOARD PRINCIPAL -->
+    <div class="dashboard-container">
+        <!-- Menu Lateral -->
+        <aside class="sidebar">
+            <h2 class="sidebar-title">Meu Brechó</h2>
+            <ul class="sidebar-nav">
+                <li><a href="vendedor.html"><i class="bi bi-house"></i> Início</a></li>
+                <li><a href="meus_produtos.html"><i class="bi bi-box-seam"></i> Meus Produtos</a></li>
+                <li><a href="add_produto_v.html"><i class="bi bi-plus-circle"></i> Adicionar Produto</a></li>
+                <li><a href="estatisticas.html"><i class="bi bi-bar-chart"></i> Estatísticas</a></li>
+                <li><a href="avaliacoes.html"><i class="bi bi-star-fill"></i> Avaliações</a></li>
+                <li><a href="configuracoes.html"><i class="bi bi-gear"></i> Configurações</a></li>
+                <li><a href="doacao.vendedor.html" id="doacao-link" class="active"><i class="bi bi-gift-fill"></i> Fazer Doação</a></li>
+                <li><a href="configuracoes_cliente.html"><i class="bi bi-chat-dots"></i> Chat com Clientes</a></li>
+            </ul>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <!-- Breadcrumbs -->
+            <div id="breadcrumbs-container" class="breadcrumbs-vendedor">
+                <a href="vendedor.html">Painel do Vendedor</a> &gt; <span>Fazer Doação</span>
+            </div>
+            
+            <h1>Fazer Doação</h1>
+            
+            <div class="donation-container">
+                <form id="donationForm" class="donation-form">
+                    <div class="form-group full-width">
+                        <label for="product">Selecionar Produto para Doação</label>
+                        <select id="product" required>
+                            <option value="">Selecione um produto</option>
+                            <!-- Os produtos serão preenchidos via JavaScript -->
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="ong">ONG Beneficiada</label>
+                        <select id="ong" required>
+                            <option value="">Selecione uma ONG</option>
+                            <option value="ong1">SOS felino</option>
+                            <option value="ong2">Patas Concientes</option>
+                            <option value="ong3">Lar dos Idosos São Vicente</option>
+                            <option value="ong4">Centro Educacional Novo Amanhã</option>
+                            <option value="ong5">Greenpeace</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date">Data de Entrega</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact">Contato da ONG</label>
+                        <input type="text" id="contact" readonly>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Endereço para Entrega</label>
+                        <input type="text" id="address" readonly>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Telefone para Contato</label>
+                        <input type="text" id="phone" readonly>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="message">Mensagem (opcional)</label>
+                        <textarea id="message" placeholder="Deixe uma mensagem para a ONG..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="donation-btn">
+                        <i class="bi bi-gift-fill"></i> Confirmar Doação
+                    </button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal de Confirmação -->
+    <div class="confirmation-modal" id="confirmationModal">
+        <div class="modal-content">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+            </svg>
+            <h2>Doação Realizada com Sucesso!</h2>
+            <p>Sua doação foi registrada e a ONG será notificada. Obrigado por fazer a diferença!</p>
+            <div class="modal-actions">
+                <button class="modal-btn btn-primary" onclick="window.location.href='Vendedor.html'">Voltar ao Início</button>
+                <button class="modal-btn btn-secondary" onclick="document.getElementById('confirmationModal').style.display='none'">Fazer Nova Doação</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Seção de Idioma -->
+                <div class="footer-links language-section">
+                    <h3>Idioma/Language</h3>
+                    <div class="language-selector">
+                        <button class="language-option active" data-lang="pt-br" aria-label="Português Brasileiro">
+                            <span class="flag-icon">🇧🇷</span> PT-BR
+                        </button>
+                        <button class="language-option" data-lang="en" aria-label="English">
+                            <span class="flag-icon">🇺🇸</span> EN
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Seção Minha Loja -->
+                <div class="footer-links">
+                    <h3>Minha Loja</h3>
+                    <a href="#"><i class="bi bi-grid-3x3-gap-fill"></i> <span>Produtos</span></a>
+                    <a href="estatisticas.html"><i class="bi bi-bar-chart-line-fill"></i> <span>Estatísticas</span></a>
+                    <a href="avaliacoes.html"><i class="bi bi-star-fill"></i> <span>Avaliações</span></a>
+                </div>
+
+                <!-- Seção Configurações -->
+                <div class="footer-links">
+                    <h3>Configurações</h3>
+                    <a href="#"><i class="bi bi-shield-lock-fill"></i> <span>Privacidade</span></a>
+                    <a href="#"><i class="bi bi-credit-card-fill"></i> <span>Pagamentos</span></a>
+                </div>
+
+                <!-- Seção Sobre Nós -->
+                <div class="footer-links">
+                    <h3>Sobre Nós</h3>
+                    <a href="#"><i class="bi bi-info-circle-fill"></i> <span>Missão</span></a>
+                    <a href="#"><i class="bi bi-people-fill"></i> <span>Equipe</span></a>
+                    <a href=""><i class="bi bi-envelope-fill"></i> <span>Contato</span></a>
+
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                &copy; 2025 ReUse - <span>Todos os direitos reservados</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Carregar produtos do localStorage
+            const produtos = JSON.parse(localStorage.getItem('produtosVendedor')) || [];
+            const selectProduto = document.getElementById('product');
+            
+            // Limpar options padrão, mantendo a primeira
+            while (selectProduto.options.length > 1) {
+                selectProduto.remove(1);
+            }
+            
+            // Adicionar produtos disponíveis
+            produtos.forEach(produto => {
+                if (produto.status === 'Disponível') {
+                    const option = document.createElement('option');
+                    option.value = produto.id;
+                    option.textContent = `${produto.nome} - R$ ${produto.preco}`;
+                    selectProduto.appendChild(option);
+                }
+            });
+            
+            // Atualizar informações da ONG quando selecionada
+            document.getElementById('ong').addEventListener('change', function() {
+                const ongInfo = {
+                    'ong1': { contact: 'Maria Silva', address: 'Rua das Flores, 123 - Centro', phone: '(11) 9999-8888' },
+                    'ong2': { contact: 'João Santos', address: 'Av. Principal, 456 - Jardins', phone: '(11) 7777-6666' },
+                    'ong3': { contact: 'Ana Oliveira', address: 'Rua das Palmeiras, 789 - Vila Nova', phone: '(11) 5555-4444' },
+                    'ong4': { contact: 'Pedro Costa', address: 'Alameda Santos, 1001 - Consolação', phone: '(11) 3333-2222' },
+                    'ong5': { contact: 'Carla Mendes', address: 'Rua Augusta, 2000 - Cerqueira César', phone: '(11) 1111-0000' }
+                };
+                
+                const selectedOng = this.value;
+                if (selectedOng && ongInfo[selectedOng]) {
+                    document.getElementById('contact').value = ongInfo[selectedOng].contact;
+                    document.getElementById('address').value = ongInfo[selectedOng].address;
+                    document.getElementById('phone').value = ongInfo[selectedOng].phone;
+                } else {
+                    document.getElementById('contact').value = '';
+                    document.getElementById('address').value = '';
+                    document.getElementById('phone').value = '';
+                }
+            });
+            
+            // Manipular envio do formulário
+            document.getElementById('donationForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Obter dados do formulário
+                const productId = document.getElementById('product').value;
+                const ong = document.getElementById('ong').value;
+                const date = document.getElementById('date').value;
+                
+                // Validar dados
+                if (!productId || !ong || !date) {
+                    alert('Por favor, preencha todos os campos obrigatórios.');
+                    return;
+                }
+                
+                // Atualizar status do produto para "Doado"
+                const produtos = JSON.parse(localStorage.getItem('produtosVendedor')) || [];
+                const produtoIndex = produtos.findIndex(p => p.id === productId);
+                
+                if (produtoIndex !== -1) {
+                    produtos[produtoIndex].status = 'Doado';
+                    localStorage.setItem('produtosVendedor', JSON.stringify(produtos));
+                    
+                    // Registrar a doação
+                    const doacoes = JSON.parse(localStorage.getItem('doacoesVendedor')) || [];
+                    doacoes.push({
+                        id: Date.now().toString(),
+                        productId: productId,
+                        productName: document.getElementById('product').options[document.getElementById('product').selectedIndex].text,
+                        ong: document.getElementById('ong').options[document.getElementById('ong').selectedIndex].text,
+                        date: date,
+                        message: document.getElementById('message').value,
+                        timestamp: new Date().toISOString()
+                    });
+                    localStorage.setItem('doacoesVendedor', JSON.stringify(doacoes));
+                    
+                    // Mostrar animação de confirmação
+                    document.getElementById('confirmationModal').style.display = 'flex';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

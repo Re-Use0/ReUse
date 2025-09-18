@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReUse - Avaliações</title>
+    <link rel="stylesheet" href="CSS/vendedor.css">
+    <link rel="stylesheet" href="CSS/vendedor-sub.css">
+    <link rel="stylesheet" href="CSS/breadcrumbs-vendedor.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="container">
+            <div class="top-header">
+                <div class="logo">
+                    <img src="IMG/reuse-logo-(1).svg" alt="ReUse Logo">
+                </div>
+                <div class="user-actions">
+                    <a href="Login.html">
+                       <i class="bi bi-box-arrow-left"></i> Sair da Conta
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- DASHBOARD PRINCIPAL -->
+    <div class="dashboard-container">
+        <!-- Menu Lateral -->
+        <aside class="sidebar">
+            <h2 class="sidebar-title">Meu Brechó</h2>
+            <ul class="sidebar-nav">
+                <li><a href="vendedor.html"><i class="bi bi-house"></i> Início</a></li>
+                <li><a href="meus_produtos.html"><i class="bi bi-box-seam"></i> Meus Produtos</a></li>
+                <li><a href="add_produto_v.html"><i class="bi bi-plus-circle"></i> Adicionar Produto</a></li>
+                <li><a href="estatisticas.html"><i class="bi bi-bar-chart"></i> Estatísticas</a></li>
+                <li><a href="avaliacoes.html" class="active"><i class="bi bi-star-fill"></i> Avaliações</a></li>
+                <li><a href="configuracoes.html"><i class="bi bi-gear"></i> Configurações</a></li>
+                <li><a href="doacao.vendedor.html" id="doacao-link"><i class="bi bi-gift-fill"></i> Fazer Doação</a></li>
+                <li><a href="chat_clientes.html"><i class="bi bi-chat-dots"></i> Chat com Clientes</a></li>
+            </ul>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <!-- Breadcrumbs -->
+            <div id="breadcrumbs-container" class="breadcrumbs-vendedor">
+                <a href="vendedor.html">Painel do Vendedor</a> &gt; <span>Avaliações</span>
+            </div>
+            
+            <h1>Avaliações dos Clientes</h1>
+            
+            <!-- Resumo de Avaliações -->
+            <div class="reviews-container">
+                <div class="rating-summary">
+                    <div class="average-rating">4.8</div>
+                    <div class="rating-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                    </div>
+                    <div class="total-ratings">Baseado em 64 avaliações</div>
+                    
+                    <div class="rating-bar">
+                        <span>5 estrelas</span>
+                        <progress value="45" max="64"></progress>
+                        <span>45</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>4 estrelas</span>
+                        <progress value="15" max="64"></progress>
+                        <span>15</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>3 estrelas</span>
+                        <progress value="3" max="64"></progress>
+                        <span>3</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>2 estrelas</span>
+                        <progress value="1" max="64"></progress>
+                        <span>1</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>1 estrela</span>
+                        <progress value="0" max="64"></progress>
+                        <span>0</span>
+                    </div>
+                </div>
+                
+                <!-- Lista de Avaliações -->
+                <h2 class="section-title">Avaliações Recentes</h2>
+                
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-name">Maria Silva</div>
+                        <div class="review-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <div class="review-date">15 de Janeiro, 2025</div>
+                    </div>
+                    <div class="review-title">Produto excelente!</div>
+                    <div class="review-content">
+                        A camiseta chegou em perfeito estado, exatamente como nas fotos. 
+                        O vendedor foi muito atencioso e o envio foi super rápido. 
+                        Com certeza comprarei novamente!
+                    </div>
+                </div>
+                
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-name">João Santos</div>
+                        <div class="review-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <div class="review-date">12 de Janeiro, 2025</div>
+                    </div>
+                    <div class="review-title">Bom produto</div>
+                    <div class="review-content">
+                        A calça jeans é de boa qualidade, mas achei que o tamanho ficou 
+                        um pouco diferente do que eu esperava. No geral, satisfeito com a compra.
+                    </div>
+                </div>
+                
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-name">Ana Costa</div>
+                        <div class="review-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <div class="review-date">8 de Janeiro, 2025</div>
+                    </div>
+                    <div class="review-title">Superou expectativas</div>
+                    <div class="review-content">
+                        Comprei o vestido floral e amei! A qualidade do tecido é excelente 
+                        e o caimento ficou perfeito. A entrega foi antes do prazo. Recomendo!
+                    </div>
+                </div>
+                
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-name">Pedro Almeida</div>
+                        <div class="review-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <div class="review-date">5 de Janeiro, 2025</div>
+                    </div>
+                    <div class="review-title">Produto com pequeno defeito</div>
+                    <div class="review-content">
+                        O tênis é confortável, mas veio com um pequeno defeito no cadarço. 
+                        Entrei em contato com o vendedor que se prontificou a resolver.
+                    </div>
+                </div>
+                
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-name">Carla Mendes</div>
+                        <div class="review-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                        </div>
+                        <div class="review-date">2 de Janeiro, 2025</div>
+                    </div>
+                    <div class="review-title">Boa experiência de compra</div>
+                    <div class="review-content">
+                        A bolsa é linda e de boa qualidade. A comunicação com o vendedor 
+                        foi eficiente e a entrega ocorreu dentro do prazo.
+                    </div>
+                </div>
+                
+                <!-- Paginação -->
+                <div class="pagination">
+                    <button class="pagination-btn active">1</button>
+                    <button class="pagination-btn">2</button>
+                    <button class="pagination-btn">3</button>
+                    <button class="pagination-btn">></button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Seção de Idioma -->
+                <div class="footer-links language-section">
+                    <h3>Idioma/Language</h3>
+                    <div class="language-selector">
+                        <button class="language-option active" data-lang="pt-br" aria-label="Português Brasileiro">
+                            <span class="flag-icon">🇧🇷</span> PT-BR
+                        </button>
+                        <button class="language-option" data-lang="en" aria-label="English">
+                            <span class="flag-icon">🇺🇸</span> EN
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Seção Minha Loja -->
+                <div class="footer-links">
+                    <h3>Minha Loja</h3>
+                    <a href="#"><i class="bi bi-grid-3x3-gap-fill"></i> <span>Produtos</span></a>
+                    <a href="estatisticas.html"><i class="bi bi-bar-chart-line-fill"></i> <span>Estatísticas</span></a>
+                    <a href="avaliacoes.html"><i class="bi bi-star-fill"></i> <span>Avaliações</span></a>
+                </div>
+
+                <!-- Seção Configurações -->
+                <div class="footer-links">
+                    <h3>Configurações</h3>
+                    <a href="#"><i class="bi bi-shield-lock-fill"></i> <span>Privacidade</span></a>
+                    <a href="#"><i class="bi bi-credit-card-fill"></i> <span>Pagamentos</span></a>
+                </div>
+
+                <!-- Seção Sobre Nós -->
+                <div class="footer-links">
+                    <h3>Sobre Nós</h3>
+                    <a href="#"><i class="bi bi-info-circle-fill"></i> <span>Missão</span></a>
+                    <a href="#"><i class="bi bi-people-fill"></i> <span>Equipe</span></a>
+                    <a href=""><i class="bi bi-envelope-fill"></i> <span>Contato</span></a>
+
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                &copy; 2025 ReUse - <span>Todos os direitos reservados</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts JavaScript -->
+    <script src="JS/breadcrumbs-vendedor.js"></script>
+    <script>
+        // Ativar item do menu lateral
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configurar breadcrumbs
+            if (typeof updateBreadcrumbs === 'function') {
+                updateBreadcrumbs('Avaliações');
+            }
+            
+            // Paginação
+            document.querySelectorAll('.pagination-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelector('.pagination-btn.active').classList.remove('active');
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

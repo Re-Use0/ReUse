@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="CSS/xmbwave.css">
+    <title>Entrar - ReUse</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="IMG/reuse-logo-(1).svg" alt="ReUse Logo">
+        </div>
+
+        <h2 class="form-title">Entrar na conta</h2>
+
+        <div class="login-type-selector">
+            <div class="type-button active" id="customer-button">Cliente</div>
+            <div class="type-button" id="seller-button">Vendedor</div>
+            <div class="type-button" id="institution-button">Instituição</div>
+        </div>
+
+        <!-- Formulário de Login do Cliente -->
+        <div class="form-container active" id="customer-form">
+            <div class="login-form">
+                <form id="customerLoginForm">
+                    <div class="form-group">
+                        <label for="customer-email">Email</label>
+                        <input type="email" id="customer-email" name="email" required>
+                        <div class="error-message" id="customer-email-error"></div>
+                    </div>
+
+                    <div class="form-group password-container">
+                        <label for="customer-password">Senha</label>
+                        <div class="password-input-wrapper">
+                            <input type="password" id="customer-password" name="password" required>
+                            <span class="toggle-password"><i class="fas fa-eye"></i></span>
+                        </div>
+                        <div class="error-message" id="customer-password-error"></div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Entrar</button>
+                </form>
+
+                <div class="signup-link">
+                    Não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a>
+                    <br>
+                    <a href="esqueceu_a_senha.html">Esqueceu a Senha ?</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulário de Login do Vendedor -->
+        <div class="form-container" id="seller-form">
+            <div class="login-form">
+                <form id="sellerLoginForm" novalidate>
+                    <div class="form-group">
+                        <label for="verification-code">Código de Verificação (3 dígitos)</label>
+                        <input type="text" id="verification-code" name="verification-code" maxlength="3"
+                            placeholder="ABC" required>
+                        <div class="error-message" id="verification-code-error"></div>
+                    </div>
+
+                    <div class="form-group password-container">
+                        <label for="seller-password">Senha</label>
+                        <div class="password-input-wrapper">
+                            <input type="password" id="seller-password" name="password" required>
+                            <span class="toggle-password"><i class="fas fa-eye"></i></span>
+                        </div>
+                        <div class="error-message" id="password-error"></div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Entrar</button>
+                </form>
+
+                <div class="signup-link">
+                    Não tem uma conta de vendedor? <a href="cadastro.html">Cadastre-se aqui</a>
+                    <br>
+                    <a href="esqueceu_a_senha.html">Esqueceu a Senha ?</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulário de Login da Instituição -->
+        <div class="form-container" id="institution-form">
+            <div class="login-form">
+                <form id="institutionLoginForm" novalidate>
+                    <div class="form-group">
+                        <label for="institution-cnpj">CNPJ da Instituição</label>
+                        <input type="text" id="institution-cnpj" name="cnpj" placeholder="00.000.000/0000-00" required>
+                        <div class="error-message" id="cnpj-error"></div>
+                    </div>
+
+                    <div class="form-group password-container">
+                        <label for="institution-password">Senha da Instituição</label>
+                        <div class="password-input-wrapper">
+                            <input type="password" id="institution-password" name="password" required>
+                            <span class="toggle-password"><i class="fas fa-eye"></i></span>
+                        </div>
+                        <div class="error-message" id="institution-password-error"></div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Entrar</button>
+                </form>
+
+                <div class="signup-link">
+                    Não tem uma conta institucional? <a href="cadastro.html">Cadastre-se aqui</a>
+                    <br>
+                    <a href="esqueceu_a_senha.html">Esqueceu a Senha ?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="JS/login.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Container de ondas
+            const waveContainer = document.createElement('div');
+            waveContainer.className = 'wave-container';
+            
+            for (let i = 0; i < 4; i++) {
+                const wave = document.createElement('div');
+                wave.className = 'wave';
+                waveContainer.appendChild(wave);
+            }
+            
+            // Container de partículas
+            const particlesContainer = document.createElement('div');
+            particlesContainer.className = 'particles';
+            
+            for (let i = 0; i < 15; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                const size = Math.random() * 4 + 1;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.bottom = `${Math.random() * 10}%`;
+                particle.style.animationDuration = `${Math.random() * 25 + 15}s`;
+                particle.style.animationDelay = `${Math.random() * 8}s`;
+                
+                // Alternar entre partículas azuis e verdes
+                if (i % 2 === 0) {
+                    particle.style.background = `rgba(100, 180, 255, ${Math.random() * 0.2 + 0.1})`;
+                }
+                
+                particlesContainer.appendChild(particle);
+            }
+            
+            document.body.insertBefore(particlesContainer, document.body.firstChild);
+            document.body.insertBefore(waveContainer, document.body.firstChild);
+        });
+    </script>
+</body>
+
+</html>

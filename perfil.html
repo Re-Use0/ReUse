@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReUse - Perfil do Usuário</title>
+    <link rel="stylesheet" href="CSS/perfil.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="CSS/breadcrumbs.css">
+</head>
+
+<body>
+ <!-- CABEÇALHO -->
+   <header>
+        <div class="container">
+            <div class="header-container">
+                <!-- Logo à esquerda -->
+                <div class="logo-section">
+                    <div class="logo">
+                        <a href="cliente.html"><img src="IMG/reuse-logo-(1).svg" alt="ReUse Logo"></a>
+                    </div>
+                </div>
+
+                <!-- Barra de pesquisa e filtros no meio -->
+                <div class="search-section">
+                    <div class="search-combined">
+                        <div class="search-input">
+                            <input type="text" id="searchInput" placeholder="O que você está procurando?">
+                            <button id="searchButton" class="search-button" aria-label="Pesquisar">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                        <div class="search-filters">
+                            <select>
+                                <option>Todos os filtros</option>
+                                <option>Roupas</option>
+                                <option>Eletrodomésticos</option>
+                                <option>Melhores preços</option>
+                                <option>Recém adicionados</option>
+                                <option>Itens para doação</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Elementos do usuário à direita -->
+                <!-- Elementos do usuário à direita -->
+<div class="user-section">
+    <div class="cart">
+        <a href="carrinho.html">
+            <span class="cart-icon"><i class="bi bi-cart"></i></span>
+        </a>
+        <span class="cart-count">1</span>
+    </div>
+    <a href="login.html">
+        <i class="bi bi-box-arrow-right"></i> Sair da Conta
+    </a>
+    <a href="perfil.html">
+        <i class="bi bi-person"></i> Minha Conta
+    </a>
+</div>
+
+                <!-- Categorias abaixo -->
+                <div class="categories-section">
+                    <section class="categories">
+                        <div class="dropdown">
+                            <a href="#">Masculino</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Roupas</div>
+                                <a href="#">Camisetas</a>
+                                <a href="#">Camisas</a>
+                                <a href="#">Calças</a>
+                                <a href="#">Bermudas</a>
+                                <a href="#">Jaquetas</a>
+                                <div class="dropdown-category">Calçados</div>
+                                <a href="#">Tênis</a>
+                                <a href="#">Sapatos</a>
+                                <a href="#">Chinelos</a>
+                                <div class="dropdown-category">Acessórios</div>
+                                <a href="#">Relógios</a>
+                                <a href="#">Cintos</a>
+                                <a href="#">Bonés</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a href="#">Feminino</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Roupas</div>
+                                <a href="#">Blusas</a>
+                                <a href="#">Vestidos</a>
+                                <a href="#">Calças</a>
+                                <a href="#">Saias</a>
+                                <a href="#">Jaquetas</a>
+                                <div class="dropdown-category">Calçados</div>
+                                <a href="#">Sapatos</a>
+                                <a href="#">Tênis</a>
+                                <a href="#">Sandálias</a>
+                                <a href="#">Botas</a>
+                                <div class="dropdown-category">Acessórios</div>
+                                <a href="#">Bolsas</a>
+                                <a href="#">Bijuterias</a>
+                                <a href="#">Lenços</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a href="#">Infantil</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Roupas</div>
+                                <a href="#">Camisetas</a>
+                                <a href="#">Conjuntos</a>
+                                <a href="#">Calças</a>
+                                <a href="#">Vestidos</a>
+                                <div class="dropdown-category">Calçados</div>
+                                <a href="#">Tênis</a>
+                                <a href="#">Sandálias</a>
+                                <div class="dropdown-category">Outros</div>
+                                <a href="#">Brinquedos</a>
+                                <a href="#">Acessórios</a>
+                                <a href="#">Material Escolar</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a href="#">Esportivo</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Roupas</div>
+                                <a href="#">Camisetas</a>
+                                <a href="#">Bermudas</a>
+                                <a href="#">Leggings</a>
+                                <a href="#">Jaquetas</a>
+                                <div class="dropdown-category">Calçados</div>
+                                <a href="#">Tênis de Corrida</a>
+                                <a href="#">Chuteiras</a>
+                                <a href="#">Tênis para Academia</a>
+                                <div class="dropdown-category">Equipamentos</div>
+                                <a href="#">Bolas</a>
+                                <a href="#">Raquetes</a>
+                                <a href="#">Acessórios de Treino</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a href="#">Casa/Cozinha</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Eletrodomésticos</div>
+                                <a href="#">Liquidificadores</a>
+                                <a href="#">Cafeteiras</a>
+                                <a href="#">Micro-ondas</a>
+                                <a href="#">Batedeiras</a>
+                                <div class="dropdown-category">Móveis</div>
+                                <a href="#">Mesas</a>
+                                <a href="#">Cadeiras</a>
+                                <a href="#">Sofás</a>
+                                <a href="#">Estantes</a>
+                                <div class="dropdown-category">Utensílios</div>
+                                <a href="#">Panelas</a>
+                                <a href="#">Talheres</a>
+                                <a href="#">Copos</a>
+                                <a href="#">Pratos</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL - PERFIL DO USUÁRIO -->
+    <main class="container">
+        <div class="profile-header">
+            <h1>Meu Perfil</h1>
+            <div class="profile-breadcrumbs">
+                <a href="cliente.html">Home</a> / <span>Meu Perfil</span>
+            </div>
+        </div>
+
+        <div class="profile-card">
+            <div class="profile-sidebar">
+                <div class="profile-picture-container">
+                    <label for="profile-picture-input" class="profile-picture-label">
+                        <img id="profile-picture" src="IMG/usuario.svg" alt="Foto de perfil">
+                        <span class="edit-icon"><i class="bi bi-pencil"></i></span>
+                    </label>
+                    <input type="file" id="profile-picture-input" accept="image/*" style="display: none;">
+                    <div class="user-name">William Wallace do Carmo</div>
+                    <div class="user-email">William@gmail.com</div>
+                </div>
+
+                <div class="profile-menu">
+                    <a href="#" class="active" data-section="personal-info"><i class="bi bi-person"></i> Informações Pessoais</a>
+                    <a href="#" data-section="addresses"><i class="bi bi-geo-alt"></i> Endereços</a>
+                    <a href="#" data-section="orders"><i class="bi bi-box"></i> Meus Pedidos</a>
+                    <a href="#" data-section="favorites"><i class="bi bi-heart"></i> Favoritos</a>
+                    <a href="#" data-section="security"><i class="bi bi-lock"></i> Segurança</a>
+                    <a href="#" data-section="notifications"><i class="bi bi-bell"></i> Notificações</a>
+                    <a href="#" data-section="payments"><i class="bi bi-credit-card"></i> Métodos de Pagamento</a>
+                </div>
+            </div>
+
+            <div class="profile-content">
+                <!-- Seção de Informações Pessoais -->
+                <div id="personal-info-section" class="profile-section active">
+                    <h2><i class="bi bi-person"></i> Informações Pessoais</h2>
+                    
+                    <div class="info-section">
+                        <div class="info-item">
+                            <label>Nome Completo:</label>
+                            <span class="info-value">William Wallace do Carmo</span>
+                            <button class="edit-btn"><i class="bi bi-pencil"></i> Editar</button>
+                        </div>
+                        
+                        <div class="info-item">
+                            <label>Telefone:</label>
+                            <span class="info-value">(16) 99713-9654</span>
+                            <button class="edit-btn"><i class="bi bi-pencil"></i> Editar</button>
+                        </div>
+                        
+                        <div class="info-item">
+                            <label>Email:</label>
+                            <span class="info-value">William@gmail.com</span>
+                            <button class="edit-btn"><i class="bi bi-pencil"></i> Editar</button>
+                        </div>
+                        
+                        <div class="info-item">
+                            <label>Senha:</label>
+                            <div class="password-container">
+                                <input type="password" id="user-password-input" value="••••••••" disabled class="password-input">
+                                <button type="button" class="toggle-password"><i class="bi bi-eye"></i></button>
+                            </div>
+                            <button class="edit-btn" id="edit-password-btn"><i class="bi bi-pencil"></i> Alterar</button>
+                        </div>
+                        
+                        <div class="info-actions">
+                            <button class="btn-save"><i class="bi bi-save"></i> Salvar Alterações</button>
+                            <button class="btn-cancel"><i class="bi bi-x"></i> Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seção de Endereços -->
+                <div id="addresses-section" class="profile-section">
+                    <h2><i class="bi bi-geo-alt"></i> Endereços</h2>
+                    
+                    <div class="address-list">
+                        <div class="address-card">
+                            <div class="address-header">
+                                <h3>Endereço Principal</h3>
+                                <div class="address-actions">
+                                    <button class="edit-btn"><i class="bi bi-pencil"></i> Editar</button>
+                                    <button class="delete-btn"><i class="bi bi-trash"></i> Remover</button>
+                                </div>
+                            </div>
+                            <div class="address-details">
+                                <p>William Wallace do Carmo</p>
+                                <p>Rua das Flores, 123 - Centro</p>
+                                <p>Araraquara - SP, 14800-000</p>
+                                <p>Brasil</p>
+                                <p>Telefone: (16) 99713-9654</p>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-add-address"><i class="bi bi-plus"></i> Adicionar Novo Endereço</button>
+                    </div>
+                    
+                    <div class="address-form" style="display: none;">
+                        <div class="form-group">
+                            <label for="address-name">Apelido do Endereço:</label>
+                            <input type="text" id="address-name" placeholder="Ex: Casa, Trabalho">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="address-cep">CEP:</label>
+                                <input type="text" id="address-cep" placeholder="00000-000">
+                            </div>
+                            <div class="form-group">
+                                <label for="address-number">Número:</label>
+                                <input type="text" id="address-number" placeholder="123">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address-street">Rua:</label>
+                            <input type="text" id="address-street" placeholder="Rua, Avenida, etc.">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address-complement">Complemento:</label>
+                            <input type="text" id="address-complement" placeholder="Apartamento, bloco, etc.">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="address-city">Cidade:</label>
+                                <input type="text" id="address-city" placeholder="Cidade">
+                            </div>
+                            <div class="form-group">
+                                <label for="address-state">Estado:</label>
+                                <select id="address-state">
+                                    <option value="">Selecione</option>
+                                    <option value="AC">Acre</option>
+                                    <option value="AL">Alagoas</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="ES">Espírito Santo</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="MA">Maranhão</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PI">Piauí</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="RO">Rondônia</option>
+                                    <option value="RR">Roraima</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="SE">Sergipe</option>
+                                    <option value="TO">Tocantins</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address-country">País:</label>
+                            <input type="text" id="address-country" value="Brasil" disabled>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address-phone">Telefone:</label>
+                            <input type="text" id="address-phone" placeholder="(00) 00000-0000">
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button class="btn-save"><i class="bi bi-save"></i> Salvar Endereço</button>
+                            <button class="btn-cancel"><i class="bi bi-x"></i> Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seção de Pedidos -->
+                <div id="orders-section" class="profile-section">
+                    <h2><i class="bi bi-box"></i> Meus Pedidos</h2>
+                    
+                    <div class="orders-filter">
+                        <select id="order-filter">
+                            <option value="all">Todos os pedidos</option>
+                            <option value="last30">Últimos 30 dias</option>
+                            <option value="last6">Últimos 6 meses</option>
+                            <option value="pending">Pendentes</option>
+                            <option value="delivered">Entregues</option>
+                            <option value="canceled">Cancelados</option>
+                        </select>
+                    </div>
+                    
+                    <div class="orders-list">
+                        <div class="order-card">
+                            <div class="order-header">
+                                <div class="order-info">
+                                    <span class="order-id">Pedido #12345</span>
+                                    <span class="order-date">Realizado em 15/08/2025</span>
+                                </div>
+                                <div class="order-status delivered">
+                                    <i class="bi bi-check-circle"></i> Entregue
+                                </div>
+                            </div>
+                            
+                            <div class="order-products">
+                                <div class="order-product">
+                                    <img src="IMG/produto1.jpg" alt="Produto" class="product-image">
+                                    <div class="product-info">
+                                        <h4>Camiseta Polo Masculina</h4>
+                                        <p>Quantidade: 1</p>
+                                        <p>R$ 39,90</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="order-product">
+                                    <img src="IMG/produto2.jpg" alt="Produto" class="product-image">
+                                    <div class="product-info">
+                                        <h4>Tênis Esportivo</h4>
+                                        <p>Quantidade: 1</p>
+                                        <p>R$ 129,90</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="order-footer">
+                                <div class="order-total">
+                                    <strong>Total:</strong> R$ 169,80
+                                </div>
+                                <div class="order-actions">
+                                    <button class="btn-details"><i class="bi bi-search"></i> Detalhes</button>
+                                    <button class="btn-buy-again"><i class="bi bi-cart"></i> Comprar Novamente</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="order-card">
+                            <div class="order-header">
+                                <div class="order-info">
+                                    <span class="order-id">Pedido #12344</span>
+                                    <span class="order-date">Realizado em 10/08/2025</span>
+                                </div>
+                                <div class="order-status canceled">
+                                    <i class="bi bi-x-circle"></i> Cancelado
+                                </div>
+                            </div>
+                            
+                            <div class="order-products">
+                                <div class="order-product">
+                                    <img src="IMG/produto3.jpg" alt="Produto" class="product-image">
+                                    <div class="product-info">
+                                        <h4>Liquidificador Philips</h4>
+                                        <p>Quantidade: 1</p>
+                                        <p>R$ 89,90</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="order-footer">
+                                <div class="order-total">
+                                    <strong>Total:</strong> R$ 89,90
+                                </div>
+                                <div class="order-actions">
+                                    <button class="btn-details"><i class="bi bi-search"></i> Detalhes</button>
+                                    <button class="btn-buy-again"><i class="bi bi-cart"></i> Comprar Novamente</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="orders-empty" style="display: none;">
+                        <i class="bi bi-box"></i>
+                        <h3>Nenhum pedido encontrado</h3>
+                        <p>Você ainda não realizou nenhum pedido em nossa loja.</p>
+                        <a href="cliente.html" class="btn-save">Ir para a loja</a>
+                    </div>
+                </div>
+
+                <!-- Seção de Favoritos -->
+                <div id="favorites-section" class="profile-section">
+                    <h2><i class="bi bi-heart"></i> Favoritos</h2>
+                    
+                    <div class="favorites-filter">
+                        <select id="favorites-filter">
+                            <option value="all">Todos os favoritos</option>
+                            <option value="available">Disponíveis</option>
+                            <option value="unavailable">Indisponíveis</option>
+                            <option value="clothes">Roupas</option>
+                            <option value="electronics">Eletrônicos</option>
+                            <option value="home">Casa e Cozinha</option>
+                        </select>
+                    </div>
+                    
+                    <div class="favorites-grid">
+                        <div class="favorite-item">
+                            <div class="favorite-image">
+                                <img src="IMG/produto1.jpg" alt="Produto">
+                                <button class="favorite-remove"><i class="bi bi-x"></i></button>
+                            </div>
+                            <div class="favorite-info">
+                                <h4>Camiseta Polo Masculina</h4>
+                                <div class="favorite-price">R$ 39,90</div>
+                                <div class="favorite-status available">Disponível</div>
+                                <button class="btn-add-cart"><i class="bi bi-cart-plus"></i> Adicionar ao Carrinho</button>
+                            </div>
+                        </div>
+                        
+                        <div class="favorite-item">
+                            <div class="favorite-image">
+                                <img src="IMG/produto2.jpg" alt="Produto">
+                                <button class="favorite-remove"><i class="bi bi-x"></i></button>
+                            </div>
+                            <div class="favorite-info">
+                                <h4>Tênis Esportivo</h4>
+                                <div class="favorite-price">R$ 129,90</div>
+                                <div class="favorite-status available">Disponível</div>
+                                <button class="btn-add-cart"><i class="bi bi-cart-plus"></i> Adicionar ao Carrinho</button>
+                            </div>
+                        </div>
+                        
+                        <div class="favorite-item">
+                            <div class="favorite-image">
+                                <img src="IMG/produto3.jpg" alt="Produto">
+                                <button class="favorite-remove"><i class="bi bi-x"></i></button>
+                            </div>
+                            <div class="favorite-info">
+                                <h4>Liquidificador Philips</h4>
+                                <div class="favorite-price">R$ 89,90</div>
+                                <div class="favorite-status unavailable">Indisponível</div>
+                                <button class="btn-notify"><i class="bi bi-bell"></i> Avise-me quando disponível</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="favorites-empty" style="display: none;">
+                        <i class="bi bi-heart"></i>
+                        <h3>Sua lista de favoritos está vazia</h3>
+                        <p>Adicione produtos aos seus favoritos para encontrá-los facilmente depois.</p>
+                        <a href="cliente.html" class="btn-save">Ir para a loja</a>
+                    </div>
+                </div>
+
+                <!-- Seção de Segurança -->
+                <div id="security-section" class="profile-section">
+                    <h2><i class="bi bi-lock"></i> Segurança</h2>
+                    
+                    <div class="security-section">
+                        <h3><i class="bi bi-shield-check"></i> Segurança da Conta</h3>
+                        <div class="security-item">
+                            <div class="security-info">
+                                <h4>Senha</h4>
+                                <p>Última alteração: 10/08/2025</p>
+                            </div>
+                            <button class="btn-change-password"><i class="bi bi-pencil"></i> Alterar Senha</button>
+                        </div>
+                        
+                        <div class="security-item">
+                            <div class="security-info">
+                                <h4>Autenticação de Dois Fatores</h4>
+                                <p>Proteja sua conta com uma camada extra de segurança</p>
+                            </div>
+                            <div class="toggle-switch">
+                                <input type="checkbox" id="two-factor-toggle" class="toggle-input">
+                                <label for="two-factor-toggle" class="toggle-label"></label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="security-section">
+                        <h3><i class="bi bi-laptop"></i> Dispositivos Conectados</h3>
+                        <div class="device-list">
+                            <div class="device-item">
+                                <div class="device-icon">
+                                    <i class="bi bi-laptop"></i>
+                                </div>
+                                <div class="device-info">
+                                    <h4>MacBook Pro</h4>
+                                    <p>Sistema: macOS</p>
+                                    <p>Último acesso: Hoje, 14:30</p>
+                                    <p>Local: Araraquara, SP</p>
+                                </div>
+                                <button class="btn-logout-device"><i class="bi bi-box-arrow-right"></i> Desconectar</button>
+                            </div>
+                            
+                            <div class="device-item">
+                                <div class="device-icon">
+                                    <i class="bi bi-phone"></i>
+                                </div>
+                                <div class="device-info">
+                                    <h4>iPhone 13</h4>
+                                    <p>Sistema: iOS</p>
+                                    <p>Último acesso: Ontem, 22:15</p>
+                                    <p>Local: Araraquara, SP</p>
+                                </div>
+                                <button class="btn-logout-device"><i class="bi bi-box-arrow-right"></i> Desconectar</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="security-section">
+                        <h3><i class="bi bi-exclamation-triangle"></i> Ações de Segurança</h3>
+                        <button class="btn-logout-all"><i class="bi bi-box-arrow-right"></i> Desconectar Todos os Dispositivos</button>
+                        <button class="btn-delete-account"><i class="bi bi-trash"></i> Excluir Conta Permanentemente</button>
+                    </div>
+                </div>
+
+                <!-- Seção de Notificações -->
+                <div id="notifications-section" class="profile-section">
+                    <h2><i class="bi bi-bell"></i> Notificações</h2>
+                    
+                    <div class="notifications-settings">
+                        <h3>Configurações de Notificação</h3>
+                        
+                        <div class="notification-category">
+                            <h4><i class="bi bi-cart"></i> Pedidos e Compras</h4>
+                            <div class="notification-option">
+                                <label>Status do pedido</label>
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="order-status-toggle" class="toggle-input" checked>
+                                    <label for="order-status-toggle" class="toggle-label"></label>
+                                </div>
+                            </div>
+                            <div class="notification-option">
+                                <label>Promoções especiais</label>
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="promotions-toggle" class="toggle-input" checked>
+                                    <label for="promotions-toggle" class="toggle-label"></label>
+                                </div>
+                            </div>
+                            <div class="notification-option">
+                                <label>Produtos em promoção</label>
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="sales-toggle" class="toggle-input">
+                                    <label for="sales-toggle" class="toggle-label"></label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="notification-category">
+                            <h4><i class="bi bi-heart"></i> Favoritos</h4>
+                            <div class="notification-option">
+                                <label>Produto disponível</label>
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="favorites-available-toggle" class="toggle-input" checked>
+                                    <label for="favorites-available-toggle" class="toggle-label"></label>
+                                </div>
+                            </div>
+                            <div class="notification-option">
+                                <label>Preço reduzido</label>
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="price-drop-toggle" class="toggle-input">
+                                    <label for="price-drop-toggle" class="toggle-label"></label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="notification-category">
+                            <h4><i class="bi bi-chat"></i> Mensagens</h4>
+                            <div class="notification-option">
+                                <label>Mensagens da loja</label>
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="messages-toggle" class="toggle-input" checked>
+                                    <label for="messages-toggle" class="toggle-label"></label>
+                                </div>
+                            </div>
+                            <div class="notification-option">
+                                <label>Atualizações de sistema</label>
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="updates-toggle" class="toggle-input" checked>
+                                    <label for="updates-toggle" class="toggle-label"></label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="notification-actions">
+                            <button class="btn-save"><i class="bi bi-save"></i> Salvar Configurações</button>
+                        </div>
+                    </div>
+                    
+                    <div class="notifications-history">
+                        <h3>Histórico de Notificações</h3>
+                        
+                        <div class="notifications-list">
+                            <div class="notification-item unread">
+                                <div class="notification-icon">
+                                    <i class="bi bi-truck"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <h4>Seu pedido #12345 foi enviado</h4>
+                                    <p>Seu pedido foi enviado e chegará em até 5 dias úteis.</p>
+                                    <span class="notification-time">Hoje, 10:30</span>
+                                </div>
+                                <button class="notification-mark-read"><i class="bi bi-check"></i></button>
+                            </div>
+                            
+                            <div class="notification-item">
+                                <div class="notification-icon">
+                                    <i class="bi bi-percent"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <h4>Promoção especial para você!</h4>
+                                    <p>20% de desconto em toda a loja por tempo limitado.</p>
+                                    <span class="notification-time">Ontem, 15:45</span>
+                                </div>
+                                <button class="notification-mark-read"><i class="bi bi-check"></i></button>
+                            </div>
+                            
+                            <div class="notification-item">
+                                <div class="notification-icon">
+                                    <i class="bi bi-heart"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <h4>Seu produto favorito está disponível</h4>
+                                    <p>O Tênis Esportivo que você adicionou aos favoritos está disponível novamente.</p>
+                                    <span class="notification-time">10/08/2025, 09:20</span>
+                                </div>
+                                <button class="notification-mark-read"><i class="bi bi-check"></i></button>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-load-more">Carregar mais notificações</button>
+                    </div>
+                </div>
+
+                <!-- Seção de Pagamentos -->
+                <div id="payments-section" class="profile-section">
+                    <h2><i class="bi bi-credit-card"></i> Métodos de Pagamento</h2>
+                    
+                    <div class="payment-methods">
+                        <div class="payment-method">
+                            <div class="payment-card">
+                                <div class="card-logo">
+                                    <i class="bi bi-credit-card"></i>
+                                </div>
+                                <div class="card-info">
+                                    <h4>Cartão de Crédito</h4>
+                                    <p>Visa **** **** **** 4242</p>
+                                    <p>Válido até: 12/2026</p>
+                                </div>
+                                <div class="card-actions">
+                                    <button class="edit-btn"><i class="bi bi-pencil"></i> Editar</button>
+                                    <button class="delete-btn"><i class="bi bi-trash"></i> Remover</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-method">
+                            <div class="payment-card">
+                                <div class="card-logo">
+                                    <i class="bi bi-upc"></i>
+                                </div>
+                                <div class="card-info">
+                                    <h4>Boleto Bancário</h4>
+                                    <p>Enviado para seu e-mail</p>
+                                </div>
+                                <div class="card-actions">
+                                    <button class="edit-btn"><i class="bi bi-pencil"></i> Editar</button>
+                                    <button class="delete-btn"><i class="bi bi-trash"></i> Remover</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-method">
+                            <div class="payment-card">
+                                <div class="card-logo">
+                                    <i class="bi bi-bank"></i>
+                                </div>
+                                <div class="card-info">
+                                    <h4>Transferência Bancária</h4>
+                                    <p>Banco: Itaú (341)</p>
+                                    <p>Conta: ****1234-5</p>
+                                </div>
+                                <div class="card-actions">
+                                    <button class="edit-btn"><i class="bi bi-pencil"></i> Editar</button>
+                                    <button class="delete-btn"><i class="bi bi-trash"></i> Remover</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-add-payment"><i class="bi bi-plus"></i> Adicionar Novo Método de Pagamento</button>
+                    
+                    <div class="payment-form" style="display: none;">
+                        <div class="form-group">
+                            <label>Tipo de Pagamento:</label>
+                            <div class="payment-types">
+                                <button class="payment-type active" data-type="credit"><i class="bi bi-credit-card"></i> Cartão de Crédito</button>
+                                <button class="payment-type" data-type="debit"><i class="bi bi-credit-card"></i> Cartão de Débito</button>
+                                <button class="payment-type" data-type="boleto"><i class="bi bi-upc"></i> Boleto</button>
+                                <button class="payment-type" data-type="pix"><i class="bi bi-qr-code"></i> Pix</button>
+                            </div>
+                        </div>
+                        
+                        <div id="credit-card-form">
+                            <div class="form-group">
+                                <label for="card-number">Número do Cartão:</label>
+                                <input type="text" id="card-number" placeholder="0000 0000 0000 0000">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="card-name">Nome no Cartão:</label>
+                                    <input type="text" id="card-name" placeholder="Como no cartão">
+                                </div>
+                                <div class="form-group">
+                                    <label for="card-cvv">CVV:</label>
+                                    <input type="text" id="card-cvv" placeholder="000">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="card-expiry">Validade:</label>
+                                    <input type="text" id="card-expiry" placeholder="MM/AA">
+                                </div>
+                                <div class="form-group">
+                                    <label for="card-installments">Parcelas:</label>
+                                    <select id="card-installments">
+                                        <option value="1">1x sem juros</option>
+                                        <option value="2">2x sem juros</option>
+                                        <option value="3">3x sem juros</option>
+                                        <option value="4">4x sem juros</option>
+                                        <option value="5">5x sem juros</option>
+                                        <option value="6">6x sem juros</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button class="btn-save"><i class="bi bi-save"></i> Salvar Método de Pagamento</button>
+                            <button class="btn-cancel"><i class="bi bi-x"></i> Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- RODAPÉ -->
+<footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Seção de Idioma -->
+                <div class="footer-links language-section">
+                    <h3>Idioma/Language</h3>
+                    <div class="language-selector">
+                        <button class="language-option active" data-lang="pt-br" aria-label="Português Brasileiro">
+                            <span class="flag-icon">🇧🇷</span> PT-BR
+                        </button>
+                        <button class="language-option" data-lang="en" aria-label="English">
+                            <span class="flag-icon">🇺🇸</span> EN
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Seção Minha Conta -->
+                <div class="footer-links">
+                    <h3>Minha Conta</h3>
+                    <a href="perfil.html"><i class="bi bi-person-fill"></i> <span>Perfil</span></a>
+                    <a href="pedidos.html"><i class="bi bi-box-seam"></i> <span>Pedidos</span></a>
+                    <a href="favoritos.html"><i class="bi bi-heart-fill"></i> <span>Favoritos</span></a>
+                </div>
+
+                <!-- Seção Minha Loja -->
+                <div class="footer-links">
+                    <h3>Minha Loja</h3>
+                    <a href="login.html"><i class="bi bi-grid-3x3-gap-fill"></i> <span>Produtos</span></a>
+                    <a href="login.html"><i class="bi bi-bar-chart-line-fill"></i> <span>Estatísticas</span></a>
+                    <a href="login.html"><i class="bi bi-star-fill"></i> <span>Avaliações</span></a>
+                </div>
+
+                <!-- Seção Configurações -->
+                <div class="footer-links">
+                    <h3>Configurações</h3>
+                    <a href="privacidade.html"><i class="bi bi-shield-lock-fill"></i> <span>Privacidade</span></a>
+                    <a href="notificacao.html"><i class="bi bi-bell-fill"></i> <span>Notificações</span></a>
+                    <a href="pagamento.html"><i class="bi bi-credit-card-fill"></i> <span>Pagamentos</span></a>
+                </div>
+
+                <!-- Seção Sobre Nós -->
+                <div class="footer-links">
+                    <h3>Sobre Nós</h3>
+                    <a href="Missao.html"><i class="bi bi-info-circle-fill"></i> <span>Missão</span></a>
+                    <a href="equipe.html"><i class="bi bi-people-fill"></i> <span>Equipe</span></a>
+                    <a href="chat_com_vendedor.html"><i class="bi bi-chat-dots-fill"></i> <span>Chat com Vendedor</span></a>
+
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                &copy; 2025 ReUse - <span>Todos os direitos reservados</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS/perfil.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReUse - Brechó Sustentável</title>
+    <link rel="stylesheet" href="CSS/vendedor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="CSS/breadcrumbs.css">
+</head>
+
+<body>
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="container">
+            <!-- Parte superior do cabeçalho: Logo, entrar, cadastrar e carrinho -->
+            <div class="top-header">
+                <div class="logo">
+                    <a href="cliente.html"><img src="IMG/reuse-logo-(1).svg" alt="ReUse Logo"></a>
+                </div>
+                <div class="user-actions">
+                    <a href="perfil.html">
+                        <i class="fas fa-user"></i> Minha Conta
+                    </a>
+                    <div class="cart">
+                        <a href="carrinho.html">
+                            <i class="fas fa-shopping-cart cart-icon"></i>
+                            <span class="cart-count">1</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Barra de pesquisa com filtros -->
+            <div class="search-bar">
+    <div class="search-input">
+        <input type="text" id="searchInput" placeholder="O que você está procurando?" data-translate-placeholder="search.placeholder">
+        <button id="searchButton" class="search-button" aria-label="Pesquisar">
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+    <div class="search-filters">
+        <select>
+            <option value="" data-translate="filters.all">Todos os filtros</option>
+            <option value="clothes" data-translate="filters.clothes">Roupas</option>
+            <option value="electronics" data-translate="filters.electronics">Eletrodomésticos</option>
+            <option value="price_asc" data-translate="filters.price_asc">Melhores preços</option>
+            <option value="new" data-translate="filters.new">Recém adicionados</option>
+            <option value="donated" data-translate="filters.donated">Itens para doação</option>
+        </select>
+    </div>
+</div>
+
+
+            <!-- Categorias com menus suspensos -->
+            <div class="categories">
+                <div class="dropdown">
+                    <a href="#">Masculino</a>
+                    <div class="dropdown-content">
+                        <div class="dropdown-category">Roupas</div>
+                        <a href="#">Camisetas</a>
+                        <a href="#">Camisas</a>
+                        <a href="#">Calças</a>
+                        <a href="#">Bermudas</a>
+                        <a href="#">Jaquetas</a>
+                        <div class="dropdown-category">Calçados</div>
+                        <a href="#">Tênis</a>
+                        <a href="#">Sapatos</a>
+                        <a href="#">Chinelos</a>
+                        <div class="dropdown-category">Acessórios</div>
+                        <a href="#">Relógios</a>
+                        <a href="#">Cintos</a>
+                        <a href="#">Bonés</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a href="#">Feminino</a>
+                    <div class="dropdown-content">
+                        <div class="dropdown-category">Roupas</div>
+                        <a href="#">Blusas</a>
+                        <a href="#">Vestidos</a>
+                        <a href="#">Calças</a>
+                        <a href="#">Saias</a>
+                        <a href="#">Jaquetas</a>
+                        <div class="dropdown-category">Calçados</div>
+                        <a href="#">Sapatos</a>
+                        <a href="#">Tênis</a>
+                        <a href="#">Sandálias</a>
+                        <a href="#">Botas</a>
+                        <div class="dropdown-category">Acessórios</div>
+                        <a href="#">Bolsas</a>
+                        <a href="#">Bijuterias</a>
+                        <a href="#">Lenços</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a href="#">Infantil</a>
+                    <div class="dropdown-content">
+                        <div class="dropdown-category">Roupas</div>
+                        <a href="#">Camisetas</a>
+                        <a href="#">Conjuntos</a>
+                        <a href="#">Calças</a>
+                        <a href="#">Vestidos</a>
+                        <div class="dropdown-category">Calçados</div>
+                        <a href="#">Tênis</a>
+                        <a href="#">Sandálias</a>
+                        <div class="dropdown-category">Outros</div>
+                        <a href="#">Brinquedos</a>
+                        <a href="#">Acessórios</a>
+                        <a href="#">Material Escolar</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a href="#">Esportivo</a>
+                    <div class="dropdown-content">
+                        <div class="dropdown-category">Roupas</div>
+                        <a href="#">Camisetas</a>
+                        <a href="#">Bermudas</a>
+                        <a href="#">Leggings</a>
+                        <a href="#">Jaquetas</a>
+                        <div class="dropdown-category">Calçados</div>
+                        <a href="#">Tênis de Corrida</a>
+                        <a href="#">Chuteiras</a>
+                        <a href="#">Tênis para Academia</a>
+                        <div class="dropdown-category">Equipamentos</div>
+                        <a href="#">Bolas</a>
+                        <a href="#">Raquetes</a>
+                        <a href="#">Acessórios de Treino</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a href="#">Casa/Cozinha</a>
+                    <div class="dropdown-content">
+                        <div class="dropdown-category">Eletrodomésticos</div>
+                        <a href="#">Liquidificadores</a>
+                        <a href="#">Cafeteiras</a>
+                        <a href="#">Micro-ondas</a>
+                        <a href="#">Batedeiras</a>
+                        <div class="dropdown-category">Móveis</div>
+                        <a href="#">Mesas</a>
+                        <a href="#">Cadeiras</a>
+                        <a href="#">Sofás</a>
+                        <a href="#">Estantes</a>
+                        <div class="dropdown-category">Utensílios</div>
+                        <a href="#">Panelas</a>
+                        <a href="#">Talheres</a>
+                        <a href="#">Copos</a>
+                        <a href="#">Pratos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="container">
+
+         <a href="produto.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </a>
+        <!-- Perfil do Vendedor -->
+        <div class="vendor-profile">
+            <div class="vendor-logo"><img src="IMG/brecoh.png" alt="Logo do Brechó"></div>
+            <div class="vendor-info">
+                <h1 class="vendor-name">Brechó Sustentável</h1>
+                <div class="vendor-rating">
+                    <div class="rating-stars">★★★★★</div>
+                    <div class="rating-value">4.6 (50 avaliações)</div>
+                </div>
+                <p>Loja especializada em itens de moda usados em excelente estado. Prezamos pela sustentabilidade e
+                    qualidade dos produtos.</p>
+                <div class="vendor-stats">
+                    <div class="stat">
+                        <div class="stat-value">8</div>
+                        <div class="stat-label">Produtos</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">64</div>
+                        <div class="stat-label">Vendas</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">87%</div>
+                        <div class="stat-label">Satisfação</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs do Vendedor -->
+        <div class="vendor-tabs">
+            <div class="vendor-tab active" data-tab="produtos">Produtos</div>
+            <div class="vendor-tab" data-tab="avaliacoes">Avaliações</div>
+            <div class="vendor-tab" data-tab="informacoes">Informações</div>
+            <div class="vendor-tab" data-tab="contato">Contato</div>
+        </div>
+
+        <!-- Conteúdo das abas -->
+        <div id="produtos-content" class="tab-content active">
+            <h2 class="section-title">Produtos Disponíveis</h2>
+            <div class="product-grid">
+                <!-- Produto 1 -->
+                <a href="produto.html" class="product-link">
+                    <div class="product-card">
+                        <div class="product-image">Imagem do Produto</div>
+                        <div class="product-info">
+                            <div class="product-name">Camiseta Polo Lacoste</div>
+                            <div class="product-price">R$ 79,90</div>
+                            <div class="product-category">Masculino</div>
+                            <div class="product-condition">Usado - Excelente estado</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produto 2 -->
+                <a href="produto.html" class="product-link">
+                    <div class="product-card">
+                        <div class="product-image">Imagem do Produto</div>
+                        <div class="product-info">
+                            <div class="product-name">Calça Jeans Levi's</div>
+                            <div class="product-price">R$ 129,90</div>
+                            <div class="product-category">Masculino</div>
+                            <div class="product-condition">Usado - Bom estado</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produto 3 -->
+                <a href="produto.html" class="product-link">
+                    <div class="product-card">
+                        <div class="product-image">Imagem do Produto</div>
+                        <div class="product-info">
+                            <div class="product-name">Vestido Floral Zara</div>
+                            <div class="product-price">R$ 89,90</div>
+                            <div class="product-category">Feminino</div>
+                            <div class="product-condition">Usado - Bom estado</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produto 4 -->
+                <a href="produto.html" class="product-link">
+                    <div class="product-card">
+                        <div class="product-image">Imagem do Produto</div>
+                        <div class="product-info">
+                            <div class="product-name">Bolsa Michael Kors</div>
+                            <div class="product-price">R$ 299,90</div>
+                            <div class="product-category">Feminino</div>
+                            <div class="product-condition">Usado - Excelente estado</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produto 5 - Tênis Nike -->
+                <a href="produto.html" class="product-link">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="IMG/Tenis nike .avif" alt="Tênis Nike">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Tênis Nike</div>
+                            <div class="product-price">R$ 199,99</div>
+                            <div class="product-category">Esportivo</div>
+                            <div class="product-condition">Usado - Bom estado</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produto 7 -->
+                <a href="produto.html" class="product-link">
+                    <div class="product-card">
+                        <div class="product-image">Imagem do Produto</div>
+                        <div class="product-info">
+                            <div class="product-name">Jaqueta Jeans Gap</div>
+                            <div class="product-price">R$ 139,90</div>
+                            <div class="product-category">Feminino</div>
+                            <div class="product-condition">Usado - Bom estado</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produto 8 -->
+                <a href="produto.html" class="product-link">
+                    <div class="product-card">
+                        <div class="product-image">Imagem do Produto</div>
+                        <div class="product-info">
+                            <div class="product-name">Relógio Casio</div>
+                            <div class="product-price">R$ 159,90</div>
+                            <div class="product-category">Acessórios</div>
+                            <div class="product-condition">Usado - Bom estado</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div id="avaliacoes-content" class="tab-content">
+            <h2 class="section-title">Avaliações dos Clientes</h2>
+            <div class="reviews-container">
+                <div class="rating-summary">
+                    <div class="average-rating">4.6 ★</div>
+                    <div class="total-ratings">(50 avaliações)</div>
+                    <div class="rating-distribution">
+                        <div class="rating-bar">
+                            <span>5 ★</span>
+                            <progress value="32" max="50"></progress>
+                            <span>64%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>4 ★</span>
+                            <progress value="12" max="50"></progress>
+                            <span>24%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>3 ★</span>
+                            <progress value="4" max="50"></progress>
+                            <span>8%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>2 ★</span>
+                            <progress value="1" max="50"></progress>
+                            <span>2%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>1 ★</span>
+                            <progress value="1" max="50"></progress>
+                            <span>2%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews-list">
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-name">Maria Silva</div>
+                            <div class="review-rating">★★★★★</div>
+                            <div class="review-date">15/05/2023</div>
+                        </div>
+                        <div class="review-title">Produto excelente!</div>
+                        <div class="review-content">
+                            Adorei a qualidade do produto, superou minhas expectativas. O vendedor foi muito atencioso.
+                        </div>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-name">João Oliveira</div>
+                            <div class="review-rating">★★★★☆</div>
+                            <div class="review-date">02/05/2023</div>
+                        </div>
+                        <div class="review-title">Bom produto</div>
+                        <div class="review-content">
+                            Produto chegou conforme descrito, apenas demorou um pouco mais para chegar.
+                        </div>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-name">Ana Costa</div>
+                            <div class="review-rating">★★★★★</div>
+                            <div class="review-date">28/04/2023</div>
+                        </div>
+                        <div class="review-title">Recomendo!</div>
+                        <div class="review-content">
+                            Ótimo atendimento e produto em perfeito estado. Com certeza comprarei novamente.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="informacoes-content" class="tab-content">
+            <h2 class="section-title">Sobre o Brechó Sustentável</h2>
+            <div class="info-container">
+                <div class="info-section">
+                    <h3>Nossa História</h3>
+                    <p>Fundado em 2018, o Brechó Sustentável nasceu da paixão por moda e preocupação com o meio
+                        ambiente. Nosso objetivo é oferecer peças de qualidade enquanto promovemos o consumo consciente.
+                    </p>
+                </div>
+
+                <div class="info-section">
+                    <h3>Nossa Missão</h3>
+                    <p>Promover a economia circular através da venda de roupas e acessórios em ótimo estado, dando uma
+                        segunda vida a peças incríveis e reduzindo o impacto ambiental da indústria da moda.</p>
+                </div>
+
+                <div class="info-section">
+                    <h3>Nossos Valores</h3>
+                    <ul class="values-list">
+                        <li>Sustentabilidade ambiental</li>
+                        <li>Transparência com os clientes</li>
+                        <li>Qualidade dos produtos</li>
+                        <li>Preços justos</li>
+                        <li>Atendimento personalizado</li>
+                    </ul>
+                </div>
+
+                <div class="info-section">
+                    <h3>Políticas da Loja</h3>
+                    <div class="policies">
+                        <div class="policy-item">
+                            <h4>Trocas e Devoluções</h4>
+                            <p>Aceitamos trocas em até 7 dias após o recebimento do produto, desde que esteja nas mesmas
+                                condições em que foi enviado.</p>
+                        </div>
+                        <div class="policy-item">
+                            <h4>Formas de Pagamento</h4>
+                            <p>Aceitamos cartões de crédito, débito, PIX e boleto bancário.</p>
+                        </div>
+                        <div class="policy-item">
+                            <h4>Frete</h4>
+                            <p>Enviamos para todo o Brasil via Correios e transportadoras parceiras. Frete grátis para
+                                compras acima de R$ 200,00.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div id="contato-content" class="tab-content">
+    <h2 class="section-title">Entre em Contato</h2>
+    <div class="contact-container">
+        <div class="contact-methods">
+            <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div class="contact-info">
+                    <h4>Email</h4>
+                    <p>BrechoSus@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">📱</div>
+                <div class="contact-info">
+                    <h4>WhatsApp</h4>
+                    <p>(11) 98765-4321</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">🏠</div>
+                <div class="contact-info">
+                    <h4>Endereço</h4>
+                    <p>Rua Sustentável, 123 - Centro<br>São Paulo/SP - CEP: 01234-567</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">🕒</div>
+                <div class="contact-info">
+                    <h4>Horário de Funcionamento</h4>
+                    <p>Segunda a Sexta: 10h às 19h<br>Sábado: 10h às 16h<br>Domingo: Fechado</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Adicionando a seção do mapa aqui -->
+        <div class="map-section">
+            <h3><i class="fas fa-map-marker-alt"></i> Localização da Loja</h3>
+            <div class="map-container">
+                <div id="map" class="map-placeholder"></div>
+                <div class="address-info">
+                    <p><strong>Endereço:</strong> Rua Sustentável, 123 - Centro, São Paulo/SP</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h3>Envie sua mensagem</h3>
+            <form>
+                <div class="form-group">
+                    <label for="contact-name">Nome</label>
+                    <input type="text" id="contact-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-email">Email</label>
+                    <input type="email" id="contact-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-subject">Assunto</label>
+                    <input type="text" id="contact-subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-message">Mensagem</label>
+                    <textarea id="contact-message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Enviar Mensagem</button>
+            </form>
+        </div>
+    </div>
+</div>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <h3>Minha Conta</h3>
+                    <a href="#"><i class="fas fa-user"></i> Perfil</a>
+                    <a href="#"><i class="fas fa-box"></i> Pedidos</a>
+                    <a href="#"><i class="fas fa-heart"></i> Favoritos</a>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Categorias</h3>
+                    <a href="#">Masculino</a>
+                    <a href="#">Feminino</a>
+                    <a href="#">Infantil</a>
+                    <a href="#">Esportivo</a>
+                    <a href="#">Casa/Cozinha</a>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Ajuda</h3>
+                    <a href="#"><i class="fas fa-question-circle"></i> Dúvidas Frequentes</a>
+                    <a href="#"><i class="fas fa-exchange-alt"></i> Trocas e Devoluções</a>
+                    <a href="#"><i class="fas fa-truck"></i> Entregas</a>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Sobre Nós</h3>
+                    <a href="#"><i class="fas fa-info-circle"></i> Quem Somos</a>
+                    <a href="#"><i class="fas fa-envelope"></i> Contato</a>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Twitter"><img src="IMG/twitter.png" alt="X"></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                &copy; 2025 ReUse - Todos os direitos reservados
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.vendor-tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    // Remove a classe 'active' de todas as abas e conteúdos
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+
+                    // Adiciona a classe 'active' na aba clicada
+                    this.classList.add('active');
+
+                    // Mostra o conteúdo correspondente
+                    const tabName = this.getAttribute('data-tab');
+                    document.getElementById(`${tabName}-content`).classList.add('active');
+                });
+            });
+        });
+    </script>
+
+    <!-- Modal de Confirmação -->
+<div id="confirmationModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h3>Confirmar Remoção</h3>
+        <p>Tem certeza que deseja remover este produto?</p>
+        <div class="modal-buttons">
+            <button id="confirmRemove" class="modal-btn confirm-btn">Sim, Remover</button>
+            <button id="cancelRemove" class="modal-btn cancel-btn">Cancelar</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Inicializar o mapa quando a aba de contato for aberta
+        const contactTab = document.querySelector('.vendor-tab[data-tab="contato"]');
+        
+        if (contactTab) {
+            contactTab.addEventListener('click', function() {
+                if (!window.mapInitialized) {
+                    initMap();
+                    window.mapInitialized = true;
+                }
+            });
+        }
+
+        function initMap() {
+            // Coordenadas iniciais (São Paulo)
+            const initialCoords = [-23.5505, -46.6333];
+            const initialZoom = 13;
+            
+            // Criar o mapa
+            const map = L.map('map').setView(initialCoords, initialZoom);
+            
+            // Adicionar camada do OpenStreetMap
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+            
+            // Adicionar marcador
+            L.marker(initialCoords).addTo(map)
+                .bindPopup('Brechó Sustentável<br>Rua Sustentável, 123 - Centro, São Paulo/SP')
+                .openPopup();
+        }
+    });
+</script>
+
+<script>
+    // Variáveis para dados de pesquisa
+let allProducts = [];
+let allInstitutions = [];
+let currentLanguage = 'pt-br'; // Definindo um valor padrão
+
+// Função para configurar os dados de pesquisa
+function setupSearchData() {
+    allProducts = [
+        { 
+            id: 1,
+            name: 'Camiseta Polo', 
+            category: 'Masculino',
+            price: 'R$ 39,90'
+        },
+        { 
+            id: 2,
+            name: 'Liquidificador Philips', 
+            category: 'Casa/Cozinha',
+            price: 'R$ 89,90'
+        },
+        { 
+            id: 3,
+            name: 'Tênis Nike', 
+            category: 'Esportivo',
+            price: 'R$ 199,99'
+        },
+        { 
+            id: 4,
+            name: 'Vestido Floral', 
+            category: 'Feminino',
+            price: 'R$ 65,00'
+        }
+    ];
+
+    allInstitutions = [
+        { 
+            id: 101,
+            name: 'Patas Conscientes', 
+            category: 'Resgate Animal' 
+        },
+        { 
+            id: 102,
+            name: 'Centro Educacional Novo Amanhã', 
+            category: 'Educação' 
+        },
+        { 
+            id: 103,
+            name: 'Lar dos Idosos São Vicente', 
+            category: 'Assistência ao Idoso' 
+        },
+        { 
+            id: 104,
+            name: 'SOS Felino', 
+            category: 'Resgate Animal' 
+        }
+    ];
+}
+
+// Função principal para configurar a barra de pesquisa
+function setupSearchBar() {
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+    
+    // Criar elemento de sugestões se não existir
+    if (!document.getElementById('searchSuggestions')) {
+        const suggestionsDiv = document.createElement('div');
+        suggestionsDiv.id = 'searchSuggestions';
+        suggestionsDiv.className = 'search-suggestions-container';
+        suggestionsDiv.style.display = 'none';
+        
+        const searchContainer = document.querySelector('.search-input');
+        if (searchContainer) {
+            searchContainer.appendChild(suggestionsDiv);
+        }
+    }
+
+    // Evento de input na barra de pesquisa
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.trim().toLowerCase();
+        
+        if (searchTerm.length === 0) {
+            document.getElementById('searchSuggestions').style.display = 'none';
+            return;
+        }
+
+        const matchedProducts = allProducts.filter(item => 
+            item.name.toLowerCase().includes(searchTerm) || 
+            item.category.toLowerCase().includes(searchTerm)
+        );
+
+        const matchedInstitutions = allInstitutions.filter(item => 
+            item.name.toLowerCase().includes(searchTerm) || 
+            item.category.toLowerCase().includes(searchTerm)
+        );
+
+        displaySuggestions(matchedProducts, matchedInstitutions);
+    });
+
+    // Evento de foco
+    searchInput.addEventListener('focus', function() {
+        if (this.value.trim().length > 0) {
+            document.getElementById('searchSuggestions').style.display = 'block';
+        }
+    });
+
+    // Evento de blur
+    searchInput.addEventListener('blur', function() {
+        setTimeout(() => {
+            document.getElementById('searchSuggestions').style.display = 'none';
+        }, 200);
+    });
+
+    // Evento do botão de pesquisa
+    searchButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        performSearch();
+    });
+
+    // Evento de tecla Enter
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            performSearch();
+        }
+    });
+
+    // Função para exibir sugestões
+    function displaySuggestions(products, institutions) {
+        const searchSuggestions = document.getElementById('searchSuggestions');
+        if (products.length === 0 && institutions.length === 0) {
+            searchSuggestions.style.display = 'none';
+            return;
+        }
+
+        searchSuggestions.innerHTML = '';
+        
+        if (products.length > 0) {
+            const productsHeader = document.createElement('div');
+            productsHeader.className = 'search-suggestion-header';
+            productsHeader.textContent = 'Itens Mais Comprados';
+            searchSuggestions.appendChild(productsHeader);
+
+            products.slice(0, 5).forEach(product => {
+                const suggestion = document.createElement('div');
+                suggestion.className = 'search-suggestion';
+                suggestion.dataset.type = 'product';
+                suggestion.dataset.id = product.id;
+                
+                const nameElement = document.createElement('div');
+                nameElement.textContent = product.name;
+                
+                const categoryElement = document.createElement('div');
+                categoryElement.textContent = product.category;
+                
+                suggestion.appendChild(nameElement);
+                suggestion.appendChild(categoryElement);
+                
+                suggestion.addEventListener('click', function() {
+                    window.location.href = 'Produto.html?id=' + product.id;
+                });
+                
+                searchSuggestions.appendChild(suggestion);
+            });
+        }
+
+        if (institutions.length > 0) {
+            const institutionsHeader = document.createElement('div');
+            institutionsHeader.className = 'search-suggestion-header';
+            institutionsHeader.textContent = 'Instituições Mais Doadas';
+            searchSuggestions.appendChild(institutionsHeader);
+
+            institutions.slice(0, 5).forEach(institution => {
+                const suggestion = document.createElement('div');
+                suggestion.className = 'search-suggestion';
+                suggestion.dataset.type = 'institution';
+                suggestion.dataset.id = institution.id;
+                
+                const nameElement = document.createElement('div');
+                nameElement.textContent = institution.name;
+                
+                const categoryElement = document.createElement('div');
+                categoryElement.textContent = institution.category;
+                
+                suggestion.appendChild(nameElement);
+                suggestion.appendChild(categoryElement);
+                
+                suggestion.addEventListener('click', function() {
+                    if (institution.name === 'Patas Conscientes') {
+                        window.location.href = 'Pagina_ONG_Usuario-2.html';
+                    } else if (institution.name === 'SOS Felino') {
+                        window.location.href = 'Pagina_ONG_Usuario.html';
+                    } else {
+                        window.location.href = 'instituicao.html?id=' + institution.id;
+                    }
+                });
+                
+                searchSuggestions.appendChild(suggestion);
+            });
+        }
+
+        searchSuggestions.style.display = 'block';
+    }
+
+    // Função para executar a pesquisa
+    function performSearch() {
+        const searchTerm = searchInput.value.trim();
+        if (searchTerm.length === 0) return;
+
+        document.getElementById('searchSuggestions').style.display = 'none';
+
+        const matchedProducts = allProducts.filter(item => 
+            item.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+            item.category.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+
+        const matchedInstitutions = allInstitutions.filter(item => 
+            item.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+            item.category.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+
+        if (matchedProducts.length > 0) {
+            const firstProduct = matchedProducts[0];
+            window.location.href = 'Produto.html?id=' + firstProduct.id;
+        } else if (matchedInstitutions.length > 0) {
+            const firstInstitution = matchedInstitutions[0];
+            if (firstInstitution.name === 'Patas Conscientes') {
+                window.location.href = 'Pagina_ONG_Usuario-2.html';
+            } else if (firstInstitution.name === 'SOS Felino') {
+                window.location.href = 'Pagina_ONG_Usuario.html';
+            } else {
+                window.location.href = 'instituicao.html?id=' + firstInstitution.id;
+            }
+        } else {
+            alert('Nenhum resultado encontrado');
+        }
+    }
+}
+
+// Inicialização quando o DOM estiver pronto
+document.addEventListener('DOMContentLoaded', function() {
+    setupSearchData();
+    setupSearchBar();
+});
+
+</script>
+<script src="JS/breadcrumbs.js"></script>
+</body>
+
+</html>

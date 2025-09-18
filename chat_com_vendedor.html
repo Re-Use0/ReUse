@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReUse - Chat com Vendedor</title>
+    <link rel="stylesheet" href="CSS/cliente.css">
+    <link rel="stylesheet" href="CSS/chat_com_vendedor.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="CSS/breadcrumbs.css">
+</head>
+<body>
+    <!-- CABEÇALHO (mantido do Cliente.html) -->
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <div class="logo-section">
+                    <div class="logo">
+                        <a href="cliente.html"><img src="IMG/reuse-logo-(1).svg" alt="ReUse Logo"></a>
+                    </div>
+                </div>
+
+                <!-- Barra de pesquisa e filtros no meio -->
+                <div class="search-section">
+                    <div class="search-combined">
+                        <div class="search-input">
+                            <input type="text" id="searchInput" placeholder="O que você está procurando?">
+                            <button id="searchButton" class="search-button" aria-label="Pesquisar">
+                               <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                        <div class="search-filters">
+                            <select>
+                                <option>Todos os filtros</option>
+                                <option>Roupas</option>
+                                <option>Eletrodomésticos</option>
+                                <option>Melhores preços</option>
+                                <option>Recém adicionados</option>
+                                <option>Itens para doação</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Elementos do usuário à direita -->
+                <div class="user-section">
+                    <div class="cart">
+                        <a href="carrinho.html">
+                            <span class="cart-icon"><i class="bi bi-cart3"></i></span>
+                        </a>
+                        <span class="cart-count">1</span>
+                    </div>
+                    <a href="login.html">
+                        <i class="bi bi-box-arrow-right"></i> Sair da Conta
+                    </a>
+                    <a href="perfil.html">
+                        <i class="bi bi-person-fill"></i> Minha Conta
+                    </a>
+                </div>
+
+                <!-- Categorias abaixo -->
+                <div class="categories-section">
+                    <section class="categories">
+                        <div class="dropdown">
+                            <a href="#">Masculino</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Roupas</div>
+                                <a href="#">Camisetas</a>
+                                <a href="#">Camisas</a>
+                                <a href="#">Calças</a>
+                                <a href="#">Bermudas</a>
+                                <a href="#">Jaquetas</a>
+                                <div class="dropdown-category">Calçados</div>
+                                <a href="#">Tênis</a>
+                                <a href="#">Sapatos</a>
+                                <a href="#">Chinelos</a>
+                                <div class="dropdown-category">Acessórios</div>
+                                <a href="#">Relógios</a>
+                                <a href="#">Cintos</a>
+                                <a href="#">Bonés</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a href="#">Feminino</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Roupas</div>
+                                <a href="#">Blusas</a>
+                                <a href="#">Vestidos</a>
+                                <a href="#">Calças</a>
+                                <a href="#">Saias</a>
+                                <a href="#">Jaquetas</a>
+                                <div class="dropdown-category">Calçados</div>
+                                <a href="#">Sapatos</a>
+                                <a href="#">Tênis</a>
+                                <a href="#">Sandálias</a>
+                                <a href="#">Botas</a>
+                                <div class="dropdown-category">Acessórios</div>
+                                <a href="#">Bolsas</a>
+                                <a href="#">Bijuterias</a>
+                                <a href="#">Lenços</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a href="#">Infantil</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Roupas</div>
+                                <a href="#">Camisetas</a>
+                                <a href="#">Conjuntos</a>
+                                <a href="#">Calças</a>
+                                <a href="#">Vestidos</a>
+                                <div class="dropdown-category">Calçados</div>
+                                <a href="#">Tênis</a>
+                                <a href="#">Sandálias</a>
+                                <div class="dropdown-category">Outros</div>
+                                <a href="#">Brinquedos</a>
+                                <a href="#">Acessórios</a>
+                                <a href="#">Material Escolar</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a href="#">Esportivo</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Roupas</div>
+                                <a href="#">Camisetas</a>
+                                <a href="#">Bermudas</a>
+                                <a href="#">Leggings</a>
+                                <a href="#">Jaquetas</a>
+                                <div class="dropdown-category">Calçados</div>
+                                <a href="#">Tênis de Corrida</a>
+                                <a href="#">Chuteiras</a>
+                                <a href="#">Tênis para Academia</a>
+                                <div class="dropdown-category">Equipamentos</div>
+                                <a href="#">Bolas</a>
+                                <a href="#">Raquetes</a>
+                                <a href="#">Acessórios de Treino</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a href="#">Casa/Cozinha</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Eletrodomésticos</div>
+                                <a href="#">Liquidificadores</a>
+                                <a href="#">Cafeteiras</a>
+                                <a href="#">Micro-ondas</a>
+                                <a href="#">Batedeiras</a>
+                                <div class="dropdown-category">Móveis</div>
+                                <a href="#">Mesas</a>
+                                <a href="#">Cadeiras</a>
+                                <a href="#">Sofás</a>
+                                <a href="#">Estantes</a>
+                                <div class="dropdown-category">Utensílios</div>
+                                <a href="#">Panelas</a>
+                                <a href="#">Talheres</a>
+                                <a href="#">Copos</a>
+                                <a href="#">Pratos</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- DASHBOARD PRINCIPAL - Adaptado para cliente -->
+    <div class="dashboard-container">
+        <!-- Menu Lateral para cliente -->
+        <aside class="sidebar">
+            <h2 class="sidebar-title">Minha Conta</h2>
+            <ul class="sidebar-nav">
+                <li><a href="cliente.html"><i class="bi bi-house"></i> Início</a></li>
+                <li><a href="perfil.html"><i class="bi bi-person"></i> Meu Perfil</a></li>
+                <li><a href="pedidos.html"><i class="bi bi-bag"></i> Meus Pedidos</a></li>
+                <li><a href="favoritos.html"><i class="bi bi-heart"></i> Favoritos</a></li>
+                <li><a href="chat_com_vendedor.html" class="active"><i class="bi bi-chat-dots"></i> Chat com Vendedores</a></li>
+            </ul>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <div class="chat-container">
+                <div class="chat-sidebar">
+                    <div class="chat-search">
+                        <input type="text" placeholder="Buscar conversas...">
+                        <i class="bi bi-search"></i>
+                    </div>
+                    
+                    <div class="chat-list">
+                        <div class="chat-item active" data-chat-id="brechoElegante">
+                            <div class="chat-avatar">
+                                <img src="IMG/brecho1.jpg" alt="Brechó Elegante">
+                            </div>
+                            <div class="chat-info">
+                                <h4>Brechó Elegante</h4>
+                                <p>Olá, temos várias opções de roupas...</p>
+                                <span class="chat-time">10:42</span>
+                            </div>
+                        </div>
+                        
+                        <div class="chat-item" data-chat-id="casaUsados">
+                            <div class="chat-avatar">
+                                <img src="IMG/brecho2.jpg" alt="Casa dos Usados">
+                            </div>
+                            <div class="chat-info">
+                                <h4>Casa dos Usados</h4>
+                                <p>Sim, podemos negociar o preço...</p>
+                                <span class="chat-time">Ontem</span>
+                            </div>
+                        </div>
+                        
+                        <div class="chat-item" data-chat-id="estiloVintage">
+                            <div class="chat-avatar">
+                                <img src="IMG/brecho3.jpg" alt="Estilo Vintage">
+                            </div>
+                            <div class="chat-info">
+                                <h4>Estilo Vintage</h4>
+                                <p>O vestido ainda está disponível?</p>
+                                <span class="chat-time">Seg</span>
+                            </div>
+                        </div>
+                        
+                        <div class="chat-item" data-chat-id="doacaoAmiga">
+                            <div class="chat-avatar">
+                                <img src="IMG/ong1.jpg" alt="Doação Amiga">
+                            </div>
+                            <div class="chat-info">
+                                <h4>Doação Amiga</h4>
+                                <p>Obrigado pela sua doação!</p>
+                                <span class="chat-time">12/12</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-conversation">
+                    <div class="chat-header">
+                        <div class="current-chat-info">
+                            <div class="current-avatar">
+                                <img src="IMG/brecho1.jpg" alt="Brechó Elegante" id="current-avatar">
+                            </div>
+                            <div>
+                                <h3 id="current-chat-name">Brechó Elegante</h3>
+                                <p id="current-chat-status">Online</p>
+                            </div>
+                        </div>
+                        <div class="chat-actions">
+                            <button><i class="bi bi-telephone"></i></button>
+                            <button><i class="bi bi-camera-video"></i></button>
+                            <button><i class="bi bi-three-dots-vertical"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-messages" id="chat-messages-container">
+                        <!-- As mensagens serão carregadas aqui via JavaScript -->
+                    </div>
+                    
+                    <div class="chat-input">
+                        <button><i class="bi bi-emoji-smile"></i></button>
+                        <button><i class="bi bi-paperclip"></i></button>
+                        <input type="text" placeholder="Digite uma mensagem..." id="message-input">
+                        <button class="send-btn" id="send-button"><i class="bi bi-send"></i></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- RODAPÉ (mantido do Cliente.html) -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Seção de Idioma -->
+                <div class="footer-links language-section">
+                    <h3>Idioma/Language</h3>
+                    <div class="language-selector">
+                        <button class="language-option active" data-lang="pt-br" aria-label="Português Brasileiro">
+                            <span class="flag-icon">🇧🇷</span> PT-BR
+                        </button>
+                        <button class="language-option" data-lang="en" aria-label="English">
+                            <span class="flag-icon">🇺🇸</span> EN
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Seção Minha Conta -->
+                <div class="footer-links">
+                    <h3>Minha Conta</h3>
+                    <a href="perfil.html"><i class="bi bi-person-fill"></i> <span>Perfil</span></a>
+                    <a href="pedidos.html"><i class="bi bi-box-seam"></i> <span>Pedidos</span></a>
+                    <a href="favoritos.html"><i class="bi bi-heart-fill"></i> <span>Favoritos</span></a>
+                </div>
+
+                <!-- Seção Minha Loja -->
+                <div class="footer-links">
+                    <h3>Minha Loja</h3>
+                    <a href="login.html"><i class="bi bi-grid-3x3-gap-fill"></i> <span>Produtos</span></a>
+                    <a href="login.html"><i class="bi bi-bar-chart-line-fill"></i> <span>Estatísticas</span></a>
+                    <a href="login.html"><i class="bi bi-star-fill"></i> <span>Avaliações</span></a>
+                </div>
+
+                <!-- Seção Configurações -->
+                <div class="footer-links">
+                    <h3>Configurações</h3>
+                    <a href="privacidade.html"><i class="bi bi-shield-lock-fill"></i> <span>Privacidade</span></a>
+                    <a href="notificacao.html"><i class="bi bi-bell-fill"></i> <span>Notificações</span></a>
+                    <a href="pagamento.html"><i class="bi bi-credit-card-fill"></i> <span>Pagamentos</span></a>
+                </div>
+
+                <!-- Seção Sobre Nós -->
+                <div class="footer-links">
+                    <h3>Sobre Nós</h3>
+                    <a href="missao.html"><i class="bi bi-info-circle-fill"></i> <span>Missão</span></a>
+                    <a href="equipe.html"><i class="bi bi-people-fill"></i> <span>Equipe</span></a>
+                    <a href="chat_com_vendedor.html"><i class="bi bi-chat-dots-fill"></i> <span>Chat com Vendedor</span></a>
+
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                &copy; 2025 ReUse - <span>Todos os direitos reservados</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Estrutura de dados para armazenar as conversas (perspectiva do cliente)
+        const conversas = {
+            brechoElegante: {
+                nome: "Brechó Elegante",
+                avatar: "IMG/brecho1.jpg",
+                status: "Online",
+                mensagens: [
+                    { texto: "Olá, temos várias opções de roupas masculinas em ótimo estado", enviada: false, hora: "10:30" },
+                    { texto: "Olá! Gostaria de saber mais sobre a camiseta Polo que vocês estão vendendo", enviada: true, hora: "10:32" },
+                    { texto: "Claro! Ela é original e está em ótimo estado, sem manchas ou furos", enviada: false, hora: "10:35" },
+                    { texto: "Perfeito! Vocês fazem entregas ou só retirada?", enviada: true, hora: "10:42" }
+                ]
+            },
+            casaUsados: {
+                nome: "Casa dos Usados",
+                avatar: "IMG/brecho2.jpg",
+                status: "Offline",
+                mensagens: [
+                    { texto: "Olá, vi o liquidificador que você está vendendo", enviada: true, hora: "14:20" },
+                    { texto: "Oi! Sim, é um liquidificador Philips em ótimo estado", enviada: false, hora: "14:25" },
+                    { texto: "Você pode fazer um desconto?", enviada: true, hora: "14:30" }
+                ]
+            },
+            estiloVintage: {
+                nome: "Estilo Vintage",
+                avatar: "IMG/brecho3.jpg",
+                status: "Online",
+                mensagens: [
+                    { texto: "Boa tarde! Vi o vestido floral no catálogo de vocês", enviada: true, hora: "09:15" },
+                    { texto: "Boa tarde! Sim, é lindo, quase não foi usado", enviada: false, hora: "09:18" },
+                    { texto: "O vestido ainda está disponível?", enviada: true, hora: "09:20" }
+                ]
+            },
+            doacaoAmiga: {
+                nome: "Doação Amiga",
+                avatar: "IMG/ong1.jpg",
+                status: "Offline",
+                mensagens: [
+                    { texto: "Olá, gostaria de fazer uma doação de roupas", enviada: true, hora: "16:45" },
+                    { texto: "Que maravilha! Aceitamos doações de roupas em bom estado", enviada: false, hora: "16:50" },
+                    { texto: "Perfeito! Como posso entregar?", enviada: true, hora: "16:55" }
+                ]
+            }
+        };
+
+        let conversaAtual = "brechoElegante"; // ID da conversa atual
+
+        // Função para carregar as mensagens da conversa atual
+        function carregarMensagens() {
+            const container = document.getElementById('chat-messages-container');
+            const conversa = conversas[conversaAtual];
+            
+            // Limpar o container
+            container.innerHTML = '';
+            
+            // Adicionar cada mensagem
+            conversa.mensagens.forEach(msg => {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${msg.enviada ? 'sent' : 'received'}`;
+                
+                messageDiv.innerHTML = `
+                    <p>${msg.texto}</p>
+                    <span>${msg.hora}</span>
+                `;
+                
+                container.appendChild(messageDiv);
+            });
+            
+            // Rolar para o final das mensagens
+            container.scrollTop = container.scrollHeight;
+            
+            // Atualizar informações do chat atual
+            document.getElementById('current-chat-name').textContent = conversa.nome;
+            document.getElementById('current-chat-status').textContent = conversa.status;
+            document.getElementById('current-avatar').src = conversa.avatar;
+        }
+
+        // Função para enviar uma mensagem
+        function enviarMensagem() {
+            const input = document.getElementById('message-input');
+            const texto = input.value.trim();
+            
+            if (texto === '') return;
+            
+            // Obter hora atual
+            const agora = new Date();
+            const hora = `${agora.getHours()}:${agora.getMinutes().toString().padStart(2, '0')}`;
+            
+            // Adicionar mensagem à conversa atual
+            conversas[conversaAtual].mensagens.push({
+                texto: texto,
+                enviada: true,
+                hora: hora
+            });
+            
+            // Limpar o input
+            input.value = '';
+            
+            // Recarregar as mensagens
+            carregarMensagens();
+        }
+
+        // Inicializar o chat
+        document.addEventListener('DOMContentLoaded', function() {
+            // Carregar a primeira conversa
+            carregarMensagens();
+            
+            // Adicionar event listeners para os itens da lista de conversas
+            document.querySelectorAll('.chat-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    // Remover a classe active de todos os itens
+                    document.querySelectorAll('.chat-item').forEach(i => {
+                        i.classList.remove('active');
+                    });
+                    
+                    // Adicionar a classe active ao item clicado
+                    this.classList.add('active');
+                    
+                    // Atualizar a conversa atual
+                    conversaAtual = this.getAttribute('data-chat-id');
+                    
+                    // Carregar as mensagens da nova conversa
+                    carregarMensagens();
+                });
+            });
+            
+            // Event listener para o botão de enviar
+            document.getElementById('send-button').addEventListener('click', enviarMensagem);
+            
+            // Event listener para pressionar Enter no input
+            document.getElementById('message-input').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    enviarMensagem();
+                }
+            });
+        });
+    </script>
+    <script src="JS/breadcrumbs.js"></script>
+</body>
+</html>

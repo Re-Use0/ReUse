@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/pagina_ong_usuario.css">
+    <link rel="stylesheet" href="CSS/sucesso.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="CSS/breadcrumbs.css">
+    <title>Produtos - ReUse</title>
+</head>
+
+<style>
+    .cart-message {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%) translateY(-20px);
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 25px;
+        border-radius: 4px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        z-index: 1000;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    
+    .cart-icon.animate {
+        animation: bounce 0.6s;
+    }
+    
+    @keyframes bounce {
+        0%, 100% { transform: scale(1); }
+        30% { transform: scale(1.2); }
+        50% { transform: scale(0.9); }
+        70% { transform: scale(1.1); }
+    }
+    
+    .back-notification {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background: rgba(0,0,0,0.8);
+        color: white;
+        padding: 15px;
+        border-radius: 5px;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .removal-message {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #4CAF50;
+        color: white;
+        padding: 15px 25px;
+        border-radius: 5px;
+        display: none;
+        align-items: center;
+        gap: 10px;
+        z-index: 1000;
+    }
+    
+    .removal-message.show {
+        display: flex;
+        animation: fadeInOut 3s forwards;
+    }
+    
+    @keyframes fadeInOut {
+        0% { opacity: 0; }
+        20% { opacity: 1; }
+        80% { opacity: 1; }
+        100% { opacity: 0; }
+    }
+</style>
+
+<body>
+ <!-- CABEÇALHO -->
+     <header>
+        <div class="container">
+            <div class="header-container">
+                <div class="logo-section">
+                    <div class="logo">
+                        <a href="cliente.html"><img src="IMG/reuse-logo-(1).svg" alt="ReUse Logo"></a>
+                    </div>
+                </div>
+
+                <!-- Barra de pesquisa e filtros no meio -->
+                <div class="search-section">
+                    <div class="search-combined">
+                        <div class="search-input">
+                            <input type="text" id="searchInput" placeholder="O que você está procurando?">
+                            <button id="searchButton" class="search-button" aria-label="Pesquisar">
+                               <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                        <div class="search-filters">
+                            <select>
+                                <option>Todos os filtros</option>
+                                <option>Roupas</option>
+                                <option>Eletrodomésticos</option>
+                                <option>Melhores preços</option>
+                                <option>Recém adicionados</option>
+                                <option>Itens para doação</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Elementos do usuário à direita -->
+                <div class="user-section">
+                    <div class="cart">
+                        <a href="carrinho.html">
+                            <span class="cart-icon"><i class="bi bi-cart3"></i></span>
+                        </a>
+                        <span class="cart-count">1</span>
+                    </div>
+                    <a href="login.html">
+                        <i class="bi bi-box-arrow-right"></i> Sair da Conta
+                    </a>
+                    <a href="perfil.html">
+                        <i class="bi bi-person-fill"></i> Minha Conta
+                    </a>
+                </div>
+
+                <!-- Categorias abaixo -->
+                <div class="categories-section">
+                    <section class="categories">
+                        <div class="dropdown">
+                            <a href="#" data-category="Masculino">Masculino</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Roupas</div>
+                                <a href="#">Camisetas</a>
+                                <a href="#">Camisas</a>
+                                <a href="#">Calças</a>
+                                <a href="#">Bermudas</a>
+                                <a href="#">Jaquetas</a>
+                                <div class="dropdown-category">Calçados</div>
+                                <a href="#">Tênis</a>
+                                <a href="#">Sapatos</a>
+                                <a href="#">Chinelos</a>
+                                <div class="dropdown-category">Acessórios</div>
+                                <a href="#">Relógios</a>
+                                <a href="#">Cintos</a>
+                                <a href="#">Bonés</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a href="#" data-category="Feminino">Feminino</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Roupas</div>
+                                <a href="#">Blusas</a>
+                                <a href="#">Vestidos</a>
+                                <a href="#">Calças</a>
+                                <a href="#">Saias</a>
+                                <a href="#">Jaquetas</a>
+                                <div class="dropdown-category">Calçados</div>
+                                <a href="#">Sapatos</a>
+                                <a href="#">Tênis</a>
+                                <a href="#">Sandálias</a>
+                                <a href="#">Botas</a>
+                                <div class="dropdown-category">Acessórios</div>
+                                <a href="#">Bolsas</a>
+                                <a href="#">Bijuterias</a>
+                                <a href="#">Lenços</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a href="#" data-category="Infantil">Infantil</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Roupas</div>
+                                <a href="#">Camisetas</a>
+                                <a href="#">Conjuntos</a>
+                                <a href="#">Calças</a>
+                                <a href="#">Vestidos</a>
+                                <div class="dropdown-category">Calçados</div>
+                                <a href="#">Tênis</a>
+                                <a href="#">Sandálias</a>
+                                <div class="dropdown-category">Outros</div>
+                                <a href="#">Brinquedos</a>
+                                <a href="#">Acessórios</a>
+                                <a href="#">Material Escolar</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a href="#" data-category="Esportivo">Esportivo</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Roupas</div>
+                                <a href="#">Camisetas</a>
+                                <a href="#">Bermudas</a>
+                                <a href="#">Leggings</a>
+                                <a href="#">Jaquetas</a>
+                                <div class="dropdown-category">Calçados</div>
+                                <a href="#">Tênis de Corrida</a>
+                                <a href="#">Chuteiras</a>
+                                <a href="#">Tênis para Academia</a>
+                                <div class="dropdown-category">Equipamentos</div>
+                                <a href="#">Bolas</a>
+                                <a href="#">Raquetes</a>
+                                <a href="#">Acessórios de Treino</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a href="#" data-category="Casa/Cozinha">Casa/Cozinha</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Eletrodomésticos</div>
+                                <a href="#">Liquidificadores</a>
+                                <a href="#">Cafeteiras</a>
+                                <a href="#">Micro-ondas</a>
+                                <a href="#">Batedeiras</a>
+                                <div class="dropdown-category">Móveis</div>
+                                <a href="#">Mesas</a>
+                                <a href="#">Cadeiras</a>
+                                <a href="#">Sofás</a>
+                                <a href="#">Estantes</a>
+                                <div class="dropdown-category">Utensílios</div>
+                                <a href="#">Panelas</a>
+                                <a href="#">Talheres</a>
+                                <a href="#">Copos</a>
+                                <a href="#">Pratos</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <div class="page-header">
+                <h1 class="page-title">Nossos Produtos</h1>
+                <p class="page-subtitle">Descubra itens incríveis com propósito social. Cada compra ajuda uma instituição beneficente.</p>
+            </div>
+            
+            <div class="filter-section">
+                <div class="filter-options">
+                    <div class="filter-group">
+                        <label for="category-filter">Categoria:</label>
+                        <select id="category-filter">
+                            <option value="all">Todas as categorias</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Infantil">Infantil</option>
+                            <option value="Esportivo">Esportivo</option>
+                            <option value="Casa/Cozinha">Casa/Cozinha</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="sort-filter">Ordenar por:</label>
+                        <select id="sort-filter">
+                            <option value="relevant">Mais relevantes</option>
+                            <option value="price-low">Menor preço</option>
+                            <option value="price-high">Maior preço</option>
+                            <option value="recent">Mais recentes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Seção de Produtos (mantida, mas agora dentro do main) -->
+            <div class="products-section">
+                <div class="products-grid">
+                    <!-- Produto 1: Camisa -->
+                    <div class="product-card" data-category="Masculino" data-price="35.00" data-date="2025-01-15">
+                        <div class="product-image camisa"><img src="IMG/camiseta.sos.png" alt="Camisa"></div>
+                        <h3 class="product-name">Camisa</h3>
+                        <div class="product-price">R$ 35,00</div>
+                        <p class="product-description">Camisa casual de algodão e confortável.</p>
+                        <button class="add-to-cart" onclick="addToCart('Camisa', 35.00, 'IMG/camiseta.sos.png', 'Camisa casual de algodão e confortável', 'CMS123')">Adicionar ao Carrinho</button>
+                    </div>
+
+                    <!-- Produto 2: Broche -->
+                    <div class="product-card" data-category="Feminino" data-price="15.00" data-date="2025-02-10">
+                        <div class="product-image broche"><img src="IMG/broche.sos.png" alt="broche"></div>
+                        <h3 class="product-name">Broche</h3>
+                        <div class="product-price">R$ 15,00</div>
+                        <p class="product-description">Broche Branco</p>
+                        <button class="add-to-cart" onclick="addToCart('Broche', 15.00, 'IMG/broche.sos.png', 'Broche Branco', 'BRC456')">Adicionar ao Carrinho</button>
+                    </div>
+
+                    <!-- Produto 3: Bolsa -->
+                    <div class="product-card" data-category="Feminino" data-price="45.00" data-date="2025-01-20">
+                        <div class="product-image bolsa"><img src="IMG/bolsa.sos.png" alt="bolsa"></div>
+                        <h3 class="product-name">Bolsa</h3>
+                        <div class="product-price">R$ 45,00</div>
+                        <p class="product-description">Bolsa de algodão Branca</p>
+                        <button class="add-to-cart" onclick="addToCart('Bolsa', 45.00, 'IMG/bolsa.sos.png', 'Bolsa de algodão Branca', 'BLS789')">Adicionar ao Carrinho</button>
+                    </div>
+
+                    <!-- Produto 4: Caneca -->
+                    <div class="product-card" data-category="Casa/Cozinha" data-price="20.00" data-date="2025-03-05">
+                        <div class="product-image caneca"><img src="IMG/caneca.sos.png" alt="caneca"></div>
+                        <h3 class="product-name">Caneca</h3>
+                        <div class="product-price">R$ 20,00</div>
+                        <p class="product-description">Caneca em cerâmica Branca, perfeita para seu café ou chá favorito.</p>
+                        <button class="add-to-cart" onclick="addToCart('Caneca', 20.00, 'IMG/caneca.sos.png', 'Caneca em cerâmica Branca', 'CNC012')">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+ <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Seção de Idioma -->
+                <div class="footer-links language-section">
+                    <h3>Idioma/Language</h3>
+                    <div class="language-selector">
+                        <button class="language-option active" data-lang="pt-br" aria-label="Português Brasileiro">
+                            <span class="flag-icon">🇧🇷</span> PT-BR
+                        </button>
+                        <button class="language-option" data-lang="en" aria-label="English">
+                            <span class="flag-icon">🇺🇸</span> EN
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Seção Minha Conta -->
+                <div class="footer-links">
+                    <h3>Minha Conta</h3>
+                    <a href="perfil.html"><i class="bi bi-person-fill"></i> <span>Perfil</span></a>
+                    <a href="pedidos.html"><i class="bi bi-box-seam"></i> <span>Pedidos</span></a>
+                    <a href="favoritos.html"><i class="bi bi-heart-fill"></i> <span>Favoritos</span></a>
+                </div>
+
+                <!-- Seção Minha Loja -->
+                <div class="footer-links">
+                    <h3>Minha Loja</h3>
+                    <a href="login.html"><i class="bi bi-grid-3x3-gap-fill"></i> <span>Produtos</span></a>
+                    <a href="login.html"><i class="bi bi-bar-chart-line-fill"></i> <span>Estatísticas</span></a>
+                    <a href="login.html"><i class="bi bi-star-fill"></i> <span>Avaliações</span></a>
+                </div>
+
+                <!-- Seção Configurações -->
+                <div class="footer-links">
+                    <h3>Configurações</h3>
+                    <a href="privacidade.html"><i class="bi bi-shield-lock-fill"></i> <span>Privacidade</span></a>
+                    <a href="notificacao.html"><i class="bi bi-bell-fill"></i> <span>Notificações</span></a>
+                    <a href="pagamento.html"><i class="bi bi-credit-card-fill"></i> <span>Pagamentos</span></a>
+                </div>
+
+                <!-- Seção Sobre Nós -->
+                <div class="footer-links">
+                    <h3>Sobre Nós</h3>
+                    <a href="missao.html"><i class="bi bi-info-circle-fill"></i> <span>Missão</span></a>
+                    <a href="equipe.html"><i class="bi bi-people-fill"></i> <span>Equipe</span></a>
+                    <a href="chat_com_vendedor.html"><i class="bi bi-chat-dots-fill"></i> <span>Chat com Vendedor</span></a>
+
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                &copy; 2025 ReUse - <span>Todos os direitos reservados</span>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Variáveis para dados de pesquisa
+let allProducts = [];
+let allInstitutions = [];
+let currentLanguage = 'pt-br'; // Definindo um valor padrão
+
+// Função para configurar os dados de pesquisa
+function setupSearchData() {
+    allProducts = [
+        { 
+            id: 1,
+            name: 'Camiseta Polo', 
+            category: 'Masculino',
+            price: 'R$ 39,90'
+        },
+        { 
+            id: 2,
+            name: 'Liquidificador Philips', 
+            category: 'Casa/Cozinha',
+            price: 'R$ 89,90'
+        },
+        { 
+            id: 3,
+            name: 'Tênis Nike', 
+            category: 'Esportivo',
+            price: 'R$ 199,99'
+        },
+        { 
+            id: 4,
+            name: 'Vestido Floral', 
+            category: 'Feminino',
+            price: 'R$ 65,00'
+        }
+    ];
+
+    allInstitutions = [
+        { 
+            id: 101,
+            name: 'Patas Conscientes', 
+            category: 'Resgate Animal' 
+        },
+        { 
+            id: 102,
+            name: 'Centro Educacional Novo Amanhã', 
+            category: 'Educação' 
+        },
+        { 
+            id: 103,
+            name: 'Lar dos Idosos São Vicente', 
+            category: 'Assistência ao Idoso' 
+        },
+        { 
+            id: 104,
+            name: 'SOS Felino', 
+            category: 'Resgate Animal' 
+        }
+    ];
+}
+
+// Função principal para configurar a barra de pesquisa
+function setupSearchBar() {
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+    
+    // Criar elemento de sugestões se não existir
+    if (!document.getElementById('searchSuggestions')) {
+        const suggestionsDiv = document.createElement('div');
+        suggestionsDiv.id = 'searchSuggestions';
+        suggestionsDiv.className = 'search-suggestions-container';
+        suggestionsDiv.style.display = 'none';
+        
+        const searchContainer = document.querySelector('.search-input');
+        if (searchContainer) {
+            searchContainer.appendChild(suggestionsDiv);
+        }
+    }
+
+    // Evento de input na barra de pesquisa
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.trim().toLowerCase();
+        
+        if (searchTerm.length === 0) {
+            document.getElementById('searchSuggestions').style.display = 'none';
+            return;
+        }
+
+        const matchedProducts = allProducts.filter(item => 
+            item.name.toLowerCase().includes(searchTerm) || 
+            item.category.toLowerCase().includes(searchTerm)
+        );
+
+        const matchedInstitutions = allInstitutions.filter(item => 
+            item.name.toLowerCase().includes(searchTerm) || 
+            item.category.toLowerCase().includes(searchTerm)
+        );
+
+        displaySuggestions(matchedProducts, matchedInstitutions);
+    });
+
+    // Evento de foco
+    searchInput.addEventListener('focus', function() {
+        if (this.value.trim().length > 0) {
+            document.getElementById('searchSuggestions').style.display = 'block';
+        }
+    });
+
+    // Evento de blur
+    searchInput.addEventListener('blur', function() {
+        setTimeout(() => {
+            document.getElementById('searchSuggestions').style.display = 'none';
+        }, 200);
+    });
+
+    // Evento do botão de pesquisa
+    searchButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        performSearch();
+    });
+
+    // Evento de tecla Enter
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            performSearch();
+        }
+    });
+
+    // Função para exibir sugestões
+    function displaySuggestions(products, institutions) {
+        const searchSuggestions = document.getElementById('searchSuggestions');
+        if (products.length === 0 && institutions.length === 0) {
+            searchSuggestions.style.display = 'none';
+            return;
+        }
+
+        searchSuggestions.innerHTML = '';
+        
+        if (products.length > 0) {
+            const productsHeader = document.createElement('div');
+            productsHeader.className = 'search-suggestion-header';
+            productsHeader.textContent = 'Itens Mais Comprados';
+            searchSuggestions.appendChild(productsHeader);
+
+            products.slice(0, 5).forEach(product => {
+                const suggestion = document.createElement('div');
+                suggestion.className = 'search-suggestion';
+                suggestion.dataset.type = 'product';
+                suggestion.dataset.id = product.id;
+                
+                const nameElement = document.createElement('div');
+                nameElement.textContent = product.name;
+                
+                const categoryElement = document.createElement('div');
+                categoryElement.textContent = product.category;
+                
+                suggestion.appendChild(nameElement);
+                suggestion.appendChild(categoryElement);
+                
+                suggestion.addEventListener('click', function() {
+                    window.location.href = 'Produto.html?id=' + product.id;
+                });
+                
+                searchSuggestions.appendChild(suggestion);
+            });
+        }
+
+        if (institutions.length > 0) {
+            const institutionsHeader = document.createElement('div');
+            institutionsHeader.className = 'search-suggestion-header';
+            institutionsHeader.textContent = 'Instituições Mais Doadas';
+            searchSuggestions.appendChild(institutionsHeader);
+
+            institutions.slice(0, 5).forEach(institution => {
+                const suggestion = document.createElement('div');
+                suggestion.className = 'search-suggestion';
+                suggestion.dataset.type = 'institution';
+                suggestion.dataset.id = institution.id;
+                
+                const nameElement = document.createElement('div');
+                nameElement.textContent = institution.name;
+                
+                const categoryElement = document.createElement('div');
+                categoryElement.textContent = institution.category;
+                
+                suggestion.appendChild(nameElement);
+                suggestion.appendChild(categoryElement);
+                
+                suggestion.addEventListener('click', function() {
+                    if (institution.name === 'Patas Conscientes') {
+                        window.location.href = 'Pagina_ONG_Usuario-2.html';
+                    } else if (institution.name === 'SOS Felino') {
+                        window.location.href = 'Pagina_ONG_Usuario.html';
+                    } else {
+                        window.location.href = 'instituicao.html?id=' + institution.id;
+                    }
+                });
+                
+                searchSuggestions.appendChild(suggestion);
+            });
+        }
+
+        searchSuggestions.style.display = 'block';
+    }
+
+    // Função para executar a pesquisa
+    function performSearch() {
+        const searchTerm = searchInput.value.trim();
+        if (searchTerm.length === 0) return;
+
+        document.getElementById('searchSuggestions').style.display = 'none';
+
+        const matchedProducts = allProducts.filter(item => 
+            item.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+            item.category.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+
+        const matchedInstitutions = allInstitutions.filter(item => 
+            item.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+            item.category.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+
+        if (matchedProducts.length > 0) {
+            const firstProduct = matchedProducts[0];
+            window.location.href = 'Produto.html?id=' + firstProduct.id;
+        } else if (matchedInstitutions.length > 0) {
+            const firstInstitution = matchedInstitutions[0];
+            if (firstInstitution.name === 'Patas Conscientes') {
+                window.location.href = 'Pagina_ONG_Usuario-2.html';
+            } else if (firstInstitution.name === 'SOS Felino') {
+                window.location.href = 'Pagina_ONG_Usuario.html';
+            } else {
+                window.location.href = 'instituicao.html?id=' + firstInstitution.id;
+            }
+        } else {
+            alert('Nenhum resultado encontrado');
+        }
+    }
+}
+
+// Inicialização quando o DOM estiver pronto
+document.addEventListener('DOMContentLoaded', function() {
+    setupSearchData();
+    setupSearchBar();
+});
+
+    </script>
+
+    <div class="removal-message" id="removalMessage">
+    <i class="fas fa-check-circle"></i>
+    <span>Produto removido do carrinho</span>
+</div>
+
+<script>
+                // Adicionar funcionalidade para os filtros
+            const categoryFilter = document.getElementById('category-filter');
+            const sortFilter = document.getElementById('sort-filter');
+            const gridViewBtn = document.getElementById('grid-view');
+            const listViewBtn = document.getElementById('list-view');
+            const productsGrid = document.querySelector('.products-grid');
+            
+            // Filtro por categoria
+            categoryFilter.addEventListener('change', function() {
+                filterProducts();
+            });
+            
+            // Ordenação
+            sortFilter.addEventListener('change', function() {
+                sortProducts();
+            });
+            
+            // Visualização em grade
+            gridViewBtn.addEventListener('click', function() {
+                productsGrid.classList.remove('products-list-view');
+                gridViewBtn.classList.add('active');
+                listViewBtn.classList.remove('active');
+            });
+            
+            // Visualização em lista
+            listViewBtn.addEventListener('click', function() {
+                productsGrid.classList.add('products-list-view');
+                listViewBtn.classList.add('active');
+                gridViewBtn.classList.remove('active');
+            });
+            
+            // Filtrar produtos
+            function filterProducts() {
+                const selectedCategory = categoryFilter.value;
+                const products = document.querySelectorAll('.product-card');
+                
+                products.forEach(product => {
+                    const productCategory = product.getAttribute('data-category');
+                    
+                    if (selectedCategory === 'all' || selectedCategory === productCategory) {
+                        product.style.display = 'block';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            };
+</script>
+<script src="JS/carrinho.js"></script>
+    <div id="cartMessageContainer" style="position: fixed; top: 20px; left: 0; width: 100%; pointer-events: none; z-index: 1000;"></div>
+    <script src="JS/breadcrumbs.js"></script>
+</body>
+</html>
+
+
+</html>

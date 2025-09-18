@@ -1,0 +1,76 @@
+/* Estilos unificados para todos os breadcrumbs */
+.smart-breadcrumbs {
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #f8f9fa;
+  padding: 14px 24px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  font-size: 15px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border-left: 4px solid #4a6fa5;
+  margin-top: 25px;
+}
+
+.smart-breadcrumbs a {
+  color: #4a6fa5;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.smart-breadcrumbs a:hover {
+  color: #3a5a78;
+  background-color: #e8f0fe;
+}
+
+.smart-breadcrumbs .current-page {
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.smart-breadcrumbs .separator {
+  color: #a0aec0;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+/* Temas específicos */
+.smart-breadcrumbs[class*="ong"] {
+  border-left-color: #4b9bff;
+}
+.smart-breadcrumbs[class*="patas"] {
+  border-left-color: #ff7e5f;
+}
+.smart-breadcrumbs[class*="vendedor"] {
+  border-left-color: #6f42c1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .smart-breadcrumbs {
+    padding: 12px 18px;
+    font-size: 14px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .smart-breadcrumbs::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  .smart-breadcrumbs::-webkit-scrollbar-thumb {
+    background-color: #d1d9e6;
+    border-radius: 2px;
+  }
+  
+  .smart-breadcrumbs a {
+    padding: 3px 6px;
+  }
+  
+  .smart-breadcrumbs .separator {
+    margin: 0 8px;
+  }
+}

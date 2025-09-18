@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doações Necessárias - SOS Felino</title>
+    <link rel="stylesheet" href="CSS/ong.css">
+    <link rel="stylesheet" href="CSS/ong_doacoes_necessarias.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="container">
+            <div class="top-header">
+                <div class="logo">
+                    <img src="IMG/reuse-logo-(1).svg" alt="ReUse Logo">
+                </div>
+                <div class="user-actions">
+                    <a href="login.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- DASHBOARD PRINCIPAL -->
+    <div class="dashboard-container">
+        <!-- Menu Lateral -->
+        <aside class="sidebar">
+            <h2 class="sidebar-title">SOS Felino</h2>
+            <ul class="sidebar-nav">
+              <li><a href="ong.html"><i class="bi bi-house"></i> Início</a></li>
+                <li><a href="ong_doacoes.html"><i class="bi bi-handbag"></i> Doações</a></li>
+                <li><a href="ong_doacoes_necessarias.html"><i class="bi bi-clipboard-check"></i> Doações Necessárias</a></li>
+                <li><a href="ong_beneficiarios.html"><i class="bi bi-people"></i> Beneficiários</a></li>
+                <li><a href="ong_relatorios.html"><i class="bi bi-bar-chart"></i> Relatórios</a></li>
+                <li><a href="ong_configuracoes.html" class="active"><i class="bi bi-gear"></i> Configurações</a></li>
+                <li><a href="ong_contato.html"><i class="bi bi-envelope"></i> Contato</a></li>
+                <li><a href="ong_produto.html"><i class="bi bi-box-seam"></i> Produtos</a></li>
+            </ul>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <!-- Breadcrumbs -->
+            <div class="breadcrumbs-vendedor">
+                <a href="ONG.html">Painel da Instituição</a> &gt; <span id="current-breadcrumb">Doações Necessárias</span>
+            </div>
+            
+            <h1>Doações Necessárias</h1>
+            
+            <!-- Ações -->
+            <div class="action-buttons">
+                <button class="primary-button" id="addDonationBtn">
+                    <i class="fas fa-plus"></i> Nova Doação Necessária
+                </button>
+            </div>
+            
+            <!-- Barra de pesquisa -->
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Pesquisar doações...">
+                <button id="searchButton"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <!-- Filtros -->
+            <div class="filters-section">
+                <div class="filter-group">
+                    <label for="categoryFilter">Categoria</label>
+                    <select id="categoryFilter">
+                        <option value="">Todas as categorias</option>
+                        <option value="Alimentação">Alimentação</option>
+                        <option value="Higiene">Higiene</option>
+                        <option value="Brinquedos">Brinquedos</option>
+                        <option value="Medicamentos">Medicamentos</option>
+                        <option value="Roupas">Roupas</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="priorityFilter">Prioridade</label>
+                    <select id="priorityFilter">
+                        <option value="">Todas as prioridades</option>
+                        <option value="Alta">Alta</option>
+                        <option value="Média">Média</option>
+                        <option value="Baixa">Baixa</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="statusFilter">Status</label>
+                    <select id="statusFilter">
+                        <option value="">Todos os status</option>
+                        <option value="Ativo">Ativo</option>
+                        <option value="Inativo">Inativo</option>
+                        <option value="Atendido">Atendido</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <button class="primary-button small" id="applyFilters">
+                        <i class="fas fa-filter"></i> Aplicar Filtros
+                    </button>
+                    <button class="secondary-button small" id="clearFilters">
+                        <i class="fas fa-times"></i> Limpar
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Lista de Doações Necessárias -->
+            <div class="section-container">
+                <h2 class="section-title">Itens Solicitados</h2>
+                
+                <div class="donations-grid" id="necessaryDonations">
+                    <!-- As doações serão carregadas dinamicamente via JavaScript -->
+                </div>
+                
+                <!-- Mensagem quando não há resultados -->
+                <div id="noResults" class="no-results" style="display: none;">
+                    <i class="fas fa-search" style="font-size: 48px; margin-bottom: 15px;"></i>
+                    <h3>Nenhuma doação encontrada</h3>
+                    <p>Tente ajustar os filtros ou termos de pesquisa.</p>
+                </div>
+                
+                <!-- Paginação -->
+                <div class="pagination" id="pagination">
+                    <!-- A paginação será gerada dinamicamente via JavaScript -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal para Adicionar/Editar Doação Necessária -->
+    <div id="donationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Nova Doação Necessária</h2>
+            
+            <form id="donationForm" class="settings-form">
+                <input type="hidden" id="donationId">
+                
+                <div class="form-group">
+                    <label for="itemName">Nome do Item <span class="required">*</span></label>
+                    <input type="text" id="itemName" required>
+                    <div class="error-message" id="itemNameError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="itemDescription">Descrição <span class="required">*</span></label>
+                    <textarea id="itemDescription" rows="3" required></textarea>
+                    <div class="error-message" id="itemDescriptionError"></div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="itemCategory">Categoria <span class="required">*</span></label>
+                        <select id="itemCategory" required>
+                            <option value="">Selecione uma categoria</option>
+                            <option value="Alimentação">Alimentação</option>
+                            <option value="Higiene">Higiene</option>
+                            <option value="Brinquedos">Brinquedos</option>
+                            <option value="Medicamentos">Medicamentos</option>
+                            <option value="Roupas">Roupas</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                        <div class="error-message" id="itemCategoryError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="itemPriority">Prioridade <span class="required">*</span></label>
+                        <select id="itemPriority" required>
+                            <option value="">Selecione a prioridade</option>
+                            <option value="Alta">Alta</option>
+                            <option value="Média">Média</option>
+                            <option value="Baixa">Baixa</option>
+                        </select>
+                        <div class="error-message" id="itemPriorityError"></div>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="itemQuantity">Quantidade Necessária <span class="required">*</span></label>
+                        <input type="number" id="itemQuantity" min="1" required>
+                        <div class="error-message" id="itemQuantityError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="itemCollected">Quantidade Arrecadada</label>
+                        <input type="number" id="itemCollected" min="0">
+                        <div class="error-message" id="itemCollectedError"></div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="itemImage">Imagem do Item (URL)</label>
+                    <input type="url" id="itemImage" placeholder="https://exemplo.com/imagem.jpg">
+                    <div class="error-message" id="itemImageError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="itemStatus">Status <span class="required">*</span></label>
+                    <select id="itemStatus" required>
+                        <option value="Ativo">Ativo</option>
+                        <option value="Inativo">Inativo</option>
+                        <option value="Atendido">Atendido</option>
+                    </select>
+                    <div class="error-message" id="itemStatusError"></div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="secondary-button" id="cancelButton">Cancelar</button>
+                    <button type="submit" class="primary-button">
+                        <i class="fas fa-save"></i> Salvar Doação
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Confirmação de Exclusão -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Confirmar Exclusão</h2>
+            <p>Tem certeza que deseja excluir esta doação necessária? Esta ação não pode ser desfeita.</p>
+            <div class="form-actions">
+                <button type="button" class="secondary-button" id="cancelDeleteButton">Cancelar</button>
+                <button type="button" class="danger-button" id="confirmDeleteButton">
+                    <i class="fas fa-trash"></i> Excluir
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ReUse - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Scripts JavaScript -->
+<script src="JS/ong_doacoes_necessarias.js"></script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="CSS/xmbwave.css">
+    <title>Cadastro Unificado - ReUse</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="IMG/reuse-logo-(1).svg" alt="ReUse Logo">
+        </div>
+
+        <h2 class="page-title">Criar conta</h2>
+
+        <div class="account-type-selector">
+            <button class="account-type-btn active" id="client-btn">Cliente</button>
+            <button class="account-type-btn" id="seller-btn">Vendedor</button>
+            <button class="account-type-btn" id="institution-btn">Instituição</button>
+        </div>
+
+        <div class="form-container">
+            <!-- Formulário de Cliente -->
+            <div class="signup-form active" id="client-form">
+                <h3 class="form-title">Dados do Cliente</h3>
+                <form id="signupForm">
+                    <div class="form-group password-toggle">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" required>
+                        <div class="form-hint">Digite seu nome completo</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group password-toggle">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" name="password" required>
+                        <i class="toggle-password fas fa-eye" data-target="password"></i>
+                        <div class="form-hint"></div>
+                    </div>
+
+                    <div class="form-group password-toggle">
+                        <label for="confirm-password">Confirmar Senha</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                        <i class="toggle-password fas fa-eye" data-target="confirm-password"></i>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Cadastrar</button>
+                </form>
+
+                <div class="login-link">
+                    Já tem uma conta? <a href="login.html">Entre aqui</a>
+                </div>
+            </div>
+
+            <!-- Formulário de Vendedor -->
+            <div class="signup-form" id="seller-form">
+                <h3 class="form-title">Dados da Loja</h3>
+                <form id="sellerRegistrationForm">
+                    <div class="form-group">
+                        <label for="business-type">Tipo de Negócio</label>
+                        <select id="business-type" name="business-type" required>
+                            <option value="">Selecione uma opção</option>
+                            <option value="brecho">Brechó</option>
+                            <option value="empresa">Empresa</option>
+                            <option value="vendedor-individual">Vendedor Individual</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="store-name">Nome da Loja</label>
+                        <input type="text" id="store-name" name="store-name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Telefone/Celular</label>
+                        <div class="phone-input-wrapper">
+                            <select id="country-code" name="country-code">
+                                <option value="+55">Brasil (+55)</option>
+                                <option value="+1">Estados Unidos/Canadá (+1)</option>
+                                <option value="+351">Portugal (+351)</option>
+                            </select>
+                            <input type="tel" id="phone" name="phone" placeholder="Ex: (11) 99999-9999" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="zipcode">CEP</label>
+                        <input type="text" id="zipcode" name="zipcode" placeholder="00000-000" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Endereço de Envio</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Categoria Principal</label>
+                        <select id="category" name="category" required>
+                            <option value="">Selecione uma categoria de venda</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="infantil">Infantil</option>
+                            <option value="caco">Casa/Cozinha</option>
+                            <option value="eletronico">Eletrônicos</option>
+                            <option value="">Esportivo</option>
+                            <option value="feminino">Livros</option>
+                            <option value="feminino">Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="store-email">Email da Loja</label>
+                        <input type="email" id="store-email" name="store-email" required>
+                    </div>
+
+                    <div class="form-group" id="cnpj-field-container" style="display: none;">
+                        <label for="seller-cnpj">CNPJ</label>
+                        <input type="text" id="seller-cnpj" name="seller-cnpj" placeholder="00.000.000/0000-00">
+                        <div class="form-hint">Digite apenas os números do CNPJ</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="verification-code">Crie um Código de Verificação (3 dígitos)</label>
+                        <input type="text" id="verification-code" name="verification-code" maxlength="3"
+                            placeholder="ABC" required>
+                    </div>
+
+                    <div class="form-group password-toggle">
+                        <label for="seller-password">Senha</label>
+                        <input type="password" id="seller-password" name="seller-password" required>
+                        <i class="toggle-password fas fa-eye" data-target="seller-password"></i>
+                        <div class="password-requirements">
+                        </div>
+                    </div>
+
+                    <div class="form-group password-toggle">
+                        <label for="seller-confirm-password">Confirmar Senha</label>
+                        <input type="password" id="seller-confirm-password" name="seller-confirm-password" required>
+                        <i class="toggle-password fas fa-eye" data-target="seller-confirm-password"></i>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Cadastrar Loja</button>
+                </form>
+
+                <div class="login-link">
+                    Já tem uma conta de vendedor? <a href="login.html">Entre aqui</a>
+                </div>
+            </div>
+
+            <!-- Formulário de Instituição -->
+            <div class="signup-form" id="institution-form">
+                <h3 class="form-title">Dados da Instituição</h3>
+                <form id="institutionRegistrationForm">
+                    <div class="form-group">
+                        <label for="institution-type">Tipo de Instituição</label>
+                        <select id="institution-type" name="institution-type" required>
+                            <option value="">Selecione uma opção</option>
+                            <option value="ong">ONG</option>
+                            <option value="igreja">Igreja</option>
+                            <option value="associacao">Associação</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="institution-name">Nome da Instituição</label>
+                        <input type="text" id="institution-name" name="institution-name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="institution-phone">Telefone/Celular</label>
+                        <div class="phone-input-wrapper">
+                            <select id="institution-country-code" name="institution-country-code">
+                                <option value="+55">Brasil (+55)</option>
+                                <option value="+1">Estados Unidos/Canadá (+1)</option>
+                                <option value="+351">Portugal (+351)</option>
+                            </select>
+                            <input type="tel" id="institution-phone" name="institution-phone"
+                                placeholder="Ex: (11) 99999-9999" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="institution-zipcode">CEP</label>
+                        <input type="text" id="institution-zipcode" name="institution-zipcode" placeholder="00000-000"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="institution-address">Endereço</label>
+                        <input type="text" id="institution-address" name="institution-address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="institution-email">Email da Instituição</label>
+                        <input type="email" id="institution-email" name="institution-email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="institution-cnpj">CNPJ</label>
+                        <input type="text" id="institution-cnpj" name="institution-cnpj"
+                            placeholder="00.000.000/0000-00" required>
+                        <div class="form-hint">Digite apenas os números do CNPJ</div>
+                    </div>
+
+                    <div class="form-group password-toggle">
+                        <label for="institution-password">Senha</label>
+                        <input type="password" id="institution-password" name="institution-password" required>
+                        <i class="toggle-password fas fa-eye" data-target="institution-password"></i>
+                        <div class="password-requirements">
+                        </div>
+                    </div>
+
+                    <div class="form-group password-toggle">
+                        <label for="institution-confirm-password">Confirmar Senha</label>
+                        <input type="password" id="institution-confirm-password" name="institution-confirm-password"
+                            required>
+                        <i class="toggle-password fas fa-eye" data-target="institution-confirm-password"></i>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Cadastrar Instituição</button>
+                </form>
+
+                <div class="login-link">
+                    Já tem uma conta? <a href="login.html">Entre aqui</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mensagem de erro global -->
+    <div class="error-message-global" id="error-message-global">
+        <i class="fas fa-exclamation-circle"></i>
+        <span id="error-text-global">Por favor, preencha todos os campos obrigatórios.</span>
+    </div>
+
+    <script src="JS/cadastro.js"></script>
+    <script src="JS/configuracoes_cliente.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Container de ondas
+            const waveContainer = document.createElement('div');
+            waveContainer.className = 'wave-container';
+            
+            for (let i = 0; i < 4; i++) {
+                const wave = document.createElement('div');
+                wave.className = 'wave';
+                waveContainer.appendChild(wave);
+            }
+            
+            // Container de partículas
+            const particlesContainer = document.createElement('div');
+            particlesContainer.className = 'particles';
+            
+            for (let i = 0; i < 20; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                const size = Math.random() * 5 + 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.bottom = `${Math.random() * 20}px`;
+                particle.style.animationDuration = `${Math.random() * 20 + 10}s`;
+                particle.style.animationDelay = `${Math.random() * 5}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+            
+            document.body.insertBefore(particlesContainer, document.body.firstChild);
+            document.body.insertBefore(waveContainer, document.body.firstChild);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo - ReUse</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="CSS/estilo.css">
+</head>
+
+<body>
+    <div class="entry-container">
+        <div class="logo-container">
+            <img src="IMG/reuse-logo-(1).svg" alt="ReUse Logo">
+        </div>
+
+        <div class="welcome-message">
+            <h1>Bem-vindo à ReUse</h1>
+            <p>Site focado em : Compra, Venda e Doação de itens Usados</p>
+        </div>
+
+        <div class="action-cards">
+            <div class="action-card">
+                <div class="card-icon">
+                    <i class="bi bi-box-arrow-left"></i>
+                </div>
+                <h3 class="card-title">Já tem uma conta?</h3>
+                <p class="card-description">Acesse sua conta para Gerenciar sua loja, instituição ou Explorar produtos disponiveis</p>
+                <a href="login.html" class="card-button">Fazer Login</a>
+            </div>
+
+            <div class="action-card">
+                <div class="card-icon">
+                    <i class="bi bi-person-plus-fill"></i>
+                </div>
+                <h3 class="card-title">Novo por aqui?</h3>
+                <p class="card-description">Junte-se a nossa comunidade para Comprar, Vender e Doar itens do consumo diario.</p>
+                <a href="cadastro.html" class="card-button">Criar Conta</a>
+            </div>
+        </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Container de ondas
+            const waveContainer = document.createElement('div');
+            waveContainer.className = 'wave-container';
+            
+            // Criar 4 ondas (como no estilo XMBwave)
+            for (let i = 0; i < 4; i++) {
+                const wave = document.createElement('div');
+                wave.className = 'wave';
+                waveContainer.appendChild(wave);
+            }
+            
+            // Container de partículas
+            const particlesContainer = document.createElement('div');
+            particlesContainer.className = 'particles';
+            
+            for (let i = 0; i < 20; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                const size = Math.random() * 6 + 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.bottom = `${Math.random() * 10}%`;
+                particle.style.animationDuration = `${Math.random() * 20 + 10}s`;
+                particle.style.animationDelay = `${Math.random() * 5}s`;
+                
+                // Alternar entre partículas azuis e verdes
+                if (i % 2 === 0) {
+                    particle.style.background = `rgba(0, 102, 204, ${Math.random() * 0.15 + 0.1})`;
+                } else {
+                    particle.style.background = `rgba(0, 204, 153, ${Math.random() * 0.15 + 0.1})`;
+                }
+                
+                particlesContainer.appendChild(particle);
+            }
+            
+            document.body.appendChild(particlesContainer);
+            document.body.appendChild(waveContainer);
+        });
+    </script>
+</body>
+
+</html>

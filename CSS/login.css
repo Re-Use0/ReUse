@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.logo-container img {
+    width: 200px;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #0066cc;
+    font-size: 2.2rem;
+    font-weight: 700;
+    position: relative;
+}
+
+.form-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #0066cc, #00cc99);
+    margin: 0.8rem auto 0;
+    border-radius: 2px;
+}
+
+.login-type-selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.type-button {
+    flex: 1;
+    padding: 1rem;
+    text-align: center;
+    background-color: white;
+    color: #555;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1.05rem;
+}
+
+.type-button.active {
+    background: linear-gradient(135deg, #0066cc, #00cc99);
+    color: white;
+}
+
+.type-button:hover:not(.active) {
+    background-color: #f0f8ff;
+    color: #0066cc;
+}
+
+.login-form {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 500px;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+    color: #444;
+    font-size: 0.95rem;
+}
+
+input {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    background-color: #f9f9f9;
+}
+
+input:focus {
+    border-color: #0066cc;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+    background-color: white;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-input-wrapper {
+    position: relative;
+}
+
+.password-input-wrapper input {
+    padding-right: 40px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+}
+
+.toggle-password:hover {
+    color: #0066cc;
+}
+
+.submit-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #0066cc, #00cc99);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 1.1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 102, 204, 0.2);
+}
+
+.submit-btn:hover {
+    opacity: 0.95;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 102, 204, 0.3);
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+.signup-link a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.signup-link a:hover {
+    color: #004d99;
+    text-decoration: underline;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+.form-container {
+    display: none;
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-container.active {
+    display: block;
+}
+
+.toggle-password.active {
+    color: #0066cc;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 2rem 1rem;
+    }
+    
+    .login-form {
+        padding: 1.8rem;
+    }
+    
+    .form-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-type-selector {
+        flex-direction: column;
+    }
+    
+    .type-button {
+        padding: 0.9rem;
+    }
+    
+    input {
+        padding: 0.9rem;
+    }
+}

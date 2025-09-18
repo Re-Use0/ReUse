@@ -1,0 +1,46 @@
+/* Estilos específicos para o breadcrumb do vendedor */
+.breadcrumbs-vendedor {
+    background-color: #f8f9fa;
+    padding: 12px 20px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.breadcrumbs-vendedor a {
+    color: #2c7be5;
+    text-decoration: none;
+    transition: color 0.2s;
+    margin: 0 3px;
+}
+
+.breadcrumbs-vendedor a:hover {
+    color: #1a68d1;
+    text-decoration: underline;
+}
+
+.breadcrumbs-vendedor span {
+    color: #4a4a4a;
+    font-weight: 600;
+    margin-left: 3px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .breadcrumbs-vendedor {
+        font-size: 13px;
+        padding: 10px 15px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .breadcrumbs-vendedor::-webkit-scrollbar {
+        height: 4px;
+    }
+    
+    .breadcrumbs-vendedor::-webkit-scrollbar-thumb {
+        background: #ddd;
+        border-radius: 2px;
+    }
+}

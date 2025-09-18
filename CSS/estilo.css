@@ -1,0 +1,300 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f8f8f8 0%, #eaf7f3 100%);
+        }
+
+        /* Efeito de ondas animadas - NOVO ESTILO */
+        .wave-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            opacity: 0.8;
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                rgba(0, 102, 204, 0.1) 0%, 
+                rgba(0, 204, 153, 0.2) 50%, 
+                rgba(0, 102, 204, 0.1) 100%);
+            transform-origin: center bottom;
+            animation: waveFlow 20s linear infinite;
+            border-radius: 30% 70% 0 0;
+        }
+
+        .wave:nth-child(2) {
+            animation-delay: -5s;
+            animation-duration: 120s;
+            background: linear-gradient(90deg, 
+                rgba(0, 90, 180, 0.08) 0%, 
+                rgba(0, 180, 135, 0.15) 50%, 
+                rgba(0, 90, 180, 0.08) 100%);
+            height: 90%;
+        }
+
+        .wave:nth-child(3) {
+            animation-delay: -2s;
+            animation-duration: 120s;
+            background: linear-gradient(90deg, 
+                rgba(0, 120, 240, 0.05) 0%, 
+                rgba(50, 230, 180, 0.1) 50%, 
+                rgba(0, 120, 240, 0.05) 100%);
+            height: 80%;
+            bottom: 5%;
+        }
+
+        .wave:nth-child(4) {
+            animation-delay: -8s;
+            animation-duration: 120s;
+            background: linear-gradient(90deg, 
+                rgba(200, 230, 255, 0.15) 0%, 
+                rgba(200, 250, 230, 0.25) 50%, 
+                rgba(200, 230, 255, 0.15) 100%);
+            height: 110%;
+            bottom: -5%;
+        }
+
+        @keyframes waveFlow {
+            0% {
+                transform: translateX(0) skewY(-3deg);
+            }
+            100% {
+                transform: translateX(-50%) skewY(-3deg);
+            }
+        }
+
+        /* Efeito de partículas finas */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(0, 204, 153, 0.3);
+            border-radius: 50%;
+            animation: floatParticle linear infinite;
+        }
+
+        @keyframes floatParticle {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(20px);
+                opacity: 0;
+            }
+        }
+
+        /* Container principal */
+        .entry-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            width: 100%;
+            animation: fadeInDown 1s ease;
+        }
+
+        .logo-container img {
+            width: 200px;
+            height: auto;
+        }
+
+        /* Mensagem de boas-vindas */
+        .welcome-message {
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            animation: fadeIn 1s ease 0.3s both;
+        }
+
+        .welcome-message h1 {
+            font-size: 2.8rem;
+            color: #0066cc;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .welcome-message p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Cards de ação */
+        .action-cards {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            width: 100%;
+            max-width: 900px;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .action-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            padding: 2.5rem;
+            width: 100%;
+            max-width: 380px;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .action-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #0066cc, #00cc99);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            color: #0066cc;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .card-description {
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        .card-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #0066cc, #00cc99);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            margin-top: auto;
+            width: 100%;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        .card-button:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 102, 204, 0.3);
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from { 
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .welcome-message h1 {
+                font-size: 2.2rem;
+            }
+            
+            .welcome-message p {
+                font-size: 1.1rem;
+            }
+            
+            .action-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .action-card {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .welcome-message h1 {
+                font-size: 1.9rem;
+            }
+            
+            .card-title {
+                font-size: 1.3rem;
+            }
+            
+            .entry-container {
+                padding: 1.5rem;
+            }
+
+            .card-icon {
+                font-size: 2.8rem;
+            }
+        }

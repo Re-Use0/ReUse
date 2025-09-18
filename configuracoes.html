@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReUse - Configurações do Vendedor</title>
+    <link rel="stylesheet" href="CSS/vendedor.css">
+    <link rel="stylesheet" href="CSS/vendedor-sub.css">
+    <link rel="stylesheet" href="CSS/breadcrumbs-vendedor.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <!-- CABEÇALHO (mantido do original) -->
+    <header>
+        <div class="container">
+            <div class="top-header">
+                <div class="logo">
+                    <img src="IMG/reuse-logo-(1).svg" alt="ReUse Logo">
+                </div>
+                <div class="user-actions">
+                    <a href="login.html">
+                       <i class="bi bi-box-arrow-left"></i> Sair da Conta
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- DASHBOARD PRINCIPAL -->
+    <div class="dashboard-container">
+        <!-- Menu Lateral -->
+        <aside class="sidebar">
+            <h2 class="sidebar-title">Meu Brechó</h2>
+            <ul class="sidebar-nav">
+                <li><a href="vendedor.html"><i class="bi bi-house"></i> Início</a></li>
+                <li><a href="meus_produtos.html"><i class="bi bi-box-seam"></i> Meus Produtos</a></li>
+                <li><a href="add_produto_v.html"><i class="bi bi-plus-circle"></i> Adicionar Produto</a></li>
+                <li><a href="estatisticas.html"><i class="bi bi-bar-chart"></i> Estatísticas</a></li>
+                <li><a href="avaliacoes.html"><i class="bi bi-star-fill"></i> Avaliações</a></li>
+                <li><a href="configuracoes.html" class="active"><i class="bi bi-gear"></i> Configurações</a></li>
+                <li><a href="doacao.vendedor.html" id="doacao-link"><i class="bi bi-gift-fill"></i> Fazer Doação</a></li>
+                <li><a href="chat_clientes.html"><i class="bi bi-chat-dots"></i> Chat com Clientes</a></li>
+            </ul>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <!-- Breadcrumbs -->
+            <div id="breadcrumbs-container" class="breadcrumbs-vendedor">
+                <a href="Vendedor.html">Painel do Vendedor</a> &gt; <span>Configurações</span>
+            </div>
+            
+            <h1>Configurações da Conta</h1>
+            
+            <!-- Formulário de Configurações -->
+            <div class="settings-container">
+                <!-- Abas de Navegação -->
+                <div class="settings-tabs">
+                    <button class="tab-btn active" data-tab="conta">Conta</button>
+                    <button class="tab-btn" data-tab="privacidade">Privacidade</button>
+                    <button class="tab-btn" data-tab="pagamentos">Pagamentos</button>
+                    <button class="tab-btn" data-tab="notificacoes">Notificações</button>
+                </div>
+                
+                <!-- Conteúdo das Abas -->
+                <div class="tab-content active" id="conta-tab">
+                    <h2>Informações da Conta</h2>
+                    
+                    <form class="settings-form" id="conta-form">
+                        <div class="form-group">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" id="nome" value="Maria Silva" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" value="maria.silva@email.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" value="(11) 99999-9999" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="nome-loja">Nome da Loja</label>
+                            <input type="text" id="nome-loja" value="Brechó da Maria" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="descricao-loja">Descrição da Loja</label>
+                            <textarea id="descricao-loja" rows="4">Roupas em ótimo estado com preços acessíveis. Peças selecionadas com cuidado para oferecer o melhor para meus clientes.</textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="foto-perfil">Foto de Perfil</label>
+                            <div class="file-upload">
+                                <img src="IMG/placeholder-profile.jpg" alt="Foto de perfil" class="profile-pic" id="profile-preview">
+                                <input type="file" id="foto-perfil" accept="image/*" class="file-input">
+                                <label for="foto-perfil" class="upload-btn">Alterar foto</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="cancel-btn" id="cancel-conta">Cancelar</button>
+                            <button type="submit" class="save-btn">Salvar Alterações</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="tab-content" id="privacidade-tab">
+                    <h2>Privacidade e Segurança</h2>
+                    
+                    <form class="settings-form" id="privacidade-form">
+                        <div class="form-group">
+                            <label for="senha-atual">Senha Atual</label>
+                            <input type="password" id="senha-atual" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="nova-senha">Nova Senha</label>
+                            <input type="password" id="nova-senha" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirmar-senha">Confirmar Nova Senha</label>
+                            <input type="password" id="confirmar-senha" required>
+                        </div>
+                        
+                        <div class="privacy-options">
+                            <h3>Preferências de Privacidade</h3>
+                            
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="perfil-publico" checked>
+                                <label for="perfil-publico">Perfil público</label>
+                            </div>
+                            
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="mostrar-email">
+                                <label for="mostrar-email">Mostrar e-mail no perfil</label>
+                            </div>
+                            
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="mostrar-estatisticas" checked>
+                                <label for="mostrar-estatisticas">Mostrar estatísticas da loja publicamente</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="cancel-btn" id="cancel-privacidade">Cancelar</button>
+                            <button type="submit" class="save-btn">Salvar Alterações</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="tab-content" id="pagamentos-tab">
+                    <h2>Métodos de Pagamento</h2>
+                    
+                    <div class="payment-methods" id="payment-methods-list">
+                        <div class="payment-card">
+                            <div class="payment-info">
+                                <i class="bi bi-credit-card"></i>
+                                <div>
+                                    <h4>Cartão de Crédito</h4>
+                                    <p>**** **** **** 1234</p>
+                                </div>
+                            </div>
+                            <button class="edit-payment-btn" data-type="cartao" data-id="1">Editar</button>
+                        </div>
+                        
+                        <div class="payment-card">
+                            <div class="payment-info">
+                                <i class="bi bi-paypal"></i>
+                                <div>
+                                    <h4>PayPal</h4>
+                                    <p>maria.silva@email.com</p>
+                                </div>
+                            </div>
+                            <button class="edit-payment-btn" data-type="paypal" data-id="2">Editar</button>
+                        </div>
+                        
+                        <div class="payment-card">
+                            <div class="payment-info">
+                                <i class="bi bi-bank"></i>
+                                <div>
+                                    <h4>Conta Bancária</h4>
+                                    <p>Banco do Brasil ••• 5678</p>
+                                </div>
+                            </div>
+                            <button class="edit-payment-btn" data-type="conta" data-id="3">Editar</button>
+                        </div>
+                    </div>
+                    
+                    <button class="add-payment-btn" id="add-payment-btn">
+                        <i class="bi bi-plus-circle"></i> Adicionar método de pagamento
+                    </button>
+                    
+                    <div class="payout-preferences">
+                        <h3>Preferências de Pagamento</h3>
+                        
+                        <div class="form-group">
+                            <label for="conta-pagamento">Conta para recebimentos</label>
+                            <select id="conta-pagamento">
+                                <option selected>Conta Corrente ••• 5678</option>
+                                <option>PayPal - maria.silva@email.com</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="frequencia-pagamento">Frequência de pagamento</label>
+                            <select id="frequencia-pagamento">
+                                <option>Semanal</option>
+                                <option selected>Quinzenal</option>
+                                <option>Mensal</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="cancel-btn" id="cancel-pagamentos">Cancelar</button>
+                        <button type="button" class="save-btn" id="save-pagamentos">Salvar Alterações</button>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="notificacoes-tab">
+                    <h2>Preferências de Notificação</h2>
+                    
+                    <form class="settings-form" id="notificacoes-form">
+                        <div class="notification-category">
+                            <h3>E-mail</h3>
+                            
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="email-vendas" checked>
+                                <label for="email-vendas">Novas vendas</label>
+                            </div>
+                            
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="email-estoque" checked>
+                                <label for="email-estoque">Produtos com estoque baixo</label>
+                            </div>
+                            
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="email-avaliacoes">
+                                <label for="email-avaliacoes">Novas avaliações</label>
+                            </div>
+                            
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="email-promocoes" checked>
+                                <label for="email-promocoes">Promoções e novidades</label>
+                            </div>
+                        </div>
+                        
+                        <div class="notification-category">
+                            <h3>Notificações no Site</h3>
+                            
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="site-vendas" checked>
+                                <label for="site-vendas">Novas vendas</label>
+                            </div>
+                            
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="site-mensagens" checked>
+                                <label for="site-mensagens">Novas mensagens</label>
+                            </div>
+                            
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="site-atualizacoes" checked>
+                                <label for="site-atualizacoes">Atualizações do sistema</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="cancel-btn" id="cancel-notificacoes">Cancelar</button>
+                            <button type="submit" class="save-btn">Salvar Alterações</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal para adicionar/editar método de pagamento -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="payment-modal-title">Adicionar Método de Pagamento</h2>
+            <form id="payment-form" class="payment-form">
+                <div id="cartao-fields">
+                    <div class="form-group">
+                        <label for="numero-cartao">Número do Cartão</label>
+                        <input type="text" id="numero-cartao" placeholder="1234 5678 9012 3456">
+                    </div>
+                    <div class="form-group">
+                        <label for="nome-cartao">Nome no Cartão</label>
+                        <input type="text" id="nome-cartao" placeholder="Maria Silva">
+                    </div>
+                    <div class="form-group">
+                        <label for="validade-cartao">Validade</label>
+                        <input type="text" id="validade-cartao" placeholder="MM/AA">
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv-cartao">CVV</label>
+                        <input type="text" id="cvv-cartao" placeholder="123">
+                    </div>
+                </div>
+                
+                <div id="paypal-fields" class="hidden">
+                    <div class="form-group">
+                        <label for="email-paypal">E-mail do PayPal</label>
+                        <input type="email" id="email-paypal" placeholder="seu@email.com">
+                    </div>
+                </div>
+                
+                <div id="conta-fields" class="hidden">
+                    <div class="form-group">
+                        <label for="banco">Banco</label>
+                        <input type="text" id="banco" placeholder="Nome do Banco">
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo-conta">Tipo de Conta</label>
+                        <select id="tipo-conta">
+                            <option value="corrente">Conta Corrente</option>
+                            <option value="poupanca">Conta Poupança</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="agencia">Agência</label>
+                        <input type="text" id="agencia" placeholder="0000">
+                    </div>
+                    <div class="form-group">
+                        <label for="conta-bancaria">Conta</label>
+                        <input type="text" id="conta-bancaria" placeholder="00000-0">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="tipo-pagamento">Tipo de Pagamento</label>
+                    <select id="tipo-pagamento">
+                        <option value="cartao">Cartão de Crédito</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="conta">Conta Bancária</option>
+                    </select>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn" id="cancel-payment">Cancelar</button>
+                    <button type="submit" class="save-btn">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast para mensagens -->
+    <div id="toast" class="toast"></div>
+
+    <script>
+        // Dados iniciais (simulando dados do usuário)
+        const userData = {
+            nome: "Maria Silva",
+            email: "maria.silva@email.com",
+            telefone: "(11) 99999-9999",
+            nomeLoja: "Brechó da Maria",
+            descricaoLoja: "Roupas em ótimo estado com preços acessíveis. Peças selecionadas com cuidado para oferecer o melhor para meus clientes.",
+            fotoPerfil: "IMG/placeholder-profile.jpg",
+            privacidade: {
+                perfilPublico: true,
+                mostrarEmail: false,
+                mostrarEstatisticas: true
+            },
+            notificacoes: {
+                emailVendas: true,
+                emailEstoque: true,
+                emailAvaliacoes: false,
+                emailPromocoes: true,
+                siteVendas: true,
+                siteMensagens: true,
+                siteAtualizacoes: true
+            },
+            pagamentos: {
+                contaPagamento: "Conta Corrente ••• 5678",
+                frequenciaPagamento: "Quinzenal"
+            }
+        };
+
+        // Elementos DOM
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        const profilePreview = document.getElementById('profile-preview');
+        const fotoPerfilInput = document.getElementById('foto-perfil');
+        const toast = document.getElementById('toast');
+        const paymentModal = document.getElementById('payment-modal');
+        const closeModalBtn = document.querySelector('.close-modal');
+        const cancelPaymentBtn = document.getElementById('cancel-payment');
+        const paymentForm = document.getElementById('payment-form');
+        const tipoPagamentoSelect = document.getElementById('tipo-pagamento');
+        const addPaymentBtn = document.getElementById('add-payment-btn');
+        const editPaymentBtns = document.querySelectorAll('.edit-payment-btn');
+        const paymentMethodsList = document.getElementById('payment-methods-list');
+        const savePagamentosBtn = document.getElementById('save-pagamentos');
+
+        // Inicializar a página
+        document.addEventListener('DOMContentLoaded', function() {
+            // Carregar dados do usuário
+            loadUserData();
+            
+            // Configurar eventos
+            setupEventListeners();
+        });
+
+        // Carregar dados do usuário nos formulários
+        function loadUserData() {
+            // Dados da conta
+            document.getElementById('nome').value = userData.nome;
+            document.getElementById('email').value = userData.email;
+            document.getElementById('telefone').value = userData.telefone;
+            document.getElementById('nome-loja').value = userData.nomeLoja;
+            document.getElementById('descricao-loja').value = userData.descricaoLoja;
+            profilePreview.src = userData.fotoPerfil;
+            
+            // Dados de privacidade
+            document.getElementById('perfil-publico').checked = userData.privacidade.perfilPublico;
+            document.getElementById('mostrar-email').checked = userData.privacidade.mostrarEmail;
+            document.getElementById('mostrar-estatisticas').checked = userData.privacidade.mostrarEstatisticas;
+            
+            // Dados de notificações
+            document.getElementById('email-vendas').checked = userData.notificacoes.emailVendas;
+            document.getElementById('email-estoque').checked = userData.notificacoes.emailEstoque;
+            document.getElementById('email-avaliacoes').checked = userData.notificacoes.emailAvaliacoes;
+            document.getElementById('email-promocoes').checked = userData.notificacoes.emailPromocoes;
+            document.getElementById('site-vendas').checked = userData.notificacoes.siteVendas;
+            document.getElementById('site-mensagens').checked = userData.notificacoes.siteMensagens;
+            document.getElementById('site-atualizacoes').checked = userData.notificacoes.siteAtualizacoes;
+            
+            // Dados de pagamentos
+            document.getElementById('conta-pagamento').value = userData.pagamentos.contaPagamento;
+            document.getElementById('frequencia-pagamento').value = userData.pagamentos.frequenciaPagamento;
+        }
+
+        // Configurar event listeners
+        function setupEventListeners() {
+            // Sistema de abas
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const tabId = btn.getAttribute('data-tab');
+                    activateTab(tabId);
+                });
+            });
+            
+            // Preview da imagem de perfil
+            fotoPerfilInput.addEventListener('change', function() {
+                if (this.files && this.files[0]) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        profilePreview.src = e.target.result;
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+            
+            // Formulários
+            document.getElementById('conta-form').addEventListener('submit', handleContaSubmit);
+            document.getElementById('privacidade-form').addEventListener('submit', handlePrivacidadeSubmit);
+            document.getElementById('notificacoes-form').addEventListener('submit', handleNotificacoesSubmit);
+            
+            // Botões de cancelar
+            document.getElementById('cancel-conta').addEventListener('click', resetContaForm);
+            document.getElementById('cancel-privacidade').addEventListener('click', resetPrivacidadeForm);
+            document.getElementById('cancel-notificacoes').addEventListener('click', resetNotificacoesForm);
+            document.getElementById('cancel-pagamentos').addEventListener('click', resetPagamentosForm);
+            
+            // Modal de pagamentos
+            addPaymentBtn.addEventListener('click', openAddPaymentModal);
+            editPaymentBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const type = this.getAttribute('data-type');
+                    const id = this.getAttribute('data-id');
+                    openEditPaymentModal(type, id);
+                });
+            });
+            
+            closeModalBtn.addEventListener('click', closePaymentModal);
+            cancelPaymentBtn.addEventListener('click', closePaymentModal);
+            paymentForm.addEventListener('submit', handlePaymentSubmit);
+            tipoPagamentoSelect.addEventListener('change', togglePaymentFields);
+            
+            // Botão salvar pagamentos
+            savePagamentosBtn.addEventListener('click', handlePagamentosSubmit);
+            
+            // Fechar modal ao clicar fora dele
+            window.addEventListener('click', function(event) {
+                if (event.target === paymentModal) {
+                    closePaymentModal();
+                }
+            });
+        }
+
+        // Ativar aba
+        function activateTab(tabId) {
+            // Desativar todas as abas
+            tabBtns.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Ativar a aba clicada
+            document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
+            document.getElementById(`${tabId}-tab`).classList.add('active');
+        }
+
+        // Manipuladores de formulários
+        function handleContaSubmit(e) {
+            e.preventDefault();
+            
+            // Validar dados
+            if (!validateContaForm()) {
+                showToast('Por favor, preencha todos os campos obrigatórios.', 'error');
+                return;
+            }
+            
+            // Simular salvamento (em uma aplicação real, faria uma requisição AJAX)
+            setTimeout(() => {
+                showToast('Configurações da conta salvas com sucesso!', 'success');
+            }, 500);
+        }
+
+        function handlePrivacidadeSubmit(e) {
+            e.preventDefault();
+            
+            // Validar senhas
+            const novaSenha = document.getElementById('nova-senha').value;
+            const confirmarSenha = document.getElementById('confirmar-senha').value;
+            
+            if (novaSenha && novaSenha !== confirmarSenha) {
+                showToast('As senhas não coincidem.', 'error');
+                return;
+            }
+            
+            // Simular salvamento
+            setTimeout(() => {
+                showToast('Configurações de privacidade salvas com sucesso!', 'success');
+                document.getElementById('senha-atual').value = '';
+                document.getElementById('nova-senha').value = '';
+                document.getElementById('confirmar-senha').value = '';
+            }, 500);
+        }
+
+        function handleNotificacoesSubmit(e) {
+            e.preventDefault();
+            
+            // Simular salvamento
+            setTimeout(() => {
+                showToast('Preferências de notificação salvas com sucesso!', 'success');
+            }, 500);
+        }
+
+        function handlePagamentosSubmit() {
+            // Simular salvamento
+            setTimeout(() => {
+                showToast('Preferências de pagamento salvas com sucesso!', 'success');
+            }, 500);
+        }
+
+        function handlePaymentSubmit(e) {
+            e.preventDefault();
+            
+            // Validar formulário baseado no tipo de pagamento
+            const tipoPagamento = tipoPagamentoSelect.value;
+            let isValid = true;
+            
+            if (tipoPagamento === 'cartao') {
+                // Validação simplificada para cartão
+                const numeroCartao = document.getElementById('numero-cartao').value;
+                if (!numeroCartao || numeroCartao.replace(/\s/g, '').length < 16) {
+                    isValid = false;
+                }
+            } else if (tipoPagamento === 'paypal') {
+                const emailPaypal = document.getElementById('email-paypal').value;
+                if (!emailPaypal || !emailPaypal.includes('@')) {
+                    isValid = false;
+                }
+            } else if (tipoPagamento === 'conta') {
+                const banco = document.getElementById('banco').value;
+                const agencia = document.getElementById('agencia').value;
+                const conta = document.getElementById('conta-bancaria').value;
+                if (!banco || !agencia || !conta) {
+                    isValid = false;
+                }
+            }
+            
+            if (!isValid) {
+                showToast('Por favor, preencha todos os campos obrigatórios.', 'error');
+                return;
+            }
+            
+            // Simular salvamento
+            setTimeout(() => {
+                showToast('Método de pagamento salvo com sucesso!', 'success');
+                closePaymentModal();
+                
+                // Em uma aplicação real, atualizaria a lista de métodos de pagamento
+                // Aqui apenas simulamos um recarregamento visual
+                if (paymentModal.dataset.mode === 'add') {
+                    // Adicionar novo método à lista (simulação)
+                    const newPayment = document.createElement('div');
+                    newPayment.className = 'payment-card';
+                    newPayment.innerHTML = `
+                        <div class="payment-info">
+                            <i class="bi bi-credit-card"></i>
+                            <div>
+                                <h4>Novo Cartão</h4>
+                                <p>**** **** **** 0000</p>
+                            </div>
+                        </div>
+                        <button class="edit-payment-btn" data-type="cartao" data-id="4">Editar</button>
+                    `;
+                    paymentMethodsList.appendChild(newPayment);
+                    
+                    // Adicionar event listener ao novo botão
+                    newPayment.querySelector('.edit-payment-btn').addEventListener('click', function() {
+                        const type = this.getAttribute('data-type');
+                        const id = this.getAttribute('data-id');
+                        openEditPaymentModal(type, id);
+                    });
+                }
+            }, 500);
+        }
+
+        // Funções de validação
+        function validateContaForm() {
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const telefone = document.getElementById('telefone').value;
+            const nomeLoja = document.getElementById('nome-loja').value;
+            
+            return nome && email && telefone && nomeLoja;
+        }
+
+        // Funções de reset de formulários
+        function resetContaForm() {
+            document.getElementById('nome').value = userData.nome;
+            document.getElementById('email').value = userData.email;
+            document.getElementById('telefone').value = userData.telefone;
+            document.getElementById('nome-loja').value = userData.nomeLoja;
+            document.getElementById('descricao-loja').value = userData.descricaoLoja;
+            profilePreview.src = userData.fotoPerfil;
+            fotoPerfilInput.value = '';
+        }
+
+        function resetPrivacidadeForm() {
+            document.getElementById('senha-atual').value = '';
+            document.getElementById('nova-senha').value = '';
+            document.getElementById('confirmar-senha').value = '';
+            document.getElementById('perfil-publico').checked = userData.privacidade.perfilPublico;
+            document.getElementById('mostrar-email').checked = userData.privacidade.mostrarEmail;
+            document.getElementById('mostrar-estatisticas').checked = userData.privacidade.mostrarEstatisticas;
+        }
+
+        function resetNotificacoesForm() {
+            document.getElementById('email-vendas').checked = userData.notificacoes.emailVendas;
+            document.getElementById('email-estoque').checked = userData.notificacoes.emailEstoque;
+            document.getElementById('email-avaliacoes').checked = userData.notificacoes.emailAvaliacoes;
+            document.getElementById('email-promocoes').checked = userData.notificacoes.emailPromocoes;
+            document.getElementById('site-vendas').checked = userData.notificacoes.siteVendas;
+            document.getElementById('site-mensagens').checked = userData.notificacoes.siteMensagens;
+            document.getElementById('site-atualizacoes').checked = userData.notificacoes.siteAtualizacoes;
+        }
+
+        function resetPagamentosForm() {
+            document.getElementById('conta-pagamento').value = userData.pagamentos.contaPagamento;
+            document.getElementById('frequencia-pagamento').value = userData.pagamentos.frequenciaPagamento;
+        }
+
+        // Funções para modal de pagamento
+        function openAddPaymentModal() {
+            document.getElementById('payment-modal-title').textContent = 'Adicionar Método de Pagamento';
+            paymentForm.reset();
+            paymentModal.dataset.mode = 'add';
+            paymentModal.style.display = 'block';
+            togglePaymentFields(); // Mostrar campos corretos baseados no tipo selecionado
+        }
+
+        function openEditPaymentModal(type, id) {
+            document.getElementById('payment-modal-title').textContent = 'Editar Método de Pagamento';
+            paymentForm.reset();
+            paymentModal.dataset.mode = 'edit';
+            paymentModal.dataset.id = id;
+            
+            // Preencher com dados existentes (simulação)
+            if (type === 'cartao') {
+                tipoPagamentoSelect.value = 'cartao';
+                document.getElementById('numero-cartao').value = '1234 5678 9012 3456';
+                document.getElementById('nome-cartao').value = 'Maria Silva';
+                document.getElementById('validade-cartao').value = '12/25';
+                document.getElementById('cvv-cartao').value = '123';
+            } else if (type === 'paypal') {
+                tipoPagamentoSelect.value = 'paypal';
+                document.getElementById('email-paypal').value = 'maria.silva@email.com';
+            } else if (type === 'conta') {
+                tipoPagamentoSelect.value = 'conta';
+                document.getElementById('banco').value = 'Banco do Brasil';
+                document.getElementById('tipo-conta').value = 'corrente';
+                document.getElementById('agencia').value = '1234';
+                document.getElementById('conta-bancaria').value = '12345-6';
+            }
+            
+            togglePaymentFields(); // Mostrar campos corretos
+            paymentModal.style.display = 'block';
+        }
+
+        function closePaymentModal() {
+            paymentModal.style.display = 'none';
+        }
+
+        function togglePaymentFields() {
+            const tipo = tipoPagamentoSelect.value;
+            
+            // Esconder todos os campos primeiro
+            document.getElementById('cartao-fields').classList.add('hidden');
+            document.getElementById('paypal-fields').classList.add('hidden');
+            document.getElementById('conta-fields').classList.add('hidden');
+            
+            // Mostrar apenas os campos relevantes
+            if (tipo === 'cartao') {
+                document.getElementById('cartao-fields').classList.remove('hidden');
+            } else if (tipo === 'paypal') {
+                document.getElementById('paypal-fields').classList.remove('hidden');
+            } else if (tipo === 'conta') {
+                document.getElementById('conta-fields').classList.remove('hidden');
+            }
+        }
+
+        // Função para mostrar toast (mensagem de feedback)
+        function showToast(message, type = '') {
+            toast.textContent = message;
+            toast.className = 'toast';
+            
+            if (type) {
+                toast.classList.add(type);
+            }
+            
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

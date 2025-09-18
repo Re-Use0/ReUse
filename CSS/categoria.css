@@ -1,0 +1,320 @@
+/* Estilos específicos para a página de categorias - Versão Aprimorada */
+
+/* Breadcrumb navigation - Estilo melhorado */
+.breadcrumbs {
+    padding: 20px 0 15px;
+    font-size: 15px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.breadcrumbs a {
+    color: #2196F3;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.breadcrumbs a:hover {
+    color: #0d8aee;
+    text-decoration: none;
+}
+
+.breadcrumbs a::after {
+    content: ">";
+    margin-left: 8px;
+    color: #888;
+    font-weight: normal;
+}
+
+.breadcrumbs span {
+    color: #1a435e;
+    font-weight: 600;
+}
+
+/* Page title - Estilo mais destacado */
+.page-title {
+    font-size: 2.2rem;
+    margin: 10px 0 30px;
+    color: #1a435e;
+    position: relative;
+    padding-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.page-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    height: 4px;
+    background: linear-gradient(90deg, #8ecd90, #0066cc);
+    border-radius: 2px;
+}
+
+/* Category grid - Layout mais sofisticado */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.category-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.category-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.category-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+    z-index: 1;
+}
+
+.category-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease-out;
+    will-change: transform;
+}
+
+.category-card:hover .category-image img {
+    transform: scale(1.1) rotate(1deg);
+}
+
+.category-info {
+    padding: 20px;
+    position: relative;
+}
+
+.category-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #1a435e;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.category-info h3::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: #8ecd90;
+    transition: width 0.3s ease;
+}
+
+.category-card:hover .category-info h3::after {
+    width: 70px;
+}
+
+.category-info p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    min-height: 42px;
+}
+
+.product-count {
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    background-color: #f0f9ff;
+    color: #2196F3;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.category-card:hover .product-count {
+    background-color: #2196F3;
+    color: white;
+}
+
+/* Badge para categorias em destaque */
+.featured-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    z-index: 2;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito de overlay para hover */
+.category-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(138, 205, 144, 0.1) 0%, rgba(0, 102, 204, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.category-card:hover::after {
+    opacity: 1;
+}
+
+/* Botão de ver mais (opcional) */
+.view-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #2196F3;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.view-more:hover {
+    color: #0d8aee;
+    text-decoration: underline;
+}
+
+/* Seção de destaques */
+.featured-section {
+    margin: 50px 0;
+    padding: 30px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+    border-radius: 12px;
+}
+
+.featured-title {
+    font-size: 1.5rem;
+    color: #1a435e;
+    margin-bottom: 25px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.featured-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #8ecd90;
+}
+
+/* Responsividade melhorada */
+@media (max-width: 992px) {
+    .category-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 25px;
+    }
+    
+    .page-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .page-title {
+        font-size: 1.6rem;
+        padding-bottom: 12px;
+    }
+    
+    .category-image {
+        height: 180px;
+    }
+}
+
+@media (max-width: 576px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .page-title {
+        font-size: 1.4rem;
+    }
+    
+    .breadcrumbs {
+        font-size: 14px;
+        padding: 15px 0 10px;
+    }
+    
+    .category-info {
+        padding: 15px;
+    }
+    
+    .category-info h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Animação de entrada para os cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.category-card {
+    animation: fadeInUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.category-card:nth-child(1) { animation-delay: 0.1s; }
+.category-card:nth-child(2) { animation-delay: 0.2s; }
+.category-card:nth-child(3) { animation-delay: 0.3s; }
+.category-card:nth-child(4) { animation-delay: 0.4s; }
+.category-card:nth-child(5) { animation-delay: 0.5s; }
+.category-card:nth-child(6) { animation-delay: 0.6s; }
+.category-card:nth-child(7) { animation-delay: 0.7s; }
+.category-card:nth-child(8) { animation-delay: 0.8s; }

@@ -1,0 +1,63 @@
+/* Estilos personalizados para Patas Conscientes */
+.patas-breadcrumbs {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f8f5f0;
+  padding: 12px 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border-left: 4px solid #ff7e5f;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.patas-breadcrumbs a {
+  color: #4a6fa5;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.patas-breadcrumbs a:hover {
+  color: #3a5a78;
+  background-color: #e8f0fe;
+}
+
+.patas-breadcrumbs .current-page {
+  color: #2d3748;
+  font-weight: 700;
+}
+
+.patas-breadcrumbs .separator {
+  color: #a0aec0;
+  margin: 0 8px;
+  font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .patas-breadcrumbs {
+    padding: 10px 15px;
+    font-size: 14px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .patas-breadcrumbs::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  .patas-breadcrumbs::-webkit-scrollbar-thumb {
+    background-color: #d1d5db;
+    border-radius: 2px;
+  }
+  
+  .patas-breadcrumbs a {
+    padding: 2px 4px;
+  }
+  
+  .patas-breadcrumbs .separator {
+    margin: 0 6px;
+  }
+}

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patas Conscientes - Contato</title>
+    
+    <!-- Folhas de estilo -->
+    <link rel="stylesheet" href="CSS/ong.css">
+    <link rel="stylesheet" href="CSS/ong_contato.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="container">
+            <div class="top-header">
+                <div class="logo">
+                    <img src="IMG/reuse-logo-(1).svg" alt="ReUse Logo">
+                </div>
+                <div class="user-actions">
+                    <a href="login.html">
+                        <i class="fas fa-sign-out-alt"></i> Sair da Conta
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- DASHBOARD PRINCIPAL -->
+    <div class="dashboard-container">
+        <!-- Menu Lateral -->
+        <aside class="sidebar">
+            <h2 class="sidebar-title">Patas concientes</h2>
+            <ul class="sidebar-nav">
+                <li><a href="ong-2.html"><i class="bi bi-house"></i> Início</a></li>
+                <li><a href="ong_doacoes-2.html"><i class="bi bi-handbag"></i> Doações</a></li>
+                <li><a href="ong_doacoes-2_necessarias.html"><i class="bi bi-clipboard-check"></i> Doações Necessárias</a></li>
+                <li><a href="ong_configuracoes-2.html"><i class="bi bi-people"></i> Beneficiários</a></li>
+                <li><a href="ong_relatorios-2.html"><i class="bi bi-bar-chart"></i> Relatórios</a></li>
+                <li><a href="ong_configuracoes-2.html" class="active"><i class="bi bi-gear"></i> Configurações</a></li>
+                <li><a href="ong_contato-2.html"><i class="bi bi-envelope"></i> Contato</a></li>
+                <li><a href="ong_produto-2.html"><i class="bi bi-box-seam"></i> Produtos</a></li>
+            </ul>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <!-- Breadcrumbs -->
+            <div class="breadcrumbs-vendedor">
+                <a href="ong-2.html">Painel da Instituição</a> &gt; <span id="current-breadcrumb">Contato</span>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h1>Entre em Contato</h1>
+                <button id="toggle-edit-mode" class="primary-button">
+                    <i class="fas fa-edit"></i> Editar Informações
+                </button>
+            </div>
+            
+            <!-- Informações de Contato -->
+            <div class="section-container">
+                <h2 class="section-title">Informações de Contato</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <button class="edit-toggle" data-field="phone">Editar</button>
+                        <div class="contact-icon">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Telefone</h3>
+                            <div class="view-mode">
+                                <p class="phone-line1">(11) 98765-4321</p>
+                                <p class="phone-line2">(11) 3456-7890</p>
+                            </div>
+                            <input type="text" class="edit-mode-field" data-field="phone-line1" value="(11) 98765-4321">
+                            <input type="text" class="edit-mode-field" data-field="phone-line2" value="(11) 3456-7890">
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <button class="edit-toggle" data-field="email">Editar</button>
+                        <div class="contact-icon">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>E-mail</h3>
+                            <div class="view-mode">
+                                <p class="email-line1">contato@patasconscientes.org.br</p>
+                                <p class="email-line2">doacoes@patasconscientes.org.br</p>
+                            </div>
+                            <input type="email" class="edit-mode-field" data-field="email-line1" value="contato@patasconscientes.org.br">
+                            <input type="email" class="edit-mode-field" data-field="email-line2" value="doacoes@patasconscientes.org.br">
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <button class="edit-toggle" data-field="address">Editar</button>
+                        <div class="contact-icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Endereço</h3>
+                            <div class="view-mode">
+                                <p class="address-line1">Rua dos Animais, 123</p>
+                                <p class="address-line2">Jardim Felino - São Paulo, SP</p>
+                                <p class="address-line3">CEP: 01234-567</p>
+                            </div>
+                            <input type="text" class="edit-mode-field" data-field="address-line1" value="Rua dos Animais, 123">
+                            <input type="text" class="edit-mode-field" data-field="address-line2" value="Jardim Felino - São Paulo, SP">
+                            <input type="text" class="edit-mode-field" data-field="address-line3" value="CEP: 01234-567">
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <button class="edit-toggle" data-field="hours">Editar</button>
+                        <div class="contact-icon">
+                            <i class="bi bi-clock-fill"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Horário de Funcionamento</h3>
+                            <div class="view-mode">
+                                <p class="hours-line1">Segunda a Sexta: 9h às 18h</p>
+                                <p class="hours-line2">Sábado: 9h às 13h</p>
+                                <p class="hours-line3">Domingo: Fechado</p>
+                            </div>
+                            <input type="text" class="edit-mode-field" data-field="hours-line1" value="Segunda a Sexta: 9h às 18h">
+                            <input type="text" class="edit-mode-field" data-field="hours-line2" value="Sábado: 9h às 13h">
+                            <input type="text" class="edit-mode-field" data-field="hours-line3" value="Domingo: Fechado">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Formulário de Contato -->
+            <div class="section-container">
+                <h2 class="section-title">Envie uma Mensagem</h2>
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Assunto</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Selecione um assunto</option>
+                            <option value="doacao">Doação</option>
+                            <option value="voluntariado">Voluntariado</option>
+                            <option value="adocao">Adoção de Animais</option>
+                            <option value="duvida">Dúvida</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="primary-button">
+                        <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Redes Sociais -->
+            <div class="section-container">
+                <h2 class="section-title">Nossas Redes Sociais</h2>
+                <div class="view-mode">
+                    <div class="social-media">
+                        <a href="#" class="social-link" id="facebook-link">
+                            <i class="bi bi-facebook"></i>
+                            <span class="social-text">Facebook</span>
+                        </a>
+                        <a href="#" class="social-link" id="instagram-link">
+                            <i class="bi bi-instagram"></i>
+                            <span class="social-text">Instagram</span>
+                        </a>
+                        <a href="#" class="social-link" id="whatsapp-link">
+                            <i class="bi bi-whatsapp"></i>
+                            <span class="social-text">WhatsApp</span>
+                        </a>
+                        <a href="#" class="social-link" id="youtube-link">
+                            <i class="bi bi-youtube"></i>
+                            <span class="social-text">YouTube</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="social-edit" style="display: none;">
+                    <div class="social-edit-field">
+                        <i class="bi bi-facebook"></i>
+                        <input type="url" class="edit-mode-field" data-field="facebook-url" placeholder="URL do Facebook" value="#">
+                        <input type="text" class="edit-mode-field" data-field="facebook-text" placeholder="Texto de exibição" value="Facebook">
+                    </div>
+                    <div class="social-edit-field">
+                        <i class="bi bi-instagram"></i>
+                        <input type="url" class="edit-mode-field" data-field="instagram-url" placeholder="URL do Instagram" value="#">
+                        <input type="text" class="edit-mode-field" data-field="instagram-text" placeholder="Texto de exibição" value="Instagram">
+                    </div>
+                    <div class="social-edit-field">
+                        <i class="bi bi-whatsapp"></i>
+                        <input type="url" class="edit-mode-field" data-field="whatsapp-url" placeholder="URL do WhatsApp" value="#">
+                        <input type="text" class="edit-mode-field" data-field="whatsapp-text" placeholder="Texto de exibição" value="WhatsApp">
+                    </div>
+                    <div class="social-edit-field">
+                        <i class="bi bi-youtube"></i>
+                        <input type="url" class="edit-mode-field" data-field="youtube-url" placeholder="URL do YouTube" value="#">
+                        <input type="text" class="edit-mode-field" data-field="youtube-text" placeholder="Texto de exibição" value="YouTube">
+                    </div>
+                </div>
+                
+                <button class="edit-toggle" data-field="social" style="margin-top: 15px;">Editar Redes Sociais</button>
+            </div>
+            
+            <!-- Mapa de Localização -->
+            <div class="section-container">
+                <h2 class="section-title">Onde Estamos</h2>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0754267452906!2d-46.65342658502166!3d-23.565734367639193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1621019413893!5m2!1spt-BR!2sbr" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <div style="margin-top: 15px;">
+                    <button class="edit-toggle" data-field="map">Alterar Localização do Mapa</button>
+                    <div class="edit-mode-field" data-field="map-url" style="display: none; margin-top: 10px;">
+                        <label for="map-embed-url">URL do Mapa Embed:</label>
+                        <input type="url" id="map-embed-url" value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0754267452906!2d-46.65342658502166!3d-23.565734367639193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1621019413893!5m2!1spt-BR!2sbr" style="width: 100%; padding: 8px; margin-top: 5px;">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Botões de ação para salvar/cancelar -->
+            <div class="edit-buttons" style="display: none;">
+                <button id="cancel-edit" class="secondary-button">Cancelar</button>
+                <button id="save-changes" class="primary-button">Salvar Alterações</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <p>&copy; 2025 ReUse - Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts JavaScript -->
+    <script>
+        // Função para destacar a página ativa no menu
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const menuItems = document.querySelectorAll('.sidebar-nav a');
+            
+            menuItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Controle do modo de edição
+            const toggleEditBtn = document.getElementById('toggle-edit-mode');
+            const cancelEditBtn = document.getElementById('cancel-edit');
+            const saveChangesBtn = document.getElementById('save-changes');
+            const editButtons = document.querySelector('.edit-buttons');
+            const editToggles = document.querySelectorAll('.edit-toggle');
+            
+            let isEditMode = false;
+            
+            toggleEditBtn.addEventListener('click', function() {
+                isEditMode = !isEditMode;
+                document.body.classList.toggle('edit-mode', isEditMode);
+                editButtons.style.display = isEditMode ? 'flex' : 'none';
+                toggleEditBtn.innerHTML = isEditMode ? 
+                    '<i class="fas fa-times"></i> Sair do Modo Edição' : 
+                    '<i class="fas fa-edit"></i> Editar Informações';
+            });
+            
+            cancelEditBtn.addEventListener('click', function() {
+                isEditMode = false;
+                document.body.classList.remove('edit-mode');
+                editButtons.style.display = 'none';
+                toggleEditBtn.innerHTML = '<i class="fas fa-edit"></i> Editar Informações';
+                
+                // Restaurar valores originais (aqui seria implementada a lógica para reverter as alterações)
+            });
+            
+            saveChangesBtn.addEventListener('click', function() {
+                // Coletar todos os dados dos campos de edição
+                const phoneLine1 = document.querySelector('[data-field="phone-line1"]').value;
+                const phoneLine2 = document.querySelector('[data-field="phone-line2"]').value;
+                const emailLine1 = document.querySelector('[data-field="email-line1"]').value;
+                const emailLine2 = document.querySelector('[data-field="email-line2"]').value;
+                const addressLine1 = document.querySelector('[data-field="address-line1"]').value;
+                const addressLine2 = document.querySelector('[data-field="address-line2"]').value;
+                const addressLine3 = document.querySelector('[data-field="address-line3"]').value;
+                const hoursLine1 = document.querySelector('[data-field="hours-line1"]').value;
+                const hoursLine2 = document.querySelector('[data-field="hours-line2"]').value;
+                const hoursLine3 = document.querySelector('[data-field="hours-line3"]').value;
+                
+                // Atualizar os elementos de visualização
+                document.querySelector('.phone-line1').textContent = phoneLine1;
+                document.querySelector('.phone-line2').textContent = phoneLine2;
+                document.querySelector('.email-line1').textContent = emailLine1;
+                document.querySelector('.email-line2').textContent = emailLine2;
+                document.querySelector('.address-line1').textContent = addressLine1;
+                document.querySelector('.address-line2').textContent = addressLine2;
+                document.querySelector('.address-line3').textContent = addressLine3;
+                document.querySelector('.hours-line1').textContent = hoursLine1;
+                document.querySelector('.hours-line2').textContent = hoursLine2;
+                document.querySelector('.hours-line3').textContent = hoursLine3;
+                
+                // Sair do modo de edição
+                isEditMode = false;
+                document.body.classList.remove('edit-mode');
+                editButtons.style.display = 'none';
+                toggleEditBtn.innerHTML = '<i class="fas fa-edit"></i> Editar Informações';
+                
+                // Aqui você normalmente enviaria os dados para o servidor
+                alert('Alterações salvas com sucesso!');
+            });
+            
+            // Controle dos botões de edição individual
+            editToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const field = this.getAttribute('data-field');
+                    const editFields = document.querySelectorAll(`.edit-mode-field[data-field^="${field}"]`);
+                    
+                    // Alternar a exibição dos campos de edição
+                    editFields.forEach(field => {
+                        field.style.display = field.style.display === 'block' ? 'none' : 'block';
+                    });
+                    
+                    // Para as redes sociais, mostrar/ocultar a seção de edição
+                    if (field === 'social') {
+                        const socialEdit = document.querySelector('.social-edit');
+                        const socialView = document.querySelector('.social-media');
+                        socialEdit.style.display = socialEdit.style.display === 'flex' ? 'none' : 'flex';
+                        socialView.style.display = socialView.style.display === 'none' ? 'flex' : 'none';
+                    }
+                    
+                    // Para o mapa, mostrar/ocultar o campo de URL
+                    if (field === 'map') {
+                        const mapUrlField = document.querySelector('[data-field="map-url"]');
+                        mapUrlField.style.display = mapUrlField.style.display === 'block' ? 'none' : 'block';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

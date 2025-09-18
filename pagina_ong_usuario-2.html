@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/pagina_ong_usuario.css">
+    <link rel="stylesheet" href="CSS/pagina_ong_usuario-2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="CSS/breadcrumbs.css">
+    <title>Patas conscientes - Página da ONG</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <div class="logo-section">
+                    <div class="logo">
+                        <a href="cliente.html"><img src="IMG/reuse-logo-(1).svg" alt="ReUse Logo"></a>
+                    </div>
+                </div>
+
+                <!-- Barra de pesquisa e filtros no meio -->
+                <div class="search-section">
+                    <div class="search-combined">
+                        <div class="search-input">
+                            <input type="text" id="searchInput" placeholder="O que você está procurando?">
+                            <button id="searchButton" class="search-button" aria-label="Pesquisar">
+                               <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                        <div class="search-filters">
+                            <select>
+                                <option>Todos os filtros</option>
+                                <option>Roupas</option>
+                                <option>Eletrodomésticos</option>
+                                <option>Melhores preços</option>
+                                <option>Recém adicionados</option>
+                                <option>Itens para doação</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Elementos do usuário à direita -->
+                <div class="user-section">
+                    <div class="cart">
+                        <a href="carrinho.html">
+                            <span class="cart-icon"><i class="bi bi-cart3"></i></span>
+                        </a>
+                        <span class="cart-count">1</span>
+                    </div>
+                    <a href="login.html">
+                        <i class="bi bi-box-arrow-right"></i> Sair da Conta
+                    </a>
+                    <a href="perfil.html">
+                        <i class="bi bi-person-fill"></i> Minha Conta
+                    </a>
+                </div>
+
+                <!-- Categorias abaixo -->
+                <div class="categories-section">
+                    <section class="categories">
+                        <div class="dropdown">
+                            <a href="#">Masculino</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Roupas</div>
+                                <a href="#">Camisetas</a>
+                                <a href="#">Camisas</a>
+                                <a href="#">Calças</a>
+                                <a href="#">Bermudas</a>
+                                <a href="#">Jaquetas</a>
+                                <div class="dropdown-category">Calçados</div>
+                                <a href="#">Tênis</a>
+                                <a href="#">Sapatos</a>
+                                <a href="#">Chinelos</a>
+                                <div class="dropdown-category">Acessórios</div>
+                                <a href="#">Relógios</a>
+                                <a href="#">Cintos</a>
+                                <a href="#">Bonés</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a href="#">Feminino</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Roupas</div>
+                                <a href="#">Blusas</a>
+                                <a href="#">Vestidos</a>
+                                <a href="#">Calças</a>
+                                <a href="#">Saias</a>
+                                <a href="#">Jaquetas</a>
+                                <div class="dropdown-category">Calçados</div>
+                                <a href="#">Sapatos</a>
+                                <a href="#">Tênis</a>
+                                <a href="#">Sandálias</a>
+                                <a href="#">Botas</a>
+                                <div class="dropdown-category">Acessórios</div>
+                                <a href="#">Bolsas</a>
+                                <a href="#">Bijuterias</a>
+                                <a href="#">Lenços</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a href="#">Infantil</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Roupas</div>
+                                <a href="#">Camisetas</a>
+                                <a href="#">Conjuntos</a>
+                                <a href="#">Calças</a>
+                                <a href="#">Vestidos</a>
+                                <div class="dropdown-category">Calçados</div>
+                                <a href="#">Tênis</a>
+                                <a href="#">Sandálias</a>
+                                <div class="dropdown-category">Outros</div>
+                                <a href="#">Brinquedos</a>
+                                <a href="#">Acessórios</a>
+                                <a href="#">Material Escolar</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a href="#">Esportivo</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Roupas</div>
+                                <a href="#">Camisetas</a>
+                                <a href="#">Bermudas</a>
+                                <a href="#">Leggings</a>
+                                <a href="#">Jaquetas</a>
+                                <div class="dropdown-category">Calçados</div>
+                                <a href="#">Tênis de Corrida</a>
+                                <a href="#">Chuteiras</a>
+                                <a href="#">Tênis para Academia</a>
+                                <div class="dropdown-category">Equipamentos</div>
+                                <a href="#">Bolas</a>
+                                <a href="#">Raquetes</a>
+                                <a href="#">Acessórios de Treino</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a href="#">Casa/Cozinha</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-category">Eletrodomésticos</div>
+                                <a href="#">Liquidificadores</a>
+                                <a href="#">Cafeteiras</a>
+                                <a href="#">Micro-ondas</a>
+                                <a href="#">Batedeiras</a>
+                                <div class="dropdown-category">Móveis</div>
+                                <a href="#">Mesas</a>
+                                <a href="#">Cadeiras</a>
+                                <a href="#">Sofás</a>
+                                <a href="#">Estantes</a>
+                                <div class="dropdown-category">Utensílios</div>
+                                <a href="#">Panelas</a>
+                                <a href="#">Talheres</a>
+                                <a href="#">Copos</a>
+                                <a href="#">Pratos</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <h1 class="title">Instituição</h1>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="container">
+        <!-- Perfil da Instituição -->
+        <div class="institution-profile">
+            <div class="institution-header">
+                <div class="institution-logo"><img src="IMG/patas-concientes.jpg" alt="Patas conscientes"></div>
+                <div class="institution-info">
+                    <h1>Patas conscientes</h1>
+                    <div class="institution-category">Resgate Animal</div>
+                    <p class="institution-description">
+                        Dedicada ao Acolhimento, Resgate e cuidados de animais
+                    </p>
+                    <button type="button" class="donate-button"
+                        onclick="window.location.href='#'">Quero Doar</button>
+                    <button type="button" class="buy-button"
+                        onclick="window.location.href='produtos_usuarios_ong-2.html'">Comprar Produtos</button>
+                    <button type="button" class="Voluntário-button"
+                        onclick="window.location.href='#'">Quero ser Voluntário</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Estatísticas da Instituição -->
+        <div class="institution-stats">
+            <div class="stat-card">
+                <div class="stat-number">124</div>
+                <div class="stat-label">Doações Recebidas</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">42</div>
+                <div class="stat-label">Animais resgatados</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">4</div>
+                <div class="stat-label">Voluntários Ativos</div>
+            </div>
+        </div>
+
+        <!-- Tabs da Instituição -->
+        <div class="institution-tabs">
+            <div class="institution-tab active">Sobre a ONG</div>
+            <div class="institution-tab">Adoção</div>
+            <div class="institution-tab">Depoimentos</div>
+           <div class="institution-tab">Contato</div>
+        </div>
+
+        <!-- Sobre a ONG -->
+        <div class="tab-content active">
+            <h2 class="section-title">Sobre Patas Concientes</h2>
+            <div class="about-content">
+                <p>Site dedicado a adoção de pets provindos de ONG's e abrigos promovendo a adoção responsável.
+                </p>
+
+                <h3>Nossa História</h3>
+                <p>História: Temos o comprimisso de reforçar esta aliança de cuidado e amor entre nós, amantes de pets e
+                    nossos queridos animais. Mantemos conexões estreitas com ONG's e abrigos locais. Partilhamos mais
+                    sobre suas rotinas, notícias, carências e claro seus respectivos pets, dessa forma os ajudamos a
+                    aumentar sua visibilidade em prol dessa corrente do bem!
+                </p>
+
+                <h3>Como Ajudar</h3>
+                <ul>
+                    <li>Entre em Contato: Preencha nosso formulário de interesse.</li>
+                    <li>Reunião Inicial: Nossa equipe entrará em contato para agendar uma reunião e discutir as
+                        possibilidades de parceria.</li>
+                    <li>Definição da Parceria: Juntos, definiremos a melhor forma de colaboração, alinhando expectativas
+                        e objetivos.
+                    </li>
+                    <li>Formalização: Assinaremos um acordo de parceria que detalha as responsabilidades e benefícios
+                        para ambas as partes.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Doações Necessárias -->
+        <div class="tab-content">
+    <h2 class="section-title">Adote um Amigo</h2>
+    <div class="donations-section">
+        <div class="adoption-message">
+            <div class="adoption-content">
+                <img src="IMG/adocao.png" alt="Animais para adoção">
+                <h3>Dê um lar para um amigo peludo</h3>
+                <p>Nossa ONG tem vários cachorros resgatados esperando por um lar amoroso. Cada adoção significa uma vida salva e mais espaço para resgatarmos outros animais necessitados.</p>
+                <p>Ao adotar, você recebe um companheiro leal e ajuda a combater o abandono animal.</p>
+                <button class="adopt-btn" onclick="window.location.href='https://patasconscientes.netlify.app/'" target>Quero Adotar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- Depoimentos -->
+<div class="tab-content">
+    <h2 class="section-title">Depoimentos</h2>
+    <div class="testimonials-section">
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <img src="IMG/ana-silva-2.png" alt="Ana Silva">
+                <div>
+                    <h3>Ana Silva</h3>
+                    <span class="testimonial-date">15/06/2025</span>
+                </div>
+            </div>
+            <div class="testimonial-rating">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="testimonial-text">
+                "Adotei meu companheiro Thor através da Patas Conscientes e foi a melhor decisão da minha vida. Todo o processo foi transparente e cheio de amor. Recomendo a todos que querem adotar com responsabilidade!"
+            </p>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <img src="IMG/carlos.png" alt="Carlos Mendes">
+                <div>
+                    <h3>Carlos Mendes</h3>
+                    <span class="testimonial-date">02/05/2025</span>
+                </div>
+            </div>
+            <div class="testimonial-rating">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+            </div>
+            <p class="testimonial-text">
+                "Sou voluntário há 6 meses e posso dizer que o trabalho desta ONG é incrível. Os animais são tratados com muito carinho e respeito. Ver os bichinhos sendo adotados por famílias amorosas não tem preço!"
+            </p>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <img src="IMG/mariana-oliveira-2.png" alt="Mariana Oliveira">
+                <div>
+                    <h3>Mariana Oliveira</h3>
+                    <span class="testimonial-date">22/04/2025</span>
+                </div>
+            </div>
+            <div class="testimonial-rating">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="testimonial-text">
+                "Doamos ração e medicamentos regularmente para a Patas Conscientes. Saber que nossa contribuição ajuda a manter os animais saudáveis enquanto esperam por um lar nos enche de alegria. ONG séria e comprometida!"
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Contato -->
+<div class="tab-content">
+    <h2 class="section-title">Informações de Contato</h2>
+    
+    <div class="contact-info-container">
+        <div class="form-group">
+            <h3><i class="bi bi-telephone"></i> Telefone</h3>
+            <div class="contact-display">
+                <span>(12) 12345-1234</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <h3><i class="bi bi-whatsapp"></i> WhatsApp</h3>
+            <div class="contact-display">
+                <span>(16) 99393-6341</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <h3><i class="bi bi-envelope"></i> E-mail</h3>
+            <div class="contact-display">
+                <span>patasconscientes@gmail.com</span>
+            </div>
+        </div>
+    </div>
+
+   <!-- Mapa de Localização -->
+            <div class="section-container">
+                <h2 class="section-title">Onde Estamos</h2>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0754267452906!2d-46.65342658502166!3d-23.565734367639193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1621019413893!5m2!1spt-BR!2sbr" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+<div id="address-edit-form" style="display: none; margin-top: 20px;">
+    <h3>Editar Endereço</h3>
+    <div class="form-group">
+        <label>Endereço Completo</label>
+        <input type="text" id="address-input" class="form-control" placeholder="Digite o endereço completo">
+    </div>
+</div>
+
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Seção de Idioma -->
+                <div class="footer-links language-section">
+                    <h3>Idioma/Language</h3>
+                    <div class="language-selector">
+                        <button class="language-option active" data-lang="pt-br" aria-label="Português Brasileiro">
+                            <span class="flag-icon">🇧🇷</span> PT-BR
+                        </button>
+                        <button class="language-option" data-lang="en" aria-label="English">
+                            <span class="flag-icon">🇺🇸</span> EN
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Seção Minha Conta -->
+                <div class="footer-links">
+                    <h3>Minha Conta</h3>
+                    <a href="perfil.html"><i class="bi bi-person-fill"></i> <span>Perfil</span></a>
+                    <a href="pedidos.html"><i class="bi bi-box-seam"></i> <span>Pedidos</span></a>
+                    <a href="favoritos.html"><i class="bi bi-heart-fill"></i> <span>Favoritos</span></a>
+                </div>
+
+                <!-- Seção Minha Loja -->
+                <div class="footer-links">
+                    <h3>Minha Loja</h3>
+                    <a href="login.html"><i class="bi bi-grid-3x3-gap-fill"></i> <span>Produtos</span></a>
+                    <a href="login.html"><i class="bi bi-bar-chart-line-fill"></i> <span>Estatísticas</span></a>
+                    <a href="login.html"><i class="bi bi-star-fill"></i> <span>Avaliações</span></a>
+                </div>
+
+                <!-- Seção Configurações -->
+                <div class="footer-links">
+                    <h3>Configurações</h3>
+                    <a href="privacidade.html"><i class="bi bi-shield-lock-fill"></i> <span>Privacidade</span></a>
+                    <a href="notificacao.html"><i class="bi bi-bell-fill"></i> <span>Notificações</span></a>
+                    <a href="pagamento.html"><i class="bi bi-credit-card-fill"></i> <span>Pagamentos</span></a>
+                </div>
+
+                <!-- Seção Sobre Nós -->
+                <div class="footer-links">
+                    <h3>Sobre Nós</h3>
+                    <a href="missao.html"><i class="bi bi-info-circle-fill"></i> <span>Missão</span></a>
+                    <a href="equipe.html"><i class="bi bi-people-fill"></i> <span>Equipe</span></a>
+                    <a href="chat_com_vendedor.html"><i class="bi bi-chat-dots-fill"></i> <span>Chat com Vendedor</span></a>
+
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                &copy; 2025 ReUse - <span>Todos os direitos reservados</span>
+            </div>
+        </div>
+    </footer>
+
+<!-- Modal de Doação Específica para Patas Conscientes -->
+<div id="donationModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    
+    <div class="donation-form">
+      <h2 class="form-title">Doação para Patas Conscientes</h2>
+      <form id="doacao-form">
+        <!-- Nome do Item -->
+        <div class="form-group">
+          <label for="nome-item" class="form-label">Nome do Item *</label>
+          <input type="text" id="nome-item" name="nome-item" class="form-control"
+                 placeholder="Ex: Ração para cães" required>
+        </div>
+
+        <!-- Categoria do Item (adaptada para Patas Conscientes) -->
+        <div class="form-group">
+          <label for="categoria" class="form-label">Categoria *</label>
+          <select id="categoria" name="categoria" class="form-select" required>
+            <option value="" selected disabled>Selecione uma categoria</option>
+            <option value="racao">Ração para animais</option>
+            <option value="cobertores">Cobertores</option>
+            <option value="brinquedos">Brinquedos</option>
+            <option value="medicamentos">Medicamentos</option>
+            <option value="higiene">Produtos de higiene</option>
+          </select>
+        </div>
+
+        <!-- Qualidade do Item -->
+        <div class="form-group">
+          <label class="form-label">Qualidade do Item *</label>
+          <div class="form-check-group">
+            <label class="form-check">
+              <input type="radio" name="qualidade" value="baixa" required>
+              Baixa
+            </label>
+            <label class="form-check">
+              <input type="radio" name="qualidade" value="media">
+              Média
+            </label>
+            <label class="form-check">
+              <input type="radio" name="qualidade" value="alta">
+              Alta
+            </label>
+          </div>
+        </div>
+
+        <!-- Estado do Item -->
+        <div class="form-group">
+          <label class="form-label">Estado do Item *</label>
+          <div class="form-check-group">
+            <label class="form-check">
+              <input type="radio" name="estado" value="usado" required>
+              Usado
+            </label>
+            <label class="form-check">
+              <input type="radio" name="estado" value="semi-novo">
+              Semi-novo
+            </label>
+            <label class="form-check">
+              <input type="radio" name="estado" value="novo">
+              Novo
+            </label>
+          </div>
+        </div>
+
+        <!-- Descrição do Produto -->
+        <div class="form-group">
+          <label for="descricao" class="form-label">Descrição do Produto *</label>
+          <textarea id="descricao" name="descricao" class="form-control form-textarea"
+                    placeholder="Descreva detalhes sobre o item (cor, tamanho, marca, etc.)" required></textarea>
+        </div>
+
+        <!-- Upload de Fotos -->
+        <div class="form-group">
+          <label class="form-label">Fotos do Item *</label>
+          <label for="fotos" class="file-upload">
+            <i class="bi bi-cloud-upload"></i>
+            <span class="upload-text">Clique ou arraste as fotos aqui</span>
+            <span class="upload-hint">Máximo: 5 fotos (JPG, PNG - até 5MB cada)</span>
+            <input type="file" id="fotos" name="fotos" accept="image/*" multiple required>
+          </label>
+        </div>
+
+        <!-- Instituição fixa (Patas Conscientes) -->
+        <div class="form-group">
+          <label class="form-label">Instituição Beneficiada *</label>
+          <div class="institution-info">
+            <div class="institution-logo-small">
+              <img src="IMG/patas-concientes.jpg" alt="Patas Conscientes">
+            </div>
+            <div class="institution-name">Patas Conscientes</div>
+          </div>
+        </div>
+
+        <!-- Botão de Envio -->
+        <div class="submit-wrapper text-center">
+          <button type="submit" class="btn btn-primary btn-lg">
+            <i class="bi bi-heart-fill"></i> Confirmar Doação
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de Cadastro de Voluntário para Patas Conscientes -->
+<div id="volunteerModal" class="modal">
+  <div class="modal-content volunteer-modal-content">
+    <span class="close volunteer-close">&times;</span>
+    
+    <!-- Cabeçalho da ONG -->
+    <div class="volunteer-header">
+      <img src="IMG/patas-concientes.jpg" alt="Patas Conscientes">
+      <h1>Patas Conscientes - Cadastro de Voluntário</h1>
+    </div>
+
+    <!-- Formulário de cadastro -->
+    <div class="volunteer-form-container">
+      <h2 class="form-title">Preencha o formulário abaixo</h2>
+      <form id="volunteerForm" class="volunteer-form">
+        <!-- Dados pessoais -->
+        <div class="form-group">
+          <label for="fullName">Nome completo:</label>
+          <input type="text" id="fullName" name="fullName" required>
+        </div>
+
+        <div class="form-group">
+          <label for="birthDate">Data de nascimento:</label>
+          <div class="birthdate-container">
+            <select id="birthDay" name="birthDay" class="birthdate-select" required>
+              <option value="" disabled selected>Dia</option>
+              <!-- Dias serão preenchidos por JavaScript -->
+            </select>
+            <select id="birthMonth" name="birthMonth" class="birthdate-select" required>
+              <option value="" disabled selected>Mês</option>
+              <!-- Meses serão preenchidos por JavaScript -->
+            </select>
+            <select id="birthYear" name="birthYear" class="birthdate-select" required>
+              <option value="" disabled selected>Ano</option>
+              <!-- Anos serão preenchidos por JavaScript -->
+            </select>
+          </div>
+          <input type="hidden" id="birthDate" name="birthDate">
+        </div>
+
+        <div class="form-group">
+          <label for="age">Idade:</label>
+          <input type="number" id="age" name="age" min="18" required>
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Gênero (opcional):</label>
+          <select id="gender" name="gender">
+            <option value="">Selecione</option>
+            <option value="feminino">Feminino</option>
+            <option value="masculino">Masculino</option>
+            <option value="outro">Outro</option>
+            <option value="prefiro-nao-dizer">Prefiro não dizer</option>
+          </select>
+        </div>
+
+        <!-- Endereço -->
+        <div class="form-group">
+          <label for="cep">CEP:</label>
+          <div class="cep-search">
+            <input type="text" id="cep" name="cep" placeholder="00000-000" required maxlength="9"
+                   pattern="\d{5}-?\d{3}">
+            <button type="button" id="cep-button" class="cep-button">Buscar</button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Endereço:</label>
+          <input type="text" id="address" name="address" required>
+        </div>
+
+        <div class="form-group">
+          <label for="complement">Complemento (opcional):</label>
+          <input type="text" id="complement" name="complement">
+        </div>
+
+        <div class="form-group">
+          <label for="neighborhood">Bairro:</label>
+          <input type="text" id="neighborhood" name="neighborhood" required>
+        </div>
+
+        <div class="form-group">
+          <label for="city">Cidade:</label>
+          <input type="text" id="city" name="city" required>
+        </div>
+
+        <div class="form-group">
+          <label for="state">Estado:</label>
+          <input type="text" id="state" name="state" required>
+        </div>
+
+        <!-- Contato -->
+        <div class="form-group">
+          <label for="phone">Telefone para contato (com DDD):</label>
+          <input type="tel" id="phone" name="phone" placeholder="(00) 00000-0000" required maxlength="15">
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <!-- Experiência -->
+        <div class="form-group full-width">
+          <label>Você já participou de trabalhos voluntários antes?</label>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" id="volunteerYes" name="volunteerBefore" value="sim">
+              <label for="volunteerYes">Sim</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="volunteerNo" name="volunteerBefore" value="nao" checked>
+              <label for="volunteerNo">Não</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group full-width" id="experienceGroup" style="display: none;">
+          <label for="experience">Se sim, descreva sua experiência:</label>
+          <textarea id="experience" name="experience" rows="3"></textarea>
+        </div>
+
+        <!-- Disponibilidade -->
+        <div class="form-group">
+          <label for="availableDays">Dias da semana:</label>
+          <input type="text" id="availableDays" name="availableDays" placeholder="Ex: Segunda, Quarta, Sexta"
+                 required>
+        </div>
+
+        <div class="form-group">
+          <label for="availableHours">Horários disponíveis:</label>
+          <input type="text" id="availableHours" name="availableHours" placeholder="Ex: Manhã, Tarde"
+                 required>
+        </div>
+
+        <!-- Capacitações -->
+        <div class="form-group full-width">
+          <label>Está disponível para participar de capacitações e reuniões eventuais?</label>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" id="trainingYes" name="trainingAvailable" value="sim" checked>
+              <label for="trainingYes">Sim</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="trainingNo" name="trainingAvailable" value="nao">
+              <label for="trainingNo">Não</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Saúde -->
+        <div class="form-group full-width">
+          <label for="healthCondition">Você possui alguma limitação física ou condição de saúde que deveríamos
+            saber?</label>
+          <textarea id="healthCondition" name="healthCondition" rows="3"></textarea>
+        </div>
+
+        <!-- Motivação -->
+        <div class="form-group full-width">
+          <label for="motivation">Por que você quer ser voluntário em nossa ONG? (opcional)</label>
+          <textarea id="motivation" name="motivation" rows="4"></textarea>
+        </div>
+
+        <!-- Botão de envio -->
+        <button type="submit" class="submit-button">Enviar Cadastro</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Overlay e mensagem de sucesso -->
+<div class="overlay" id="volunteer-success-overlay" style="display: none;"></div>
+<div class="success-message-new" id="volunteer-success-message" style="display: none;">
+  <i class="bi bi-check-circle-fill"></i>
+  <h3>Cadastro realizado com sucesso!</h3>
+  <p>Obrigado por sua contribuição.</p>
+</div>
+
+ <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.institution-tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove a classe active de todas as tabs e conteúdos
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+
+                    // Adiciona a classe active à tab clicada
+                    tab.classList.add('active');
+
+                    // Mostra o conteúdo correspondente
+                    const tabId = Array.from(tabs).indexOf(tab);
+                    tabContents[tabId].classList.add('active');
+                });
+            });
+        });
+    </script>
+
+<script>
+    // Variável para controlar se o mapa já foi carregado
+    let mapLoaded = false;
+
+    // Função para carregar o mapa quando a aba de Contato for ativada
+    function setupMapTab() {
+        const tabs = document.querySelectorAll('.institution-tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                // Se for a aba de Contato (índice 3) e o mapa ainda não foi carregado
+                if (index === 3 && !mapLoaded) {
+                    loadMap();
+                    mapLoaded = true;
+                }
+            });
+        });
+    }
+
+    // Carrega a biblioteca Leaflet para o mapa
+    function loadMap() {
+        if (window.L) {
+            initMap();
+            return;
+        }
+
+        const leafletCSS = document.createElement('link');
+        leafletCSS.rel = 'stylesheet';
+        leafletCSS.href = 'https://unpkg.com/leaflet@1.7.1/dist/leaflet.css';
+        document.head.appendChild(leafletCSS);
+        
+        const leafletJS = document.createElement('script');
+        leafletJS.src = 'https://unpkg.com/leaflet@1.7.1/dist/leaflet.js';
+        leafletJS.onload = initMap;
+        document.head.appendChild(leafletJS);
+    }
+
+   function initMap() {
+    // Coordenadas da Fatec Taquaritinga: -21.4064, -48.5047
+    const map = L.map('map').setView([-21.4064, -48.5047], 15);
+    
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    
+    L.marker([-21.4064, -48.5047]).addTo(map)
+        .bindPopup('<b>Patas Concientes</b><br>Av. Dr. Flávio Henrique Lemos, 585 - Taquaritinga/SP')
+        .openPopup();
+}
+    // Configura o mapa quando a página carregar
+    document.addEventListener('DOMContentLoaded', function() {
+        setupMapTab();
+    });
+</script>
+
+<script>
+    // Variáveis para dados de pesquisa
+let allProducts = [];
+let allInstitutions = [];
+let currentLanguage = 'pt-br'; // Definindo um valor padrão
+
+// Função para configurar os dados de pesquisa
+function setupSearchData() {
+    allProducts = [
+        { 
+            id: 1,
+            name: 'Camiseta Polo', 
+            category: 'Masculino',
+            price: 'R$ 39,90'
+        },
+        { 
+            id: 2,
+            name: 'Liquidificador Philips', 
+            category: 'Casa/Cozinha',
+            price: 'R$ 89,90'
+        },
+        { 
+            id: 3,
+            name: 'Tênis Nike', 
+            category: 'Esportivo',
+            price: 'R$ 199,99'
+        },
+        { 
+            id: 4,
+            name: 'Vestido Floral', 
+            category: 'Feminino',
+            price: 'R$ 65,00'
+        }
+    ];
+
+    allInstitutions = [
+        { 
+            id: 101,
+            name: 'Patas Conscientes', 
+            category: 'Resgate Animal' 
+        },
+        { 
+            id: 102,
+            name: 'Centro Educacional Novo Amanhã', 
+            category: 'Educação' 
+        },
+        { 
+            id: 103,
+            name: 'Lar dos Idosos São Vicente', 
+            category: 'Assistência ao Idoso' 
+        },
+        { 
+            id: 104,
+            name: 'SOS Felino', 
+            category: 'Resgate Animal' 
+        }
+    ];
+}
+
+// Função principal para configurar a barra de pesquisa
+function setupSearchBar() {
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+    
+    // Criar elemento de sugestões se não existir
+    if (!document.getElementById('searchSuggestions')) {
+        const suggestionsDiv = document.createElement('div');
+        suggestionsDiv.id = 'searchSuggestions';
+        suggestionsDiv.className = 'search-suggestions-container';
+        suggestionsDiv.style.display = 'none';
+        
+        const searchContainer = document.querySelector('.search-input');
+        if (searchContainer) {
+            searchContainer.appendChild(suggestionsDiv);
+        }
+    }
+
+    // Evento de input na barra de pesquisa
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.trim().toLowerCase();
+        
+        if (searchTerm.length === 0) {
+            document.getElementById('searchSuggestions').style.display = 'none';
+            return;
+        }
+
+        const matchedProducts = allProducts.filter(item => 
+            item.name.toLowerCase().includes(searchTerm) || 
+            item.category.toLowerCase().includes(searchTerm)
+        );
+
+        const matchedInstitutions = allInstitutions.filter(item => 
+            item.name.toLowerCase().includes(searchTerm) || 
+            item.category.toLowerCase().includes(searchTerm)
+        );
+
+        displaySuggestions(matchedProducts, matchedInstitutions);
+    });
+
+    // Evento de foco
+    searchInput.addEventListener('focus', function() {
+        if (this.value.trim().length > 0) {
+            document.getElementById('searchSuggestions').style.display = 'block';
+        }
+    });
+
+    // Evento de blur
+    searchInput.addEventListener('blur', function() {
+        setTimeout(() => {
+            document.getElementById('searchSuggestions').style.display = 'none';
+        }, 200);
+    });
+
+    // Evento do botão de pesquisa
+    searchButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        performSearch();
+    });
+
+    // Evento de tecla Enter
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            performSearch();
+        }
+    });
+
+    // Função para exibir sugestões
+    function displaySuggestions(products, institutions) {
+        const searchSuggestions = document.getElementById('searchSuggestions');
+        if (products.length === 0 && institutions.length === 0) {
+            searchSuggestions.style.display = 'none';
+            return;
+        }
+
+        searchSuggestions.innerHTML = '';
+        
+        if (products.length > 0) {
+            const productsHeader = document.createElement('div');
+            productsHeader.className = 'search-suggestion-header';
+            productsHeader.textContent = 'Itens Mais Comprados';
+            searchSuggestions.appendChild(productsHeader);
+
+            products.slice(0, 5).forEach(product => {
+                const suggestion = document.createElement('div');
+                suggestion.className = 'search-suggestion';
+                suggestion.dataset.type = 'product';
+                suggestion.dataset.id = product.id;
+                
+                const nameElement = document.createElement('div');
+                nameElement.textContent = product.name;
+                
+                const categoryElement = document.createElement('div');
+                categoryElement.textContent = product.category;
+                
+                suggestion.appendChild(nameElement);
+                suggestion.appendChild(categoryElement);
+                
+                suggestion.addEventListener('click', function() {
+                    window.location.href = 'Produto.html?id=' + product.id;
+                });
+                
+                searchSuggestions.appendChild(suggestion);
+            });
+        }
+
+        if (institutions.length > 0) {
+            const institutionsHeader = document.createElement('div');
+            institutionsHeader.className = 'search-suggestion-header';
+            institutionsHeader.textContent = 'Instituições Mais Doadas';
+            searchSuggestions.appendChild(institutionsHeader);
+
+            institutions.slice(0, 5).forEach(institution => {
+                const suggestion = document.createElement('div');
+                suggestion.className = 'search-suggestion';
+                suggestion.dataset.type = 'institution';
+                suggestion.dataset.id = institution.id;
+                
+                const nameElement = document.createElement('div');
+                nameElement.textContent = institution.name;
+                
+                const categoryElement = document.createElement('div');
+                categoryElement.textContent = institution.category;
+                
+                suggestion.appendChild(nameElement);
+                suggestion.appendChild(categoryElement);
+                
+                suggestion.addEventListener('click', function() {
+                    if (institution.name === 'Patas Conscientes') {
+                        window.location.href = 'Pagina_ONG_Usuario-2.html';
+                    } else if (institution.name === 'SOS Felino') {
+                        window.location.href = 'Pagina_ONG_Usuario.html';
+                    } else {
+                        window.location.href = 'instituicao.html?id=' + institution.id;
+                    }
+                });
+                
+                searchSuggestions.appendChild(suggestion);
+            });
+        }
+
+        searchSuggestions.style.display = 'block';
+    }
+
+    // Função para executar a pesquisa
+    function performSearch() {
+        const searchTerm = searchInput.value.trim();
+        if (searchTerm.length === 0) return;
+
+        document.getElementById('searchSuggestions').style.display = 'none';
+
+        const matchedProducts = allProducts.filter(item => 
+            item.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+            item.category.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+
+        const matchedInstitutions = allInstitutions.filter(item => 
+            item.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+            item.category.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+
+        if (matchedProducts.length > 0) {
+            const firstProduct = matchedProducts[0];
+            window.location.href = 'Produto.html?id=' + firstProduct.id;
+        } else if (matchedInstitutions.length > 0) {
+            const firstInstitution = matchedInstitutions[0];
+            if (firstInstitution.name === 'Patas Conscientes') {
+                window.location.href = 'Pagina_ONG_Usuario-2.html';
+            } else if (firstInstitution.name === 'SOS Felino') {
+                window.location.href = 'Pagina_ONG_Usuario.html';
+            } else {
+                window.location.href = 'instituicao.html?id=' + firstInstitution.id;
+            }
+        } else {
+            alert('Nenhum resultado encontrado');
+        }
+    }
+}
+
+// Inicialização quando o DOM estiver pronto
+document.addEventListener('DOMContentLoaded', function() {
+    setupSearchData();
+    setupSearchBar();
+});
+
+</script>
+<script src="JS/breadcrumbs.js"></script>
+<script src="JS/modal_patas.js"></script>
+</body>
+
+</html>

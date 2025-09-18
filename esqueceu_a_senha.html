@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recuperação de senha na plataforma ReUse">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="CSS/esqueceu_a_Senha.css">
+    <title>Recuperar Senha - ReUse</title>
+</head>
+<body>
+    <div class="particles-container">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        
+    </div>
+
+    <main class="container" role="main">
+        <div class="form-container active">
+            <div class="logo-container">
+                <img class="logo" src="IMG/reuse-logo-(1).svg" alt="Logo ReUse - Plataforma de reutilização sustentável">
+            </div>
+            <div class="Recuperar-form">
+                <form id="recoveryForm" novalidate>
+                    <div class="form-group">
+                        <h1 class="form-title">Recuperar Senha</h1>
+                        <p class="form-instruction">Insira o endereço de e-mail associado à sua conta ReUse. Enviaremos um link para redefinir sua senha.</p>
+
+                        <div class="input-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com" required aria-required="true">
+                            <div class="error-message" id="email-error" role="alert"></div>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Enviar Link de Recuperação</button>
+
+                        <div class="back-to-login">
+                            <a href="login.html"><i class="fas fa-arrow-left"></i> Voltar para o login</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal de Sucesso Personalizado -->
+    <div class="success-modal" id="successModal" style="display: none;">
+        <div class="modal-content">
+            <div class="success-animation">
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+            </div>
+            <h2 class="success-title">Email enviado com sucesso!</h2>
+            <p class="success-message">Enviamos um link de recuperação para seu email. Verifique sua caixa de entrada e siga as instruções para criar uma nova senha.</p>
+            <div class="success-details">
+                <i class="fas fa-envelope success-icon"></i>
+                <span id="userEmail" class="email-display"></span>
+            </div>
+            <button class="modal-close-btn" onclick="closeSuccessModal()">Entendido</button>
+        </div>
+    </div>
+
+    <script src="JS/esqueceu_a_senha.js"></script>
+</body>
+</html>

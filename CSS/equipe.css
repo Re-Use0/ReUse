@@ -1,0 +1,272 @@
+    :root {
+      --primary-color: #8ecd90;
+      --primary-light: #52b69a;
+      --primary-dark: #115e4e;
+      --background-dark: #0a1921;
+      --text-light: #e0f2ef;
+      --text-muted: #6b7c7c;
+      --glass-dark: rgba(10, 25, 33, 0.8);
+      --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+      --radius-md: 16px;
+      --transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+      --spacing-sm: 16px;
+      --spacing-md: 24px;
+      --spacing-lg: 32px;
+      --spacing-xl: 48px;
+      --font-sans: 'Poppins', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    }
+
+    /* Novas animações para os cards */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes cardHover {
+      0% {
+        transform: translateY(0) rotate(0);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      50% {
+        transform: translateY(-15px) rotate(2deg);
+        box-shadow: 0 20px 30px rgba(82, 182, 154, 0.4);
+      }
+      100% {
+        transform: translateY(-10px) rotate(0);
+        box-shadow: 0 15px 25px rgba(82, 182, 154, 0.3);
+      }
+    }
+
+    @keyframes imageFloat {
+      0%, 100% {
+        transform: translateY(0) scale(1);
+      }
+      50% {
+        transform: translateY(-8px) scale(1.05);
+      }
+    }
+
+    @keyframes borderPulse {
+      0%, 100% {
+        box-shadow: 0 0 5px var(--primary-light), 0 0 10px rgba(82, 182, 154, 0.3);
+      }
+      50% {
+        box-shadow: 0 0 15px var(--primary-light), 0 0 25px rgba(82, 182, 154, 0.5);
+      }
+    }
+
+    @keyframes contentGlow {
+      0%, 100% {
+        text-shadow: 0 0 5px rgba(142, 205, 144, 0.3);
+      }
+      50% {
+        text-shadow: 0 0 15px rgba(142, 205, 144, 0.6);
+      }
+    }
+
+    /* Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--background-dark);
+      color: var(--text-light);
+      line-height: 1.6;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Partículas de fundo */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    /* Header Styles */
+    header {
+      background: var(--glass-dark);
+      padding: 1.5rem 0;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      border-bottom: 1px solid rgba(82, 182, 154, 0.2);
+      z-index: 10;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 var(--spacing-lg);
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .logo img {
+      width: 180px;
+      transition: var(--transition);
+    }
+
+    .logo:hover img {
+      transform: scale(1.05);
+    }
+
+    .cart-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    /* Main Content */
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: var(--spacing-xl) var(--spacing-lg);
+      position: relative;
+      z-index: 1;
+    }
+
+    main h1 {
+      color: var(--primary-color);
+      margin-bottom: var(--spacing-xl);
+      text-align: center;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    /* Team Members Grid */
+    .equipe {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: var(--spacing-xl);
+      margin-top: var(--spacing-xl);
+    }
+
+    /* Team Member Cards */
+    .membro {
+    background: rgba(16, 94, 78, 0.15);
+    border: 1px solid rgba(82, 182, 154, 0.3);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    width: 280px;
+    min-height: 400px; /* Altura mínima consistente */
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 0.8s ease-out both;
+}
+
+    .membro:nth-child(1) { animation-delay: 0.1s; }
+    .membro:nth-child(2) { animation-delay: 0.2s; }
+    .membro:nth-child(3) { animation-delay: 0.3s; }
+    .membro:nth-child(4) { animation-delay: 0.4s; }
+    .membro:nth-child(5) { animation-delay: 0.5s; }
+
+    .membro:hover {
+      animation: cardHover 1s forwards, borderPulse 2s infinite;
+    }
+
+   
+/* Member Image */
+.membro img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto var(--spacing-md);
+    display: block;
+    border: 3px solid rgba(82, 182, 154, 0.5);
+    transition: var(--transition);
+    flex-shrink: 0; /* Impede que a imagem diminua */
+}
+
+    .membro:hover img {
+      animation: imageFloat 3s ease-in-out infinite;
+      border-color: var(--primary-color);
+    }
+
+    /* Member Description */
+  /* Member Description - MODIFICAÇÕES AQUI */
+.descricao {
+    position: relative;
+    padding-top: var(--spacing-md);
+    margin-top: auto; /* Empurra a descrição para baixo */
+    border-top: 1px solid rgba(82, 182, 154, 0.3);
+    transition: var(--transition);
+    flex-grow: 1; /* Ocupa o espaço restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+    .membro:hover .descricao {
+      border-top-color: var(--primary-color);
+    }
+
+  .descricao h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    transition: var(--transition);
+}
+
+    .membro:hover .descricao h3 {
+      animation: contentGlow 2s infinite;
+    }
+
+   .descricao p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    transition: var(--transition);
+    /* Garante que o texto ocupe espaço consistente */
+    min-height: 60px;
+}
+
+    .membro:hover .descricao p {
+      color: var(--text-light);
+    }
+
+ /* Responsive Design - MODIFICAÇÕES AQUI */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+    
+    .cart-title {
+        font-size: 1.8rem;
+        margin-top: var(--spacing-sm);
+    }
+    
+    main h1 {
+        font-size: 2rem;
+    }
+    
+    .membro {
+        width: 100%;
+        max-width: 300px;
+        min-height: 380px; /* Altura ligeiramente menor em mobile */
+    }
+    
+    .descricao p {
+        min-height: 70px; /* Ajuste para mobile */
+    }
+}

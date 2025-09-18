@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - SOS Felino</title>
+    
+    <!-- Folhas de estilo -->
+    <link rel="stylesheet" href="CSS/ong.css">
+    <link rel="stylesheet" href="CSS/ong_produto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="container">
+            <div class="top-header">
+                <div class="logo">
+                    <img src="IMG/reuse-logo-(1).svg" alt="ReUse Logo">
+                </div>
+                <div class="user-actions">
+                    <a href="login.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- DASHBOARD PRINCIPAL -->
+    <div class="dashboard-container">
+        <!-- Menu Lateral -->
+        <aside class="sidebar">
+            <h2 class="sidebar-title">SOS Felino</h2>
+            <ul class="sidebar-nav">
+                <li><a href="ong.html"><i class="bi bi-house"></i> Início</a></li>
+                <li><a href="ong_doacoes.html"><i class="bi bi-handbag"></i> Doações</a></li>
+                <li><a href="ong_doacoes_necessarias.html"><i class="bi bi-clipboard-check"></i> Doações Necessárias</a></li>
+                <li><a href="ong_beneficiarios.html"><i class="bi bi-people"></i> Beneficiários</a></li>
+                <li><a href="ong_relatorios.html"><i class="bi bi-bar-chart"></i> Relatórios</a></li>
+                <li><a href="ong_configuracoes.html" class="active"><i class="bi bi-gear"></i> Configurações</a></li>
+                <li><a href="ong_contato.html"><i class="bi bi-envelope"></i> Contato</a></li>
+                <li><a href="ong_produto.html"><i class="bi bi-box-seam"></i> Produtos</a></li>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <!-- Breadcrumbs -->
+            <div class="breadcrumbs-vendedor">
+                <a href="ong.html">Painel da Instituição</a> &gt; <span>Produtos</span>
+            </div>
+            
+            <h1>Produtos da Loja</h1>
+            
+            <!-- Estatísticas de Produtos -->
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: #e8f5e9;">
+                        <i class="bi bi-box-seam" style="color: #4CAF50;"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-value">4</div>
+                        <div class="stat-label">Produtos Ativos</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: #e1f5fe;">
+                        <i class="bi bi-cart-check" style="color: #2196F3;"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-value">51</div>
+                        <div class="stat-label">Total de Vendas</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: #fff3e0;">
+                        <i class="bi bi-currency-dollar" style="color: #FF9800;"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-value">R$ 1.585,00</div>
+                        <div class="stat-label">Faturamento Total</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: #f3e5f5;">
+                        <i class="bi bi-star" style="color: #9C27B0;"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-value">4.8</div>
+                        <div class="stat-label">Avaliação Média</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Barra de Ações -->
+            <div class="action-buttons">
+                <button class="primary-button" onclick="window.location.href='Adicionar_Produto_ONG.html'">
+                    <i class="fas fa-plus"></i> Adicionar Novo Produto
+                </button>
+                
+                <div class="filters-section" style="margin-top: 20px;">
+                    <div class="filter-group">
+                        <label for="categoria">Filtrar por:</label>
+                        <select id="categoria">
+                            <option value="todos">Todos os produtos</option>
+                            <option value="roupas">Roupas</option>
+                            <option value="acessorios">Acessórios</option>
+                            <option value="casa">Produtos para Casa</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="ordenar">Ordenar por:</label>
+                        <select id="ordenar">
+                            <option value="recentes">Mais recentes</option>
+                            <option value="vendidos">Mais vendidos</option>
+                            <option value="preco-menor">Menor preço</option>
+                            <option value="preco-maior">Maior preço</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="busca">Buscar:</label>
+                        <input type="text" id="busca" placeholder="Nome do produto...">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Grid de Produtos -->
+            <div class="products-section">
+                <div class="products-grid" id="products-grid">
+                    <!-- Produto 1: Camisa -->
+                    <div class="product-card" data-categoria="roupas" data-vendidos="15" data-preco="35" data-avaliacao="4.9">
+                        <div class="product-image camisa"><img src="IMG/camiseta.sos.png" alt="Camisa"></div>
+                        <h3 class="product-name">Camisa SOS Felino</h3>
+                        <div class="product-price">R$ 35,00</div>
+                        <p class="product-description">Camisa casual de algodão, confortável e com estampa da instituição.</p>
+                        <div class="product-stats">
+                            <span><i class="bi bi-cart"></i> 15 vendidos</span>
+                            <span><i class="bi bi-star-fill"></i> 4.9 (12 avaliações)</span>
+                        </div>
+                        <div class="donation-actions">
+                            <button class="primary-button small" onclick="editarProduto(1)">
+                                <i class="fas fa-edit"></i> Editar
+                            </button>
+                            <button class="danger-button small" onclick="excluirProduto(1)">
+                                <i class="fas fa-trash"></i> Excluir
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Produto 2: Broche -->
+                    <div class="product-card" data-categoria="acessorios" data-vendidos="10" data-preco="15" data-avaliacao="4.7">
+                        <div class="product-image broche"><img src="IMG/broche.sos.png" alt="broche"></div>
+                        <h3 class="product-name">Broche SOS Felino</h3>
+                        <div class="product-price">R$ 15,00</div>
+                        <p class="product-description">Broche metálico com logo da instituição.</p>
+                        <div class="product-stats">
+                            <span><i class="bi bi-cart"></i> 10 vendidos</span>
+                            <span><i class="bi bi-star-fill"></i> 4.7 (8 avaliações)</span>
+                        </div>
+                        <div class="donation-actions">
+                            <button class="primary-button small" onclick="editarProduto(2)">
+                                <i class="fas fa-edit"></i> Editar
+                            </button>
+                            <button class="danger-button small" onclick="excluirProduto(2)">
+                                <i class="fas fa-trash"></i> Excluir
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Produto 3: Bolsa -->
+                    <div class="product-card" data-categoria="acessorios" data-vendidos="6" data-preco="45" data-avaliacao="4.5">
+                        <div class="product-image bolsa"><img src="IMG/bolsa.sos.png" alt="bolsa"></div>
+                        <h3 class="product-name">Bolsa SOS Felino</h3>
+                        <div class="product-price">R$ 45,00</div>
+                        <p class="product-description">Bolsa de algodão ecologicamente correta.</p>
+                        <div class="product-stats">
+                            <span><i class="bi bi-cart"></i> 6 vendidos</span>
+                            <span><i class="bi bi-star-fill"></i> 4.5 (5 avaliações)</span>
+                        </div>
+                        <div class="donation-actions">
+                            <button class="primary-button small" onclick="editarProduto(3)">
+                                <i class="fas fa-edit"></i> Editar
+                            </button>
+                            <button class="danger-button small" onclick="excluirProduto(3)">
+                                <i class="fas fa-trash"></i> Excluir
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Produto 4: Caneca -->
+                    <div class="product-card" data-categoria="casa" data-vendidos="20" data-preco="20" data-avaliacao="4.8">
+                        <div class="product-image caneca"><img src="IMG/caneca.sos.png" alt="caneca"></div>
+                        <h3 class="product-name">Caneca SOS Felino</h3>
+                        <div class="product-price">R$ 20,00</div>
+                        <p class="product-description">Caneca em cerâmica com estampa personalizada.</p>
+                        <div class="product-stats">
+                            <span><i class="bi bi-cart"></i> 20 vendidos</span>
+                            <span><i class="bi bi-star-fill"></i> 4.8 (15 avaliações)</span>
+                        </div>
+                        <div class="donation-actions">
+                            <button class="primary-button small" onclick="editarProduto(4)">
+                                <i class="fas fa-edit"></i> Editar
+                            </button>
+                            <button class="danger-button small" onclick="excluirProduto(4)">
+                                <i class="fas fa-trash"></i> Excluir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Estado vazio (inicialmente oculto) -->
+                <div class="empty-state" id="empty-state" style="display: none;">
+                    <i class="bi bi-search"></i>
+                    <h3>Nenhum produto encontrado</h3>
+                    <p>Tente ajustar os filtros ou termos de busca.</p>
+                    <button class="primary-button" onclick="limparFiltros()">
+                        <i class="fas fa-times"></i> Limpar Filtros
+                    </button>
+                </div>
+                
+                <!-- Paginação -->
+                <div class="pagination">
+                    <button class="pagination-button" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="pagination-button active">1</button>
+                    <button class="pagination-button">2</button>
+                    <button class="pagination-button">3</button>
+                    <button class="pagination-button">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ReUse - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+
+<!-- Modal Editar Produto -->
+<div id="modalEditar" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Editar Produto</h2>
+            <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+            <form id="formEditarProduto">
+                <input type="hidden" id="produtoId">
+                
+                <div class="form-group">
+                    <label for="nomeProduto">Nome do Produto</label>
+                    <input type="text" id="nomeProduto" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="precoProduto">Preço (R$)</label>
+                    <input type="number" id="precoProduto" min="0" step="0.01" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="categoriaProduto">Categoria</label>
+                    <select id="categoriaProduto" required>
+                        <option value="roupas">Roupas</option>
+                        <option value="acessorios">Acessórios</option>
+                        <option value="casa">Produtos para Casa</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="descricaoProduto">Descrição</label>
+                    <textarea id="descricaoProduto" rows="3" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="imagemProduto">URL da Imagem</label>
+                    <input type="text" id="imagemProduto">
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="secondary-button" onclick="fecharModal('modalEditar')">Cancelar</button>
+                    <button type="submit" class="primary-button">Salvar Alterações</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Excluir Produto -->
+<div id="modalExcluir" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Excluir Produto</h2>
+            <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+            <p>Tem certeza que deseja excluir o produto <strong id="nomeProdutoExcluir"></strong>?</p>
+            <p class="warning-text">Esta ação não pode ser desfeita.</p>
+            
+            <div class="form-actions">
+                <button type="button" class="secondary-button" onclick="fecharModal('modalExcluir')">Cancelar</button>
+                <button type="button" class="danger-button" onclick="confirmarExclusao()">Excluir Produto</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Adicionar Produto -->
+<div id="modalAdicionar" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Adicionar Novo Produto</h2>
+            <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+            <form id="formAdicionarProduto">
+                <div class="form-group">
+                    <label for="novoNomeProduto">Nome do Produto</label>
+                    <input type="text" id="novoNomeProduto" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="novoPrecoProduto">Preço (R$)</label>
+                    <input type="number" id="novoPrecoProduto" min="0" step="0.01" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="novoCategoriaProduto">Categoria</label>
+                    <select id="novoCategoriaProduto" required>
+                        <option value="roupas">Roupas</option>
+                        <option value="acessorios">Acessórios</option>
+                        <option value="casa">Produtos para Casa</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="novaDescricaoProduto">Descrição</label>
+                    <textarea id="novaDescricaoProduto" rows="3" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="novaImagemProduto">URL da Imagem</label>
+                    <input type="text" id="novaImagemProduto">
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="secondary-button" onclick="fecharModal('modalAdicionar')">Cancelar</button>
+                    <button type="submit" class="primary-button">Adicionar Produto</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    <!-- Scripts JavaScript -->
+<script src="JS/ong_produtos.js"></script>
+</body>
+
+</html>

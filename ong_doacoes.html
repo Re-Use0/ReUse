@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS Felino - Doações</title>
+    
+    <!-- Folhas de estilo -->
+    <link rel="stylesheet" href="CSS/ong.css">
+    <link rel="stylesheet" href="CSS/ong_doacao.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="container">
+            <div class="top-header">
+                <div class="logo">
+                    <img src="IMG/reuse-logo-(1).svg" alt="ReUse Logo">
+                </div>
+                <div class="user-actions">
+                    <a href="login.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- DASHBOARD PRINCIPAL -->
+    <div class="dashboard-container">
+        <!-- Menu Lateral -->
+        <aside class="sidebar">
+            <h2 class="sidebar-title">SOS Felino</h2>
+            <ul class="sidebar-nav">
+                <li><a href="ong.html"><i class="bi bi-house"></i> Início</a></li>
+                <li><a href="ong_doacoes.html"><i class="bi bi-handbag"></i> Doações</a></li>
+                <li><a href="ong_doacoes_necessarias.html"><i class="bi bi-clipboard-check"></i> Doações Necessárias</a></li>
+                <li><a href="ong_beneficiarios.html"><i class="bi bi-people"></i> Beneficiários</a></li>
+                <li><a href="ong_relatorios.html"><i class="bi bi-bar-chart"></i> Relatórios</a></li>
+                <li><a href="ong_configuracoes.html" class="active"><i class="bi bi-gear"></i> Configurações</a></li>
+                <li><a href="ong_contato.html"><i class="bi bi-envelope"></i> Contato</a></li>
+                <li><a href="ong_produto.html"><i class="bi bi-box-seam"></i> Produtos</a></li>
+            </ul>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <!-- Breadcrumbs -->
+            <div class="breadcrumbs-vendedor">
+                <a href="ong.html">Painel da Instituição</a> &gt; <span id="current-breadcrumb">Doações</span>
+            </div>
+            
+            <h1>Doações Recebidas</h1>
+            
+            <!-- Filtros -->
+            <div class="filters-section">
+                <div class="filter-group">
+                    <label for="status-filter">Status</label>
+                    <select id="status-filter">
+                        <option value="all">Todas</option>
+                        <option value="received">Recebidas</option>
+                        <option value="pending">Pendentes</option>
+                        <option value="scheduled">Agendadas</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="date-filter">Período</label>
+                    <select id="date-filter">
+                        <option value="all">Todo período</option>
+                        <option value="week">Esta semana</option>
+                        <option value="month">Este mês</option>
+                        <option value="quarter">Este trimestre</option>
+                        <option value="year">Este ano</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="category-filter">Categoria</label>
+                    <select id="category-filter">
+                        <option value="all">Todas</option>
+                        <option value="clothing">Roupas</option>
+                        <option value="blankets">Cobertores</option>
+                        <option value="toys">Brinquedos</option>
+                        <option value="hygiene">Produtos de Higiene</option>
+                        <option value="food">Ração</option>
+                    </select>
+                </div>
+                
+                <button id="filter-button" class="primary-button small">
+                    <i class="fas fa-filter"></i> Filtrar
+                </button>
+            </div>
+            
+            <!-- Lista de Doações -->
+            <div class="section-container">
+                <div id="donations-container" class="donations-grid">
+                    <!-- Doações serão carregadas dinamicamente via JavaScript -->
+                </div>
+                
+                <!-- Paginação -->
+                <div class="pagination">
+                    <button id="prev-page" class="pagination-button" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div id="page-buttons"></div>
+                    <button id="next-page" class="pagination-button">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal de Detalhes -->
+    <div id="details-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Detalhes da Doação</h2>
+            <div id="donation-details" class="donation-details">
+                <!-- Conteúdo será preenchido via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast de Notificação -->
+    <div id="toast" class="toast"></div>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ReUse - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Scripts JavaScript -->
+<script src="JS/ong_doacao.js"></script>
+</body>
+</html>

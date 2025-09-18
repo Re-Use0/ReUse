@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReUse - Chat com Clientes</title>
+    <link rel="stylesheet" href="CSS/vendedor.css">
+    <link rel="stylesheet" href="CSS/chat_Clientes.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <!-- CABEÇALHO (mantido do original) -->
+    <header>
+        <div class="container">
+            <div class="top-header">
+                <div class="logo">
+                    <img src="IMG/reuse-logo-(1).svg" alt="ReUse Logo">
+                </div>
+                <div class="user-actions">
+                    <a href="login.html">
+                       <i class="bi bi-box-arrow-left"></i> Sair da Conta
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- DASHBOARD PRINCIPAL -->
+    <div class="dashboard-container">
+        <!-- Menu Lateral -->
+        <aside class="sidebar">
+            <h2 class="sidebar-title">Meu Brechó</h2>
+            <ul class="sidebar-nav">
+                <li><a href="vendedor.html"><i class="bi bi-house"></i> Início</a></li>
+                <li><a href="meus_produtos.html"><i class="bi bi-box-seam"></i> Meus Produtos</a></li>
+                <li><a href="add_produto_v.html"><i class="bi bi-plus-circle"></i> Adicionar Produto</a></li>
+                <li><a href="estatisticas.html"><i class="bi bi-bar-chart"></i> Estatísticas</a></li>
+                <li><a href="avaliacoes.html"><i class="bi bi-star-fill"></i> Avaliações</a></li>
+                <li><a href="chat_clientes.html" class="active"><i class="bi bi-chat-dots"></i> Chat com Clientes</a></li>
+                <li><a href="configuracoes.html"><i class="bi bi-gear"></i> Configurações</a></li>
+                <li><a href="doacao.vendedor.html" id="doacao-link"><i class="bi bi-gift-fill"></i> Fazer Doação</a></li>
+            </ul>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <div class="chat-container">
+                <div class="chat-sidebar">
+                    <div class="chat-search">
+                        <input type="text" placeholder="Buscar conversas...">
+                        <i class="bi bi-search"></i>
+                    </div>
+                    
+                    <div class="chat-list">
+                        <div class="chat-item active" data-chat-id="maria">
+                            <div class="chat-avatar">
+                                <img src="IMG/avatar1.jpg" alt="Maria Silva">
+                            </div>
+                            <div class="chat-info">
+                                <h4>Maria Silva</h4>
+                                <p>Olá, gostaria de saber mais sobre a camiseta...</p>
+                                <span class="chat-time">10:42</span>
+                            </div>
+                        </div>
+                        
+                        <div class="chat-item" data-chat-id="joao">
+                            <div class="chat-avatar">
+                                <img src="IMG/avatar2.jpg" alt="João Santos">
+                            </div>
+                            <div class="chat-info">
+                                <h4>João Santos</h4>
+                                <p>Você pode fazer um desconto no tênis?</p>
+                                <span class="chat-time">Ontem</span>
+                            </div>
+                        </div>
+                        
+                        <div class="chat-item" data-chat-id="ana">
+                            <div class="chat-avatar">
+                                <img src="IMG/avatar3.jpg" alt="Ana Costa">
+                            </div>
+                            <div class="chat-info">
+                                <h4>Ana Costa</h4>
+                                <p>O vestido ainda está disponível?</p>
+                                <span class="chat-time">Seg</span>
+                            </div>
+                        </div>
+                        
+                        <div class="chat-item" data-chat-id="pedro">
+                            <div class="chat-avatar">
+                                <img src="IMG/avatar4.jpg" alt="Pedro Almeida">
+                            </div>
+                            <div class="chat-info">
+                                <h4>Pedro Almeida</h4>
+                                <p>Obrigado pela doação!</p>
+                                <span class="chat-time">12/12</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-conversation">
+                    <div class="chat-header">
+                        <div class="current-chat-info">
+                            <div class="current-avatar">
+                                <img src="IMG/avatar1.jpg" alt="Maria Silva" id="current-avatar">
+                            </div>
+                            <div>
+                                <h3 id="current-chat-name">Maria Silva</h3>
+                                <p id="current-chat-status">Online</p>
+                            </div>
+                        </div>
+                        <div class="chat-actions">
+                            <button><i class="bi bi-telephone"></i></button>
+                            <button><i class="bi bi-camera-video"></i></button>
+                            <button><i class="bi bi-three-dots-vertical"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-messages" id="chat-messages-container">
+                        <!-- As mensagens serão carregadas aqui via JavaScript -->
+                    </div>
+                    
+                    <div class="chat-input">
+                        <button><i class="bi bi-emoji-smile"></i></button>
+                        <button><i class="bi bi-paperclip"></i></button>
+                        <input type="text" placeholder="Digite uma mensagem..." id="message-input">
+                        <button class="send-btn" id="send-button"><i class="bi bi-send"></i></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- RODAPÉ (mantido do original) -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Seção de Idioma -->
+                <div class="footer-links language-section">
+                    <h3>Idioma/Language</h3>
+                    <div class="language-selector">
+                        <button class="language-option active" data-lang="pt-br" aria-label="Português Brasileiro">
+                            <span class="flag-icon">🇧🇷</span> PT-BR
+                        </button>
+                        <button class="language-option" data-lang="en" aria-label="English">
+                            <span class="flag-icon">🇺🇸</span> EN
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Seção Minha Loja -->
+                <div class="footer-links">
+                    <h3>Minha Loja</h3>
+                    <a href="#"><i class="bi bi-grid-3x3-gap-fill"></i> <span>Produtos</span></a>
+                    <a href="estatisticas.html"><i class="bi bi-bar-chart-line-fill"></i> <span>Estatísticas</span></a>
+                    <a href="avaliacoes.html"><i class="bi bi-star-fill"></i> <span>Avaliações</span></a>
+                    <a href="chat_clientes.html"><i class="bi bi-chat-dots-fill"></i> <span>Chat</span></a>
+                </div>
+
+                <!-- Seção Configurações -->
+                <div class="footer-links">
+                    <h3>Configurações</h3>
+                    <a href="#"><i class="bi bi-shield-lock-fill"></i> <span>Privacidade</span></a>
+                    <a href="#"><i class="bi bi-credit-card-fill"></i> <span>Pagamentos</span></a>
+                </div>
+
+                <!-- Seção Sobre Nós -->
+                <div class="footer-links">
+                    <h3>Sobre Nós</h3>
+                    <a href="#"><i class="bi bi-info-circle-fill"></i> <span>Missão</span></a>
+                    <a href="#"><i class="bi bi-people-fill"></i> <span>Equipe</span></a>
+                    <a href=""><i class="bi bi-envelope-fill"></i> <span>Contato</span></a>
+
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                &copy; 2025 ReUse - <span>Todos os direitos reservados</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Estrutura de dados para armazenar as conversas
+        const conversas = {
+            maria: {
+                nome: "Maria Silva",
+                avatar: "IMG/avatar1.jpg",
+                status: "Online",
+                mensagens: [
+                    { texto: "Olá, gostaria de saber mais sobre a camiseta Polo que você está vendendo", enviada: false, hora: "10:30" },
+                    { texto: "Olá Maria! Claro, o que gostaria de saber?", enviada: true, hora: "10:32" },
+                    { texto: "Ela é original? Qual o estado de conservação?", enviada: false, hora: "10:35" },
+                    { texto: "Sim, é original. Está em ótimo estado, sem manchas ou furos", enviada: true, hora: "10:37" },
+                    { texto: "Perfeito! Você faz entregas ou só retirada?", enviada: false, hora: "10:42" }
+                ]
+            },
+            joao: {
+                nome: "João Santos",
+                avatar: "IMG/avatar2.jpg",
+                status: "Offline",
+                mensagens: [
+                    { texto: "Olá, vi o tênis que você está vendendo", enviada: false, hora: "14:20" },
+                    { texto: "Oi João! Sim, é um tênis esportivo em ótimo estado", enviada: true, hora: "14:25" },
+                    { texto: "Você pode fazer um desconto no tênis?", enviada: false, hora: "14:30" }
+                ]
+            },
+            ana: {
+                nome: "Ana Costa",
+                avatar: "IMG/avatar3.jpg",
+                status: "Online",
+                mensagens: [
+                    { texto: "Boa tarde! Vi o vestido vermelho no seu catálogo", enviada: false, hora: "09:15" },
+                    { texto: "Boa tarde Ana! Sim, é lindo, quase não foi usado", enviada: true, hora: "09:18" },
+                    { texto: "O vestido ainda está disponível?", enviada: false, hora: "09:20" }
+                ]
+            },
+            pedro: {
+                nome: "Pedro Almeida",
+                avatar: "IMG/avatar4.jpg",
+                status: "Offline",
+                mensagens: [
+                    { texto: "Olá, recebi a doação hoje. Muito obrigado!", enviada: false, hora: "16:45" },
+                    { texto: "Que bom Pedro! Fico feliz em ajudar", enviada: true, hora: "16:50" },
+                    { texto: "As roupas estão em perfeito estado, obrigado pela doação!", enviada: false, hora: "16:55" }
+                ]
+            }
+        };
+
+        let conversaAtual = "maria"; // ID da conversa atual
+
+        // Função para carregar as mensagens da conversa atual
+        function carregarMensagens() {
+            const container = document.getElementById('chat-messages-container');
+            const conversa = conversas[conversaAtual];
+            
+            // Limpar o container
+            container.innerHTML = '';
+            
+            // Adicionar cada mensagem
+            conversa.mensagens.forEach(msg => {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${msg.enviada ? 'sent' : 'received'}`;
+                
+                messageDiv.innerHTML = `
+                    <p>${msg.texto}</p>
+                    <span>${msg.hora}</span>
+                `;
+                
+                container.appendChild(messageDiv);
+            });
+            
+            // Rolar para o final das mensagens
+            container.scrollTop = container.scrollHeight;
+            
+            // Atualizar informações do chat atual
+            document.getElementById('current-chat-name').textContent = conversa.nome;
+            document.getElementById('current-chat-status').textContent = conversa.status;
+            document.getElementById('current-avatar').src = conversa.avatar;
+        }
+
+        // Função para enviar uma mensagem
+        function enviarMensagem() {
+            const input = document.getElementById('message-input');
+            const texto = input.value.trim();
+            
+            if (texto === '') return;
+            
+            // Obter hora atual
+            const agora = new Date();
+            const hora = `${agora.getHours()}:${agora.getMinutes().toString().padStart(2, '0')}`;
+            
+            // Adicionar mensagem à conversa atual
+            conversas[conversaAtual].mensagens.push({
+                texto: texto,
+                enviada: true,
+                hora: hora
+            });
+            
+            // Limpar o input
+            input.value = '';
+            
+            // Recarregar as mensagens
+            carregarMensagens();
+        }
+
+        // Inicializar o chat
+        document.addEventListener('DOMContentLoaded', function() {
+            // Carregar a primeira conversa
+            carregarMensagens();
+            
+            // Adicionar event listeners para os itens da lista de conversas
+            document.querySelectorAll('.chat-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    // Remover a classe active de todos os itens
+                    document.querySelectorAll('.chat-item').forEach(i => {
+                        i.classList.remove('active');
+                    });
+                    
+                    // Adicionar a classe active ao item clicado
+                    this.classList.add('active');
+                    
+                    // Atualizar a conversa atual
+                    conversaAtual = this.getAttribute('data-chat-id');
+                    
+                    // Carregar as mensagens da nova conversa
+                    carregarMensagens();
+                });
+            });
+            
+            // Event listener para o botão de enviar
+            document.getElementById('send-button').addEventListener('click', enviarMensagem);
+            
+            // Event listener para pressionar Enter no input
+            document.getElementById('message-input').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    enviarMensagem();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
