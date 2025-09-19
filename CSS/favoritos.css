@@ -302,3 +302,139 @@ main {
         flex-direction: column;
     }
 }
+
+.favorites-container {
+    padding: 20px 0;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.favorite-item {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.favorite-item:hover {
+    transform: translateY(-5px);
+}
+
+.favorite-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.favorite-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255,255,255,0.9);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.favorite-btn:hover {
+    background: white;
+}
+
+.favorite-btn i {
+    color: #e74c3c;
+    font-size: 18px;
+}
+
+.favorite-info {
+    padding: 15px;
+}
+
+.favorite-name {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+    cursor: pointer;
+}
+
+.favorite-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #2ecc71;
+    margin-bottom: 8px;
+}
+
+.product-category {
+    color: #7f8c8d;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.favorite-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-small {
+    padding: 8px 12px;
+    font-size: 0.9em;
+}
+
+.empty-favorites {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.empty-favorites-icon {
+    font-size: 4em;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+.empty-favorites h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.empty-favorites p {
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background: #3498db;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary:hover {
+    background: #2980b9;
+}

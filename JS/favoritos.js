@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Carrega os favoritos do localStorage (agora usando IDs)
+    // Carrega os favoritos do localStorage
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     
     // Elementos da página
@@ -11,21 +11,17 @@ document.addEventListener('DOMContentLoaded', function () {
         // Esconde a mensagem de lista vazia
         if (emptyFavoritesDiv) emptyFavoritesDiv.style.display = 'none';
         
-        // Cria o grid de favoritos se não existir
-        if (!favoritesGrid) {
-            const favoritesContainer = document.querySelector('.favorites-container');
-            const newFavoritesGrid = document.createElement('div');
-            newFavoritesGrid.className = 'favorites-grid';
-            favoritesContainer.appendChild(newFavoritesGrid);
-        } else {
+        // Mostra o grid de favoritos
+        if (favoritesGrid) {
+            favoritesGrid.style.display = 'grid';
             favoritesGrid.innerHTML = ''; // Limpa o grid existente
         }
         
         // Adiciona cada favorito ao grid
         favorites.forEach(productId => {
             const favoriteItem = createFavoriteItem(productId);
-            if (favoriteItem) {
-                document.querySelector('.favorites-grid').appendChild(favoriteItem);
+            if (favoriteItem && favoritesGrid) {
+                favoritesGrid.appendChild(favoriteItem);
             }
         });
     } else {
@@ -49,11 +45,13 @@ document.addEventListener('DOMContentLoaded', function () {
         favoriteItem.className = 'favorite-item';
         favoriteItem.dataset.id = productId;
         
-        // HTML do item de favorito
+        // HTML do item de favorito (usando classes Bootstrap)
         favoriteItem.innerHTML = `
             <div class="favorite-image">
                 <img src="${productData.image}" alt="${productData.name}">
-                <button class="favorite-icon active"><i class="fas fa-heart"></i></button>
+                <button class="favorite-btn active" data-id="${productId}" aria-label="Remover dos favoritos">
+                    <i class="bi bi-heart-fill"></i>
+                </button>
             </div>
             <div class="favorite-info">
                 <div class="favorite-name">${productData.name}</div>
@@ -61,10 +59,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="product-category">${productData.category}</div>
                 <div class="favorite-actions">
                     <a href="carrinho.html" class="btn btn-primary btn-small">
-                        <i class="fas fa-cart-plus"></i> Adicionar
+                        <i class="bi bi-cart-plus"></i> Adicionar
                     </a>
-                    <button class="btn btn-danger btn-small remove-favorite">
-                        <i class="fas fa-trash-alt"></i> Remover
+                    <button class="btn btn-danger btn-small remove-favorite" data-id="${productId}">
+                        <i class="bi bi-trash"></i> Remover
                     </button>
                 </div>
             </div>
@@ -77,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         
         // Adiciona evento de clique para o ícone de coração
-        const heartIcon = favoriteItem.querySelector('.favorite-icon');
+        const heartIcon = favoriteItem.querySelector('.favorite-btn');
         heartIcon.addEventListener('click', function(e) {
             e.preventDefault();
             removeFavorite(productId, favoriteItem);
@@ -101,6 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Função para remover um favorito
     function removeFavorite(productId, favoriteItem) {
         // Remove do array de favoritos
+        let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
         favorites = favorites.filter(id => id !== productId);
         
         // Atualiza o localStorage
@@ -109,33 +108,25 @@ document.addEventListener('DOMContentLoaded', function () {
         // Remove o item da tela
         favoriteItem.remove();
         
+        // Atualiza também na página principal usando a função existente
+        if (typeof updateMainPageFavorites === 'function') {
+            updateMainPageFavorites(productId, false);
+        }
+        
         // Se não houver mais favoritos, mostra a mensagem de lista vazia
         if (favorites.length === 0) {
             if (emptyFavoritesDiv) emptyFavoritesDiv.style.display = 'block';
             if (favoritesGrid) favoritesGrid.style.display = 'none';
         }
         
-        // Atualiza também na página principal se estiver aberta
-        updateMainPageFavorites(productId, false);
+        // Mostra feedback de remoção
+        showFavoriteFeedback(false);
     }
     
-    // Função para atualizar favoritos na página principal
-    function updateMainPageFavorites(productId, isFavorite) {
-        // Esta função atualiza o estado na página principal se estiver aberta
-        const mainPageIcons = window.opener ? 
-            window.opener.document.querySelectorAll(`.favorite-icon[data-id="${productId}"]`) : 
-            null;
-            
-        if (mainPageIcons && mainPageIcons.length > 0) {
-            mainPageIcons.forEach(icon => {
-                if (isFavorite) {
-                    icon.classList.add('active');
-                    icon.innerHTML = '<i class="fas fa-heart"></i>';
-                } else {
-                    icon.classList.remove('active');
-                    icon.innerHTML = '<i class="far fa-heart"></i>';
-                }
-            });
+    // Função para mostrar feedback visual (reutilizando a existente)
+    function showFavoriteFeedback(isAdded) {
+        if (typeof window.showFavoriteFeedback === 'function') {
+            window.showFavoriteFeedback(isAdded);
         }
     }
     
@@ -169,10 +160,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         };
         
-        // Retorna os dados do produto ou null se não encontrado
         return products[productId] || null;
     }
-    
-    // Debug: mostra os favoritos carregados
-    console.log('Favoritos carregados (IDs):', favorites);
 });

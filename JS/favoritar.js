@@ -1,71 +1,94 @@
-
-// Função para favoritar produtos
+// Função principal para configurar o sistema de favoritos
 function setupFavorites() {
     // Carregar favoritos do localStorage
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     
     // Atualizar ícones com base nos favoritos existentes
+    updateFavoriteIcons(favorites);
+    
+    // Usar event delegation para evitar múltiplos listeners
+    document.addEventListener('click', function(e) {
+        // Verificar se o clique foi em um botão de favorito
+        const favoriteBtn = e.target.closest('.favorite-btn, .favorite-btn-bottom');
+        if (favoriteBtn) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const productId = favoriteBtn.getAttribute('data-id');
+            handleFavoriteClick(productId, favoriteBtn, favorites);
+        }
+    });
+}
+
+// Função para atualizar os ícones de favorito
+function updateFavoriteIcons(favorites) {
     document.querySelectorAll('.favorite-btn, .favorite-btn-bottom').forEach(btn => {
         const productId = btn.getAttribute('data-id');
         if (favorites.includes(productId)) {
             btn.classList.add('active');
-            btn.querySelector('i').classList.remove('bi-heart');
-            btn.querySelector('i').classList.add('bi-heart-fill');
+            const icon = btn.querySelector('i');
+            if (icon) {
+                icon.classList.remove('bi-heart');
+                icon.classList.add('bi-heart-fill');
+            }
+        } else {
+            btn.classList.remove('active');
+            const icon = btn.querySelector('i');
+            if (icon) {
+                icon.classList.remove('bi-heart-fill');
+                icon.classList.add('bi-heart');
+            }
         }
     });
+}
+
+// Função para lidar com o clique no botão de favorito
+function handleFavoriteClick(productId, button, favorites) {
+    // Verificar se o produto já está favoritado
+    const index = favorites.indexOf(productId);
+    const isActive = favorites.includes(productId);
     
-    // Adicionar event listeners para os botões de favoritar
-    document.querySelectorAll('.favorite-btn, .favorite-btn-bottom').forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            const productId = this.getAttribute('data-id');
-            let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-            
-            // Verificar se o produto já está favoritado
-            const index = favorites.indexOf(productId);
-            const isActive = this.classList.contains('active');
-            
-            if (isActive) {
-                // Remover dos favoritos
-                favorites.splice(index, 1);
-                this.classList.remove('active');
-                this.querySelector('i').classList.remove('bi-heart-fill');
-                this.querySelector('i').classList.add('bi-heart');
-                
-                // Atualizar todos os botões para este produto
-                document.querySelectorAll(`[data-id="${productId}"]`).forEach(btn => {
-                    btn.classList.remove('active');
-                    btn.querySelector('i').classList.remove('bi-heart-fill');
-                    btn.querySelector('i').classList.add('bi-heart');
-                });
-            } else {
-                // Adicionar aos favoritos
-                favorites.push(productId);
-                this.classList.add('active');
-                this.querySelector('i').classList.remove('bi-heart');
-                this.querySelector('i').classList.add('bi-heart-fill');
-                
-                // Atualizar todos os botões para este produto
-                document.querySelectorAll(`[data-id="${productId}"]`).forEach(btn => {
-                    btn.classList.add('active');
-                    btn.querySelector('i').classList.remove('bi-heart');
-                    btn.querySelector('i').classList.add('bi-heart-fill');
-                });
+    if (isActive) {
+        // Remover dos favoritos
+        favorites.splice(index, 1);
+        // Atualizar todos os botões para este produto
+        document.querySelectorAll(`[data-id="${productId}"]`).forEach(btn => {
+            btn.classList.remove('active');
+            const icon = btn.querySelector('i');
+            if (icon) {
+                icon.classList.remove('bi-heart-fill');
+                icon.classList.add('bi-heart');
             }
-            
-            // Salvar no localStorage
-            localStorage.setItem('favorites', JSON.stringify(favorites));
-            
-            // Mostrar feedback visual
-            showFavoriteFeedback(!isActive);
         });
-    });
+    } else {
+        // Adicionar aos favoritos
+        favorites.push(productId);
+        // Atualizar todos os botões para este produto
+        document.querySelectorAll(`[data-id="${productId}"]`).forEach(btn => {
+            btn.classList.add('active');
+            const icon = btn.querySelector('i');
+            if (icon) {
+                icon.classList.remove('bi-heart');
+                icon.classList.add('bi-heart-fill');
+            }
+        });
+    }
+    
+    // Salvar no localStorage
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+    
+    // Mostrar feedback visual
+    showFavoriteFeedback(!isActive);
 }
 
 // Função para mostrar feedback visual ao favoritar
 function showFavoriteFeedback(isAdded) {
+    // Remover feedback existente, se houver
+    const existingFeedback = document.querySelector('.favorite-feedback');
+    if (existingFeedback) {
+        existingFeedback.remove();
+    }
+    
     const feedback = document.createElement('div');
     feedback.className = `favorite-feedback ${isAdded ? 'added' : 'removed'}`;
     feedback.innerHTML = `
@@ -110,6 +133,15 @@ style.textContent = `
     @keyframes slideOut {
         from { transform: translateX(0); opacity: 1; }
         to { transform: translateX(100px); opacity: 0; }
+    }
+    
+    .favorite-btn, .favorite-btn-bottom {
+        cursor: pointer;
+        transition: color 0.2s;
+    }
+    
+    .favorite-btn.active, .favorite-btn-bottom.active {
+        color: #e74c3c;
     }
 `;
 document.head.appendChild(style);
