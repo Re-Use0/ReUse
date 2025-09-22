@@ -312,3 +312,1924 @@ body.night-mode .contact-btn:hover {
         background-color: #3d3d5c;
     }
 }
+
+/* ================ CARRINHO DE COMPRAS ================ */
+body.night-mode .cart-title {
+    color: #e6e6e6;
+}
+
+body.night-mode .cart-container {
+    background-color: #2d2d44;
+    color: #e6e6e6;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.night-mode .cart-header {
+    border-bottom-color: #4b5563;
+}
+
+body.night-mode .cart-header h2 {
+    color: #e6e6e6;
+}
+
+body.night-mode .cart-item {
+    border-bottom-color: #4b5563;
+    background-color: #3d3d5c;
+}
+
+body.night-mode .item-name {
+    color: #e6e6e6;
+}
+
+body.night-mode .item-description,
+body.night-mode .item-sku {
+    color: #b8b8cc;
+}
+
+body.night-mode .item-price {
+    color: #4da6ff;
+}
+
+body.night-mode .quantity-input {
+    background-color: #2d2d44;
+    color: #e6e6e6;
+    border-color: #4b5563;
+}
+
+body.night-mode .quantity-btn {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border-color: #4b5563;
+}
+
+body.night-mode .quantity-btn:hover {
+    background-color: #4b5563;
+}
+
+body.night-mode .remove-btn {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: #ff6b6b;
+    border-color: rgba(231, 76, 60, 0.3);
+}
+
+body.night-mode .remove-btn:hover {
+    background-color: rgba(231, 76, 60, 0.3);
+}
+
+body.night-mode .cart-summary {
+    border-top-color: #4b5563;
+    background-color: #3d3d5c;
+}
+
+body.night-mode .summary-row {
+    border-bottom-color: #4b5563;
+}
+
+body.night-mode .checkout-btn {
+    background-color: #2563eb;
+    color: white;
+}
+
+body.night-mode .checkout-btn:hover {
+    background-color: #1d4ed8;
+}
+
+body.night-mode .empty-cart-container {
+    background-color: #2d2d44;
+    color: #e6e6e6;
+}
+
+body.night-mode .empty-cart-icon {
+    color: #4da6ff;
+}
+
+body.night-mode .continue-shopping {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border-color: #4b5563;
+}
+
+body.night-mode .continue-shopping:hover {
+    background-color: #4b5563;
+}
+
+body.night-mode .back-notification {
+    background-color: #2d2d44;
+    color: #e6e6e6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+body.night-mode .removal-message {
+    background-color: rgba(45, 45, 68, 0.95);
+    color: #e6e6e6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ================ FINALIZAR COMPRA - ELEMENTOS ESPECÍFICOS ================ */
+body.night-mode .checkout-wrapper {
+    background-color: #1a1a2e;
+}
+
+body.night-mode .checkout-header {
+    color: #e6e6e6;
+    border-bottom-color: #4b5563;
+}
+
+body.night-mode .order-summary-badge {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border-color: #4da6ff;
+}
+
+body.night-mode .form-progress {
+    background-color: #2d2d44;
+    border-color: #4b5563;
+}
+
+body.night-mode .progress-step {
+    color: #a0aec0;
+}
+
+body.night-mode .progress-step.active {
+    background-color: #3d3d5c;
+    color: #4da6ff;
+    border-color: #4da6ff;
+}
+
+body.night-mode .progress-step .step-number {
+    background-color: #4b5563;
+    color: #e6e6e6;
+}
+
+body.night-mode .progress-step.active .step-number {
+    background-color: #4da6ff;
+    color: white;
+}
+
+body.night-mode .form-tab {
+    background-color: #2d2d44;
+    border-color: #4b5563;
+}
+
+body.night-mode .form-tab h3 {
+    color: #e6e6e6;
+    border-bottom-color: #4b5563;
+}
+
+body.night-mode .form-row label {
+    color: #e6e6e6;
+}
+
+body.night-mode .form-row input,
+body.night-mode .form-row select,
+body.night-mode .form-row textarea {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border-color: #4b5563;
+}
+
+body.night-mode .form-row input:focus,
+body.night-mode .form-row select:focus,
+body.night-mode .form-row textarea:focus {
+    border-color: #4da6ff;
+    box-shadow: 0 0 0 2px rgba(77, 166, 255, 0.2);
+}
+
+body.night-mode .input-with-icon i {
+    color: #a0aec0;
+}
+
+body.night-mode .btn-secondary {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border-color: #4b5563;
+}
+
+body.night-mode .btn-secondary:hover {
+    background-color: #4b5563;
+}
+
+body.night-mode .btn-next,
+body.night-mode .btn-prev {
+    background-color: #2563eb;
+    color: white;
+}
+
+body.night-mode .btn-next:hover,
+body.night-mode .btn-prev:hover {
+    background-color: #1d4ed8;
+}
+
+body.night-mode .btn-next.btn-disabled {
+    background-color: #4b5563;
+    color: #a0aec0;
+    cursor: not-allowed;
+}
+
+body.night-mode .payment-options {
+    background-color: #2d2d44;
+    border-color: #4b5563;
+}
+
+body.night-mode .payment-option {
+    border-color: #4b5563;
+}
+
+body.night-mode .payment-option label {
+    color: #e6e6e6;
+}
+
+body.night-mode .payment-option:hover {
+    background-color: #3d3d5c;
+}
+
+body.night-mode .payment-option input:checked + label {
+    background-color: rgba(77, 166, 255, 0.15);
+    color: #4da6ff;
+    border-color: #4da6ff;
+}
+
+body.night-mode .card-brands {
+    background-color: #2d2d44;
+    border-color: #4b5563;
+}
+
+body.night-mode .card-brand-option {
+    border-color: #4b5563;
+}
+
+body.night-mode .card-brand-option label {
+    color: #e6e6e6;
+}
+
+body.night-mode .card-brand-option:hover {
+    background-color: #3d3d5c;
+}
+
+body.night-mode .card-brand-option input:checked + label {
+    background-color: rgba(77, 166, 255, 0.15);
+    color: #4da6ff;
+    border-color: #4da6ff;
+}
+
+body.night-mode .order-summary-card {
+    background-color: #2d2d44;
+    border-color: #4b5563;
+    color: #e6e6e6;
+}
+
+body.night-mode .order-summary-title {
+    border-bottom-color: #4b5563;
+}
+
+body.night-mode .order-item {
+    border-bottom-color: #4b5563;
+}
+
+body.night-mode .item-category {
+    color: #b8b8cc;
+}
+
+body.night-mode .order-summary-calculation {
+    border-top-color: #4b5563;
+    background-color: #3d3d5c;
+}
+
+body.night-mode .calculation-row {
+    border-bottom-color: #4b5563;
+}
+
+body.night-mode .calculation-row.total {
+    color: #e6e6e6;
+    background-color: rgba(77, 166, 255, 0.1);
+}
+
+body.night-mode .checkout-button {
+    background-color: #2563eb;
+    color: white;
+}
+
+body.night-mode .checkout-button:hover {
+    background-color: #1d4ed8;
+}
+
+body.night-mode .secure-checkout {
+    color: #b8b8cc;
+}
+
+body.night-mode .back-button {
+    color: #8bb4ff;
+}
+
+body.night-mode .back-button:hover {
+    color: #4da6ff;
+    background-color: rgba(77, 166, 255, 0.15);
+}
+
+
+body.night-mode .success-message {
+    background-color: #2d2d44;
+    color: #e6e6e6;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.night-mode .error-message {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: #ff6b6b;
+    border-color: rgba(231, 76, 60, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para o formulário PIX no modo noturno */
+body.night-mode #pix-form p {
+    color: #e6e6e6;
+}
+
+body.night-mode #pix-form input {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border-color: #4b5563;
+}
+
+body.night-mode #pix-form div[style*="background-color: #f8f9fa"] {
+    background-color: #3d3d5c !important;
+    color: #e6e6e6;
+}
+
+
+
+/* ---------------------------------------PROUTOS-------------------------- */
+
+/* ================ ELEMENTOS DA PÁGINA DE PRODUTO ================ */
+body.night-mode .frete-calc {
+    background-color: #2d2d44;
+    border-color: #4b5563;
+    color: #e6e6e6;
+}
+
+body.night-mode .frete-calc label {
+    color: #e6e6e6;
+}
+
+body.night-mode .frete-calc input {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border-color: #4b5563;
+}
+
+body.night-mode .frete-calc input::placeholder {
+    color: #a0aec0;
+}
+
+body.night-mode .frete-calc button {
+    background-color: #2563eb;
+    color: white;
+}
+
+body.night-mode .frete-calc button:hover {
+    background-color: #1d4ed8;
+}
+
+body.night-mode #frete-result {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border-color: #4b5563;
+}
+
+body.night-mode #frete-options li {
+    border-bottom-color: #4b5563;
+    color: #e6e6e6;
+}
+
+body.night-mode .descricao-produto {
+    background-color: #2d2d44;
+    color: #e6e6e6;
+    border-color: #4b5563;
+}
+
+body.night-mode .descricao-produto h2,
+body.night-mode .descricao-produto h3 {
+    color: #e6e6e6;
+    border-bottom-color: #4b5563;
+}
+
+body.night-mode .descricao-produto ul {
+    color: #b8b8cc;
+}
+
+body.night-mode .vendedor-link {
+    color: #8bb4ff;
+}
+
+body.night-mode .vendedor-link:hover {
+    color: #4da6ff;
+    background-color: rgba(77, 166, 255, 0.15);
+}
+
+body.night-mode .condicao-produto {
+    background-color: #2d2d44;
+    color: #e6e6e6;
+    border-color: #4b5563;
+}
+
+body.night-mode .condicao-produto strong {
+    color: #4da6ff;
+}
+
+body.night-mode .adicionar-carrinho button {
+    background-color: #2563eb;
+    color: white;
+}
+
+body.night-mode .adicionar-carrinho button:hover {
+    background-color: #1d4ed8;
+}
+
+/* ================ ELEMENTOS ESPECÍFICOS DO MAIN NO MODO NOTURNO ================ */
+body.night-mode main {
+    background: linear-gradient(135deg, #2a2a3e 0%, #1a1a2e 100%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+body.night-mode .page-title {
+    color: #4da6ff;
+
+}
+
+body.night-mode .page-subtitle {
+    color: #b8b8cc;
+}
+
+body.night-mode .products-section,
+body.night-mode .filter-section {
+    background-color: #2d2d44;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.night-mode .filter-group label {
+    color: #e6e6e6;
+}
+
+body.night-mode .filter-group select {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border-color: #4b5563;
+}
+
+body.night-mode .view-btn {
+    background: #3d3d5c;
+    color: #e6e6e6;
+}
+
+body.night-mode .view-btn:hover,
+body.night-mode .view-btn.active {
+    background: #4da6ff;
+    color: white;
+}
+
+/* ================ PERFIL DA INSTITUIÇÃO NO MODO NOTURNO ================ */
+body.night-mode .institution-profile {
+    background-color: #2d2d44;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+body.night-mode .institution-header {
+    border-bottom-color: #4b5563;
+}
+
+body.night-mode .institution-info h1 {
+    color: #4da6ff;
+}
+
+body.night-mode .institution-category {
+    background-color: rgba(76, 175, 80, 0.2);
+    color: #4CAF50;
+}
+
+body.night-mode .institution-description {
+    color: #b8b8cc;
+}
+
+body.night-mode .stat-card {
+    background: linear-gradient(135deg, #3d3d5c, #2d2d44);
+    border-left-color: #4CAF50;
+}
+
+body.night-mode .stat-number {
+    color: #4CAF50;
+}
+
+body.night-mode .stat-label {
+    color: #b8b8cc;
+}
+
+/* ================ TABS NO MODO NOTURNO ================ */
+body.night-mode .institution-tabs {
+    border-bottom-color: #4b5563;
+    background-color: #2d2d44;
+}
+
+body.night-mode .institution-tab {
+    background-color: #3d3d5c;
+    border-right-color: #4b5563;
+    color: #b8b8cc;
+}
+
+body.night-mode .institution-tab.active {
+    background-color: #2d2d44;
+    color: #4da6ff;
+    border-bottom-color: #4da6ff;
+}
+
+body.night-mode .institution-tab:hover:not(.active) {
+    background-color: #4b5563;
+}
+
+body.night-mode .tab-content {
+    background-color: #2d2d44;
+}
+
+body.night-mode .about-content {
+    color: #b8b8cc;
+}
+
+body.night-mode .about-content h3 {
+    color: #4da6ff;
+}
+
+body.night-mode .about-content ul {
+    color: #b8b8cc;
+}
+
+/* ================ DOAÇÕES/ADOÇÃO NO MODO NOTURNO ================ */
+body.night-mode .donations-section {
+    background-color: #2d2d44;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.night-mode .adoption-message h3 {
+    color: #e6e6e6;
+}
+
+body.night-mode .adoption-message p {
+    color: #b8b8cc;
+}
+
+/* ================ DEPOIMENTOS NO MODO NOTURNO ================ */
+body.night-mode .testimonial-card {
+    background-color: #3d3d5c;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.night-mode .testimonial-header h3 {
+    color: #4da6ff;
+}
+
+body.night-mode .testimonial-date {
+    color: #a0aec0;
+}
+
+body.night-mode .testimonial-text {
+    color: #b8b8cc;
+}
+
+/* ================ CONTATO NO MODO NOTURNO ================ */
+body.night-mode .contact-info-container {
+    background-color: #2d2d44;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.night-mode .contact-display {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+}
+
+body.night-mode .map-container {
+    background-color: #2d2d44;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.night-mode .address-info {
+    background-color: #3d3d5c;
+    color: #b8b8cc;
+}
+
+/* ================ MODAIS NO MODO NOTURNO ================ */
+body.night-mode .modal-content {
+    background-color: #2d2d44;
+    color: #e6e6e6;
+}
+
+body.night-mode .form-title {
+    color: #e6e6e6;
+}
+
+body.night-mode .form-label {
+    color: #e6e6e6;
+}
+
+body.night-mode .form-control,
+body.night-mode .form-select {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border-color: #4b5563;
+}
+
+body.night-mode .file-upload {
+    border-color: #4b5563;
+    background-color: #3d3d5c;
+}
+
+body.night-mode .upload-text {
+    color: #e6e6e6;
+}
+
+body.night-mode .upload-hint {
+    color: #b8b8cc;
+}
+
+body.night-mode .institution-info {
+    background-color: #3d3d5c;
+}
+
+body.night-mode .volunteer-header {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+}
+
+body.night-mode .volunteer-form-container {
+    background-color: #2d2d44;
+}
+
+body.night-mode .volunteer-form label {
+    color: #e6e6e6;
+}
+
+body.night-mode .volunteer-form input,
+body.night-mode .volunteer-form select,
+body.night-mode .volunteer-form textarea {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border-color: #4b5563;
+}
+
+body.night-mode .cep-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+body.night-mode .submit-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+body.night-mode .success-message-new {
+    background-color: #2d2d44;
+    color: #e6e6e6;
+}
+
+body.night-mode .success-message-new h3 {
+    color: #e6e6e6;
+}
+
+body.night-mode .success-message-new p {
+    color: #b8b8cc;
+}
+
+/* ================ PÁGINA DE PRODUTOS DA ONG NO MODO NOTURNO ================ */
+body.night-mode .products-section {
+    background-color: #2d2d44;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.night-mode .product-card {
+    background-color: #3d3d5c;
+    border: 1px solid #4b5563;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.night-mode .product-name {
+    color: #e6e6e6;
+}
+
+body.night-mode .product-price {
+    color: #4da6ff;
+}
+
+body.night-mode .product-description {
+    color: #b8b8cc;
+}
+
+body.night-mode .add-to-cart {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+}
+
+body.night-mode .add-to-cart:hover {
+    background-color: #1d4ed8;
+}
+
+body.night-mode .filter-section {
+    background-color: #2d2d44;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.night-mode .filter-group label {
+    color: #e6e6e6;
+}
+
+body.night-mode .filter-group select {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border-color: #4b5563;
+}
+
+body.night-mode .page-title {
+    color: #4da6ff;
+}
+
+body.night-mode .page-subtitle {
+    color: #b8b8cc;
+}
+
+/* ================ MENSAGENS DO CARRINHO NO MODO NOTURNO ================ */
+body.night-mode .cart-message {
+    background-color: #2d2d44;
+    color: #e6e6e6;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.night-mode .removal-message {
+    background-color: rgba(45, 45, 68, 0.95);
+    color: #e6e6e6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ================ RODAPÉ NO MODO NOTURNO ================ */
+
+body.night-mode .social-links a {
+    background-color: #2196F3;
+    color: white;
+}
+
+body.night-mode .social-links a:hover {
+    background-color: #1976D2;
+}
+
+body.night-mode .copyright {
+    color: #b8b8cc;
+}
+
+/* ================ SELEÇÃO DE IDIOMA NO MODO NOTURNO ================ */
+body.night-mode .language-option {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .language-option.active {
+    background-color: #4da6ff;
+    color: white;
+    border-color: #4da6ff;
+}
+
+body.night-mode .language-option:hover:not(.active) {
+    background-color: #4b5563;
+}
+
+/* ================ CORREÇÕES PARA O PERFIL NO MODO NOTURNO ================ */
+body.night-mode .profile-header h1 {
+    color: #e6e6e6;
+}
+
+body.night-mode .profile-breadcrumbs {
+    color: #b8b8cc;
+}
+
+body.night-mode .profile-breadcrumbs a {
+    color: #8bb4ff;
+}
+
+body.night-mode .profile-breadcrumbs a:hover {
+    color: #4da6ff;
+}
+
+body.night-mode .profile-card {
+    background-color: #2d2d44;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.night-mode .profile-sidebar {
+    background-color: #3d3d5c;
+    border-right: 1px solid #4b5563;
+}
+
+body.night-mode .user-name {
+    color: #e6e6e6;
+}
+
+body.night-mode .user-email {
+    color: #b8b8cc;
+}
+
+body.night-mode .profile-menu a {
+    color: #b8b8cc;
+    border-bottom: 1px solid #4b5563;
+}
+
+body.night-mode .profile-menu a:hover {
+    background-color: rgba(77, 166, 255, 0.15);
+    color: #4da6ff;
+}
+
+body.night-mode .profile-menu a.active {
+    background-color: rgba(77, 166, 255, 0.2);
+    color: #4da6ff;
+    border-left: 3px solid #4da6ff;
+}
+
+body.night-mode .profile-section h2 {
+    color: #e6e6e6;
+    border-bottom: 1px solid #4b5563;
+}
+
+body.night-mode .info-item label {
+    color: #e6e6e6;
+}
+
+body.night-mode .info-value {
+    color: #b8b8cc;
+}
+
+body.night-mode .edit-btn {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .edit-btn:hover {
+    background-color: #4b5563;
+}
+
+body.night-mode .password-input {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .toggle-password {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .btn-save {
+    background-color: #2563eb;
+    color: white;
+}
+
+body.night-mode .btn-save:hover {
+    background-color: #1d4ed8;
+}
+
+body.night-mode .btn-cancel {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .btn-cancel:hover {
+    background-color: #4b5563;
+}
+
+body.night-mode .address-card {
+    background-color: #3d3d5c;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .address-header h3 {
+    color: #e6e6e6;
+}
+
+body.night-mode .address-details p {
+    color: #b8b8cc;
+}
+
+body.night-mode .delete-btn {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: #ff6b6b;
+    border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+body.night-mode .delete-btn:hover {
+    background-color: rgba(231, 76, 60, 0.3);
+}
+
+body.night-mode .btn-add-address {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .btn-add-address:hover {
+    background-color: #4b5563;
+}
+
+body.night-mode .form-group label {
+    color: #e6e6e6;
+}
+
+body.night-mode .form-group input,
+body.night-mode .form-group select {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .security-section h3 {
+    color: #e6e6e6;
+    border-bottom: 1px solid #4b5563;
+}
+
+body.night-mode .security-item {
+    background-color: #3d3d5c;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .security-info h4 {
+    color: #e6e6e6;
+}
+
+body.night-mode .security-info p {
+    color: #b8b8cc;
+}
+
+body.night-mode .btn-change-password {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .btn-change-password:hover {
+    background-color: #4b5563;
+}
+
+body.night-mode .toggle-input {
+    background-color: #3d3d5c;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .toggle-input:checked {
+    background-color: #4da6ff;
+}
+
+body.night-mode .device-item {
+    background-color: #3d3d5c;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .device-info h4 {
+    color: #e6e6e6;
+}
+
+body.night-mode .device-info p {
+    color: #b8b8cc;
+}
+
+body.night-mode .btn-logout-device {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: #ff6b6b;
+    border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+body.night-mode .btn-logout-device:hover {
+    background-color: rgba(231, 76, 60, 0.3);
+}
+
+body.night-mode .btn-logout-all,
+body.night-mode .btn-delete-account {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: #ff6b6b;
+    border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+body.night-mode .btn-logout-all:hover,
+body.night-mode .btn-delete-account:hover {
+    background-color: rgba(231, 76, 60, 0.3);
+}
+
+body.night-mode .payment-method {
+    background-color: #3d3d5c;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .payment-card h4 {
+    color: #e6e6e6;
+}
+
+body.night-mode .payment-card p {
+    color: #b8b8cc;
+}
+
+body.night-mode .btn-add-payment {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .btn-add-payment:hover {
+    background-color: #4b5563;
+}
+
+body.night-mode .payment-type {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .payment-type:hover {
+    background-color: #4b5563;
+}
+
+body.night-mode .payment-type.active {
+    background-color: rgba(77, 166, 255, 0.2);
+    color: #4da6ff;
+    border-color: #4da6ff;
+}
+
+/* ================ PÁGINA DE PEDIDOS NO MODO NOTURNO ================ */
+body.night-mode .orders-container {
+    background-color: #2d2d44;
+    color: #e6e6e6;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.night-mode .page-title {
+    color: #4da6ff;
+    border-bottom: 1px solid #4b5563;
+}
+
+body.night-mode .orders-filter {
+    background-color: #3d3d5c;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .filter-tabs {
+    border-bottom: 1px solid #4b5563;
+}
+
+body.night-mode .filter-tab {
+    color: #b8b8cc;
+    border-bottom: 2px solid transparent;
+}
+
+body.night-mode .filter-tab.active {
+    color: #4da6ff;
+    border-bottom-color: #4da6ff;
+}
+
+body.night-mode .filter-tab:hover:not(.active) {
+    color: #e6e6e6;
+    background-color: rgba(77, 166, 255, 0.1);
+}
+
+body.night-mode .search-orders {
+    background-color: #3d3d5c;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .search-orders i {
+    color: #a0aec0;
+}
+
+body.night-mode .search-orders input {
+    background-color: transparent;
+    color: #e6e6e6;
+}
+
+body.night-mode .search-orders input::placeholder {
+    color: #a0aec0;
+}
+
+body.night-mode .empty-orders {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .empty-orders-icon {
+    color: #4da6ff;
+}
+
+body.night-mode .empty-orders h2 {
+    color: #e6e6e6;
+}
+
+body.night-mode .empty-orders p {
+    color: #b8b8cc;
+}
+
+body.night-mode .btn {
+    transition: all 0.3s ease;
+}
+
+body.night-mode .btn-primary {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+}
+
+body.night-mode .btn-primary:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+body.night-mode .btn-secondary {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .btn-secondary:hover {
+    background-color: #4b5563;
+    transform: translateY(-2px);
+}
+
+/* ================ ESTILOS PARA PEDIDOS QUANDO HOUVER CONTEÚDO ================ */
+body.night-mode .order-card {
+    background-color: #3d3d5c;
+    border: 1px solid #4b5563;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.night-mode .order-header {
+    border-bottom: 1px solid #4b5563;
+}
+
+body.night-mode .order-id {
+    color: #e6e6e6;
+}
+
+body.night-mode .order-date {
+    color: #b8b8cc;
+}
+
+body.night-mode .order-status {
+    background-color: rgba(77, 166, 255, 0.2);
+    color: #4da6ff;
+}
+
+body.night-mode .order-status.delivered {
+    background-color: rgba(76, 175, 80, 0.2);
+    color: #4CAF50;
+}
+
+body.night-mode .order-status.processing {
+    background-color: rgba(255, 193, 7, 0.2);
+    color: #FFC107;
+}
+
+body.night-mode .order-status.shipped {
+    background-color: rgba(33, 150, 243, 0.2);
+    color: #2196F3;
+}
+
+body.night-mode .order-item {
+    border-bottom: 1px solid #4b5563;
+}
+
+body.night-mode .item-image {
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .item-details h4 {
+    color: #e6e6e6;
+}
+
+body.night-mode .item-details p {
+    color: #b8b8cc;
+}
+
+body.night-mode .item-price {
+    color: #4da6ff;
+}
+
+body.night-mode .order-summary {
+    border-top: 1px solid #4b5563;
+    background-color: #2d2d44;
+}
+
+body.night-mode .summary-label {
+    color: #b8b8cc;
+}
+
+body.night-mode .summary-value {
+    color: #e6e6e6;
+}
+
+body.night-mode .summary-total {
+    color: #4da6ff;
+}
+
+body.night-mode .order-actions .btn {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .order-actions .btn:hover {
+    background-color: #4b5563;
+}
+
+body.night-mode .order-actions .btn-primary {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+}
+
+body.night-mode .order-actions .btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+/* ================ PÁGINA DE FAVORITOS NO MODO NOTURNO ================ */
+body.night-mode .favorites-container {
+    background-color: #2d2d44;
+    color: #e6e6e6;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.night-mode .page-title {
+    color: #4da6ff;
+    border-bottom: 1px solid #4b5563;
+}
+
+body.night-mode .favorites-grid {
+    background-color: transparent;
+}
+
+body.night-mode .favorite-item {
+    background-color: #3d3d5c;
+    border: 1px solid #4b5563;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.night-mode .favorite-item:hover {
+    box-shadow: 0 4px 15px rgba(77, 166, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+body.night-mode .favorite-image {
+    border-bottom: 1px solid #4b5563;
+}
+
+body.night-mode .favorite-info {
+    color: #e6e6e6;
+}
+
+body.night-mode .favorite-name {
+    color: #e6e6e6;
+}
+
+body.night-mode .favorite-price {
+    color: #4da6ff;
+}
+
+body.night-mode .favorite-description {
+    color: #b8b8cc;
+}
+
+body.night-mode .favorite-actions {
+    border-top: 1px solid #4b5563;
+    background-color: rgba(45, 45, 68, 0.8);
+}
+
+body.night-mode .btn-add-cart {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+}
+
+body.night-mode .btn-add-cart:hover {
+    background-color: #1d4ed8;
+}
+
+body.night-mode .btn-remove-favorite {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: #ff6b6b;
+    border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+body.night-mode .btn-remove-favorite:hover {
+    background-color: rgba(231, 76, 60, 0.3);
+}
+
+body.night-mode .empty-favorites {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .empty-favorites-icon {
+    color: #ff6b6b;
+}
+
+body.night-mode .empty-favorites h2 {
+    color: #e6e6e6;
+}
+
+body.night-mode .empty-favorites p {
+    color: #b8b8cc;
+}
+
+body.night-mode .empty-favorites-actions .btn-primary {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+}
+
+body.night-mode .empty-favorites-actions .btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+/* ================ FILTROS E ORGANIZAÇÃO DE FAVORITOS ================ */
+body.night-mode .favorites-filter {
+    background-color: #3d3d5c;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .filter-label {
+    color: #e6e6e6;
+}
+
+body.night-mode .filter-select {
+    background-color: #2d2d44;
+    color: #e6e6e6;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .view-options {
+    background-color: #3d3d5c;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .view-option {
+    color: #b8b8cc;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .view-option.active {
+    background-color: rgba(77, 166, 255, 0.2);
+    color: #4da6ff;
+    border-color: #4da6ff;
+}
+
+body.night-mode .view-option:hover:not(.active) {
+    background-color: #4b5563;
+    color: #e6e6e6;
+}
+
+/* ================ MENSAGENS E NOTIFICAÇÕES ================ */
+body.night-mode .favorite-notification {
+    background-color: #2d2d44;
+    color: #e6e6e6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .notification-success {
+    background-color: rgba(76, 175, 80, 0.2);
+    color: #4CAF50;
+    border-color: rgba(76, 175, 80, 0.3);
+}
+
+body.night-mode .notification-error {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: #ff6b6b;
+    border-color: rgba(231, 76, 60, 0.3);
+}
+
+/* ================ ESTADO DE CARREGAMENTO ================ */
+body.night-mode .favorites-loading {
+    background-color: #2d2d44;
+    color: #e6e6e6;
+}
+
+body.night-mode .loading-spinner {
+    border: 3px solid #3d3d5c;
+    border-top: 3px solid #4da6ff;
+}
+
+body.night-mode .loading-text {
+    color: #b8b8cc;
+}
+
+/* ================ PAGINAÇÃO ================ */
+body.night-mode .favorites-pagination {
+    background-color: #3d3d5c;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .pagination-btn {
+    background-color: #2d2d44;
+    color: #e6e6e6;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .pagination-btn:hover:not(:disabled) {
+    background-color: #4b5563;
+}
+
+body.night-mode .pagination-btn.active {
+    background-color: rgba(77, 166, 255, 0.2);
+    color: #4da6ff;
+    border-color: #4da6ff;
+}
+
+body.night-mode .pagination-btn:disabled {
+    background-color: #2d2d44;
+    color: #6b7280;
+    cursor: not-allowed;
+}
+
+/* ================ RESPONSIVIDADE ================ */
+@media (max-width: 768px) {
+    body.night-mode .favorite-item {
+        background-color: #3d3d5c;
+    }
+    
+    body.night-mode .favorite-actions {
+        background-color: rgba(45, 45, 68, 0.9);
+    }
+    
+    body.night-mode .empty-favorites {
+        background-color: #3d3d5c;
+    }
+}
+
+/* ================ CONFIGURAÇÕES NO MODO NOTURNO ================ */
+body.night-mode .settings-container {
+    background-color: #2d2d44;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.night-mode .settings-header h1 {
+    color: #4da6ff;
+}
+
+body.night-mode .settings-header p {
+    color: #b8b8cc;
+}
+
+body.night-mode .settings-section {
+    background-color: #3d3d5c;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .settings-section h2 {
+    color: #e6e6e6;
+    border-bottom: 1px solid #4b5563;
+}
+
+body.night-mode .form-group label {
+    color: #e6e6e6;
+}
+
+body.night-mode .form-control {
+    background-color: #2d2d44;
+    color: #e6e6e6;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .form-control:focus {
+    border-color: #4da6ff;
+    box-shadow: 0 0 0 2px rgba(77, 166, 255, 0.2);
+}
+
+body.night-mode .validation-message {
+    color: #ff6b6b;
+}
+
+body.night-mode .notification-preferences {
+    color: #e6e6e6;
+}
+
+body.night-mode .checkbox-group label {
+    color: #e6e6e6;
+}
+
+body.night-mode .password-strength {
+    color: #b8b8cc;
+}
+
+body.night-mode .danger-zone {
+    background-color: rgba(231, 76, 60, 0.1);
+    border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+body.night-mode .danger-zone h2 {
+    color: #ff6b6b;
+}
+
+body.night-mode .danger-zone p {
+    color: #b8b8cc;
+}
+
+body.night-mode .btn {
+    transition: all 0.3s ease;
+}
+
+body.night-mode .btn-primary {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+}
+
+body.night-mode .btn-primary:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+body.night-mode .btn-secondary {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .btn-secondary:hover {
+    background-color: #4b5563;
+    transform: translateY(-2px);
+}
+
+body.night-mode .btn-danger {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: #ff6b6b;
+    border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+body.night-mode .btn-danger:hover {
+    background-color: rgba(231, 76, 60, 0.3);
+    transform: translateY(-2px);
+}
+
+body.night-mode .save-indicator {
+    color: #b8b8cc;
+}
+
+/* Estilizando checkboxes no modo noturno */
+body.night-mode input[type="checkbox"] {
+    filter: invert(80%) hue-rotate(180deg) brightness(1.2);
+}
+
+/* Botão de alternância de tema */
+.theme-toggle-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.theme-toggle {
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+body.night-mode .theme-toggle {
+    background: #4da6ff;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* modo_noturno-2.css - Estilos adicionais para modo noturno */
+
+/* ================ POLÍTICA DE PRIVACIDADE NO MODO NOTURNO ================ */
+body.night-mode .privacy-container {
+    background: linear-gradient(135deg, #2a2a3e 0%, #1a1a2e 100%);
+}
+
+body.night-mode .privacy-hero {
+    background: linear-gradient(135deg, #2d2d44 0%, #3d3d5c 100%);
+    border-bottom: 1px solid #4b5563;
+}
+
+body.night-mode .privacy-header h1 {
+    color: #4da6ff;
+}
+
+body.night-mode .update-date {
+    color: #b8b8cc;
+}
+
+body.night-mode .update-date span {
+    color: #e6e6e6;
+}
+
+body.night-mode .privacy-breadcrumbs {
+    color: #b8b8cc;
+}
+
+body.night-mode .privacy-breadcrumbs a {
+    color: #8bb4ff;
+}
+
+body.night-mode .privacy-breadcrumbs a:hover {
+    color: #4da6ff;
+}
+
+body.night-mode .privacy-breadcrumbs span {
+    color: #e6e6e6;
+}
+
+/* Seções de conteúdo */
+body.night-mode .privacy-content {
+    background-color: #2d2d44;
+}
+
+body.night-mode .privacy-section {
+    border-bottom: 1px solid #4b5563;
+}
+
+body.night-mode .privacy-section h2 {
+    color: #4da6ff;
+}
+
+body.night-mode .privacy-section h2 span {
+    color: #8bb4ff;
+}
+
+body.night-mode .privacy-section p {
+    color: #b8b8cc;
+}
+
+/* Subseções */
+body.night-mode .subsection h3 {
+    color: #e6e6e6;
+}
+
+body.night-mode .subsection h3 i {
+    color: #4da6ff;
+}
+
+/* Listas com ícones */
+body.night-mode .icon-list li {
+    color: #b8b8cc;
+}
+
+body.night-mode .icon-list li i {
+    color: #4da6ff;
+}
+
+body.night-mode .icon-list li strong {
+    color: #e6e6e6;
+}
+
+/* Grid de uso */
+body.night-mode .usage-grid {
+    background-color: #3d3d5c;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .usage-item {
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .usage-item i {
+    color: #4da6ff;
+}
+
+body.night-mode .usage-item p {
+    color: #e6e6e6;
+}
+
+/* Seção de segurança */
+body.night-mode .highlight-box {
+    background: linear-gradient(135deg, #3d3d5c 0%, #2d2d44 100%);
+    border: 1px solid #4da6ff;
+}
+
+body.night-mode .security-features {
+    background-color: #2d2d44;
+}
+
+body.night-mode .security-item {
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .security-item i {
+    color: #4da6ff;
+}
+
+body.night-mode .security-item p {
+    color: #e6e6e6;
+}
+
+body.night-mode .security-note {
+    background-color: rgba(77, 166, 255, 0.1);
+    border: 1px solid rgba(77, 166, 255, 0.3);
+}
+
+body.night-mode .security-note i {
+    color: #4da6ff;
+}
+
+body.night-mode .security-note p {
+    color: #b8b8cc;
+}
+
+/* Direitos */
+body.night-mode .rights-grid {
+    background-color: #3d3d5c;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .right-item {
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .right-item i {
+    color: #4da6ff;
+}
+
+body.night-mode .right-item p {
+    color: #e6e6e6;
+}
+
+body.night-mode .contact-rights {
+    background-color: #2d2d44;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .contact-rights p {
+    color: #b8b8cc;
+}
+
+body.night-mode .email-btn {
+    background-color: #2563eb;
+    color: white;
+}
+
+body.night-mode .email-btn:hover {
+    background-color: #1d4ed8;
+}
+
+body.night-mode .email-btn i {
+    color: white;
+}
+
+/* Cookies */
+body.night-mode .cookie-uses {
+    background-color: #3d3d5c;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .cookie-use {
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .cookie-icon {
+    background-color: #2d2d44;
+}
+
+body.night-mode .cookie-icon i {
+    color: #4da6ff;
+}
+
+body.night-mode .cookie-use p {
+    color: #e6e6e6;
+}
+
+body.night-mode .cookie-manage {
+    background-color: #2d2d44;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .cookie-manage p {
+    color: #b8b8cc;
+}
+
+body.night-mode .manage-btn {
+    background-color: #2563eb;
+    color: white;
+}
+
+body.night-mode .manage-btn:hover {
+    background-color: #1d4ed8;
+}
+
+/* Menores de idade */
+body.night-mode .age-warning {
+    background-color: rgba(255, 193, 7, 0.1);
+    border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+body.night-mode .age-warning i {
+    color: #FFC107;
+}
+
+body.night-mode .age-warning p {
+    color: #b8b8cc;
+}
+
+/* Alterações na política */
+body.night-mode .changes-info {
+    background-color: rgba(76, 175, 80, 0.1);
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+body.night-mode .changes-info i {
+    color: #4CAF50;
+}
+
+body.night-mode .changes-info p {
+    color: #b8b8cc;
+}
+
+/* Contato */
+body.night-mode .contact-section {
+    background: linear-gradient(135deg, #3d3d5c 0%, #2d2d44 100%);
+}
+
+body.night-mode .contact-methods {
+    background-color: #2d2d44;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .contact-method {
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .contact-method i {
+    color: #4da6ff;
+}
+
+body.night-mode .contact-method p {
+    color: #e6e6e6;
+}
+
+body.night-mode .contact-method strong {
+    color: #b8b8cc;
+}
+
+/* Última atualização */
+body.night-mode .last-updated {
+    background-color: #2d2d44;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .last-updated p {
+    color: #b8b8cc;
+}
+
+body.night-mode .last-updated strong {
+    color: #e6e6e6;
+}
+
+/* Voltar ao topo */
+body.night-mode .back-to-top a {
+    background-color: #2563eb;
+    color: white;
+}
+
+body.night-mode .back-to-top a:hover {
+    background-color: #1d4ed8;
+}
+
+/* ================ BREADCRUMBS ESPECÍFICOS PARA PRIVACIDADE ================ */
+body.night-mode .privacy-breadcrumbs {
+    background-color: #2d2d44;
+    border-left: 3px solid #4da6ff;
+}
+
+/* ================ RESPONSIVIDADE ================ */
+@media (max-width: 768px) {
+    body.night-mode .privacy-content {
+        background-color: transparent;
+        border: none;
+    }
+    
+    body.night-mode .privacy-section {
+        background-color: #2d2d44;
+        border: 1px solid #4b5563;
+        margin-bottom: 1rem;
+    }
+    
+    body.night-mode .usage-grid,
+    body.night-mode .rights-grid,
+    body.night-mode .cookie-uses {
+        background-color: #2d2d44;
+    }
+}
+

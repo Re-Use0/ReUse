@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="CSS/pagina_ong_usuario-2.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="CSS/breadcrumbs.css">
+    <link rel="stylesheet" href="CSS/modo_noturno.css">
     <title>Patas conscientes - Página da ONG</title>
 </head>
 
@@ -44,20 +45,25 @@
                 </div>
 
                 <!-- Elementos do usuário à direita -->
-                <div class="user-section">
-                    <div class="cart">
-                        <a href="carrinho.html">
-                            <span class="cart-icon"><i class="bi bi-cart3"></i></span>
-                        </a>
-                        <span class="cart-count">1</span>
-                    </div>
-                    <a href="login.html">
-                        <i class="bi bi-box-arrow-right"></i> Sair da Conta
-                    </a>
-                    <a href="perfil.html">
-                        <i class="bi bi-person-fill"></i> Minha Conta
-                    </a>
-                </div>
+              <div class="user-section">
+    <!-- Botão de tema adicionado aqui -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <i class="bi bi-sun-fill" id="themeIcon"></i>
+    </button>
+    <div class="cart">
+        <a href="carrinho.html">
+            <span class="cart-icon"><i class="bi bi-cart3"></i></span>
+        </a>
+        <span class="cart-count">1</span>
+    </div>
+    <a href="login.html">
+        <i class="bi bi-box-arrow-right"></i> Sair da Conta
+    </a>
+    <a href="perfil.html">
+        <i class="bi bi-person-fill"></i> Minha Conta
+    </a>
+</div>
+
 
                 <!-- Categorias abaixo -->
                 <div class="categories-section">
@@ -248,7 +254,7 @@
     <div class="donations-section">
         <div class="adoption-message">
             <div class="adoption-content">
-                <img src="IMG/adocao.png" alt="Animais para adoção">
+                <img src="IMG/adocao.jpg" alt="Animais para adoção">
                 <h3>Dê um lar para um amigo peludo</h3>
                 <p>Nossa ONG tem vários cachorros resgatados esperando por um lar amoroso. Cada adoção significa uma vida salva e mais espaço para resgatarmos outros animais necessitados.</p>
                 <p>Ao adotar, você recebe um companheiro leal e ajuda a combater o abandono animal.</p>
@@ -264,7 +270,7 @@
     <div class="testimonials-section">
         <div class="testimonial-card">
             <div class="testimonial-header">
-                <img src="IMG/ana-silva-2.png" alt="Ana Silva">
+                <img src="IMG/ana-silva-2.jpg" alt="Ana Silva">
                 <div>
                     <h3>Ana Silva</h3>
                     <span class="testimonial-date">15/06/2025</span>
@@ -284,7 +290,7 @@
 
         <div class="testimonial-card">
             <div class="testimonial-header">
-                <img src="IMG/carlos.png" alt="Carlos Mendes">
+                <img src="IMG/carlos.jpg" alt="Carlos Mendes">
                 <div>
                     <h3>Carlos Mendes</h3>
                     <span class="testimonial-date">02/05/2025</span>
@@ -304,7 +310,7 @@
 
         <div class="testimonial-card">
             <div class="testimonial-header">
-                <img src="IMG/mariana-oliveira-2.png" alt="Mariana Oliveira">
+                <img src="IMG/mariana-oliveira-2.jpg" alt="Mariana Oliveira">
                 <div>
                     <h3>Mariana Oliveira</h3>
                     <span class="testimonial-date">22/04/2025</span>
@@ -380,19 +386,6 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <!-- Seção de Idioma -->
-                <div class="footer-links language-section">
-                    <h3>Idioma/Language</h3>
-                    <div class="language-selector">
-                        <button class="language-option active" data-lang="pt-br" aria-label="Português Brasileiro">
-                            <span class="flag-icon">🇧🇷</span> PT-BR
-                        </button>
-                        <button class="language-option" data-lang="en" aria-label="English">
-                            <span class="flag-icon">🇺🇸</span> EN
-                        </button>
-                    </div>
-                </div>
-
                 <!-- Seção Minha Conta -->
                 <div class="footer-links">
                     <h3>Minha Conta</h3>
@@ -412,6 +405,7 @@
                 <!-- Seção Configurações -->
                 <div class="footer-links">
                     <h3>Configurações</h3>
+                    <a href="configuracoes_cliente.html"><i class="bi bi-gear-fill"></i> <span>Configurações</span></a>
                     <a href="privacidade.html"><i class="bi bi-shield-lock-fill"></i> <span>Privacidade</span></a>
                     <a href="notificacao.html"><i class="bi bi-bell-fill"></i> <span>Notificações</span></a>
                     <a href="pagamento.html"><i class="bi bi-credit-card-fill"></i> <span>Pagamentos</span></a>
@@ -422,7 +416,7 @@
                     <h3>Sobre Nós</h3>
                     <a href="missao.html"><i class="bi bi-info-circle-fill"></i> <span>Missão</span></a>
                     <a href="equipe.html"><i class="bi bi-people-fill"></i> <span>Equipe</span></a>
-                    <a href="chat_com_vendedor.html"><i class="bi bi-chat-dots-fill"></i> <span>Chat com Vendedor</span></a>
+                    <a href="chat_Com_Vendedor.html"><i class="bi bi-chat-dots-fill"></i> <span>Chat com Vendedor</span></a>
 
                     <div class="social-links">
                         <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
@@ -1048,6 +1042,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 <script src="JS/breadcrumbs.js"></script>
 <script src="JS/modal_patas.js"></script>
+<script src="JS/modo_noturno.js"></script>
 </body>
 
 </html>

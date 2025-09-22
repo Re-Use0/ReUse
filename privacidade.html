@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="CSS/privacidade.css">
     <link rel="stylesheet" href="CSS/breadcrumbs.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/modo_noturno.css">
+    <link rel="stylesheet" href="CSS/modo_noturno-2.css">
 </head>
 
 <body>
@@ -45,20 +47,25 @@
                 </div>
 
                 <!-- Elementos do usuário à direita -->
-                <div class="user-section">
-                    <div class="cart">
-                        <a href="carrinho.html">
-                            <span class="cart-icon"><i class="bi bi-cart3"></i></span>
-                        </a>
-                        <span class="cart-count">1</span>
-                    </div>
-                    <a href="login.html">
-                        <i class="bi bi-box-arrow-right"></i> Sair da Conta
-                    </a>
-                    <a href="perfil.html">
-                        <i class="bi bi-person-fill"></i> Minha Conta
-                    </a>
-                </div>
+               <div class="user-section">
+    <!-- Botão de tema adicionado aqui -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <i class="bi bi-sun-fill" id="themeIcon"></i>
+    </button>
+    <div class="cart">
+        <a href="carrinho.html">
+            <span class="cart-icon"><i class="bi bi-cart3"></i></span>
+        </a>
+        <span class="cart-count">1</span>
+    </div>
+    <a href="login.html">
+        <i class="bi bi-box-arrow-right"></i> Sair da Conta
+    </a>
+    <a href="perfil.html">
+        <i class="bi bi-person-fill"></i> Minha Conta
+    </a>
+</div>
+
 
                 <!-- Categorias abaixo -->
                 <div class="categories-section">
@@ -414,13 +421,6 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <!-- Seção de Idioma -->
-      <div class="footer-links language-section">
-                    <h3>Idioma/Language</h3>
-                    <div class="language-selector">
-                           <div id="google_translate_element"></div>
-                    </div>
-                </div>
 
                 <!-- Seção Minha Conta -->
                 <div class="footer-links">
@@ -470,18 +470,6 @@
 
   
     <script src="JS/breadcrumbs.js"></script>
-        <script>
-        // Função para carregar o Google Translate Widget
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'pt',
-                includedLanguages: 'pt,en,es,fr',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
-    </script>
-    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
+    <script src="JS/modo_noturno.js"></script>
 </body>
 </html>

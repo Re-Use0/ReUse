@@ -6,7 +6,7 @@
                 preco: 35.00,
                 categoria: "roupas",
                 descricao: "Camiseta de algodão com estampa da instituição, confortável e com design exclusivo.",
-                imagem: "IMG/Camiseta-Patas.png",
+                imagem: "IMG/Camiseta-Patas.jpg",
                 vendidos: 18,
                 avaliacao: 4.8
             },
@@ -16,7 +16,7 @@
                 preco: 12.00,
                 categoria: "acessorios",
                 descricao: "Broche metálico com logo da instituição, perfeito para mostrar seu apoio.",
-                imagem: "IMG/Broche.SOS.png",
+                imagem: "IMG/Broche.SOS.jpg",
                 vendidos: 12,
                 avaliacao: 4.9
             },
@@ -26,7 +26,7 @@
                 preco: 45.00,
                 categoria: "acessorios",
                 descricao: "Bolsa ecológica de algodão, ideal para o dia a dia e para carregar suas compras.",
-                imagem: "IMG/Bolsa-Patas.png",
+                imagem: "IMG/Bolsa-Patas.jpg",
                 vendidos: 8,
                 avaliacao: 4.6
             },
@@ -36,7 +36,7 @@
                 preco: 25.00,
                 categoria: "acessorios",
                 descricao: "Boné ajustável com logo bordado, perfeito para proteção solar com estilo.",
-                imagem: "IMG/Bone-Patas.png",
+                imagem: "IMG/Bone-Patas.jpg",
                 vendidos: 4,
                 avaliacao: 4.5
             }

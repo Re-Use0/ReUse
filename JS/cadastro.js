@@ -372,24 +372,35 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Função para redirecionamento
-    function redirectToPage(role) {
-        setTimeout(() => {
-            switch (role) {
-                case 'client':
-                    window.location.href = 'cliente.html';
-                    break;
-                case 'seller':
-                    window.location.href = 'vendedor.html';
-                    break;
-                case 'institution':
-                    window.location.href = 'ong.html';
-                    break;
-                default:
-                    window.location.href = '#';
-            }
-        }, 1000);
-    }
+   // Função para mostrar sucesso
+function showSuccess(message) {
+    const successElement = document.getElementById('success-message-global');
+    const successText = document.getElementById('success-text-global');
+
+    successText.textContent = message;
+    successElement.style.display = 'flex';
+
+    // Fechar automaticamente após 3 segundos
+    setTimeout(() => {
+        successElement.style.display = 'none';
+    }, 3000);
+}
+
+// Fechar mensagem ao clicar
+document.getElementById('success-message-global')?.addEventListener('click', function () {
+    this.style.display = 'none';
+});
+
+// Função para redirecionamento
+function redirectToPage(role) {
+    // Mostrar mensagem de sucesso
+    showSuccess('Cadastro realizado com sucesso! Redirecionando para login...');
+    
+    setTimeout(() => {
+        // Redirecionar para a página de login em vez das páginas específicas
+        window.location.href = 'login.html';
+    }, 3000); // Aumentei o tempo para 3 segundos para dar tempo de ver a mensagem
+}
 
     // Adiciona os event listeners aos formulários
     document.getElementById('signupForm')?.addEventListener('submit', validateClientForm);

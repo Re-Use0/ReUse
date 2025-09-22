@@ -1,0 +1,877 @@
+/* modo_noturno-2.css - Estilos adicionais para modo noturno */
+
+/* ================ CORREÇÃO PARA PRIVACY-CONTENT ================ */
+body.night-mode main .privacy-container .privacy-content {
+    background-color: #2d2d44 !important;
+    border: 1px solid #4b5563 !important;
+    color: #e6e6e6 !important;
+}
+
+/* ================ POLÍTICA DE PRIVACIDADE NO MODO NOTURNO ================ */
+body.night-mode .privacy-container {
+    background: linear-gradient(135deg, #2a2a3e 0%, #1a1a2e 100%) !important;
+}
+
+body.night-mode .privacy-hero {
+    background: linear-gradient(135deg, #2d2d44 0%, #3d3d5c 100%) !important;
+    border-bottom: 1px solid #4b5563 !important;
+}
+
+body.night-mode .privacy-header h1 {
+    color: #4da6ff !important;
+}
+
+body.night-mode .update-date {
+    color: #b8b8cc !important;
+}
+
+body.night-mode .update-date span {
+    color: #e6e6e6 !important;
+}
+
+body.night-mode .privacy-breadcrumbs {
+    color: #b8b8cc !important;
+    background-color: #2d2d44 !important;
+}
+
+body.night-mode .privacy-breadcrumbs a {
+    color: #8bb4ff !important;
+}
+
+body.night-mode .privacy-breadcrumbs a:hover {
+    color: #4da6ff !important;
+}
+
+body.night-mode .privacy-breadcrumbs span {
+    color: #e6e6e6 !important;
+}
+
+/* Seções de conteúdo */
+body.night-mode .privacy-sections {
+    background-color: transparent !important;
+}
+
+body.night-mode .privacy-section {
+    border-bottom: 1px solid #4b5563 !important;
+    background-color: transparent !important;
+}
+
+body.night-mode .privacy-section h2 {
+    color: #4da6ff !important;
+}
+
+body.night-mode .privacy-section h2 span {
+    color: #8bb4ff !important;
+}
+
+body.night-mode .privacy-section p {
+    color: #b8b8cc !important;
+}
+
+/* Subseções */
+body.night-mode .subsection h3 {
+    color: #e6e6e6 !important;
+}
+
+body.night-mode .subsection h3 i {
+    color: #4da6ff !important;
+}
+
+/* Listas com ícones */
+body.night-mode .icon-list li {
+    color: #b8b8cc !important;
+}
+
+body.night-mode .icon-list li i {
+    color: #4da6ff !important;
+}
+
+body.night-mode .icon-list li strong {
+    color: #e6e6e6 !important;
+}
+
+/* Grid de uso */
+body.night-mode .usage-grid {
+    background-color: #3d3d5c !important;
+    border: 1px solid #4b5563 !important;
+}
+
+body.night-mode .usage-item {
+    border: 1px solid #4b5563 !important;
+    background-color: #2d2d44 !important;
+}
+
+body.night-mode .usage-item i {
+    color: #4da6ff !important;
+}
+
+body.night-mode .usage-item p {
+    color: #e6e6e6 !important;
+}
+
+/* Seção de segurança */
+body.night-mode .highlight-box {
+    background: linear-gradient(135deg, #3d3d5c 0%, #2d2d44 100%) !important;
+    border: 1px solid #4da6ff !important;
+}
+
+body.night-mode .security-features {
+    background-color: #2d2d44 !important;
+}
+
+body.night-mode .security-item {
+    border: 1px solid #4b5563 !important;
+    background-color: #3d3d5c !important;
+}
+
+body.night-mode .security-item i {
+    color: #4da6ff !important;
+}
+
+body.night-mode .security-item p {
+    color: #e6e6e6 !important;
+}
+
+body.night-mode .security-note {
+    background-color: rgba(77, 166, 255, 0.1) !important;
+    border: 1px solid rgba(77, 166, 255, 0.3) !important;
+}
+
+body.night-mode .security-note i {
+    color: #4da6ff !important;
+}
+
+body.night-mode .security-note p {
+    color: #b8b8cc !important;
+}
+
+/* Direitos */
+body.night-mode .rights-grid {
+    background-color: #3d3d5c !important;
+    border: 1px solid #4b5563 !important;
+}
+
+body.night-mode .right-item {
+    border: 1px solid #4b5563 !important;
+    background-color: #2d2d44 !important;
+}
+
+body.night-mode .right-item i {
+    color: #4da6ff !important;
+}
+
+body.night-mode .right-item p {
+    color: #e6e6e6 !important;
+}
+
+body.night-mode .contact-rights {
+    background-color: #2d2d44 !important;
+    border: 1px solid #4b5563 !important;
+}
+
+body.night-mode .contact-rights p {
+    color: #b8b8cc !important;
+}
+
+body.night-mode .email-btn {
+    background-color: #2563eb !important;
+    color: white !important;
+}
+
+body.night-mode .email-btn:hover {
+    background-color: #1d4ed8 !important;
+}
+
+body.night-mode .email-btn i {
+    color: white !important;
+}
+
+/* Cookies */
+body.night-mode .cookie-uses {
+    background-color: #3d3d5c !important;
+    border: 1px solid #4b5563 !important;
+}
+
+body.night-mode .cookie-use {
+    border: 1px solid #4b5563 !important;
+    background-color: #2d2d44 !important;
+}
+
+body.night-mode .cookie-icon {
+    background-color: #3d3d5c !important;
+}
+
+body.night-mode .cookie-icon i {
+    color: #4da6ff !important;
+}
+
+body.night-mode .cookie-use p {
+    color: #e6e6e6 !important;
+}
+
+body.night-mode .cookie-manage {
+    background-color: #2d2d44 !important;
+    border: 1px solid #4b5563 !important;
+}
+
+body.night-mode .cookie-manage p {
+    color: #b8b8cc !important;
+}
+
+body.night-mode .manage-btn {
+    background-color: #2563eb !important;
+    color: white !important;
+}
+
+body.night-mode .manage-btn:hover {
+    background-color: #1d4ed8 !important;
+}
+
+/* Menores de idade */
+body.night-mode .age-warning {
+    background-color: rgba(255, 193, 7, 0.1) !important;
+    border: 1px solid rgba(255, 193, 7, 0.3) !important;
+}
+
+body.night-mode .age-warning i {
+    color: #FFC107 !important;
+}
+
+body.night-mode .age-warning p {
+    color: #b8b8cc !important;
+}
+
+/* Alterações na política */
+body.night-mode .changes-info {
+    background-color: rgba(76, 175, 80, 0.1) !important;
+    border: 1px solid rgba(76, 175, 80, 0.3) !important;
+}
+
+body.night-mode .changes-info i {
+    color: #4CAF50 !important;
+}
+
+body.night-mode .changes-info p {
+    color: #b8b8cc !important;
+}
+
+/* Contato */
+body.night-mode .contact-section {
+    background: linear-gradient(135deg, #3d3d5c 0%, #2d2d44 100%) !important;
+}
+
+body.night-mode .contact-methods {
+    background-color: #2d2d44 !important;
+    border: 1px solid #4b5563 !important;
+}
+
+body.night-mode .contact-method {
+    border: 1px solid #4b5563 !important;
+    background-color: #3d3d5c !important;
+}
+
+body.night-mode .contact-method i {
+    color: #4da6ff !important;
+}
+
+body.night-mode .contact-method p {
+    color: #e6e6e6 !important;
+}
+
+body.night-mode .contact-method strong {
+    color: #b8b8cc !important;
+}
+
+/* Última atualização */
+body.night-mode .last-updated {
+    background-color: #2d2d44 !important;
+    border: 1px solid #4b5563 !important;
+}
+
+body.night-mode .last-updated p {
+    color: #b8b8cc !important;
+}
+
+body.night-mode .last-updated strong {
+    color: #e6e6e6 !important;
+}
+
+/* Voltar ao topo */
+body.night-mode .back-to-top a {
+    background-color: #2563eb !important;
+    color: white !important;
+}
+
+body.night-mode .back-to-top a:hover {
+    background-color: #1d4ed8 !important;
+}
+
+/* ================ BREADCRUMBS ESPECÍFICOS PARA PRIVACIDADE ================ */
+body.night-mode .privacy-breadcrumbs {
+    background-color: #2d2d44 !important;
+    border-left: 3px solid #4da6ff !important;
+}
+
+/* ================ ELEMENTOS GERAIS DO MAIN ================ */
+body.night-mode main {
+    background: linear-gradient(135deg, #2a2a3e 0%, #1a1a2e 100%) !important;
+}
+
+/* ================ RESPONSIVIDADE ================ */
+@media (max-width: 768px) {
+    body.night-mode .privacy-content {
+        background-color: transparent !important;
+        border: none !important;
+    }
+    
+    body.night-mode .privacy-section {
+        background-color: #2d2d44 !important;
+        border: 1px solid #4b5563 !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    body.night-mode .usage-grid,
+    body.night-mode .rights-grid,
+    body.night-mode .cookie-uses {
+        background-color: #2d2d44 !important;
+    }
+}
+
+/* Estilos para modo noturno na página de pagamentos */
+body.night-mode .payments-container {
+    background: linear-gradient(135deg, #2a2a3e 0%, #1a1a2e 100%);
+}
+
+body.night-mode .payments-header h1 {
+    color: #4da6ff;
+}
+
+body.night-mode .subtitle {
+    color: #b8b8cc;
+}
+
+body.night-mode .payment-section {
+    background-color: #2d2d44;
+    border: 1px solid #4b5563;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.night-mode .payment-section.highlight {
+    border-color: #32BCAD;
+    background-color: rgba(50, 188, 173, 0.1);
+}
+
+body.night-mode .section-header h2 {
+    color: #e6e6e6;
+}
+
+body.night-mode .section-header i {
+    color: #4da6ff;
+    background-color: rgba(77, 166, 255, 0.15);
+}
+
+body.night-mode .section-description {
+    color: #b8b8cc;
+}
+
+body.night-mode .card-method {
+    background-color: #3d3d5c;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .card-method:hover {
+    border-color: #4da6ff;
+    box-shadow: 0 5px 15px rgba(77, 166, 255, 0.2);
+}
+
+body.night-mode .card-name {
+    color: #e6e6e6;
+}
+
+body.night-mode .pix-icon {
+    color: #32BCAD;
+    background-color: rgba(50, 188, 173, 0.15);
+}
+
+body.night-mode .pix-details h3 {
+    color: #e6e6e6;
+}
+
+body.night-mode .pix-details p {
+    color: #b8b8cc;
+}
+
+body.night-mode .pix-benefits li {
+    color: #e6e6e6;
+}
+
+body.night-mode .pix-benefits li i {
+    color: #32BCAD;
+}
+
+body.night-mode .security-info {
+    background-color: rgba(77, 166, 255, 0.1);
+    border-left-color: #4da6ff;
+}
+
+body.night-mode .security-header h3 {
+    color: #e6e6e6;
+}
+
+body.night-mode .security-header i {
+    color: #4da6ff;
+}
+
+body.night-mode .security-info p {
+    color: #b8b8cc;
+}
+
+/* FAQ no modo noturno */
+body.night-mode .faq-header h2 {
+    color: #4da6ff;
+}
+
+body.night-mode .faq-header p {
+    color: #b8b8cc;
+}
+
+body.night-mode .faq-item {
+    background-color: #2d2d44;
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .faq-question {
+    background-color: #3d3d5c;
+}
+
+body.night-mode .faq-question:hover {
+    background-color: rgba(77, 166, 255, 0.15);
+}
+
+body.night-mode .question-text h3 {
+    color: #e6e6e6;
+}
+
+body.night-mode .question-meta {
+    color: #b8b8cc;
+}
+
+body.night-mode .category {
+    background-color: rgba(77, 166, 255, 0.2);
+    color: #4da6ff;
+}
+
+body.night-mode .answer-content p {
+    color: #b8b8cc;
+}
+
+body.night-mode .answer-details {
+    background-color: #3d3d5c;
+}
+
+body.night-mode .answer-details li {
+    color: #e6e6e6;
+}
+
+body.night-mode .answer-help {
+    background-color: rgba(241, 196, 15, 0.1);
+    color: #f1c40f;
+    border-left-color: #f1c40f;
+}
+
+body.night-mode .answer-help i {
+    color: #f1c40f;
+}
+
+body.night-mode .benefit-card {
+    background-color: #3d3d5c;
+    border-color: #4b5563;
+}
+
+body.night-mode .benefit-card h4 {
+    color: #e6e6e6;
+}
+
+body.night-mode .benefit-card p {
+    color: #b8b8cc;
+}
+
+body.night-mode .security-card {
+    background-color: #3d3d5c;
+    border-color: #4b5563;
+}
+
+body.night-mode .security-card p {
+    color: #e6e6e6;
+}
+
+body.night-mode .answer-note {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: #ff6b6b;
+    border-left-color: #ff6b6b;
+}
+
+body.night-mode .answer-note i {
+    color: #ff6b6b;
+}
+
+body.night-mode .faq-contact {
+    background: linear-gradient(135deg, #3d3d5c 0%, #2d2d44 100%);
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .contact-btn {
+    background-color: #4da6ff;
+    color: white;
+}
+
+body.night-mode .contact-btn:hover {
+    background-color: #3d3d5c;
+    color: #4da6ff;
+}
+
+/* Timeline no modo noturno */
+body.night-mode .timeline:before {
+    background: #4da6ff;
+}
+
+body.night-mode .timeline-content strong {
+    color: #e6e6e6;
+}
+
+body.night-mode .timeline-content p {
+    color: #b8b8cc;
+}
+
+/* Badge no modo noturno */
+body.night-mode .badge {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Estilos para modo noturno na página de missão */
+body.night-mode .mission-section {
+    background: linear-gradient(135deg, #2a2a3e 0%, #1a1a2e 100%);
+}
+
+body.night-mode .section-title {
+    color: #4da6ff;
+}
+
+body.night-mode .section-title::after {
+    background: linear-gradient(90deg, #4da6ff, #32BCAD);
+}
+
+body.night-mode .mission-card {
+    background-color: #2d2d44;
+    border: 1px solid #4b5563;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+body.night-mode .mission-card:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    border-top-color: #4da6ff;
+}
+
+body.night-mode .mission-icon {
+    background: linear-gradient(135deg, #4da6ff, #32BCAD);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+body.night-mode .mission-card h2 {
+    color: #4da6ff;
+}
+
+body.night-mode .mission-card p {
+    color: #b8b8cc;
+}
+
+body.night-mode .mission-values {
+    background: linear-gradient(135deg, #2d2d44, #3d3d5c);
+    border-left: 5px solid #4da6ff;
+}
+
+body.night-mode .mission-values li {
+    color: #e6e6e6;
+    border-bottom: 1px solid #4b5563;
+}
+
+body.night-mode .mission-values li strong {
+    color: #4da6ff;
+}
+
+body.night-mode .impact-description {
+    color: #b8b8cc;
+}
+
+body.night-mode .stat-item {
+    background-color: #2d2d44;
+    border: 1px solid #4b5563;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+body.night-mode .stat-item::before {
+    background: linear-gradient(90deg, #4da6ff, #32BCAD);
+}
+
+body.night-mode .stat-number {
+    background: linear-gradient(135deg, #4da6ff, #32BCAD);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+body.night-mode .stat-label {
+    color: #b8b8cc;
+}
+
+body.night-mode .mission-join {
+    background: linear-gradient(135deg, #2d2d44, #3d3d5c);
+    border: 1px solid #4b5563;
+}
+
+body.night-mode .mission-join h2 {
+    color: #4da6ff;
+}
+
+body.night-mode .mission-join p {
+    color: #b8b8cc;
+}
+
+body.night-mode .action-button.buy {
+    background: linear-gradient(90deg, #2563eb, #1d4ed8);
+}
+
+body.night-mode .action-button.donate {
+    background: linear-gradient(90deg, #0d9488, #0891b2);
+}
+
+body.night-mode .action-button:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajustes para elementos específicos */
+body.night-mode .mission-values li::before {
+    color: #32BCAD;
+}
+
+body.night-mode .mission-join::before {
+    opacity: 0.05;
+    filter: invert(1) brightness(0.8);
+}
+
+/* Estilos para modo noturno na página de chat com vendedor */
+body.night-mode .dashboard-container {
+    background: linear-gradient(135deg, #2a2a3e 0%, #1a1a2e 100%);
+}
+
+body.night-mode .sidebar {
+    background-color: #2d2d44;
+    border: 1px solid #4b5563;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.night-mode .sidebar-title {
+    color: #e6e6e6;
+    border-bottom-color: #4b5563;
+}
+
+body.night-mode .sidebar-nav a {
+    color: #b8b8cc;
+}
+
+body.night-mode .sidebar-nav a:hover {
+    background-color: #3d3d5c;
+    color: #4da6ff;
+}
+
+body.night-mode .sidebar-nav a.active {
+    background-color: rgba(77, 166, 255, 0.2);
+    color: #4da6ff;
+}
+
+body.night-mode .main-content {
+    background: transparent;
+}
+
+body.night-mode .chat-container {
+    background-color: #2d2d44;
+    border: 1px solid #4b5563;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.night-mode .chat-sidebar {
+    border-right-color: #4b5563;
+    background-color: #2d2d44;
+}
+
+body.night-mode .chat-search {
+    border-bottom-color: #4b5563;
+}
+
+body.night-mode .chat-search input {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border-color: #4b5563;
+}
+
+body.night-mode .chat-search input::placeholder {
+    color: #a0aec0;
+}
+
+body.night-mode .chat-search i {
+    color: #a0aec0;
+}
+
+body.night-mode .chat-list {
+    background-color: #2d2d44;
+}
+
+body.night-mode .chat-item {
+    border-bottom-color: #4b5563;
+    background-color: #2d2d44;
+}
+
+body.night-mode .chat-item:hover {
+    background-color: #3d3d5c;
+}
+
+body.night-mode .chat-item.active {
+    background-color: rgba(77, 166, 255, 0.15);
+}
+
+body.night-mode .chat-info h4 {
+    color: #e6e6e6;
+}
+
+body.night-mode .chat-info p {
+    color: #b8b8cc;
+}
+
+body.night-mode .chat-time {
+    color: #a0aec0;
+}
+
+body.night-mode .chat-conversation {
+    background-color: #2d2d44;
+}
+
+body.night-mode .chat-header {
+    border-bottom-color: #4b5563;
+    background-color: #2d2d44;
+}
+
+body.night-mode .current-chat-info h3 {
+    color: #e6e6e6;
+}
+
+body.night-mode .current-chat-info p {
+    color: #4da6ff;
+}
+
+body.night-mode .chat-actions button {
+    color: #a0aec0;
+    background-color: transparent;
+}
+
+body.night-mode .chat-actions button:hover {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+}
+
+body.night-mode .chat-messages {
+    background-color: #1a1a2e;
+}
+
+body.night-mode .message {
+    color: #e6e6e6;
+}
+
+body.night-mode .message span {
+    color: #a0aec0;
+}
+
+body.night-mode .message.received {
+    background-color: #3d3d5c;
+    border-color: #4b5563;
+}
+
+body.night-mode .message.sent {
+    background-color: rgba(77, 166, 255, 0.3);
+    color: #e6e6e6;
+}
+
+body.night-mode .chat-input {
+    border-top-color: #4b5563;
+    background-color: #2d2d44;
+}
+
+body.night-mode .chat-input input {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+    border-color: #4b5563;
+}
+
+body.night-mode .chat-input input::placeholder {
+    color: #a0aec0;
+}
+
+body.night-mode .chat-input button {
+    color: #a0aec0;
+    background-color: transparent;
+}
+
+body.night-mode .chat-input button:hover {
+    background-color: #3d3d5c;
+    color: #e6e6e6;
+}
+
+body.night-mode .chat-input .send-btn {
+    background-color: #25D366;
+    color: white;
+}
+
+body.night-mode .chat-input .send-btn:hover {
+    background-color: #128C7E;
+}
+
+/* Ajustes para elementos específicos do chat */
+body.night-mode .message.received {
+    border-bottom-left-radius: 4px;
+}
+
+body.night-mode .message.sent {
+    border-bottom-right-radius: 4px;
+}
+
+/* Melhorar a visibilidade dos ícones */
+body.night-mode .bi::before {
+    color: inherit;
+}
+
+/* Ajustar cores dos status online/offline */
+body.night-mode .current-chat-info p[style*="color: #4CAF50"] {
+    color: #32BCAD !important;
+}
+
+/* Ajustar o scrollbar para modo escuro */
+body.night-mode .chat-list::-webkit-scrollbar,
+body.night-mode .chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+body.night-mode .chat-list::-webkit-scrollbar-track,
+body.night-mode .chat-messages::-webkit-scrollbar-track {
+    background: #2d2d44;
+}
+
+body.night-mode .chat-list::-webkit-scrollbar-thumb,
+body.night-mode .chat-messages::-webkit-scrollbar-thumb {
+    background: #4b5563;
+    border-radius: 3px;
+}
+
+body.night-mode .chat-list::-webkit-scrollbar-thumb:hover,
+body.night-mode .chat-messages::-webkit-scrollbar-thumb:hover {
+    background: #4da6ff;
+}

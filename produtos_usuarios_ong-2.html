@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="CSS/sucesso.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="CSS/breadcrumbs.css">
+    <link rel="stylesheet" href="CSS/modo_noturno.css">
     <title>Produtos - Patas Conscientes - ReUse</title>
 </head>
 
@@ -114,20 +115,25 @@
                 </div>
 
                 <!-- Elementos do usuário à direita -->
-                <div class="user-section">
-                    <div class="cart">
-                        <a href="carrinho.html">
-                            <span class="cart-icon"><i class="bi bi-cart3"></i></span>
-                        </a>
-                        <span class="cart-count">0</span>
-                    </div>
-                    <a href="login.html">
-                        <i class="bi bi-box-arrow-right"></i> Sair da Conta
-                    </a>
-                    <a href="perfil.html">
-                        <i class="bi bi-person-fill"></i> Minha Conta
-                    </a>
-                </div>
+              <div class="user-section">
+    <!-- Botão de tema adicionado aqui -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <i class="bi bi-sun-fill" id="themeIcon"></i>
+    </button>
+    <div class="cart">
+        <a href="carrinho.html">
+            <span class="cart-icon"><i class="bi bi-cart3"></i></span>
+        </a>
+        <span class="cart-count">1</span>
+    </div>
+    <a href="login.html">
+        <i class="bi bi-box-arrow-right"></i> Sair da Conta
+    </a>
+    <a href="perfil.html">
+        <i class="bi bi-person-fill"></i> Minha Conta
+    </a>
+</div>
+
 
                 <!-- Categorias abaixo -->
                 <div class="categories-section">
@@ -271,61 +277,47 @@
                 <div class="products-grid">
                     <!-- Produto 1: Camiseta -->
                     <div class="product-card" data-category="roupas" data-price="35.00" data-date="2025-01-15">
-                        <div class="product-image camisa"><img src="IMG/camiseta-patas.png" alt="Camiseta Patas Conscientes"></div>
+                        <div class="product-image camisa"><img src="IMG/camiseta-patas.jpg" alt="Camiseta Patas Conscientes"></div>
                         <h3 class="product-name">Camiseta Patas Conscientes</h3>
                         <div class="product-price">R$ 35,00</div>
                         <p class="product-description">Camiseta de algodão com estampa da instituição, confortável e com design exclusivo.</p>
-                        <button class="add-to-cart" onclick="addToCart('Camiseta Patas Conscientes', 35.00, 'IMG/camiseta-patas.png', 'Camiseta de algodão com estampa da instituição', 'CMS001')">Adicionar ao Carrinho</button>
+                        <button class="add-to-cart" onclick="addToCart('Camiseta Patas Conscientes', 35.00, 'IMG/camiseta-patas.jpg', 'Camiseta de algodão com estampa da instituição', 'CMS001')">Adicionar ao Carrinho</button>
                     </div>
 
                     <!-- Produto 2: Broche -->
                     <div class="product-card" data-category="acessorios" data-price="12.00" data-date="2025-02-10">
-                        <div class="product-image broche"><img src="IMG/broche-patas.png" alt="Broche Patas Conscientes"></div>
+                        <div class="product-image broche"><img src="IMG/broche-patas.jpg" alt="Broche Patas Conscientes"></div>
                         <h3 class="product-name">Broche Patas Conscientes</h3>
                         <div class="product-price">R$ 12,00</div>
                         <p class="product-description">Broche metálico com logo da instituição, perfeito para mostrar seu apoio.</p>
-                        <button class="add-to-cart" onclick="addToCart('Broche Patas Conscientes', 12.00, 'IMG/broche-patas.png', 'Broche metálico com logo da instituição', 'BRC002')">Adicionar ao Carrinho</button>
+                        <button class="add-to-cart" onclick="addToCart('Broche Patas Conscientes', 12.00, 'IMG/broche-patas.jpg', 'Broche metálico com logo da instituição', 'BRC002')">Adicionar ao Carrinho</button>
                     </div>
 
                     <!-- Produto 3: Bolsa -->
                     <div class="product-card" data-category="acessorios" data-price="45.00" data-date="2025-01-20">
-                        <div class="product-image bolsa"><img src="IMG/bolsa-patas.png" alt="Bolsa Patas Conscientes"></div>
+                        <div class="product-image bolsa"><img src="IMG/bolsa-patas.jpg" alt="Bolsa Patas Conscientes"></div>
                         <h3 class="product-name">Bolsa Patas Conscientes</h3>
                         <div class="product-price">R$ 45,00</div>
                         <p class="product-description">Bolsa ecológica de algodão, ideal para o dia a dia e para carregar suas compras.</p>
-                        <button class="add-to-cart" onclick="addToCart('Bolsa Patas Conscientes', 45.00, 'IMG/bolsa-Patas.png', 'Bolsa ecológica de algodão', 'BLS003')">Adicionar ao Carrinho</button>
+                        <button class="add-to-cart" onclick="addToCart('Bolsa Patas Conscientes', 45.00, 'IMG/bolsa-Patas.jpg', 'Bolsa ecológica de algodão', 'BLS003')">Adicionar ao Carrinho</button>
                     </div>
 
                     <!-- Produto 4: Boné -->
                     <div class="product-card" data-category="acessorios" data-price="25.00" data-date="2025-03-05">
-                        <div class="product-image bone"><img src="IMG/bone-patas.png" alt="Boné Patas Conscientes"></div>
+                        <div class="product-image bone"><img src="IMG/bone-patas.jpg" alt="Boné Patas Conscientes"></div>
                         <h3 class="product-name">Boné Patas Conscientes</h3>
                         <div class="product-price">R$ 25,00</div>
                         <p class="product-description">Boné ajustável com logo bordado, perfeito para proteção solar com estilo.</p>
-                        <button class="add-to-cart" onclick="addToCart('Boné Patas Conscientes', 25.00, 'IMG/bone-patas.png', 'Boné ajustável com logo bordado', 'BON004')">Adicionar ao Carrinho</button>
+                        <button class="add-to-cart" onclick="addToCart('Boné Patas Conscientes', 25.00, 'IMG/bone-patas.jpg', 'Boné ajustável com logo bordado', 'BON004')">Adicionar ao Carrinho</button>
                     </div>
                 </div>
             </div>
         </div>
     </main>
  <!-- RODAPÉ -->
-     <!-- RODAPÉ -->
     <footer>
         <div class="container">
             <div class="footer-content">
-                <!-- Seção de Idioma -->
-                <div class="footer-links language-section">
-                    <h3>Idioma/Language</h3>
-                    <div class="language-selector">
-                        <button class="language-option active" data-lang="pt-br" aria-label="Português Brasileiro">
-                            <span class="flag-icon">🇧🇷</span> PT-BR
-                        </button>
-                        <button class="language-option" data-lang="en" aria-label="English">
-                            <span class="flag-icon">🇺🇸</span> EN
-                        </button>
-                    </div>
-                </div>
-
                 <!-- Seção Minha Conta -->
                 <div class="footer-links">
                     <h3>Minha Conta</h3>
@@ -345,6 +337,7 @@
                 <!-- Seção Configurações -->
                 <div class="footer-links">
                     <h3>Configurações</h3>
+                    <a href="configuracoes_cliente.html"><i class="bi bi-gear-fill"></i> <span>Configurações</span></a>
                     <a href="privacidade.html"><i class="bi bi-shield-lock-fill"></i> <span>Privacidade</span></a>
                     <a href="notificacao.html"><i class="bi bi-bell-fill"></i> <span>Notificações</span></a>
                     <a href="pagamento.html"><i class="bi bi-credit-card-fill"></i> <span>Pagamentos</span></a>
@@ -355,7 +348,7 @@
                     <h3>Sobre Nós</h3>
                     <a href="missao.html"><i class="bi bi-info-circle-fill"></i> <span>Missão</span></a>
                     <a href="equipe.html"><i class="bi bi-people-fill"></i> <span>Equipe</span></a>
-                    <a href="chat_com_vendedor.html"><i class="bi bi-chat-dots-fill"></i> <span>Chat com Vendedor</span></a>
+                    <a href="chat_Com_Vendedor.html"><i class="bi bi-chat-dots-fill"></i> <span>Chat com Vendedor</span></a>
 
                     <div class="social-links">
                         <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
@@ -493,6 +486,7 @@
             });
         }
     </script>
+    <script src="JS/modo_noturno.js"></script>
 </body>
 
 </html>

@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReUse - Perfil do Usuário</title>
+    <link rel="stylesheet" href="CSS/cliente.css">
     <link rel="stylesheet" href="CSS/perfil.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="CSS/breadcrumbs.css">
+    <link rel="stylesheet" href="CSS/modo_noturno.css">
+
 </head>
 
 <body>
@@ -45,11 +48,14 @@
                 </div>
 
                 <!-- Elementos do usuário à direita -->
-                <!-- Elementos do usuário à direita -->
-<div class="user-section">
+                <div class="user-section">
+    <!-- Botão de tema adicionado aqui -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <i class="bi bi-sun-fill" id="themeIcon"></i>
+    </button>
     <div class="cart">
         <a href="carrinho.html">
-            <span class="cart-icon"><i class="bi bi-cart"></i></span>
+            <span class="cart-icon"><i class="bi bi-cart3"></i></span>
         </a>
         <span class="cart-count">1</span>
     </div>
@@ -57,9 +63,10 @@
         <i class="bi bi-box-arrow-right"></i> Sair da Conta
     </a>
     <a href="perfil.html">
-        <i class="bi bi-person"></i> Minha Conta
+        <i class="bi bi-person-fill"></i> Minha Conta
     </a>
 </div>
+
 
                 <!-- Categorias abaixo -->
                 <div class="categories-section">
@@ -168,7 +175,6 @@
         </div>
     </header>
 
-
     <!-- CONTEÚDO PRINCIPAL - PERFIL DO USUÁRIO -->
     <main class="container">
         <div class="profile-header">
@@ -193,10 +199,7 @@
                 <div class="profile-menu">
                     <a href="#" class="active" data-section="personal-info"><i class="bi bi-person"></i> Informações Pessoais</a>
                     <a href="#" data-section="addresses"><i class="bi bi-geo-alt"></i> Endereços</a>
-                    <a href="#" data-section="orders"><i class="bi bi-box"></i> Meus Pedidos</a>
-                    <a href="#" data-section="favorites"><i class="bi bi-heart"></i> Favoritos</a>
                     <a href="#" data-section="security"><i class="bi bi-lock"></i> Segurança</a>
-                    <a href="#" data-section="notifications"><i class="bi bi-bell"></i> Notificações</a>
                     <a href="#" data-section="payments"><i class="bi bi-credit-card"></i> Métodos de Pagamento</a>
                 </div>
             </div>
@@ -350,170 +353,6 @@
                     </div>
                 </div>
 
-                <!-- Seção de Pedidos -->
-                <div id="orders-section" class="profile-section">
-                    <h2><i class="bi bi-box"></i> Meus Pedidos</h2>
-                    
-                    <div class="orders-filter">
-                        <select id="order-filter">
-                            <option value="all">Todos os pedidos</option>
-                            <option value="last30">Últimos 30 dias</option>
-                            <option value="last6">Últimos 6 meses</option>
-                            <option value="pending">Pendentes</option>
-                            <option value="delivered">Entregues</option>
-                            <option value="canceled">Cancelados</option>
-                        </select>
-                    </div>
-                    
-                    <div class="orders-list">
-                        <div class="order-card">
-                            <div class="order-header">
-                                <div class="order-info">
-                                    <span class="order-id">Pedido #12345</span>
-                                    <span class="order-date">Realizado em 15/08/2025</span>
-                                </div>
-                                <div class="order-status delivered">
-                                    <i class="bi bi-check-circle"></i> Entregue
-                                </div>
-                            </div>
-                            
-                            <div class="order-products">
-                                <div class="order-product">
-                                    <img src="IMG/produto1.jpg" alt="Produto" class="product-image">
-                                    <div class="product-info">
-                                        <h4>Camiseta Polo Masculina</h4>
-                                        <p>Quantidade: 1</p>
-                                        <p>R$ 39,90</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="order-product">
-                                    <img src="IMG/produto2.jpg" alt="Produto" class="product-image">
-                                    <div class="product-info">
-                                        <h4>Tênis Esportivo</h4>
-                                        <p>Quantidade: 1</p>
-                                        <p>R$ 129,90</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="order-footer">
-                                <div class="order-total">
-                                    <strong>Total:</strong> R$ 169,80
-                                </div>
-                                <div class="order-actions">
-                                    <button class="btn-details"><i class="bi bi-search"></i> Detalhes</button>
-                                    <button class="btn-buy-again"><i class="bi bi-cart"></i> Comprar Novamente</button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="order-card">
-                            <div class="order-header">
-                                <div class="order-info">
-                                    <span class="order-id">Pedido #12344</span>
-                                    <span class="order-date">Realizado em 10/08/2025</span>
-                                </div>
-                                <div class="order-status canceled">
-                                    <i class="bi bi-x-circle"></i> Cancelado
-                                </div>
-                            </div>
-                            
-                            <div class="order-products">
-                                <div class="order-product">
-                                    <img src="IMG/produto3.jpg" alt="Produto" class="product-image">
-                                    <div class="product-info">
-                                        <h4>Liquidificador Philips</h4>
-                                        <p>Quantidade: 1</p>
-                                        <p>R$ 89,90</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="order-footer">
-                                <div class="order-total">
-                                    <strong>Total:</strong> R$ 89,90
-                                </div>
-                                <div class="order-actions">
-                                    <button class="btn-details"><i class="bi bi-search"></i> Detalhes</button>
-                                    <button class="btn-buy-again"><i class="bi bi-cart"></i> Comprar Novamente</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="orders-empty" style="display: none;">
-                        <i class="bi bi-box"></i>
-                        <h3>Nenhum pedido encontrado</h3>
-                        <p>Você ainda não realizou nenhum pedido em nossa loja.</p>
-                        <a href="cliente.html" class="btn-save">Ir para a loja</a>
-                    </div>
-                </div>
-
-                <!-- Seção de Favoritos -->
-                <div id="favorites-section" class="profile-section">
-                    <h2><i class="bi bi-heart"></i> Favoritos</h2>
-                    
-                    <div class="favorites-filter">
-                        <select id="favorites-filter">
-                            <option value="all">Todos os favoritos</option>
-                            <option value="available">Disponíveis</option>
-                            <option value="unavailable">Indisponíveis</option>
-                            <option value="clothes">Roupas</option>
-                            <option value="electronics">Eletrônicos</option>
-                            <option value="home">Casa e Cozinha</option>
-                        </select>
-                    </div>
-                    
-                    <div class="favorites-grid">
-                        <div class="favorite-item">
-                            <div class="favorite-image">
-                                <img src="IMG/produto1.jpg" alt="Produto">
-                                <button class="favorite-remove"><i class="bi bi-x"></i></button>
-                            </div>
-                            <div class="favorite-info">
-                                <h4>Camiseta Polo Masculina</h4>
-                                <div class="favorite-price">R$ 39,90</div>
-                                <div class="favorite-status available">Disponível</div>
-                                <button class="btn-add-cart"><i class="bi bi-cart-plus"></i> Adicionar ao Carrinho</button>
-                            </div>
-                        </div>
-                        
-                        <div class="favorite-item">
-                            <div class="favorite-image">
-                                <img src="IMG/produto2.jpg" alt="Produto">
-                                <button class="favorite-remove"><i class="bi bi-x"></i></button>
-                            </div>
-                            <div class="favorite-info">
-                                <h4>Tênis Esportivo</h4>
-                                <div class="favorite-price">R$ 129,90</div>
-                                <div class="favorite-status available">Disponível</div>
-                                <button class="btn-add-cart"><i class="bi bi-cart-plus"></i> Adicionar ao Carrinho</button>
-                            </div>
-                        </div>
-                        
-                        <div class="favorite-item">
-                            <div class="favorite-image">
-                                <img src="IMG/produto3.jpg" alt="Produto">
-                                <button class="favorite-remove"><i class="bi bi-x"></i></button>
-                            </div>
-                            <div class="favorite-info">
-                                <h4>Liquidificador Philips</h4>
-                                <div class="favorite-price">R$ 89,90</div>
-                                <div class="favorite-status unavailable">Indisponível</div>
-                                <button class="btn-notify"><i class="bi bi-bell"></i> Avise-me quando disponível</button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="favorites-empty" style="display: none;">
-                        <i class="bi bi-heart"></i>
-                        <h3>Sua lista de favoritos está vazia</h3>
-                        <p>Adicione produtos aos seus favoritos para encontrá-los facilmente depois.</p>
-                        <a href="cliente.html" class="btn-save">Ir para a loja</a>
-                    </div>
-                </div>
-
                 <!-- Seção de Segurança -->
                 <div id="security-section" class="profile-section">
                     <h2><i class="bi bi-lock"></i> Segurança</h2>
@@ -575,124 +414,6 @@
                         <h3><i class="bi bi-exclamation-triangle"></i> Ações de Segurança</h3>
                         <button class="btn-logout-all"><i class="bi bi-box-arrow-right"></i> Desconectar Todos os Dispositivos</button>
                         <button class="btn-delete-account"><i class="bi bi-trash"></i> Excluir Conta Permanentemente</button>
-                    </div>
-                </div>
-
-                <!-- Seção de Notificações -->
-                <div id="notifications-section" class="profile-section">
-                    <h2><i class="bi bi-bell"></i> Notificações</h2>
-                    
-                    <div class="notifications-settings">
-                        <h3>Configurações de Notificação</h3>
-                        
-                        <div class="notification-category">
-                            <h4><i class="bi bi-cart"></i> Pedidos e Compras</h4>
-                            <div class="notification-option">
-                                <label>Status do pedido</label>
-                                <div class="toggle-switch">
-                                    <input type="checkbox" id="order-status-toggle" class="toggle-input" checked>
-                                    <label for="order-status-toggle" class="toggle-label"></label>
-                                </div>
-                            </div>
-                            <div class="notification-option">
-                                <label>Promoções especiais</label>
-                                <div class="toggle-switch">
-                                    <input type="checkbox" id="promotions-toggle" class="toggle-input" checked>
-                                    <label for="promotions-toggle" class="toggle-label"></label>
-                                </div>
-                            </div>
-                            <div class="notification-option">
-                                <label>Produtos em promoção</label>
-                                <div class="toggle-switch">
-                                    <input type="checkbox" id="sales-toggle" class="toggle-input">
-                                    <label for="sales-toggle" class="toggle-label"></label>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="notification-category">
-                            <h4><i class="bi bi-heart"></i> Favoritos</h4>
-                            <div class="notification-option">
-                                <label>Produto disponível</label>
-                                <div class="toggle-switch">
-                                    <input type="checkbox" id="favorites-available-toggle" class="toggle-input" checked>
-                                    <label for="favorites-available-toggle" class="toggle-label"></label>
-                                </div>
-                            </div>
-                            <div class="notification-option">
-                                <label>Preço reduzido</label>
-                                <div class="toggle-switch">
-                                    <input type="checkbox" id="price-drop-toggle" class="toggle-input">
-                                    <label for="price-drop-toggle" class="toggle-label"></label>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="notification-category">
-                            <h4><i class="bi bi-chat"></i> Mensagens</h4>
-                            <div class="notification-option">
-                                <label>Mensagens da loja</label>
-                                <div class="toggle-switch">
-                                    <input type="checkbox" id="messages-toggle" class="toggle-input" checked>
-                                    <label for="messages-toggle" class="toggle-label"></label>
-                                </div>
-                            </div>
-                            <div class="notification-option">
-                                <label>Atualizações de sistema</label>
-                                <div class="toggle-switch">
-                                    <input type="checkbox" id="updates-toggle" class="toggle-input" checked>
-                                    <label for="updates-toggle" class="toggle-label"></label>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="notification-actions">
-                            <button class="btn-save"><i class="bi bi-save"></i> Salvar Configurações</button>
-                        </div>
-                    </div>
-                    
-                    <div class="notifications-history">
-                        <h3>Histórico de Notificações</h3>
-                        
-                        <div class="notifications-list">
-                            <div class="notification-item unread">
-                                <div class="notification-icon">
-                                    <i class="bi bi-truck"></i>
-                                </div>
-                                <div class="notification-content">
-                                    <h4>Seu pedido #12345 foi enviado</h4>
-                                    <p>Seu pedido foi enviado e chegará em até 5 dias úteis.</p>
-                                    <span class="notification-time">Hoje, 10:30</span>
-                                </div>
-                                <button class="notification-mark-read"><i class="bi bi-check"></i></button>
-                            </div>
-                            
-                            <div class="notification-item">
-                                <div class="notification-icon">
-                                    <i class="bi bi-percent"></i>
-                                </div>
-                                <div class="notification-content">
-                                    <h4>Promoção especial para você!</h4>
-                                    <p>20% de desconto em toda a loja por tempo limitado.</p>
-                                    <span class="notification-time">Ontem, 15:45</span>
-                                </div>
-                                <button class="notification-mark-read"><i class="bi bi-check"></i></button>
-                            </div>
-                            
-                            <div class="notification-item">
-                                <div class="notification-icon">
-                                    <i class="bi bi-heart"></i>
-                                </div>
-                                <div class="notification-content">
-                                    <h4>Seu produto favorito está disponível</h4>
-                                    <p>O Tênis Esportivo que você adicionou aos favoritos está disponível novamente.</p>
-                                    <span class="notification-time">10/08/2025, 09:20</span>
-                                </div>
-                                <button class="notification-mark-read"><i class="bi bi-check"></i></button>
-                            </div>
-                        </div>
-                        
-                        <button class="btn-load-more">Carregar mais notificações</button>
                     </div>
                 </div>
 
@@ -812,22 +533,9 @@
     </main>
 
     <!-- RODAPÉ -->
-<footer>
+    <footer>
         <div class="container">
             <div class="footer-content">
-                <!-- Seção de Idioma -->
-                <div class="footer-links language-section">
-                    <h3>Idioma/Language</h3>
-                    <div class="language-selector">
-                        <button class="language-option active" data-lang="pt-br" aria-label="Português Brasileiro">
-                            <span class="flag-icon">🇧🇷</span> PT-BR
-                        </button>
-                        <button class="language-option" data-lang="en" aria-label="English">
-                            <span class="flag-icon">🇺🇸</span> EN
-                        </button>
-                    </div>
-                </div>
-
                 <!-- Seção Minha Conta -->
                 <div class="footer-links">
                     <h3>Minha Conta</h3>
@@ -847,6 +555,7 @@
                 <!-- Seção Configurações -->
                 <div class="footer-links">
                     <h3>Configurações</h3>
+                    <a href="configuracoes_cliente.html"><i class="bi bi-gear-fill"></i> <span>Configurações</span></a>
                     <a href="privacidade.html"><i class="bi bi-shield-lock-fill"></i> <span>Privacidade</span></a>
                     <a href="notificacao.html"><i class="bi bi-bell-fill"></i> <span>Notificações</span></a>
                     <a href="pagamento.html"><i class="bi bi-credit-card-fill"></i> <span>Pagamentos</span></a>
@@ -855,9 +564,9 @@
                 <!-- Seção Sobre Nós -->
                 <div class="footer-links">
                     <h3>Sobre Nós</h3>
-                    <a href="Missao.html"><i class="bi bi-info-circle-fill"></i> <span>Missão</span></a>
+                    <a href="missao.html"><i class="bi bi-info-circle-fill"></i> <span>Missão</span></a>
                     <a href="equipe.html"><i class="bi bi-people-fill"></i> <span>Equipe</span></a>
-                    <a href="chat_com_vendedor.html"><i class="bi bi-chat-dots-fill"></i> <span>Chat com Vendedor</span></a>
+                    <a href="chat_Com_Vendedor.html"><i class="bi bi-chat-dots-fill"></i> <span>Chat com Vendedor</span></a>
 
                     <div class="social-links">
                         <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
@@ -875,6 +584,8 @@
     </footer>
 
     <script src="JS/perfil.js"></script>
+    <script src="JS/breadcrumbs.js"></script>
+    <script src="JS/modo_noturno.js"></script>
 </body>
 
 </html>

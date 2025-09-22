@@ -326,3 +326,27 @@ select:focus {
         padding: 0.9rem;
     }
 }
+
+/* Mensagem de sucesso global */
+.success-message-global {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #27ae60;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    z-index: 1100;
+    display: none;
+    align-items: center;
+    gap: 10px;
+    max-width: 90%;
+    animation: slideDown 0.3s ease-out;
+    cursor: pointer;
+}
+
+.success-message-global i {
+    font-size: 1.5rem;
+}

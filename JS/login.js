@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Validação do formulário de vendedor
+    // Validação do formulário de vendedor (ATUALIZADO)
     const sellerLoginForm = document.getElementById('sellerLoginForm');
 
     sellerLoginForm.addEventListener('submit', (e) => {
@@ -109,7 +109,31 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (isValid) {
-            window.location.href = 'vendedor.html';
+            // Verificação dos valores específicos
+            if (verificationCode.value.toLowerCase() === 'xcz' && password.value === 'Senha#123') {
+                window.location.href = 'vendedor.html'; // Página do vendedor
+            } else {
+                // Exibir mensagem de erro estilizada
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'custom-error-message';
+                errorDiv.textContent = 'Usuário ou senha incorretos';
+                
+                // Remover mensagem de erro anterior se existir
+                const existingError = sellerLoginForm.querySelector('.custom-error-message');
+                if (existingError) {
+                    existingError.remove();
+                }
+                
+                // Inserir a mensagem de erro antes do botão de submit
+                const submitBtn = sellerLoginForm.querySelector('.submit-btn');
+                sellerLoginForm.insertBefore(errorDiv, submitBtn);
+                
+                // Adicionar animação de shake ao formulário
+                sellerLoginForm.classList.add('shake');
+                setTimeout(() => {
+                    sellerLoginForm.classList.remove('shake');
+                }, 500);
+            }
         }
     });
 
@@ -148,8 +172,29 @@ document.addEventListener('DOMContentLoaded', () => {
             // Verificação dos valores específicos
             if (cnpj.value === '12.123.123/1234-12' && password.value === '1235') {
                 window.location.href = 'ong-2.html'; // Página especial
+            } else if (cnpj.value === '25.456.456/4567-25' && password.value === '1234567') {
+                window.location.href = 'ong.html'; // Página específica
             } else {
-                window.location.href = 'ong.html'; // Página padrão para outras instituições
+                // Exibir mensagem de erro estilizada
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'custom-error-message';
+                errorDiv.textContent = 'Usuário ou senha incorretos';
+                
+                // Remover mensagem de erro anterior se existir
+                const existingError = institutionLoginForm.querySelector('.custom-error-message');
+                if (existingError) {
+                    existingError.remove();
+                }
+                
+                // Inserir a mensagem de erro antes do botão de submit
+                const submitBtn = institutionLoginForm.querySelector('.submit-btn');
+                institutionLoginForm.insertBefore(errorDiv, submitBtn);
+                
+                // Adicionar animação de shake ao formulário
+                institutionLoginForm.classList.add('shake');
+                setTimeout(() => {
+                    institutionLoginForm.classList.remove('shake');
+                }, 500);
             }
         }
     });

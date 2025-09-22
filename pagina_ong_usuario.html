@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="CSS/pagina_ong_usuario.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="CSS/breadcrumbs.css">
+    <link rel="stylesheet" href="CSS/modo_noturno.css">
     <title>SOS Felino - Página da ONG</title>
 </head>
 
@@ -43,20 +44,25 @@
                 </div>
 
                 <!-- Elementos do usuário à direita -->
-                <div class="user-section">
-                    <div class="cart">
-                        <a href="carrinho.html">
-                            <span class="cart-icon"><i class="bi bi-cart3"></i></span>
-                        </a>
-                        <span class="cart-count">1</span>
-                    </div>
-                    <a href="login.html">
-                        <i class="bi bi-box-arrow-right"></i> Sair da Conta
-                    </a>
-                    <a href="perfil.html">
-                        <i class="bi bi-person-fill"></i> Minha Conta
-                    </a>
-                </div>
+               <div class="user-section">
+    <!-- Botão de tema adicionado aqui -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <i class="bi bi-sun-fill" id="themeIcon"></i>
+    </button>
+    <div class="cart">
+        <a href="carrinho.html">
+            <span class="cart-icon"><i class="bi bi-cart3"></i></span>
+        </a>
+        <span class="cart-count">1</span>
+    </div>
+    <a href="login.html">
+        <i class="bi bi-box-arrow-right"></i> Sair da Conta
+    </a>
+    <a href="perfil.html">
+        <i class="bi bi-person-fill"></i> Minha Conta
+    </a>
+</div>
+
 
                 <!-- Categorias abaixo -->
                 <div class="categories-section">
@@ -243,7 +249,7 @@
                 <div class="donations-grid">
                     <div class="donation-item">
                         <div class="donation-image">
-                            <img src="IMG/racao.png" alt="Ração para Gatos">
+                            <img src="IMG/racao.jpg" alt="Ração para Gatos">
                         </div>
                         <h3>Ração para Gatos</h3>
                         <p>Precisamos de ração seca e úmida para alimentar nossos resgatados</p>
@@ -257,7 +263,7 @@
 
                     <div class="donation-item">
                         <div class="donation-image">
-                            <img src="IMG/cobertor.png" alt="Cobertores">
+                            <img src="IMG/cobertor.jpg" alt="Cobertores">
                         </div>
                         <h3>Cobertores</h3>
                         <p>Para manter os animais aquecidos no inverno</p>
@@ -271,7 +277,7 @@
 
                     <div class="donation-item">
                         <div class="donation-image">
-                            <img src="IMG/medicamentos.png" alt="Medicamentos">
+                            <img src="IMG/medicamentos.jpg" alt="Medicamentos">
                         </div>
                         <h3>Medicamentos</h3>
                         <p>Antipulgas, vermífugos e outros remédios básicos</p>
@@ -285,7 +291,7 @@
 
                     <div class="donation-item">
                         <div class="donation-image">
-                            <img src="IMG/brinquedos.png" alt="Brinquedos">
+                            <img src="IMG/brinquedos.jpg" alt="Brinquedos">
                         </div>
                         <h3>Brinquedos</h3>
                         <p>Para enriquecimento ambiental dos gatos</p>
@@ -306,7 +312,7 @@
             <div class="testimonials-section">
                 <div class="testimonial-card">
                     <div class="testimonial-header">
-                        <img src="IMG/ana-silva.png" alt="Ana Silva">
+                        <img src="IMG/ana-silva.jpg" alt="Ana Silva">
                         <div>
                             <h3>Ana Silva</h3>
                             <span class="testimonial-date">15/03/2025</span>
@@ -327,7 +333,7 @@
 
                 <div class="testimonial-card">
                     <div class="testimonial-header">
-                        <img src="IMG/carlos-mendes.png" alt="Carlos Mendes">
+                        <img src="IMG/carlos-mendes.jpg" alt="Carlos Mendes">
                         <div>
                             <h3>Carlos Mendes</h3>
                             <span class="testimonial-date">22/02/2025</span>
@@ -348,7 +354,7 @@
 
                 <div class="testimonial-card">
                     <div class="testimonial-header">
-                        <img src="IMG/mariana-oliveira.png" alt="Mariana Oliveira">
+                        <img src="IMG/mariana-oliveira.jpg" alt="Mariana Oliveira">
                         <div>
                             <h3>Mariana Oliveira</h3>
                             <span class="testimonial-date">10/01/2025</span>
@@ -416,19 +422,6 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <!-- Seção de Idioma -->
-                <div class="footer-links language-section">
-                    <h3>Idioma/Language</h3>
-                    <div class="language-selector">
-                        <button class="language-option active" data-lang="pt-br" aria-label="Português Brasileiro">
-                            <span class="flag-icon">🇧🇷</span> PT-BR
-                        </button>
-                        <button class="language-option" data-lang="en" aria-label="English">
-                            <span class="flag-icon">🇺🇸</span> EN
-                        </button>
-                    </div>
-                </div>
-
                 <!-- Seção Minha Conta -->
                 <div class="footer-links">
                     <h3>Minha Conta</h3>
@@ -448,6 +441,7 @@
                 <!-- Seção Configurações -->
                 <div class="footer-links">
                     <h3>Configurações</h3>
+                    <a href="configuracoes_cliente.html"><i class="bi bi-gear-fill"></i> <span>Configurações</span></a>
                     <a href="privacidade.html"><i class="bi bi-shield-lock-fill"></i> <span>Privacidade</span></a>
                     <a href="notificacao.html"><i class="bi bi-bell-fill"></i> <span>Notificações</span></a>
                     <a href="pagamento.html"><i class="bi bi-credit-card-fill"></i> <span>Pagamentos</span></a>
@@ -1085,6 +1079,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <script src="JS/breadcrumbs.js"></script>
 <script src="JS/modal_doação_sos_felino.js"></script>
 <script src="JS/modal_voluntario_sos_felino.js"></script>
+<script src="JS/modo_noturno.js"></script>
 </body>
 
 </html>

@@ -42,7 +42,7 @@ body {
 
 /* ================ CABEÇALHO ================ */
 header {
-    background: linear-gradient(135deg, #8ecd90 0%, #0066cc 100%);
+        background: linear-gradient(135deg, #8ecd90 0%, #0066cc 50%, #000 100%);
     color: black;
     padding: 15px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -662,7 +662,7 @@ h3 {
 
 /* ================ RODAPÉ ================ */
 footer {
-    background-color: #1a435e;
+    background: linear-gradient(135deg, #2c3e50 0%, #000 100%);
     color: white;
     padding: 40px 0 20px;
     margin-top: 50px;

@@ -8,7 +8,7 @@ const produtos = [
         avaliacao: 4.9, 
         categoria: "roupas",
         descricao: "Camisa casual de algodão, confortável e com estampa da instituição.",
-        imagem: "IMG/Camiseta.SOS.png"
+        imagem: "IMG/Camiseta.SOS.jpg"
     },
     { 
         id: 2, 
@@ -18,7 +18,7 @@ const produtos = [
         avaliacao: 4.7, 
         categoria: "acessorios",
         descricao: "Broche metálico com logo da instituição.",
-        imagem: "IMG/Broche.SOS.png"
+        imagem: "IMG/Broche.SOS.jpg"
     },
     { 
         id: 3, 
@@ -28,7 +28,7 @@ const produtos = [
         avaliacao: 4.5, 
         categoria: "acessorios",
         descricao: "Bolsa de algodão ecologicamente correta.",
-        imagem: "IMG/Bolsa.SOS.png"
+        imagem: "IMG/Bolsa.SOS.jpg"
     },
     { 
         id: 4, 
@@ -38,7 +38,7 @@ const produtos = [
         avaliacao: 4.8, 
         categoria: "casa",
         descricao: "Caneca em cerâmica com estampa personalizada.",
-        imagem: "IMG/Caneca.SOS.png"
+        imagem: "IMG/Caneca.SOS.jpg"
     }
 ];
 
