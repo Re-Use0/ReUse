@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #B3CDE0;
+    background-color: #BFEAFF ;
     color: #333;
     line-height: 1.6;
 }
@@ -438,15 +438,15 @@ header {
 }
 
 .action-button.buy {
-    background-color: #2196F3;
+    background:linear-gradient(135deg, #2196F3 0% , #1764A3 100% ); 
 }
 
 .action-button.sell {
-    background-color: #009688;
+    background: linear-gradient(135deg, #009688 0%, #00DEC8 100%) #009688;
 }
 
 .action-button.donate {
-    background-color: #00BCD4;
+    background: linear-gradient(135deg, #20c95f 0%, #00DEC8 100%);
 }
 
 /* Títulos de seção */

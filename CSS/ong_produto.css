@@ -5,10 +5,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        body {
-            background-color: #B3CDE0;
-            color: #333;
-        }
+
 
         /* Container principal para centralizar conteúdo */
         .container {
@@ -18,12 +15,7 @@
         }
 
         /* ================ CABEÇALHO ================ */
-        header {
-            background: linear-gradient(135deg, #8ecd90 0%, #0066cc 100%);
-            color: white;
-            padding: 15px 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+
 
         .top-header {
             display: flex;
